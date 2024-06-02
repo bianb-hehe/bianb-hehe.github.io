@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYpicbed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px auto;
+        }
+        #uploadForm {
+            width: 300px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        #fileInput {
+            display: block;
+            margin: 0 auto;
+        }
+        #uploadButton {
+            display: block;
+            margin: 10px auto;
+        }
+        #preview {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .preview-item {
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            padding: 10px;
+            text-align: left;
+        }
+        .preview-item img, .preview-item video {
+            max-width: 100%;
+            max-height: 150px;
+            transition: transform 0.3s ease;
+        }
+        .preview-item p {
+            margin-top: 10px;
+            word-wrap: break-word;
+        }
+        .preview-item:hover img, .preview-item:hover video {
+            transform: scale(1.1);
+        }
+        .download-link {
+            display: block;
+            margin-top: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Mypicbed</h2>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="file" id="fileInput" name="fileInput" accept="image/*,video/*" required>
+            <button type="submit" id="uploadButton">上传</button>
+        </div>
+    </form>
+    <div id="preview"></div>
+
+    <script>
+        const uploadForm = document.getElementById('uploadForm');
+        const fileInput = document.getElementById('fileInput');
+        const preview = document.getElementById('preview');
+
+        // 获取本地存储的多媒体数据并显示
+        window.onload = function() {
+            const uploadsData = localStorage.getItem('uploadedData');
+            if (uploadsData) {
+                const uploads = JSON.parse(uploadsData);
+                uploads.forEach(uploadData => {
+                    const previewItem = createPreviewItem(uploadData);
+                    preview.appendChild(previewItem);
+                });
+            }
+        };
+
+        uploadForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function() {
+                    const uploadData = {
+                        type: file.type.startsWith('image') ? 'image' : 'video',
+                        src: reader.result,
+                        timestamp: new Date().getTime() 
+                    };
+                    const previewItem = createPreviewItem(uploadData);
+                    preview.appendChild(previewItem);
+                    saveUploadData(uploadData);
+                    fileInput.value = ''; 
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // 创建上传项
+        function createPreviewItem(uploadData) {
+            const previewItem = document.createElement('div');
+            previewItem.classList.add('preview-item');
+            if (uploadData.type === 'image') {
+                const image = document.createElement('img');
+                image.src = uploadData.src;
+                previewItem.appendChild(image);
+            } else if (uploadData.type === 'video') {
+                const video = document.createElement('video');
+                video.src = uploadData.src;
+                video.controls = true;
+                previewItem.appendChild(video);
+            }
+            const downloadLink = document.createElement('a');
+            downloadLink.href = uploadData.src;
+            downloadLink.textContent = '下载';
+            downloadLink.classList.add('download-link');
+            previewItem.appendChild(downloadLink);
+            return previewItem;
+        }
+
+        // 将多媒体数据保存到本地存储
+        function saveUploadData(uploadData) {
+            let uploads = localStorage.getItem('uploadedData');
+            if (uploads) {
+                uploads = JSON.parse(uploads);
+            } else {
+                uploads = [];
+            }
+            uploads.push(uploadData);
+            localStorage.setItem('uploadedData', JSON.stringify(uploads));
+        }
+    </script>
+	
+</body>
+</html>

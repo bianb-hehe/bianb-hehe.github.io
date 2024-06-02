@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帖子上传</title>
+</head>
+<body>
+    <h1>上传帖子</h1>
+    <h2> 不会写看站点内教程 </h2>
+     <h3> 请在编辑点编辑文档 </h3>
+      <h4> 编辑完后上传到此处 </h4>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="fileInput" id="fileInput">
+        <button type="submit">提交</button>
+    </form>
+
+    <div id="progressContainer" style="display: none;">
+        <div id="progressBar" style="width: 0%; height: 20px; background-color: #4CAF50;"></div>
+        <div id="progressText">0%</div>
+    </div>
+
+    <script>
+        const uploadForm = document.getElementById('uploadForm');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+
+        uploadForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+
+            fetch('http://localhost:40001/upload', {
+                method: 'POST',
+                body: formData,
+                onUploadProgress: function(progressEvent) {
+                    const percentage = Math.round((progressEvent.loaded / progressEvent.total) * 100);
+                    progressBar.style.width = percentage + "%";
+                    progressText.innerHTML = percentage + "%";
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('文件上传成功');
+                progressContainer.style.display = 'none';
+            })
+            .catch(error => {
+                console.error('文件上传失败', error);
+                progressContainer.style.display = 'none';
+            });
+            
+            progressContainer.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

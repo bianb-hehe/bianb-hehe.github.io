@@ -1,0 +1,1383 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Minecraft-纯净服务器搭建全流程, Mybbs">
+    <meta name="description" content="文章目录
+前言
+
+相关介绍
+
+
+一、服务器的租赁
+二、服务器和联机房间的区别
+三、服务器版本的选择
+四、服务器端的下载
+五、服务端的使用(Spigot端)
+六、服务器的基础配置(非插件配置)
+
+[1]. server.properties配">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Minecraft-纯净服务器搭建全流程 | Mybbs</title>
+    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://img.pixelbbs.cn/LightPicture/2024/05/642ae2f5e0e131a7.ico">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+<meta name="generator" content="Hexo 7.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Mybbs" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+   
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://img.pixelbbs.cn/LightPicture/2024/05/642ae2f5e0e131a7.ico" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Mybbs</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>帖子</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>站点公告</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/HTML/index1.html" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>发帖子</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/HTML/tc.html" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>图床</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a target="_blank" rel="noopener" href="https://www.pixelbbs.cn/source/plugin/bphp_clouds/upload/4438/20240601/417cb596663d3d5bf57708af2fa16eba.zip" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>源码</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/HTML/index2.html" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>服务器</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://img.pixelbbs.cn/LightPicture/2024/05/642ae2f5e0e131a7.ico" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Mybbs</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			帖子
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			站点公告
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/HTML/index1.html" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			发帖子
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/HTML/tc.html" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			图床
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a target="_blank" rel="noopener" href="https://www.pixelbbs.cn/source/plugin/bphp_clouds/upload/4438/20240601/417cb596663d3d5bf57708af2fa16eba.zip" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			源码
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/HTML/index2.html" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			服务器
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本帖子的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://tse3-mm.cn.bing.net/th/id/OIP-C.TIRIQ8fyK87VR8v2xtw7RAHaHa?rs=1&pid=ImgDetMain')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Minecraft-纯净服务器搭建全流程</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                <span class="chip bg-color">教程</span>
+                            </a>
+                        
+                            <a href="/tags/MC/">
+                                <span class="chip bg-color">MC</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                                <span class="chip bg-color">服务器</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                教程
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-05-31
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.2k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    22 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h4 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h4><ul>
+<li><a href="#-1">前言</a></li>
+<li><ul>
+<li><a href="#-8">相关介绍</a></li>
+</ul>
+</li>
+<li><a href="#-26">一、服务器的租赁</a></li>
+<li><a href="#-39">二、服务器和联机房间的区别</a></li>
+<li><a href="#-51">三、服务器版本的选择</a></li>
+<li><a href="#-58">四、服务器端的下载</a></li>
+<li><a href="#spigot-70">五、服务端的使用(Spigot端)</a></li>
+<li><a href="#-84">六、服务器的基础配置(非插件配置)</a></li>
+<li><ul>
+<li><a href="#1-serverproperties-86">[1]. server.properties配置</a></li>
+<li><a href="#2-spigotyml-126">[2]. spigot.yml配置</a></li>
+<li><a href="#3-runbat-278">[3]. Run.bat后台</a></li>
+<li><a href="#4-opsjson-310">[4]. ops.json配置</a></li>
+<li><a href="#5-bannedipsjson-327">[5]. banned-ips.json配置</a></li>
+<li><a href="#6-bannedplayersjson-348">[6]. banned-players.json配置</a></li>
+<li><a href="#7-whitelistjson-369">[7]. whitelist.json配置</a></li>
+</ul>
+</li>
+<li><a href="#-383">七、服务器插件的下载渠道</a></li>
+<li><a href="#-391">八、服务器插件的简单使用</a></li>
+<li><a href="#-419">九、服务器插件介绍网站</a></li>
+<li><a href="#-425">十、开启服务器</a></li>
+</ul>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p><strong>Minecraft沙盒游戏，它不单单可以让玩家游戏，玩家还能自己创建MC的服务器来供其他的玩家联机。</strong></p>
+</blockquote>
+<blockquote>
+<p>此篇文章主要是介绍一下 <strong>Spigot服务端的使用</strong>，有的新手服主会盲目地花钱购买服务端，然后购买之后又不懂如何操作，然后就花钱找了技术来帮忙，这样算下来的话开个MC服务器的成本会增加许多，与其购买服务端和花钱找技术还不如自己学会如何使用服务端，如果有任何问题的话可以在下方评论。</p>
+</blockquote>
+<blockquote>
+<p>注： <code>&amp;#x56E0;&amp;#x4E3A;MC&amp;#x4E2D;&amp;#x6BCF;&amp;#x4E2A;&amp;#x63D2;&amp;#x4EF6;&amp;#x90FD;&amp;#x5404;&amp;#x6709;&amp;#x7279;&amp;#x8272;&amp;#xFF0C;&amp;#x6B64;&amp;#x5904;&amp;#x4EC5;&amp;#x63D0;&amp;#x4F9B;&amp;#x7B80;&amp;#x5355;&amp;#x7684;&amp;#x4F7F;&amp;#x7528;&amp;#x3002;&amp;#x6B64;&amp;#x6587;&amp;#x7AE0;&amp;#x662F;&amp;#x9488;&amp;#x5BF9;&amp;#x840C;&amp;#x65B0;&amp;#x670D;&amp;#x4E3B;&amp;#x5199;&amp;#x7684;&amp;#xFF0C;&amp;#x64CD;&amp;#x4F5C;&amp;#x6B65;&amp;#x9AA4;&amp;#x53EF;&amp;#x80FD;&amp;#x4F1A;&amp;#x6709;&amp;#x4E9B;&amp;#x7E41;&amp;#x7410;&amp;#xFF0C;&amp;#x4E3B;&amp;#x8981;&amp;#x662F;&amp;#x4ECB;&amp;#x7ECD;&amp;#x4E00;&amp;#x4E9B;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x7AEF;&amp;#x7684;&amp;#x5185;&amp;#x5BB9;&amp;#xFF0C;&amp;#x63D2;&amp;#x4EF6;&amp;#x7684;&amp;#x5177;&amp;#x4F53;&amp;#x4F7F;&amp;#x7528;&amp;#x53EF;&amp;#x4EE5;&amp;#x53C2;&amp;#x8003;&amp;#x5176;&amp;#x4ED6;&amp;#x7684;&amp;#x6587;&amp;#x7AE0;&amp;#x3002;</code></p>
+</blockquote>
+<h3 id="相关介绍"><a href="#相关介绍" class="headerlink" title="相关介绍"></a>相关介绍</h3><p><a target="_blank" rel="noopener" href="https://www.mcbbs.net/thread-61240-1-1.html"><strong>OP指令大全</strong></a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_34352449/article/details/88705976">在Linux下搭建我的世界(Minecraft)服务器</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/shiraka/p/14532465.html">linux云服务搭建Minecraft服务器</a></p>
+<p><img src="https://img-blog.csdnimg.cn/20200324102239404.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<blockquote>
+<p><strong>Spigot服务端</strong>是我第一种接触的服务端，如果是新手服主的话推荐使用，可以从纯净服开始学习如何 <strong>搭建MC服务器</strong>和搭配好玩的 <strong>服务器插件</strong>，要是 <strong>mod服</strong>的话可以使用 <strong>Spong海绵端</strong>、 <strong>Catserver猫端</strong>等。</p>
+</blockquote>
+<blockquote>
+<p>文章末尾有附带Spigot从 <strong>1.7~1.14.4版本</strong>的 <strong>服务端下载</strong>，如果出现没法获取分享文件的话，可能是我对网盘的内容进行了更新和分享，若网盘进行更新的话也会将新的网盘链接发在此文章下方。</p>
+</blockquote>
+<blockquote>
+<p>注： <code>&amp;#x5176;&amp;#x5B9E;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x7AEF;&amp;#x7684;&amp;#x64CD;&amp;#x4F5C;&amp;#x548C;&amp;#x5728;&amp;#x4F60;&amp;#x7535;&amp;#x8111;&amp;#x5BF9;&amp;#x4E00;&amp;#x4E2A;&amp;#x6587;&amp;#x4EF6;&amp;#x5939;&amp;#x7684;&amp;#x64CD;&amp;#x4F5C;&amp;#x76F8;&amp;#x5DEE;&amp;#x65E0;&amp;#x51E0;&amp;#xFF0C;&amp;#x5982;&amp;#x679C;&amp;#x4F60;&amp;#x60F3;&amp;#x8981;&amp;#x771F;&amp;#x6B63;&amp;#x4E86;&amp;#x89E3;MC&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x7684;&amp;#x8BDD;&amp;#xFF0C;&amp;#x5EFA;&amp;#x8BAE;&amp;#x4E0D;&amp;#x8981;&amp;#x4F7F;&amp;#x7528;&amp;#x9762;&amp;#x677F;&amp;#x670D;&amp;#x6765;&amp;#x5F00;&amp;#x670D;&amp;#x3002;&amp;#x5F88;&amp;#x591A;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x529F;&amp;#x80FD;&amp;#x7684;&amp;#x5B9E;&amp;#x73B0;&amp;#x90FD;&amp;#x662F;&amp;#x5BF9;&amp;#x63D2;&amp;#x4EF6;&amp;#x914D;&amp;#x7F6E;&amp;#x7684;&amp;#x64CD;&amp;#x4F5C;&amp;#xFF0C;&amp;#x8981;&amp;#x60F3;&amp;#x5B66;&amp;#x4E60;&amp;#x7684;&amp;#x8BDD;&amp;#x5C31;&amp;#x9700;&amp;#x8981;&amp;#x4ED8;&amp;#x51FA;&amp;#x4E9B;&amp;#x65F6;&amp;#x95F4;</code></p>
+</blockquote>
+<h2 id="一、服务器的租赁"><a href="#一、服务器的租赁" class="headerlink" title="; 一、服务器的租赁"></a><a name="_26">;</a> 一、服务器的租赁</h2><blockquote>
+<p>在没有在淘宝租赁服务器的时候，我自己有使用过 <strong>华为云</strong>和 <strong>阿里云</strong>，使用了公网IP后玩家还是没法进行连接（有可能是我配置的问题）<br>有需要的朋友可参考大佬文章<a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv2913966/">华为云ECS开服教程</a></p>
+</blockquote>
+<blockquote>
+<p>然后是使用的 <strong>端口映射软件</strong>，使用过好几个端口映射软件效果都很差、延迟很大，服务器里面只有2个人的时候都能卡爆。<br>有的云还可能会出现赚了服主的钱然后跑路的情况，你在选择租赁服务器的时候最好仔细斟酌一下。</p>
+</blockquote>
+<blockquote>
+<p><strong>如果你想要去租一个服务器的话可以到淘宝中找</strong>，相比直接去租 <strong>华为云</strong>或 <strong>阿里云</strong>那种比较商用的服务器会划算些。</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200331100637772.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<blockquote>
+<p>目前网易我的世界有提供租赁服，你也可以到网易当中租赁，最高的配置是 <strong>40人每月120元</strong>。</p>
+</blockquote>
+<blockquote>
+<p>网易租赁服的话现在只能开纯净服或插件服，而且需要对服务器内容进行变更的话是很难操作的，之前有使用过几个月租赁服，传入文件只能传到 <strong>Plugin文件夹</strong>下，而且不能下载服务器的文件到电脑中。</p>
+</blockquote>
+<h2 id="二、服务器和联机房间的区别"><a href="#二、服务器和联机房间的区别" class="headerlink" title="; 二、服务器和联机房间的区别"></a><a name="_39">;</a> 二、服务器和联机房间的区别</h2><blockquote>
+<p>之前有用过多玩我的世界游戏盒子，在没有关闭之前玩家就能够创建自己的联机房间让其他玩家进行连接，目前网易也有这个功能。</p>
+</blockquote>
+<p>区别联机房间服务器1需要房主一直在线，不然其他玩家没法连接到相应的联机房间服务器只有后台是开启的，就算服主不在线，其他玩家也能够连接2没有后台有后台3玩家数据保存在房主的电脑中玩家的数据保存在服务器中，且能对其具体内容进行变更4主要通过Mod模组对游戏内容进行变更，和单人Mod生存类似通过Mod和插件对游戏进行变更，能够实现对游戏某个功能的具体变更，包括对玩家、怪物、游戏地图、游戏界面等。</p>
+<h2 id="三、服务器版本的选择"><a href="#三、服务器版本的选择" class="headerlink" title="三、服务器版本的选择"></a>三、服务器版本的选择</h2><blockquote>
+<p>目前比较有人玩的服务器版本是[1.7.10]、 [1.12.2]、[1.14.4]，服务器的版本并不是越高版本越好，按理来说 <strong>服务器的版本越高的话，对主机的性能要求越高</strong>，如果你只是想要和朋友一起玩的话可以去选择一个低版本的服务端。</p>
+</blockquote>
+<blockquote>
+<p>服务器版本也对应了玩家的版本，如果服务器中没有加 [<strong>向上兼容版本</strong>]插件或是[<strong>向下兼容版本</strong>]插件的话，玩家使用的客户端只能和服务器端版本相同才能进入服务器。</p>
+</blockquote>
+<blockquote>
+<p>注： <code>&amp;#x5982;&amp;#x679C;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x542B;&amp;#x6709;&amp;#x63D2;&amp;#x4EF6;&amp;#x7684;&amp;#x8BDD;&amp;#x79F0;&amp;#x4F5C;&amp;#x63D2;&amp;#x4EF6;&amp;#x670D;&amp;#xFF0C;&amp;#x5982;&amp;#x679C;&amp;#x505A;&amp;#x5230;&amp;#x771F;&amp;#x6B63;&amp;#x7684;&amp;#x7EAF;&amp;#x51C0;&amp;#x670D;&amp;#x7684;&amp;#x8BDD;&amp;#xFF0C;&amp;#x73A9;&amp;#x5BB6;&amp;#x968F;&amp;#x4FBF;&amp;#x8F93;&amp;#x5165;&amp;#x4E00;&amp;#x4E2A;&amp;#x7BA1;&amp;#x7406;&amp;#x5458;&amp;#x7684;id&amp;#x90FD;&amp;#x80FD;&amp;#x76F4;&amp;#x63A5;&amp;#x767B;&amp;#x5F55;&amp;#xFF0C;&amp;#x6240;&amp;#x4EE5;&amp;#x6211;&amp;#x4EEC;&amp;#x624D;&amp;#x9700;&amp;#x8981;&amp;#x6DFB;&amp;#x52A0;&amp;#x767B;&amp;#x5F55;&amp;#x63D2;&amp;#x4EF6;&amp;#x7B49;&amp;#x63D2;&amp;#x4EF6;&amp;#x3002; &amp;#x800C;Mod&amp;#x670D;&amp;#x662F;&amp;#x5728;&amp;#x63D2;&amp;#x4EF6;&amp;#x7684;&amp;#x57FA;&amp;#x7840;&amp;#x4E4B;&amp;#x4E0A;&amp;#x6DFB;&amp;#x52A0;&amp;#x4E86;Mod&amp;#xFF0C;&amp;#x672C;&amp;#x8D28;&amp;#x4E0A;Mod&amp;#x670D;&amp;#x548C;&amp;#x63D2;&amp;#x4EF6;&amp;#x670D;&amp;#x7684;&amp;#x64CD;&amp;#x4F5C;&amp;#x76F8;&amp;#x5DEE;&amp;#x65E0;&amp;#x51E0;&amp;#xFF0C;&amp;#x90FD;&amp;#x5F97;&amp;#x6709;&amp;#x63D2;&amp;#x4EF6;&amp;#x914D;&amp;#x7F6E;&amp;#x53D8;&amp;#x66F4;&amp;#x7684;&amp;#x64CD;&amp;#x4F5C;&amp;#x3002;</code></p>
+</blockquote>
+<h2 id="四、服务器端的下载"><a href="#四、服务器端的下载" class="headerlink" title="四、服务器端的下载"></a>四、服务器端的下载</h2><blockquote>
+<p>服务器端的话，你可以到 <strong>淘宝网</strong>或者是去MC技术群找技术定制，不过 <strong>如果你是想要一个纯净插件服的话，文章末尾就有提供下载</strong>。</p>
+</blockquote>
+<blockquote>
+<p>如果你是想要一个 <strong>免费的服务端</strong>的话，建议去 <strong>MCBBS论坛</strong>中寻找，论坛中的大部分的服务器端都是免费的，有一些是需要付 <strong>金粒</strong>的，金粒可以通过在论坛中发言获得，还有一些是需要访问外网去付费下载。<br>建议在MCBBS中注册一个账号，因为很多的帖子会隐藏服务端的下载，这个时候你就需要花费金粒或是提高等级来获取隐藏的内容。</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200331094538155.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/20200331094500634.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<blockquote>
+<p>你可以在筛选框中选择自己需要的版本、服务器端类型等。</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200331094851893.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<h2 id="五、服务端的使用-Spigot端"><a href="#五、服务端的使用-Spigot端" class="headerlink" title="; 五、服务端的使用(Spigot端)"></a><a name="spigot_70">;</a> 五、服务端的使用(Spigot端)</h2><blockquote>
+<p>有时Spigot端是长这样的，文件数很少，说明是还没启动过后台的初始端。</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200331101316812.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<blockquote>
+<p>这时你需要打开eula.txt文件，把eula的值变更为true，然后点击Run.bat文件。<br>这个.bat文件打开后就是你服务器的后台了，.bat的文件名可以自己任意取。</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200331101500755.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<blockquote>
+<p>最后的服务器端大概长这样</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200331104750132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<blockquote>
+<p>上图中的文件夹 <strong>Plot</strong>、 <strong>world</strong>、 <strong>world_nether</strong>、 <strong>world_the_end</strong>、 <strong>zy</strong>这几个都是服务器的地图，如果你需要导入地图的话，直接把地图放在这个目录下即可。</p>
+</blockquote>
+<blockquote>
+<p>其中的 <strong>plugins</strong>为插件文件夹， <strong>剩余的配置将在步骤六中介绍</strong>。</p>
+</blockquote>
+<h2 id="六、服务器的基础配置-非插件配置"><a href="#六、服务器的基础配置-非插件配置" class="headerlink" title="六、服务器的基础配置(非插件配置)"></a>六、服务器的基础配置(非插件配置)</h2><blockquote>
+<p>下面有提到的配置了解一下，其他的配置不大需要了解。</p>
+</blockquote>
+<h3 id="1-server-properties配置"><a href="#1-server-properties配置" class="headerlink" title="[1]. server.properties配置"></a>[1]. server.properties配置</h3><blockquote>
+<p>如果你需要在同一个主机开多个服务器的时候，你就需要变更配置中的服务器端口（默认的端口是25565），只要各个服务器的端口是不同的即可。</p>
+</blockquote>
+<p>（ _此配置的注释并非我原创，原帖的链接为_：<a target="_blank" rel="noopener" href="https://blog.csdn.net/linjiayang2016/article/details/93885632">Server.properties</a>）</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">generator-settings=</span><br><span class="line">op-permission-level=<span class="number">4</span>				<span class="meta">#op的权限级别</span></span><br><span class="line">allow-nether=<span class="literal">true</span>					#是否允许生成末地</span><br><span class="line">level-name=world					#主世界文件夹名称</span><br><span class="line">enable-query=<span class="literal">false</span>					#是否开启GameSpy4协议服务器监听器</span><br><span class="line">allow-flight=<span class="literal">true</span>					#是否允许飞行</span><br><span class="line">announce-player-achievements=<span class="literal">true</span>	#公布玩家成就信息</span><br><span class="line">server-port=<span class="number">25566</span>					#服务器端口</span><br><span class="line">level-type=DEFAULT					#世界类型</span><br><span class="line">enable-rcon=<span class="literal">false</span>					#是否开启rcon监听</span><br><span class="line">force-gamemode=<span class="literal">false</span>				<span class="meta">#force游戏模式</span></span><br><span class="line">level-seed=							#服务器种子</span><br><span class="line">server-ip=<span class="number">192.168</span><span class="number">.19</span><span class="number">.32</span>				#服务器指向ip</span><br><span class="line">max-build-height=<span class="number">256</span>				#建筑最大高度</span><br><span class="line">spawn-npcs=<span class="literal">false</span>					#是否有主城NPC</span><br><span class="line">white-list=<span class="literal">false</span>					#是否开启白名单</span><br><span class="line">spawn-animals=<span class="literal">true</span>					#是否允许动物生成</span><br><span class="line">hardcore=<span class="literal">false</span>						#是否开启极限模式</span><br><span class="line">snooper-enabled=<span class="literal">false</span>				#是否给snoop.minecraft.net网站发送服务器数据，推荐关闭</span><br><span class="line">online-mode=<span class="literal">false</span>					#是否联网游戏(非正版一定要改<span class="literal">false</span>)</span><br><span class="line">resource-pack=						#服务器资源包下载地址</span><br><span class="line">pvp=<span class="literal">true</span>							#是否开启pvp</span><br><span class="line">difficulty=<span class="number">3</span>						#服务器难度 和平<span class="number">0</span>~<span class="number">3</span>困难(自行调整)</span><br><span class="line">enable-command-block=<span class="literal">true</span>			#是否开启命令方块</span><br><span class="line">server-name=Server					#服务器名称</span><br><span class="line">gamemode=<span class="number">0</span>							#游戏模式</span><br><span class="line">player-idle-timeout=<span class="number">0</span>				#服务器最长挂机时间</span><br><span class="line">max-players=<span class="number">20</span>						#最大玩家数</span><br><span class="line">spawn-monsters=<span class="literal">true</span>					#是否允许生成怪物</span><br><span class="line">generate-structures=<span class="literal">true</span>			#是否生成建筑物</span><br><span class="line">view-distance=<span class="number">10</span>					#可见距离</span><br><span class="line">motd=Server							#服务器标语</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="2-spigot-yml配置"><a href="#2-spigot-yml配置" class="headerlink" title="[2]. spigot.yml配置"></a>[2]. spigot.yml配置</h3><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">config-version: <span class="number">8</span></span><br><span class="line">settings:</span><br><span class="line">  debug: <span class="literal">false</span></span><br><span class="line">  save-user-cache-on-stop-only: <span class="literal">false</span></span><br><span class="line">  sample-count: <span class="number">12</span></span><br><span class="line">  player-shuffle: <span class="number">0</span></span><br><span class="line">  user-cache-size: <span class="number">1000</span></span><br><span class="line">  <span class="type">int</span>-cache-limit: <span class="number">1024</span></span><br><span class="line">  netty-threads: <span class="number">4</span></span><br><span class="line">  attribute:</span><br><span class="line">    maxHealth: ##玩家可拥有的最大血量</span><br><span class="line">      max: <span class="number">2048.0</span></span><br><span class="line">    movementSpeed: ##玩家的最大速度</span><br><span class="line">      max: <span class="number">2048.0</span></span><br><span class="line">    attackDamage: ##玩家最大的攻击</span><br><span class="line">      max: <span class="number">2048.0</span></span><br><span class="line">  global-api-cache: <span class="literal">false</span></span><br><span class="line">  filter-creative-items: <span class="literal">true</span></span><br><span class="line">  ##移动错误的阈值</span><br><span class="line">  moved-wrongly-threshold: <span class="number">0.0625</span></span><br><span class="line">  ##移动速度的阈值</span><br><span class="line">  moved-too-quickly-threshold: <span class="number">100.0</span></span><br><span class="line">  ##是否跨服</span><br><span class="line">  bungeecord: <span class="literal">false</span></span><br><span class="line">  late-bind: <span class="literal">false</span></span><br><span class="line">  timeout-time: <span class="number">60</span></span><br><span class="line">  restart-on-crash: <span class="literal">true</span></span><br><span class="line">  restart-script: ./start.sh</span><br><span class="line">  moved-too-quickly-multiplier: <span class="number">10.0</span></span><br><span class="line">  item-dirty-ticks: <span class="number">20</span></span><br><span class="line">commands:</span><br><span class="line">  tab-complete: <span class="number">0</span></span><br><span class="line">  <span class="built_in">log</span>: <span class="literal">true</span></span><br><span class="line">  spam-exclusions:</span><br><span class="line">  - /skill</span><br><span class="line">  replace-commands:</span><br><span class="line">  - setblock</span><br><span class="line">  - summon</span><br><span class="line">  - testforblock</span><br><span class="line">  - tellraw</span><br><span class="line">  silent-commandblock-console: <span class="literal">false</span></span><br><span class="line">messages:</span><br><span class="line">  ##非白名单用户的提示</span><br><span class="line">  whitelist: You are not whitelisted on this server!</span><br><span class="line"></span><br><span class="line">  ##未知指令的提示</span><br><span class="line">  unknown-command: Unknown command. Type <span class="string">"/help"</span> <span class="keyword">for</span> help.</span><br><span class="line"></span><br><span class="line">  ##服务器满人提示</span><br><span class="line">  server-full: The server is full!</span><br><span class="line"></span><br><span class="line">  ##玩家连接失败提示</span><br><span class="line">  outdated-client: Outdated client! Please use {<span class="number">0</span>}</span><br><span class="line">  ##该玩家已在服务器内的提示</span><br><span class="line">  outdated-server: Outdated server! I<span class="number">'</span>m still on {<span class="number">0</span>}</span><br><span class="line">  ##服务器重启提示</span><br><span class="line">  restart: Server is restarting</span><br><span class="line">stats:</span><br><span class="line">  disable-saving: <span class="literal">false</span></span><br><span class="line">  forced-stats: {}</span><br><span class="line">world-settings:##世界的设置</span><br><span class="line">  <span class="keyword">default</span>:</span><br><span class="line">    verbose: <span class="literal">true</span></span><br><span class="line">    view-distance: <span class="number">10</span></span><br><span class="line">    chunks-per-tick: <span class="number">650</span></span><br><span class="line">    clear-tick-<span class="built_in">list</span>: <span class="literal">false</span></span><br><span class="line">    merge-radius:</span><br><span class="line">      <span class="built_in">exp</span>: <span class="number">3.0</span></span><br><span class="line">      item: <span class="number">2.5</span></span><br><span class="line">    wither-spawn-sound-radius: <span class="number">0</span></span><br><span class="line">    arrow-despawn-rate: <span class="number">1200</span></span><br><span class="line">    item-despawn-rate: <span class="number">6000</span></span><br><span class="line">    enable-zombie-pigmen-portal-spawns: <span class="literal">true</span></span><br><span class="line">    hanging-tick-frequency: <span class="number">100</span></span><br><span class="line">    zombie-aggressive-towards-villager: <span class="literal">true</span></span><br><span class="line">    max-entity-collisions: <span class="number">8</span></span><br><span class="line">    dragon-death-sound-radius: <span class="number">0</span></span><br><span class="line">    seed-village: <span class="number">10387312</span></span><br><span class="line">    seed-feature: <span class="number">14357617</span></span><br><span class="line">    anti-xray:</span><br><span class="line">      enabled: <span class="literal">true</span></span><br><span class="line">      engine-mode: <span class="number">1</span></span><br><span class="line">      hide-blocks:</span><br><span class="line">      - <span class="number">14</span></span><br><span class="line">      - <span class="number">15</span></span><br><span class="line">      - <span class="number">16</span></span><br><span class="line">      - <span class="number">21</span></span><br><span class="line">      - <span class="number">48</span></span><br><span class="line">      - <span class="number">49</span></span><br><span class="line">      - <span class="number">54</span></span><br><span class="line">      - <span class="number">56</span></span><br><span class="line">      - <span class="number">73</span></span><br><span class="line">      - <span class="number">74</span></span><br><span class="line">      - <span class="number">82</span></span><br><span class="line">      - <span class="number">129</span></span><br><span class="line">      - <span class="number">130</span></span><br><span class="line">      replace-blocks:</span><br><span class="line">      - <span class="number">1</span></span><br><span class="line">      - <span class="number">5</span></span><br><span class="line">    hopper-alt-ticking: <span class="literal">false</span></span><br><span class="line">    ticks-per:</span><br><span class="line">      hopper-transfer: <span class="number">8</span></span><br><span class="line">      hopper-check: <span class="number">8</span></span><br><span class="line">    hopper-amount: <span class="number">1</span></span><br><span class="line">    mob-spawn-range: <span class="number">4</span></span><br><span class="line">    nerf-spawner-mobs: <span class="literal">false</span></span><br><span class="line">    growth:</span><br><span class="line">      cactus-modifier: <span class="number">100</span></span><br><span class="line">      cane-modifier: <span class="number">100</span></span><br><span class="line">      melon-modifier: <span class="number">100</span></span><br><span class="line">      mushroom-modifier: <span class="number">100</span></span><br><span class="line">      pumpkin-modifier: <span class="number">100</span></span><br><span class="line">      sapling-modifier: <span class="number">100</span></span><br><span class="line">      wheat-modifier: <span class="number">100</span></span><br><span class="line">      netherwart-modifier: <span class="number">100</span></span><br><span class="line">      vine-modifier: <span class="number">100</span></span><br><span class="line">      cocoa-modifier: <span class="number">100</span></span><br><span class="line">    entity-activation-range:</span><br><span class="line">      animals: <span class="number">32</span></span><br><span class="line">      monsters: <span class="number">32</span></span><br><span class="line">      misc: <span class="number">16</span></span><br><span class="line">    entity-tracking-range:</span><br><span class="line">      players: <span class="number">48</span></span><br><span class="line">      animals: <span class="number">48</span></span><br><span class="line">      monsters: <span class="number">48</span></span><br><span class="line">      misc: <span class="number">32</span></span><br><span class="line">      other: <span class="number">64</span></span><br><span class="line">    random-light-updates: <span class="literal">false</span></span><br><span class="line">    save-structure-info: <span class="literal">true</span></span><br><span class="line">    max-bulk-chunks: <span class="number">10</span></span><br><span class="line">    hunger:</span><br><span class="line">      walk-exhaustion: <span class="number">0.2</span></span><br><span class="line">      sprint-exhaustion: <span class="number">0.8</span></span><br><span class="line">      combat-exhaustion: <span class="number">0.3</span></span><br><span class="line">      regen-exhaustion: <span class="number">3.0</span></span><br><span class="line">    max-tnt-per-tick: <span class="number">100</span></span><br><span class="line">    max-tick-time:</span><br><span class="line">      tile: <span class="number">50</span></span><br><span class="line">      entity: <span class="number">50</span></span><br><span class="line">timings:</span><br><span class="line">  enabled: <span class="literal">true</span></span><br><span class="line">  verbose: <span class="literal">true</span></span><br><span class="line">  server-name-privacy: <span class="literal">false</span></span><br><span class="line">  hidden-config-entries:</span><br><span class="line">  - database</span><br><span class="line">  - settings.bungeecord-addresses</span><br><span class="line">  history-interval: <span class="number">300</span></span><br><span class="line">  history-length: <span class="number">3600</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="3-Run-bat后台"><a href="#3-Run-bat后台" class="headerlink" title="[3]. Run.bat后台"></a>[3]. Run.bat后台</h3><blockquote>
+<p>在目录中的.bat后缀的是一个Windows的DOS指令集合，也就是服务器的后台，这个文件的名称可以是任意的。<br>使用 <strong>Notepad++</strong> 可以打开这个文件并进行配置的变更。<br><strong>Xms512M表示服务器分配的最小运行内存为512M</strong><br><strong>Xmx1024M表示服务器分配的最大运行内存为1025M</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>title后面的内容表示打开后台显示的标题</strong></p>
+</blockquote>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@ECHO OFF</span><br><span class="line">:restart</span><br><span class="line">title Spigot<span class="number">-1.7</span>.x<span class="number">-1.8</span>.x-生存服</span><br><span class="line">@echo off</span><br><span class="line">:MAIN</span><br><span class="line">cls</span><br><span class="line">java -Xms512M -Xmx1024M -jar spigot<span class="number">-1.7</span>.x<span class="number">-1.8</span>.x.jar</span><br><span class="line"><span class="keyword">if</span> exist <span class="string">"plugins\RestartEvolution\restart.mcs"</span> <span class="keyword">goto</span> MAIN</span><br><span class="line"><span class="keyword">if</span> not exist <span class="string">"plugins\RestartEvolution\restart.mcs"</span> <span class="keyword">goto</span> END</span><br><span class="line">:END</span><br><span class="line">echo.</span><br><span class="line"></span><br><span class="line">pause&gt;nul</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>服务器的内存不是无限的分配的，需要根据主机的内存大小来自行配置。</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200331112202222.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/20200331112123933.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<blockquote>
+<p>上图的 <code>8G</code>即为主机的运行内存，因为主机需要分配一些运行内存给系统或是其他的程序，所以你在分配服务器的最大运行内存时不能全都分配下去，不然你会发现后台一直崩溃。<br>每添加 <code>1G</code>能够使服务器多容纳 <code>10</code>个玩家，但如果服务端插件和 <code>mod</code>优化不好的话，光增加服务端的内存不会起到大的效果。</p>
+</blockquote>
+<blockquote>
+<p><strong>如果主机的内存够大的话，建议留下3G以上的运行内存。<br> 如果主机的内存较小的话，建议留下1G以上的运行内存。</strong><br>注： <code>1G=1024M</code></p>
+</blockquote>
+<h3 id="4-ops-json配置"><a href="#4-ops-json配置" class="headerlink" title="[4]. ops.json配置"></a>[4]. ops.json配置</h3><blockquote>
+<p>这个配置中是保存服务器的 <strong>op信息</strong>，如果你发现下载下来的服务端这个配置中不是为 <code>[]</code>时，你得把里面的op信息清空，保证服务器没有后门。<br>设置某个玩家为服务器的op，取消某个玩家的op</p>
+</blockquote>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/op 玩家</span><br><span class="line">/deop 玩家</span><br></pre></td></tr></tbody></table></figure>
+
+<p>参数介绍uuid玩家的特征码，类似于座号nameop的名称levelop拥有的权限等级，数值越大权限越高bypassesPlayerLimit能否在服务器人满的情况进入</p>
+<p><img src="https://img-blog.csdnimg.cn/2020033111285457.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<h3 id="5-banned-ips-json配置"><a href="#5-banned-ips-json配置" class="headerlink" title="[5]. banned-ips.json配置"></a>[5]. banned-ips.json配置</h3><blockquote>
+<p>这个配置主要保存的是被封禁玩家的ip信息</p>
+</blockquote>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/banip 玩家的IP地址</span><br><span class="line">/unbanip 玩家的IP地址</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>注： <code>&amp;#x5982;&amp;#x679C;&amp;#x662F;&amp;#x5728;&amp;#x540E;&amp;#x53F0;&amp;#x6267;&amp;#x884C;&amp;#x6307;&amp;#x4EE4;&amp;#x7684;&amp;#x8BDD;&amp;#x4E0D;&amp;#x9700;&amp;#x8981;&amp;#x659C;&amp;#x6760;/ &amp;#xFF0C;&amp;#x56E0;&amp;#x4E3A;&amp;#x73A9;&amp;#x5BB6;&amp;#x91CD;&amp;#x542F;&amp;#x8DEF;&amp;#x7531;&amp;#x5668;&amp;#x4E4B;&amp;#x540E;&amp;#x4ED6;&amp;#x7684;IP&amp;#x5C31;&amp;#x4F1A;&amp;#x88AB;&amp;#x91CD;&amp;#x65B0;&amp;#x5206;&amp;#x914D;&amp;#x4E00;&amp;#x4E2A;&amp;#x65B0;&amp;#x7684;&amp;#xFF0C;&amp;#x6240;&amp;#x4EE5;&amp;#x4E0D;&amp;#x63A8;&amp;#x8350;&amp;#x4F7F;&amp;#x7528;&amp;#x7981;&amp;#x73A9;&amp;#x5BB6;IP&amp;#xFF0C;&amp;#x5982;&amp;#x679C;&amp;#x4F60;&amp;#x9700;&amp;#x8981;&amp;#x6C38;&amp;#x4E45;&amp;#x7981;&amp;#x4E00;&amp;#x4E2A;&amp;#x73A9;&amp;#x5BB6;&amp;#x7684;&amp;#x8BDD;&amp;#x53EF;&amp;#x4EE5;&amp;#x5C06;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x8BBE;&amp;#x7F6E;&amp;#x4E3A;&amp;#x53EA;&amp;#x80FD;&amp;#x6CE8;&amp;#x518C;&amp;#x4E00;&amp;#x6B21;&amp;#xFF0C;&amp;#x4E4B;&amp;#x540E;&amp;#x5C01;&amp;#x7981;&amp;#x73A9;&amp;#x5BB6;&amp;#x7684;id&amp;#x5373;&amp;#x53EF;&amp;#x3002; </code></p>
+</blockquote>
+<p>参数介绍ip被封禁玩家的ip地址created什么时候被封的ipsource执行封禁操作的操作者,console是表示从后台进行封禁expiresip被封禁的时间reason封禁理由</p>
+<p><img src="https://img-blog.csdnimg.cn/20200331113807950.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<h3 id="6-banned-players-json配置"><a href="#6-banned-players-json配置" class="headerlink" title="[6]. banned-players.json配置"></a>[6]. banned-players.json配置</h3><blockquote>
+<p>这个配置保存了被封禁玩家id信息<br>封禁玩家和解禁玩家的指令如下:</p>
+</blockquote>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/ban 玩家</span><br><span class="line">/unban 玩家</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>注： <code>&amp;#x5982;&amp;#x679C;&amp;#x662F;&amp;#x5728;&amp;#x540E;&amp;#x53F0;&amp;#x6267;&amp;#x884C;&amp;#x6307;&amp;#x4EE4;&amp;#x7684;&amp;#x8BDD;&amp;#x4E0D;&amp;#x9700;&amp;#x8981;&amp;#x659C;&amp;#x6760;/</code></p>
+</blockquote>
+<p>参数介绍uuid玩家的特征码，类似于座号name被封禁的玩家名称，即idcreated什么时候被封的idsource执行封禁操作的操作者,console是表示从后台进行封禁expiresip被封禁的时间reason封禁理由</p>
+<p><img src="https://img-blog.csdnimg.cn/20200331114205270.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<h3 id="7-whitelist-json配置"><a href="#7-whitelist-json配置" class="headerlink" title="[7]. whitelist.json配置"></a>[7]. whitelist.json配置</h3><blockquote>
+<p>添加白名单用户和删除白名单用户的指令如下：</p>
+</blockquote>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/whitelist add 玩家</span><br><span class="line">/whitelist remove 玩家</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>注： <code>&amp;#x5982;&amp;#x679C;&amp;#x662F;&amp;#x5728;&amp;#x540E;&amp;#x53F0;&amp;#x6267;&amp;#x884C;&amp;#x6307;&amp;#x4EE4;&amp;#x7684;&amp;#x8BDD;&amp;#x4E0D;&amp;#x9700;&amp;#x8981;&amp;#x659C;&amp;#x6760;/</code></p>
+</blockquote>
+<p>参数介绍uuid玩家的特征码，类似于座号name玩家的名称，即id<br><img src="https://img-blog.csdnimg.cn/2020033111504424.png"></p>
+<h2 id="七、服务器插件的下载渠道"><a href="#七、服务器插件的下载渠道" class="headerlink" title="七、服务器插件的下载渠道"></a>七、服务器插件的下载渠道</h2><blockquote>
+<p>你可以在 <strong>MCBBS论坛</strong>或者是 <strong>我的世界中文分享站</strong>等官方的插件分享区下载，你也可以到MC技术群中找技术花钱去定制，有些插件可能会有后门，你在下载之前最好仔细看看评论和帖子的内容。<br><a target="_blank" rel="noopener" href="https://www.mcbbs.net/forum.php">MCBBS论坛</a></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200331133222464.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/20200331133151211.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"><br><a target="_blank" rel="noopener" href="https://www.secretmine.net/category/yzzy/zhilingheji">我的世界中文分享站</a><br><img src="https://img-blog.csdnimg.cn/20200331133416700.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<h2 id="八、服务器插件的简单使用"><a href="#八、服务器插件的简单使用" class="headerlink" title="; 八、服务器插件的简单使用"></a><a name="_391">;</a> 八、服务器插件的简单使用</h2><blockquote>
+<p>服务器中基本所有功能的实现都是依靠的插件，要使用插件的时候将对应的 <strong>.jar文件放入plugins</strong>，然后重启服务器，服务器就会自动生成相应的插件的配置。</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200331135202930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<blockquote>
+<p><strong>打开plugins，里面的.jar文件就是插件</strong>，而其余的文件夹就是相应插件的配置文件夹。<br>在那些文件夹中会保存有相应插件的配置，如果你要对插件进行变更的话可以打开相应插件的文件夹，然后找到对应的配置进行变更。</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200331135501838.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<blockquote>
+<p>注： <code>&amp;#x63D2;&amp;#x4EF6;&amp;#x7684;&amp;#x547D;&amp;#x540D;&amp;#x53EF;&amp;#x4EE5;&amp;#x81EA;&amp;#x5B9A;&amp;#x4E49;&amp;#xFF0C;&amp;#x8FD9;&amp;#x4E0D;&amp;#x4F1A;&amp;#x5F71;&amp;#x54CD;&amp;#x5230;&amp;#x63D2;&amp;#x4EF6;&amp;#x529F;&amp;#x80FD;&amp;#x7684;&amp;#x8FD0;&amp;#x884C;&amp;#x3002;&amp;#x4F60;&amp;#x53EF;&amp;#x4EE5;&amp;#x53D8;&amp;#x66F4;&amp;#x540D;&amp;#x5B57;&amp;#x4EE5;&amp;#x4FBF;&amp;#x4E8E;&amp;#x66F4;&amp;#x597D;&amp;#x5730;&amp;#x4E86;&amp;#x89E3;&amp;#x63D2;&amp;#x4EF6;&amp;#x5BF9;&amp;#x5E94;&amp;#x7684;&amp;#x529F;&amp;#x80FD;&amp;#x3002;</code><br>因为不同的插件所生成的配置文件名和配置是不同的，在你需要对插件进行变更时可以先百度一下相应插件的使用方法。</p>
+</blockquote>
+<blockquote>
+<p>在此步骤仅简单介绍一下 <strong>多世界插件</strong>，插件不是一成不变的，插件的作者通常会根据bug和玩家的反馈来推出新的插件版本。<br>注： <code>&amp;#x4F60;&amp;#x4E0D;&amp;#x4E00;&amp;#x5B9A;&amp;#x8981;&amp;#x968F;&amp;#x5927;&amp;#x6D41;&amp;#x53BB;&amp;#x4E0B;&amp;#x8F7D;&amp;#x65B0;&amp;#x7684;&amp;#x63D2;&amp;#x4EF6;&amp;#xFF0C;&amp;#x53EA;&amp;#x8981;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x7684;&amp;#x63D2;&amp;#x4EF6;&amp;#x6CA1;&amp;#x6709;bug&amp;#x6216;&amp;#x63D2;&amp;#x4EF6;&amp;#x4FBF;&amp;#x4E8E;&amp;#x4F7F;&amp;#x7528;&amp;#x7684;&amp;#x8BDD;&amp;#xFF0C;&amp;#x5C31;&amp;#x53EF;&amp;#x4EE5;&amp;#x7EE7;&amp;#x7EED;&amp;#x4F7F;&amp;#x7528;&amp;#x8BE5;&amp;#x7248;&amp;#x672C;&amp;#x7684;&amp;#x63D2;&amp;#x4EF6;&amp;#x3002;</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200331140607581.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<blockquote>
+<p>每个文件夹内一定会有一个config.yml的配置，里面的参数和选项是由插件作者设计，是一个固定存在的插件。<br>打开这些配置的时候你可以选择使用文本的方式打开，</p>
+</blockquote>
+<blockquote>
+<p>注： <code>&amp;#x6709;&amp;#x4E00;&amp;#x4E9B;&amp;#x63D2;&amp;#x4EF6;&amp;#x7684;&amp;#x529F;&amp;#x80FD;&amp;#x4E0D;&amp;#x9700;&amp;#x8981;&amp;#x4F7F;&amp;#x7528;&amp;#x5230;&amp;#x914D;&amp;#x7F6E;&amp;#xFF0C;&amp;#x53EF;&amp;#x80FD;&amp;#x53EA;&amp;#x4F1A;&amp;#x5B58;&amp;#x5728;.db&amp;#x7684;&amp;#x6570;&amp;#x636E;&amp;#x5E93;&amp;#x6587;&amp;#x4EF6;&amp;#xFF0C;&amp;#x751A;&amp;#x81F3;&amp;#x662F;&amp;#x6CA1;&amp;#x6709;&amp;#x751F;&amp;#x6210;&amp;#x6587;&amp;#x4EF6;&amp;#x5939;&amp;#x53CA;&amp;#x5176;&amp;#x914D;&amp;#x7F6E;&amp;#x3002;</code></p>
+</blockquote>
+<blockquote>
+<p>打开的config.yml配置如下所示<br>这些参数是一层一层地填写的，你可以看到上图的 <strong>multiverse-configuration</strong>参数下面还有很多个参数，下面的这些就是包含在 <strong>multiverse-configuration</strong>参数下的，如果你需要取消玩家在聊天栏中的聊天前缀的话，可以在 <strong>prefixchat</strong>参数的 <strong>true</strong>改为 <strong>false</strong></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200331143556875.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<blockquote>
+<p><strong>worlds.yml配置</strong><br>主要存放的是服务器地图的配置，你可以根据所需要变更的内容进行变更。</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200331144436175.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<h2 id="九、服务器插件介绍网站"><a href="#九、服务器插件介绍网站" class="headerlink" title="九、服务器插件介绍网站"></a>九、服务器插件介绍网站</h2><blockquote>
+<p>MC插件有很多，你也不必所有的MC插件都知道如何运用，你可以百度搜某个插件，或者是通过论坛或百科来查找相关插件的使用方式。</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="http://mineplugin.org/%E9%A6%96%E9%A1%B5">Minecraft插件百科</a><br><a target="_blank" rel="noopener" href="https://www.mcbbs.net/forum.php">MCBBS论坛</a><br><img src="https://img-blog.csdnimg.cn/20200327140008497.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+<h2 id="十、开启服务器"><a href="#十、开启服务器" class="headerlink" title="; 十、开启服务器"></a><a name="_425">;</a> 十、开启服务器</h2><blockquote>
+<p>点击服务端中.bat文件就能打开后台了，开启之前保证服 **务器端的运行内存不会超过主机的80%**，不然容易出现后台崩溃的情况。<br>这里得注意一下，在游戏中输入指令需要使用到 <code>&amp;#x659C;&amp;#x6760;/</code>，而 <strong>后台中你不需要使用斜杠</strong>，打出的每一句话都默认为一个带有斜杠的指令了。</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200331134221491.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NtYWxsZm94MjMz,size_16,color_FFFFFF,t_70"></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        帖子作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">站长</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        帖子链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2024/05/31/105138570/">http://example.com/2024/05/31/105138570/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本论坛所有帖子除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">站长</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                    <span class="chip bg-color">教程</span>
+                                </a>
+                            
+                                <a href="/tags/MC/">
+                                    <span class="chip bg-color">MC</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                                    <span class="chip bg-color">服务器</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2024/05/31/18142/">
+                    <div class="card-image">
+                        
+                        <img src="https://photo-jager.oss-cn-hangzhou.aliyuncs.com/img/PicGo/202401051810645.png" class="responsive-img" alt="Cloudflare Pages + Hexo 搭建个人博客">
+                        
+                        <span class="card-title">Cloudflare Pages + Hexo 搭建个人博客</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-05-31
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/github/" class="post-category">
+                                    github
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">教程</span>
+                    </a>
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BD%AC%E8%BD%BD/">
+                        <span class="chip bg-color">转载</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/05/31/119299329/">
+                    <div class="card-image">
+                        
+                        <img src="https://ts4.cn.mm.bing.net/th?id=OIP-C.X-Ihsd7mzgtVS-7VZpNvuwHaHI&w=80&h=80&c=1&vt=10&bgcl=317a03&r=0&o=6&dpr=2&pid=5.1" class="responsive-img" alt="10万字208道Java经典面试题总结(附答案)">
+                        
+                        <span class="card-title">10万字208道Java经典面试题总结(附答案)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-31
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/github/" class="post-category">
+                                    github
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">教程</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
+                    </a>
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2024</span>
+            
+            <a href="/about" target="_blank">站长</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">107.3k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/bianb-hehe" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2898734480@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2898734480" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2898734480" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>帖子编辑</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    #editor {
+        width: 100%;
+        height: 300px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    #preview {
+        width: 100%;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+
+<h1>帖子编辑</h1>
+
+<textarea id="editor" placeholder="在此编写..."></textarea>
+<div id="preview"></div>
+
+<button onclick="exportMarkdown()">导出帖子</button>
+<button onclick="publishToMybbs()">发布到Mybbs</button> <!-- 添加发布到Mybbs按钮 -->
+<script>
+    // Function to convert Markdown to HTML
+    function markdownToHTML(markdown) {
+        return marked(markdown);
+    }
+
+    // Update preview
+    function updatePreview() {
+        var editor = document.getElementById('editor');
+        var preview = document.getElementById('preview');
+        preview.innerHTML = markdownToHTML(editor.value);
+    }
+
+    // Initial update
+    updatePreview();
+
+    // Add event listener for input changes
+    document.getElementById('editor').addEventListener('input', updatePreview);
+
+    // Function to export Markdown
+    function exportMarkdown() {
+        var markdownText = document.getElementById('editor').value;
+        
+        // Create FormData object
+        var formData = new FormData();
+        formData.append('markdownFile', new Blob([markdownText], { type: 'text/plain' }), 'markdown.md');
+
+        // Send POST request to backend
+        fetch('/upload', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('文件上传成功！');
+            } else {
+                alert('文件上传失败！');
+            }
+        })
+        .catch(error => {
+            console.error('文件上传错误:', error);
+            alert('文件上传错误！');
+        });
+    }
+
+    // Function to publish to Mybbs
+    function publishToMybbs() {
+        // Redirect to the desired page
+        window.location.href = '/HTML/index.html';
+    }
+</script>
+
+</body>
+</html>

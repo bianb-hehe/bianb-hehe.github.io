@@ -1,0 +1,78 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>加入我们 —— myserver</title>
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<link href="./Hero/main.css" rel="stylesheet" type="text/css">
+<link href="./Hero/card0.css" rel="stylesheet" type="text/css">
+<link href="./Hero/card1.css" rel="stylesheet" type="text/css">
+<link href="./Hero/card2.css" rel="stylesheet" type="text/css">
+<link href="./Hero/card3.css" rel="stylesheet" type="text/css">
+<BODY background="Hero/picture2.jpg"><!--图片可以改 大小要求1920x2160-->
+  
+
+<style type="text/css">
+#nav1 {
+	color: black;
+	background-color: #bbbbbbb5;
+}
+</style>
+<script src="./Hero/jquery-1.8.0.js"></script>
+<script type="text/javascript" src="./Hero/main.js"></script>
+<script type="text/javascript">
+function resize() {
+	var h = document.documentElement.clientHeight;
+	var w = document.documentElement.clientWidth;
+	$("#background").css("height", document.documentElement.clientHeight);
+	$("#card0").css("height", document.documentElement.clientHeight);
+	
+	//Lights
+	$("#light1").css("left", w/2 - 220);
+	$("#light1").css("top", h/2 - 10);
+	$("#light2").css("left", w/2 - 390);
+	$("#light2").css("top", h/2 - 7);
+	$("#light3").css("left", w/2 + 445);
+	$("#light3").css("top", h/2 - 70);
+	$("#light4").css("left", w/2 + 40);
+	$("#light4").css("top", h/2 - 53);
+}
+</script>
+<meta name="baidu-site-verification" content="52jki5HgKa">
+</head>
+
+<body onload="resize()" onresize="resize()" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div id="background" style="height: 906px;">
+	<div id="lights">
+    	<div class="light light_big" id="light1" style="left: 738px; top: 443px;"></div>
+    	<div class="light light_big" id="light2" style="left: 568px; top: 446px;"></div>
+    	<div class="light" id="light3" style="left: 1403px; top: 383px;"></div>
+    	<div class="light" id="light4" style="left: 998px; top: 400px;"></div>
+    </div>
+	
+  	<div id="bk1" style="opacity: 0;"></div>
+    <div id="bk2" style="opacity: 0;"></div>
+    <div id="bkOut" style="display: none; opacity: 0;"></div>
+</div>
+
+<div id="toper">
+    <div id="logo"><a href="index2.html">首页</a></div>
+  	<div id="nav">
+    	<ul>
+            <a href="joinus.html"><li id="nav1">加入我们</li></a>
+        </ul>
+    </div>
+    
+<br>
+<br>
+  <div id="card3">
+    	<div id="c3_div" class="MCFont">
+        	<div id="c3_tile">加入我们</div>
+            <div id="c3_info">
+            	<div id="serverIP">服务器群 : </div>
+            </div>
+            </div>
+        </div>
+  </div>
+
+</body></html>
