@@ -139,6 +139,32 @@
     
     
     <entry>
+      <title>rating</title>
+      <link href="/2024/06/08/rating-1/"/>
+      <url>/2024/06/08/rating-1/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>rating</title>
+      <link href="/2024/06/08/rating/"/>
+      <url>/2024/06/08/rating/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[1.12.2][支持手机版|拔刀剑]祝福或诅咒：无限力量之征——关于剑与理想的故事</title>
       <link href="/2024/06/07/2384%E9%93%85389/"/>
       <url>/2024/06/07/2384%E9%93%85389/</url>
@@ -604,35 +630,6 @@
     
     
     <entry>
-      <title>[Github] CSDNExporter</title>
-      <link href="/2024/05/31/%5B%E5%B7%A5%E5%85%B7%5DCSDNE/"/>
-      <url>/2024/05/31/%5B%E5%B7%A5%E5%85%B7%5DCSDNE/</url>
-      
-        <content type="html"><![CDATA[<p><a href="/download/CSDNExporter-master.zip" download="">打包下载本zip</a></p><h2 id="重要说明"><a href="#重要说明" class="headerlink" title="重要说明"></a>重要说明</h2><ul><li>2024-05-22 通知：<strong>估计CSDN加入了反爬虫机制，代码已无法请求CSDN网页，因此本项目已凉~</strong></li></ul><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>CSDN 博客导出工具, 用于将 CSDN 博客导出为 Markdown / PDF 格式. 比较赞的地方在于, 它<br>不仅支持一篇博文的导出, 还支持将某个类目下的博文批量导出, 以及将导出的多篇博文汇总为<br>一篇, 以便用于全局搜索, 具体效果可以查看 <a href="https://blog.csdn.net/Eric_1993/article/details/104772437">导出 CSDN 博客至 Markdown 或 PDF 格式 (近乎完美)</a>.</p><h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><p>另外要说明的是:</p><ol start="0"><li><p>安装必要的 Python 库, 如 <code>httpx</code>, <code>requests</code>, <code>BeautifulSoup</code>, 直接运行 <code>pip install -r requirements.txt</code> 即可;</p><ul><li>2024-04-24 更新：<code>BeautifulSoup</code> 升级为 <code>beautifulsoup4</code>，已在 Ubuntu 和 Windows 系统测试过没啥问题;</li></ul></li><li><p>为了解析图片链接, 需要安装 <a href="https://aria2.github.io/">aria2</a>, 并保证能在命令行启动;</p><ul><li>将软件的安装目录加入到环境变量中即可, 加入后最好重启或刷新终端, 如 Bash、Zsh、Terminal、Powershell 等等，如果运行命令 <code>aria2c --verison</code> 不报错，说明成功；</li></ul></li><li><p>为了转换为 PDF, 需要安装 <a href="https://pandoc.org/">Pandoc</a></p><ul><li>有同学反映转换 pdf 时，遇到 pandoc 的报错 <code>pandoc: unrecognized option '--pdf-engine=xelatex'</code>, 因此还需要安装 xelatex, 具体查阅下 pandoc 的安装说明吧。<ul><li>Ubuntu 上可以使用 <code>sudo apt-get install texlive-xetex</code> + <code>sudo apt install latex-cjk-all</code> 安装 texlive 相关的内容 (注意 [LaTeX Error: File `ctex.sty’ not found</li></ul></li></ul></li></ol><p>](<a href="https://tex.stackexchange.com/questions/687540/latex-error-file-ctex-sty-not-found">https://tex.stackexchange.com/questions/687540/latex-error-file-ctex-sty-not-found</a>))<br>        - Pandoc 使用 <code>sudo apt-get install pandoc</code> 安装<br>        - 代码中使用了 ‘Source Code Pro’ 字体，是我个人很喜欢的编程字体，可以参考 <a href="https://askubuntu.com/questions/193072/how-to-use-the-adobe-source-code-pro-font">Source Code Pro Font</a> 中 edwin 的回答，从 <a href="https://fonts.google.com/">Google Font</a> 获取该字体，并按回答中的方法安装到系统中。当然，如果不想使用该字体，只需要将 <code>main.py</code> 中关于 ‘Source Code Pro’ 的两行代码给注释掉即可。</p><p>此外, 正如博客标题 <a href="https://blog.csdn.net/Eric_1993/article/details/104772437">导出 CSDN 博客至 Markdown 或 PDF 格式 (近乎完美)</a> 中说的, “近乎完美”,<br>是因为该博客导出工具还有一些细节没有考虑, 没有需求就没有动力去改代码, 精力有限, 目前该工具让我满意 😂😂😂.</p><h2 id="运行脚本"><a href="#运行脚本" class="headerlink" title="运行脚本"></a>运行脚本</h2><ul><li>Linux系统运行<br>启动脚本为 <code>./run.sh</code>, 使用 <code>chmod +x run.sh</code> 增加其可执行权限;</li><li>Windows系统启动<br>启动脚本为<code>run.bat</code>, 双击打开或者在cmd中运行<code>run.bat</code></li></ul><h2 id="更新历史"><a href="#更新历史" class="headerlink" title="更新历史"></a>更新历史</h2><ul><li>2024-04-26: 增加对表格解析的支持</li><li>2024-04-25: 修复 Windows 下使用绝对路径报错的问题</li></ul><h2 id="特别感谢"><a href="#特别感谢" class="headerlink" title="特别感谢"></a>特别感谢</h2><p>因个人原因，仓库疏于维护，非常感谢社区成员的关注与支持，尤其感谢如下成员的付出：</p><p><a href="https://github.com/yaunsine">@yaunsine</a>, <a href="https://github.com/Tim-Saijun">@Tim-Saijun</a>, <a href="https://github.com/66my">@66my</a></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> github </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> github </tag>
-            
-            <tag> 工具 </tag>
-            
-            <tag> CSDN </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>[Github]hexo-theme-mnh</title>
       <link href="/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dhexo-theme-mnh/"/>
       <url>/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dhexo-theme-mnh/</url>
@@ -681,6 +678,35 @@
             <tag> hexo主题 </tag>
             
             <tag> 精品 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[Github] CSDNExporter</title>
+      <link href="/2024/05/31/%5B%E5%B7%A5%E5%85%B7%5DCSDNE/"/>
+      <url>/2024/05/31/%5B%E5%B7%A5%E5%85%B7%5DCSDNE/</url>
+      
+        <content type="html"><![CDATA[<p><a href="/download/CSDNExporter-master.zip" download="">打包下载本zip</a></p><h2 id="重要说明"><a href="#重要说明" class="headerlink" title="重要说明"></a>重要说明</h2><ul><li>2024-05-22 通知：<strong>估计CSDN加入了反爬虫机制，代码已无法请求CSDN网页，因此本项目已凉~</strong></li></ul><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>CSDN 博客导出工具, 用于将 CSDN 博客导出为 Markdown / PDF 格式. 比较赞的地方在于, 它<br>不仅支持一篇博文的导出, 还支持将某个类目下的博文批量导出, 以及将导出的多篇博文汇总为<br>一篇, 以便用于全局搜索, 具体效果可以查看 <a href="https://blog.csdn.net/Eric_1993/article/details/104772437">导出 CSDN 博客至 Markdown 或 PDF 格式 (近乎完美)</a>.</p><h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><p>另外要说明的是:</p><ol start="0"><li><p>安装必要的 Python 库, 如 <code>httpx</code>, <code>requests</code>, <code>BeautifulSoup</code>, 直接运行 <code>pip install -r requirements.txt</code> 即可;</p><ul><li>2024-04-24 更新：<code>BeautifulSoup</code> 升级为 <code>beautifulsoup4</code>，已在 Ubuntu 和 Windows 系统测试过没啥问题;</li></ul></li><li><p>为了解析图片链接, 需要安装 <a href="https://aria2.github.io/">aria2</a>, 并保证能在命令行启动;</p><ul><li>将软件的安装目录加入到环境变量中即可, 加入后最好重启或刷新终端, 如 Bash、Zsh、Terminal、Powershell 等等，如果运行命令 <code>aria2c --verison</code> 不报错，说明成功；</li></ul></li><li><p>为了转换为 PDF, 需要安装 <a href="https://pandoc.org/">Pandoc</a></p><ul><li>有同学反映转换 pdf 时，遇到 pandoc 的报错 <code>pandoc: unrecognized option '--pdf-engine=xelatex'</code>, 因此还需要安装 xelatex, 具体查阅下 pandoc 的安装说明吧。<ul><li>Ubuntu 上可以使用 <code>sudo apt-get install texlive-xetex</code> + <code>sudo apt install latex-cjk-all</code> 安装 texlive 相关的内容 (注意 [LaTeX Error: File `ctex.sty’ not found</li></ul></li></ul></li></ol><p>](<a href="https://tex.stackexchange.com/questions/687540/latex-error-file-ctex-sty-not-found">https://tex.stackexchange.com/questions/687540/latex-error-file-ctex-sty-not-found</a>))<br>        - Pandoc 使用 <code>sudo apt-get install pandoc</code> 安装<br>        - 代码中使用了 ‘Source Code Pro’ 字体，是我个人很喜欢的编程字体，可以参考 <a href="https://askubuntu.com/questions/193072/how-to-use-the-adobe-source-code-pro-font">Source Code Pro Font</a> 中 edwin 的回答，从 <a href="https://fonts.google.com/">Google Font</a> 获取该字体，并按回答中的方法安装到系统中。当然，如果不想使用该字体，只需要将 <code>main.py</code> 中关于 ‘Source Code Pro’ 的两行代码给注释掉即可。</p><p>此外, 正如博客标题 <a href="https://blog.csdn.net/Eric_1993/article/details/104772437">导出 CSDN 博客至 Markdown 或 PDF 格式 (近乎完美)</a> 中说的, “近乎完美”,<br>是因为该博客导出工具还有一些细节没有考虑, 没有需求就没有动力去改代码, 精力有限, 目前该工具让我满意 😂😂😂.</p><h2 id="运行脚本"><a href="#运行脚本" class="headerlink" title="运行脚本"></a>运行脚本</h2><ul><li>Linux系统运行<br>启动脚本为 <code>./run.sh</code>, 使用 <code>chmod +x run.sh</code> 增加其可执行权限;</li><li>Windows系统启动<br>启动脚本为<code>run.bat</code>, 双击打开或者在cmd中运行<code>run.bat</code></li></ul><h2 id="更新历史"><a href="#更新历史" class="headerlink" title="更新历史"></a>更新历史</h2><ul><li>2024-04-26: 增加对表格解析的支持</li><li>2024-04-25: 修复 Windows 下使用绝对路径报错的问题</li></ul><h2 id="特别感谢"><a href="#特别感谢" class="headerlink" title="特别感谢"></a>特别感谢</h2><p>因个人原因，仓库疏于维护，非常感谢社区成员的关注与支持，尤其感谢如下成员的付出：</p><p><a href="https://github.com/yaunsine">@yaunsine</a>, <a href="https://github.com/Tim-Saijun">@Tim-Saijun</a>, <a href="https://github.com/66my">@66my</a></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div><div class="rating">  <span class="star" data-value="5">★</span>  <span class="star" data-value="4">★</span>  <span class="star" data-value="3">★</span>  <span class="star" data-value="2">★</span>  <span class="star" data-value="1">★</span></div><p id="rating-value">Rating: <span id="rating-score">0</span></p><style>  .rating {    direction: rtl;    font-size: 2em;    unicode-bidi: bidi-override;  }  .star {    cursor: pointer;    color: gray;  }  .star:hover,  .star:hover ~ .star {    color: gold;  }  .star.selected,  .star.selected ~ .star {    color: gold;  }</style><script>  document.addEventListener('DOMContentLoaded', function() {    const stars = document.querySelectorAll('.star');    const ratingScore = document.getElementById('rating-score');    stars.forEach(star => {      star.addEventListener('click', function() {        const value = this.getAttribute('data-value');        ratingScore.textContent = value;        stars.forEach(s => {          s.classList.remove('selected');          if (s.getAttribute('data-value') <= value) {            s.classList.add('selected');          }        });      });    });  });</script>]]></content>
+      
+      
+      <categories>
+          
+          <category> github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+            <tag> 工具 </tag>
+            
+            <tag> CSDN </tag>
             
         </tags>
       
