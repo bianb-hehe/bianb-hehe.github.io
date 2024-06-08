@@ -90,7 +90,6 @@
         <nav>
             <ul>
                 <li><a href="#">首页</a></li>
-                
             </ul>
         </nav>
     </header>
@@ -100,7 +99,7 @@
             <textarea id="markdown-content" placeholder="在这里输入Markdown文档内容..."></textarea>
             <div class="button-group">
                 <button onclick="exportMarkdown()">导出为Markdown</button>
-                <button onclick="publishDocument()">发布帖子</button>
+                <button onclick="publishDocument()">去qq群发布</button>
             </div>
         </section>
     </main>
@@ -126,24 +125,10 @@
         }
 
         function publishDocument() {
-            const content = document.getElementById('markdown-content').value;
-            const filename = generateRandomFilename();
-            
-            // Simulate publishing (this requires server-side support)
-            fetch('publish.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ filename: filename, content: content })
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('文档已发布为 ' + filename);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+            // Remove the content retrieval and any server-side publishing logic
+            alert('文档已发布。');
+            // Redirect to QQ group
+            window.location.href = 'http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=AVD1Y5VnrY8z603_1dFsQrHfY1Uodp1O&authKey=bX2RSjVq%2BYvjD2fsZ3PpEz4r2UAeV0e4lMLr4gTi7agxGPNsEfOP2M%2F%2Bw7i1mryp&noverify=0&group_code=565126072';
         }
     </script>
 </body>
