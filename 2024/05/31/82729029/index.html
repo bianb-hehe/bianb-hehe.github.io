@@ -732,7 +732,7 @@ queueMicrotask(() => {
   const initArtalk = () => {
     window.artalkItem = new Artalk(Object.assign({
       el: '#artalk-wrap',
-      server: 'https://www.pixelbbs.cn/',
+      server: 'https://bianb-hehe.github.io/',
       site: 'blog',
       pageKey: location.pathname,
       darkMode: document.documentElement.getAttribute('data-theme') === 'dark',
@@ -764,7 +764,7 @@ queueMicrotask(() => {
 
   const getCount = () => {
     Artalk.loadCountWidget({
-      server: 'https://www.pixelbbs.cn/',
+      server: 'https://bianb-hehe.github.io/',
       site: 'blog',
       countEl: '.artalk-count'
     })
@@ -830,7 +830,7 @@ queueMicrotask(() => {
 
   const getSetting = async () => {
     try {
-      const res = await fetch('https://www.pixelbbs.cn//api/conf', { method: 'GET' })
+      const res = await fetch('https://bianb-hehe.github.io//api/conf', { method: 'GET' })
       return await res.json()
     } catch (e) {
       console.log(e)
@@ -852,7 +852,7 @@ queueMicrotask(() => {
 
   const getComment = async () => {
     try {
-      const res = await fetch('https://www.pixelbbs.cn//api/stat', headerList)
+      const res = await fetch('https://bianb-hehe.github.io//api/stat', headerList)
       const result = await res.json()
       const avatarStr = await getSetting()
       const { mirror, params, default:defaults } = avatarStr.data.frontend_conf.gravatar

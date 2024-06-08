@@ -492,6 +492,31 @@
     
     
     <entry>
+      <title>Mybbs发帖教程</title>
+      <link href="/2024/05/31/%E5%8F%91%E5%B8%96/"/>
+      <url>/2024/05/31/%E5%8F%91%E5%B8%96/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://img.pixelbbs.cn/LightPicture/2024/05/cfcfa66857ba57c1.jpg"></p><span id="more"></span><p>由于这个网站没有直接的发帖路径<br>所以版主制作了一个发布系统<br>*注意:网址会变动，时不时404,加裙获取最新网址 群号:971519377<br>按如下格式编写</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 写上你的标题</span><br><span class="line">categories: </span><br><span class="line">- 你的分类</span><br><span class="line">tags:</span><br><span class="line">- 标签1</span><br><span class="line">- 便签2</span><br><span class="line">comments: 设置评论为打开(<span class="literal">true</span>)关闭(<span class="literal">false</span>)</span><br><span class="line">img: （封面图，填网址！网址！)</span><br><span class="line">---</span><br><span class="line">&lt;帖子内容&gt;</span><br><span class="line">(在帖子内容中，可以随意使用md语法以及html标签</span><br></pre></td></tr></tbody></table></figure><p><a href=".\download\模板.md" download="">打包下载模板</a><br>教程完毕！有问题评论区发言</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[休闲] [整合包发布] [1.20.6-1.7.10]XPlus 2.0 原版整合 - 高效/稳定/便捷[Fabric/Forge]</title>
       <link href="/2024/05/31/%E6%95%B4%E5%90%88%E5%8C%851/"/>
       <url>/2024/05/31/%E6%95%B4%E5%90%88%E5%8C%851/</url>
@@ -515,31 +540,6 @@
             <tag> 整合包 </tag>
             
             <tag> 休闲 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Mybbs发帖教程</title>
-      <link href="/2024/05/31/%E5%8F%91%E5%B8%96/"/>
-      <url>/2024/05/31/%E5%8F%91%E5%B8%96/</url>
-      
-        <content type="html"><![CDATA[<p><img src="https://img.pixelbbs.cn/LightPicture/2024/05/cfcfa66857ba57c1.jpg"></p><span id="more"></span><p>由于这个网站没有直接的发帖路径<br>所以版主制作了一个发布系统<br>*注意:网址会变动，时不时404,加裙获取最新网址 群号:971519377<br>按如下格式编写</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 写上你的标题</span><br><span class="line">categories: </span><br><span class="line">- 你的分类</span><br><span class="line">tags:</span><br><span class="line">- 标签1</span><br><span class="line">- 便签2</span><br><span class="line">comments: 设置评论为打开(<span class="literal">true</span>)关闭(<span class="literal">false</span>)</span><br><span class="line">img: （封面图，填网址！网址！)</span><br><span class="line">---</span><br><span class="line">&lt;帖子内容&gt;</span><br><span class="line">(在帖子内容中，可以随意使用md语法以及html标签</span><br></pre></td></tr></tbody></table></figure><p><a href=".\download\模板.md" download="">打包下载模板</a><br>教程完毕！有问题评论区发言</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 教程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 教程 </tag>
             
         </tags>
       
@@ -768,33 +768,6 @@
     
     
     <entry>
-      <title>[Myserver]率真阿婆主修仙服</title>
-      <link href="/2024/05/31/%5BMyserver%5D%E7%8E%87%E7%9C%9F%E9%98%BF%E5%A9%86%E4%B8%BB%E4%BF%AE%E4%BB%99%E6%9C%8D/"/>
-      <url>/2024/05/31/%5BMyserver%5D%E7%8E%87%E7%9C%9F%E9%98%BF%E5%A9%86%E4%B8%BB%E4%BF%AE%E4%BB%99%E6%9C%8D/</url>
-      
-        <content type="html"><![CDATA[<p><img src="https://img.pixelbbs.cn/LightPicture/2024/05/57172531612f8f3d.png"></p><span id="more"></span><p>服务器开在网易<br>qq裙:873918956<br>类似仙居，胜于仙居</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 宣传 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MC </tag>
-            
-            <tag> 服务器 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>[Github]hexo-theme-Snippet——简洁而不简单</title>
       <link href="/2024/05/31/Snippet%20%E7%AE%80%E6%B4%81%E8%80%8C%E4%B8%8D%E7%AE%80%E5%8D%95/"/>
       <url>/2024/05/31/Snippet%20%E7%AE%80%E6%B4%81%E8%80%8C%E4%B8%8D%E7%AE%80%E5%8D%95/</url>
@@ -814,6 +787,33 @@
             <tag> github </tag>
             
             <tag> hexo主题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[Myserver]率真阿婆主修仙服</title>
+      <link href="/2024/05/31/%5BMyserver%5D%E7%8E%87%E7%9C%9F%E9%98%BF%E5%A9%86%E4%B8%BB%E4%BF%AE%E4%BB%99%E6%9C%8D/"/>
+      <url>/2024/05/31/%5BMyserver%5D%E7%8E%87%E7%9C%9F%E9%98%BF%E5%A9%86%E4%B8%BB%E4%BF%AE%E4%BB%99%E6%9C%8D/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://img.pixelbbs.cn/LightPicture/2024/05/57172531612f8f3d.png"></p><span id="more"></span><p>服务器开在网易<br>qq裙:873918956<br>类似仙居，胜于仙居</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 宣传 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MC </tag>
+            
+            <tag> 服务器 </tag>
             
         </tags>
       
