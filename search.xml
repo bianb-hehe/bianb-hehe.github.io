@@ -492,6 +492,31 @@
     
     
     <entry>
+      <title>Mybbs发帖教程</title>
+      <link href="/2024/05/31/%E5%8F%91%E5%B8%96/"/>
+      <url>/2024/05/31/%E5%8F%91%E5%B8%96/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://img.pixelbbs.cn/LightPicture/2024/05/cfcfa66857ba57c1.jpg"></p><span id="more"></span><p>由于这个网站没有直接的发帖路径<br>所以版主制作了一个发布系统<br>*注意:网址会变动，时不时404,加裙获取最新网址 群号:971519377<br>按如下格式编写</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 写上你的标题</span><br><span class="line">categories: </span><br><span class="line">- 你的分类</span><br><span class="line">tags:</span><br><span class="line">- 标签1</span><br><span class="line">- 便签2</span><br><span class="line">comments: 设置评论为打开(<span class="literal">true</span>)关闭(<span class="literal">false</span>)</span><br><span class="line">img: （封面图，填网址！网址！)</span><br><span class="line">---</span><br><span class="line">&lt;帖子内容&gt;</span><br><span class="line">(在帖子内容中，可以随意使用md语法以及html标签</span><br></pre></td></tr></tbody></table></figure><p><a href=".\download\模板.md" download="">打包下载模板</a><br>教程完毕！有问题评论区发言</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[休闲] [整合包发布] [1.20.6-1.7.10]XPlus 2.0 原版整合 - 高效/稳定/便捷[Fabric/Forge]</title>
       <link href="/2024/05/31/%E6%95%B4%E5%90%88%E5%8C%851/"/>
       <url>/2024/05/31/%E6%95%B4%E5%90%88%E5%8C%851/</url>
@@ -523,23 +548,25 @@
     
     
     <entry>
-      <title>Mybbs发帖教程</title>
-      <link href="/2024/05/31/%E5%8F%91%E5%B8%96/"/>
-      <url>/2024/05/31/%E5%8F%91%E5%B8%96/</url>
+      <title>[Github]hexo-theme-3-hexo</title>
+      <link href="/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5D3-hexo/"/>
+      <url>/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5D3-hexo/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://img.pixelbbs.cn/LightPicture/2024/05/cfcfa66857ba57c1.jpg"></p><span id="more"></span><p>由于这个网站没有直接的发帖路径<br>所以版主制作了一个发布系统<br>*注意:网址会变动，时不时404,加裙获取最新网址 群号:971519377<br>按如下格式编写</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 写上你的标题</span><br><span class="line">categories: </span><br><span class="line">- 你的分类</span><br><span class="line">tags:</span><br><span class="line">- 标签1</span><br><span class="line">- 便签2</span><br><span class="line">comments: 设置评论为打开(<span class="literal">true</span>)关闭(<span class="literal">false</span>)</span><br><span class="line">img: （封面图，填网址！网址！)</span><br><span class="line">---</span><br><span class="line">&lt;帖子内容&gt;</span><br><span class="line">(在帖子内容中，可以随意使用md语法以及html标签</span><br></pre></td></tr></tbody></table></figure><p><a href=".\download\模板.md" download="">打包下载模板</a><br>教程完毕！有问题评论区发言</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+        <content type="html"><![CDATA[<p><a href="/download/[主题]3-hexo/hexo-theme-3-hexo-master.zip" download="">打包下载本主题zip</a><br>3-hexo 是为 <a href="https://github.com/tommy351/hexo">hexo</a> 制作的主题。三段式设计、方便。你可以点击: <a href="https://yelog.org/">我的博客</a> 查看效果</p><p>如果想要体验手机浏览效果，可以扫以下二维码：</p><p><img src="https://i.loli.net/2020/01/28/OqXkYuf8ipED6QM.png" alt="二维码图片_1月28日11时25分02秒.png"></p><p>配置及说明： <a href="http://yelog.org/2017/03/23/3-hexo-instruction/">3-hexo使用说明</a><br>功能更新日志：<a href="http://yelog.org/2017/03/13/3-hexo-logs/">3-hexo开发日志-持续更新</a><br>—————————————— &nbsp;<br><strong>关于主题：</strong></p><ol><li>极简体验</li><li>三段式设计</li><li>通过文章分类、标签或标题关键字检索</li><li>移动端适配</li><li>评论</li><li>多作者模式</li><li>全文快捷键</li></ol><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yelog/hexo-theme-3-hexo.git themes/3-hexo</span><br></pre></td></tr></tbody></table></figure><p>修改hexo根目录的<code>_config.yml</code>，如下</p><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="number">3</span><span class="string">-hexo</span></span><br></pre></td></tr></tbody></table></figure><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes/3-hexo</span><br><span class="line">git pull</span><br></pre></td></tr></tbody></table></figure><h2 id="外观"><a href="#外观" class="headerlink" title="外观"></a>外观</h2><h3 id="整体设计"><a href="#整体设计" class="headerlink" title="整体设计"></a>整体设计</h3><p><strong>三段式设计:</strong><br><img src="http://img.saodiyang.com/Fl2tl1Is5zx-D0DAt03bg0WkWXhO.png" alt="三段式设计"></p><h3 id="通过分类过滤"><a href="#通过分类过滤" class="headerlink" title="通过分类过滤"></a>通过分类过滤</h3><p><img src="http://img.saodiyang.com/FmooXnOPeRPGBts5V5W7CV0AHuIo.gif" alt="分类过滤文章"></p><h3 id="通过标题关键字搜索"><a href="#通过标题关键字搜索" class="headerlink" title="通过标题关键字搜索"></a>通过标题关键字搜索</h3><p><img src="http://img.saodiyang.com/FkF9lgTJoLdmNlYbTVokSNB3zdS4.gif" alt="文章标题关键字搜索"></p><h3 id="通过作者搜索"><a href="#通过作者搜索" class="headerlink" title="通过作者搜索"></a>通过作者搜索</h3><p><strong>若开启了多作者模式，则可以通过输入@，进行作者搜索，如下所示</strong><br><img src="http://img.saodiyang.com/FhbFRRPIDuz1pEKH-dr-RWDHVvXn.gif" alt="通过作者搜索"></p><h3 id="通过标签搜索"><a href="#通过标签搜索" class="headerlink" title="通过标签搜索"></a>通过标签搜索</h3><p><strong>输入#，就会出现标签提示</strong><br><img src="http://img.saodiyang.com/FoJsDnsoLWKo7ECSzcLmzUX_uWgw.gif" alt="通过标签搜索"></p><h3 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h3><p><img src="http://img.saodiyang.com/FtDD77YX_xenS-AZQW56qrwrQc4D.gif" alt="测试一下评论"></p><h3 id="打赏功能"><a href="#打赏功能" class="headerlink" title="打赏功能"></a>打赏功能</h3><p><img src="http://img.saodiyang.com/FhlNgOF7ipEIVrrztFdRam3WRikw.gif" alt="打赏功能"></p><h3 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h3><p><img src="http://img.saodiyang.com/FhQLLqrRCr4yFGl9nDb_9oc4yME-.png" alt="文章置顶"></p><h3 id="返回头部"><a href="#返回头部" class="headerlink" title="返回头部"></a>返回头部</h3><p><img src="http://img.saodiyang.com/FjpVByJViwYEWHHMTeayiQ-FD_qG.gif" alt="返回头部"></p><h2 id="效果博客"><a href="#效果博客" class="headerlink" title="效果博客"></a>效果博客</h2><ul><li><a href="https://www.chenuon.cn/">程忧点滴</a></li><li><a href="https://coco56.gitee.io/blog/">COCO56个人博客</a></li><li><a href="https://wallleap.cn/">wallleap</a></li><li><a href="https://dingguanyu.com/">黑刀的个人博客</a></li></ul><h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p> 作者Peiwen Lu的jekyll主题：<a href="https://github.com/P233/3-Jekyll">3-jekyll</a>主题<br> 作者Yansu的<a href="http://yansu.org/">blog</a><br> 作者litten的<a href="https://github.com/litten/hexo-theme-yilia">hexo-theme-yilia</a>主题</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
       
       
       <categories>
           
-          <category> 教程 </category>
+          <category> github </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 教程 </tag>
+            <tag> github </tag>
+            
+            <tag> hexo主题 </tag>
             
         </tags>
       
@@ -598,33 +625,6 @@
             <tag> hexo主题 </tag>
             
             <tag> 精品 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>[Github]hexo-theme-3-hexo</title>
-      <link href="/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5D3-hexo/"/>
-      <url>/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5D3-hexo/</url>
-      
-        <content type="html"><![CDATA[<p><a href="/download/[主题]3-hexo/hexo-theme-3-hexo-master.zip" download="">打包下载本主题zip</a><br>3-hexo 是为 <a href="https://github.com/tommy351/hexo">hexo</a> 制作的主题。三段式设计、方便。你可以点击: <a href="https://yelog.org/">我的博客</a> 查看效果</p><p>如果想要体验手机浏览效果，可以扫以下二维码：</p><p><img src="https://i.loli.net/2020/01/28/OqXkYuf8ipED6QM.png" alt="二维码图片_1月28日11时25分02秒.png"></p><p>配置及说明： <a href="http://yelog.org/2017/03/23/3-hexo-instruction/">3-hexo使用说明</a><br>功能更新日志：<a href="http://yelog.org/2017/03/13/3-hexo-logs/">3-hexo开发日志-持续更新</a><br>—————————————— &nbsp;<br><strong>关于主题：</strong></p><ol><li>极简体验</li><li>三段式设计</li><li>通过文章分类、标签或标题关键字检索</li><li>移动端适配</li><li>评论</li><li>多作者模式</li><li>全文快捷键</li></ol><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yelog/hexo-theme-3-hexo.git themes/3-hexo</span><br></pre></td></tr></tbody></table></figure><p>修改hexo根目录的<code>_config.yml</code>，如下</p><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="number">3</span><span class="string">-hexo</span></span><br></pre></td></tr></tbody></table></figure><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes/3-hexo</span><br><span class="line">git pull</span><br></pre></td></tr></tbody></table></figure><h2 id="外观"><a href="#外观" class="headerlink" title="外观"></a>外观</h2><h3 id="整体设计"><a href="#整体设计" class="headerlink" title="整体设计"></a>整体设计</h3><p><strong>三段式设计:</strong><br><img src="http://img.saodiyang.com/Fl2tl1Is5zx-D0DAt03bg0WkWXhO.png" alt="三段式设计"></p><h3 id="通过分类过滤"><a href="#通过分类过滤" class="headerlink" title="通过分类过滤"></a>通过分类过滤</h3><p><img src="http://img.saodiyang.com/FmooXnOPeRPGBts5V5W7CV0AHuIo.gif" alt="分类过滤文章"></p><h3 id="通过标题关键字搜索"><a href="#通过标题关键字搜索" class="headerlink" title="通过标题关键字搜索"></a>通过标题关键字搜索</h3><p><img src="http://img.saodiyang.com/FkF9lgTJoLdmNlYbTVokSNB3zdS4.gif" alt="文章标题关键字搜索"></p><h3 id="通过作者搜索"><a href="#通过作者搜索" class="headerlink" title="通过作者搜索"></a>通过作者搜索</h3><p><strong>若开启了多作者模式，则可以通过输入@，进行作者搜索，如下所示</strong><br><img src="http://img.saodiyang.com/FhbFRRPIDuz1pEKH-dr-RWDHVvXn.gif" alt="通过作者搜索"></p><h3 id="通过标签搜索"><a href="#通过标签搜索" class="headerlink" title="通过标签搜索"></a>通过标签搜索</h3><p><strong>输入#，就会出现标签提示</strong><br><img src="http://img.saodiyang.com/FoJsDnsoLWKo7ECSzcLmzUX_uWgw.gif" alt="通过标签搜索"></p><h3 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h3><p><img src="http://img.saodiyang.com/FtDD77YX_xenS-AZQW56qrwrQc4D.gif" alt="测试一下评论"></p><h3 id="打赏功能"><a href="#打赏功能" class="headerlink" title="打赏功能"></a>打赏功能</h3><p><img src="http://img.saodiyang.com/FhlNgOF7ipEIVrrztFdRam3WRikw.gif" alt="打赏功能"></p><h3 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h3><p><img src="http://img.saodiyang.com/FhQLLqrRCr4yFGl9nDb_9oc4yME-.png" alt="文章置顶"></p><h3 id="返回头部"><a href="#返回头部" class="headerlink" title="返回头部"></a>返回头部</h3><p><img src="http://img.saodiyang.com/FjpVByJViwYEWHHMTeayiQ-FD_qG.gif" alt="返回头部"></p><h2 id="效果博客"><a href="#效果博客" class="headerlink" title="效果博客"></a>效果博客</h2><ul><li><a href="https://www.chenuon.cn/">程忧点滴</a></li><li><a href="https://coco56.gitee.io/blog/">COCO56个人博客</a></li><li><a href="https://wallleap.cn/">wallleap</a></li><li><a href="https://dingguanyu.com/">黑刀的个人博客</a></li></ul><h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p> 作者Peiwen Lu的jekyll主题：<a href="https://github.com/P233/3-Jekyll">3-jekyll</a>主题<br> 作者Yansu的<a href="http://yansu.org/">blog</a><br> 作者litten的<a href="https://github.com/litten/hexo-theme-yilia">hexo-theme-yilia</a>主题</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> github </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> github </tag>
-            
-            <tag> hexo主题 </tag>
             
         </tags>
       
@@ -739,6 +739,33 @@
     
     
     <entry>
+      <title>[Myserver]率真阿婆主修仙服</title>
+      <link href="/2024/05/31/%5BMyserver%5D%E7%8E%87%E7%9C%9F%E9%98%BF%E5%A9%86%E4%B8%BB%E4%BF%AE%E4%BB%99%E6%9C%8D/"/>
+      <url>/2024/05/31/%5BMyserver%5D%E7%8E%87%E7%9C%9F%E9%98%BF%E5%A9%86%E4%B8%BB%E4%BF%AE%E4%BB%99%E6%9C%8D/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://img.pixelbbs.cn/LightPicture/2024/05/57172531612f8f3d.png"></p><span id="more"></span><p>服务器开在网易<br>qq裙:873918956<br>类似仙居，胜于仙居</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 宣传 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MC </tag>
+            
+            <tag> 服务器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Minecraft 1.21：快照24w05a发布！解锁宝库，大量稀有战利品！</title>
       <link href="/2024/05/31/Minecraft%201.21%EF%BC%9A%E5%BF%AB%E7%85%A724w05a%E5%8F%91%E5%B8%83%EF%BC%81%E8%A7%A3%E9%94%81%E5%AE%9D%E5%BA%93%EF%BC%8C%E5%A4%A7%E9%87%8F%E7%A8%80%E6%9C%89%E6%88%98%E5%88%A9%E5%93%81%EF%BC%81/"/>
       <url>/2024/05/31/Minecraft%201.21%EF%BC%9A%E5%BF%AB%E7%85%A724w05a%E5%8F%91%E5%B8%83%EF%BC%81%E8%A7%A3%E9%94%81%E5%AE%9D%E5%BA%93%EF%BC%8C%E5%A4%A7%E9%87%8F%E7%A8%80%E6%9C%89%E6%88%98%E5%88%A9%E5%93%81%EF%BC%81/</url>
@@ -787,33 +814,6 @@
             <tag> github </tag>
             
             <tag> hexo主题 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>[Myserver]率真阿婆主修仙服</title>
-      <link href="/2024/05/31/%5BMyserver%5D%E7%8E%87%E7%9C%9F%E9%98%BF%E5%A9%86%E4%B8%BB%E4%BF%AE%E4%BB%99%E6%9C%8D/"/>
-      <url>/2024/05/31/%5BMyserver%5D%E7%8E%87%E7%9C%9F%E9%98%BF%E5%A9%86%E4%B8%BB%E4%BF%AE%E4%BB%99%E6%9C%8D/</url>
-      
-        <content type="html"><![CDATA[<p><img src="https://img.pixelbbs.cn/LightPicture/2024/05/57172531612f8f3d.png"></p><span id="more"></span><p>服务器开在网易<br>qq裙:873918956<br>类似仙居，胜于仙居</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 宣传 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MC </tag>
-            
-            <tag> 服务器 </tag>
             
         </tags>
       
