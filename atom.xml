@@ -6,7 +6,7 @@
   <link href="https://bianb-hehe.github.io/atom.xml" rel="self"/>
   
   <link href="https://bianb-hehe.github.io/"/>
-  <updated>2024-06-06T13:49:43.577Z</updated>
+  <updated>2024-06-08T05:54:10.311Z</updated>
   <id>https://bianb-hehe.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://bianb-hehe.github.io/2026/05/26/8684/"/>
     <id>https://bianb-hehe.github.io/2026/05/26/8684/</id>
     <published>2026-05-26T05:03:32.000Z</published>
-    <updated>2024-06-06T13:49:43.577Z</updated>
+    <updated>2024-06-08T05:54:10.311Z</updated>
     
     
       
@@ -48,7 +48,7 @@
     <link href="https://bianb-hehe.github.io/2025/09/24/2589378/"/>
     <id>https://bianb-hehe.github.io/2025/09/24/2589378/</id>
     <published>2025-09-23T20:17:35.000Z</published>
-    <updated>2024-06-03T08:59:35.881Z</updated>
+    <updated>2024-06-08T05:53:48.060Z</updated>
     
     
     <summary type="html">这是 Disqus 最近更新的一项功能。 如果您已经为自己的博客启用 Disqus 评论系统，直接打开 https://disqus.com/admin/settings/recommendations/ 选择站点，找到Enable Recommendations on your site，选定布局样式，暂时支持更改的项目有：   显示文章发表日期  显示评论数  推荐栏目的布局  推荐文章的日期</summary>
@@ -69,14 +69,16 @@
     <link href="https://bianb-hehe.github.io/2025/09/24/28523795/"/>
     <id>https://bianb-hehe.github.io/2025/09/24/28523795/</id>
     <published>2025-09-23T20:17:35.000Z</published>
-    <updated>2024-06-03T08:59:35.883Z</updated>
+    <updated>2024-06-08T05:53:18.497Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;iframe src=&quot;https://www.bilibili.com/video/BV1aZ42117MF&quot; width=&quot;800&quot; height=&quot;600&quot; frameborder=&quot;0&quot;</summary>
+    <summary type="html">&lt;iframe src=&quot;https://www.bilibili.com/video/BV1aZ42117MF&quot; width=&quot;800&quot; height=&quot;600&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
+&lt;/iframe&gt;
+&lt;div</summary>
         
       
     
@@ -96,7 +98,7 @@
     <link href="https://bianb-hehe.github.io/2025/04/07/GriefDefender/"/>
     <id>https://bianb-hehe.github.io/2025/04/07/GriefDefender/</id>
     <published>2025-04-07T04:12:13.000Z</published>
-    <updated>2024-06-08T04:33:30.196Z</updated>
+    <updated>2024-06-08T05:50:27.333Z</updated>
     
     
       
@@ -123,7 +125,7 @@
     <link href="https://bianb-hehe.github.io/2025/02/25/57892389/"/>
     <id>https://bianb-hehe.github.io/2025/02/25/57892389/</id>
     <published>2025-02-25T06:04:55.000Z</published>
-    <updated>2024-06-03T08:59:35.880Z</updated>
+    <updated>2024-06-08T05:53:09.986Z</updated>
     
     
     <summary type="html">sdcv = stardict console version ，即终端下的 stardict 词典  支持导入本地词典！</summary>
@@ -144,7 +146,7 @@
     <link href="https://bianb-hehe.github.io/2024/06/07/2384%E9%93%85389/"/>
     <id>https://bianb-hehe.github.io/2024/06/07/2384%E9%93%85389/</id>
     <published>2024-06-07T13:07:54.845Z</published>
-    <updated>2024-06-07T13:36:45.485Z</updated>
+    <updated>2024-06-08T05:54:18.854Z</updated>
     
     
       
@@ -173,7 +175,7 @@
     <link href="https://bianb-hehe.github.io/2024/06/07/Dominion/"/>
     <id>https://bianb-hehe.github.io/2024/06/07/Dominion/</id>
     <published>2024-06-07T13:00:41.187Z</published>
-    <updated>2024-06-07T13:01:45.957Z</updated>
+    <updated>2024-06-08T05:50:34.950Z</updated>
     
     
     <summary type="html">新的领地插件，支持Folia！</summary>
@@ -194,7 +196,7 @@
     <link href="https://bianb-hehe.github.io/2024/06/07/opl_mc/"/>
     <id>https://bianb-hehe.github.io/2024/06/07/opl_mc/</id>
     <published>2024-06-07T12:41:59.057Z</published>
-    <updated>2024-06-07T12:42:54.790Z</updated>
+    <updated>2024-06-08T05:50:01.605Z</updated>
     
     
       
@@ -224,7 +226,7 @@
     <link href="https://bianb-hehe.github.io/2024/06/07/ANine-LuckPermsEX/"/>
     <id>https://bianb-hehe.github.io/2024/06/07/ANine-LuckPermsEX/</id>
     <published>2024-06-07T12:37:22.479Z</published>
-    <updated>2024-06-07T12:40:10.823Z</updated>
+    <updated>2024-06-08T05:51:15.132Z</updated>
     
     
     <summary type="html">ANine-LuckPermsEX可以把Anine称号同步到LP权限插件的称号上</summary>
@@ -245,7 +247,7 @@
     <link href="https://bianb-hehe.github.io/2024/06/06/4939453/"/>
     <id>https://bianb-hehe.github.io/2024/06/06/4939453/</id>
     <published>2024-06-06T10:41:29.323Z</published>
-    <updated>2024-06-08T04:15:37.839Z</updated>
+    <updated>2024-06-08T05:53:35.637Z</updated>
     
     
       
@@ -272,7 +274,7 @@
     <link href="https://bianb-hehe.github.io/2024/06/06/130442795/"/>
     <id>https://bianb-hehe.github.io/2024/06/06/130442795/</id>
     <published>2024-06-06T05:52:25.000Z</published>
-    <updated>2024-06-06T13:53:38.560Z</updated>
+    <updated>2024-06-08T05:51:58.273Z</updated>
     
     
       
@@ -300,7 +302,7 @@
     <link href="https://bianb-hehe.github.io/2024/06/03/481472347/"/>
     <id>https://bianb-hehe.github.io/2024/06/03/481472347/</id>
     <published>2024-06-03T11:14:46.237Z</published>
-    <updated>2024-06-03T11:21:18.871Z</updated>
+    <updated>2024-06-08T05:51:52.490Z</updated>
     
     
       
@@ -327,7 +329,7 @@
     <link href="https://bianb-hehe.github.io/2024/06/02/178/"/>
     <id>https://bianb-hehe.github.io/2024/06/02/178/</id>
     <published>2024-06-02T05:03:45.459Z</published>
-    <updated>2024-06-03T08:59:35.879Z</updated>
+    <updated>2024-06-08T05:54:28.697Z</updated>
     
     
       
@@ -354,7 +356,7 @@
     <link href="https://bianb-hehe.github.io/2024/06/02/hexo-tutorial-use-your-domain-beginner/"/>
     <id>https://bianb-hehe.github.io/2024/06/02/hexo-tutorial-use-your-domain-beginner/</id>
     <published>2024-06-02T03:51:36.965Z</published>
-    <updated>2024-06-03T08:59:35.873Z</updated>
+    <updated>2024-06-08T05:50:21.280Z</updated>
     
     
     <summary type="html">使用自己的域名访问HEXO！</summary>
@@ -377,7 +379,7 @@
     <link href="https://bianb-hehe.github.io/2024/06/01/845792875/"/>
     <id>https://bianb-hehe.github.io/2024/06/01/845792875/</id>
     <published>2024-06-01T05:47:46.356Z</published>
-    <updated>2024-06-03T08:59:35.875Z</updated>
+    <updated>2024-06-08T05:51:46.339Z</updated>
     
     
       
@@ -406,7 +408,7 @@
     <link href="https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[%E8%81%94%E6%9C%BA][2021.1.1][CPS].schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/"/>
     <id>https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[%E8%81%94%E6%9C%BA][2021.1.1][CPS].schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/</id>
     <published>2024-05-31T10:24:06.311Z</published>
-    <updated>2024-06-08T02:38:16.912Z</updated>
+    <updated>2024-06-08T05:54:36.972Z</updated>
     
     
     <summary type="html">&lt;p&gt;联机教程&lt;/p&gt;</summary>
@@ -429,7 +431,7 @@
     <link href="https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[Wiki][PCD]MythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/"/>
     <id>https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[Wiki][PCD]MythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/</id>
     <published>2024-05-31T10:24:06.311Z</published>
-    <updated>2024-06-08T02:38:16.912Z</updated>
+    <updated>2024-06-08T05:54:44.554Z</updated>
     
     
     <summary type="html">&lt;p&gt;联机教程&lt;/p&gt;</summary>
@@ -452,7 +454,7 @@
     <link href="https://bianb-hehe.github.io/2024/05/31/%E5%8F%8B%E9%93%BE/"/>
     <id>https://bianb-hehe.github.io/2024/05/31/%E5%8F%8B%E9%93%BE/</id>
     <published>2024-05-31T10:24:06.311Z</published>
-    <updated>2024-06-08T02:38:16.912Z</updated>
+    <updated>2024-06-08T05:49:35.668Z</updated>
     
     
     <summary type="html">&lt;p&gt;Mybbs友链&lt;/p&gt;</summary>
@@ -469,7 +471,7 @@
     <link href="https://bianb-hehe.github.io/2024/05/31/%E5%8F%91%E5%B8%96/"/>
     <id>https://bianb-hehe.github.io/2024/05/31/%E5%8F%91%E5%B8%96/</id>
     <published>2024-05-31T10:24:06.311Z</published>
-    <updated>2024-06-08T02:38:16.912Z</updated>
+    <updated>2024-06-08T05:49:42.340Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://img.pixelbbs.cn/LightPicture/2024/05/cfcfa66857ba57c1.jpg&quot;&gt;&lt;/p&gt;</summary>
@@ -488,7 +490,7 @@
     <link href="https://bianb-hehe.github.io/2024/05/31/%E6%95%B4%E5%90%88%E5%8C%851/"/>
     <id>https://bianb-hehe.github.io/2024/05/31/%E6%95%B4%E5%90%88%E5%8C%851/</id>
     <published>2024-05-31T10:24:06.311Z</published>
-    <updated>2024-06-08T01:58:57.643Z</updated>
+    <updated>2024-06-08T05:49:27.941Z</updated>
     
     
     <summary type="html">&lt;p&gt;下载，使用本整合包即代表你已同意《用户协议与免责声明》&lt;/p&gt;</summary>
