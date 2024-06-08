@@ -44,27 +44,6 @@
   </entry>
   
   <entry>
-    <title>「Disqus」为 hexo 博客添加文章推荐功能</title>
-    <link href="https://bianb-hehe.github.io/2025/09/24/2589378/"/>
-    <id>https://bianb-hehe.github.io/2025/09/24/2589378/</id>
-    <published>2025-09-23T20:17:35.000Z</published>
-    <updated>2024-06-08T05:53:48.060Z</updated>
-    
-    
-    <summary type="html">这是 Disqus 最近更新的一项功能。 如果您已经为自己的博客启用 Disqus 评论系统，直接打开 https://disqus.com/admin/settings/recommendations/ 选择站点，找到Enable Recommendations on your site，选定布局样式，暂时支持更改的项目有：   显示文章发表日期  显示评论数  推荐栏目的布局  推荐文章的日期</summary>
-    
-    
-    
-    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
     <title>「视频」MC绷带指令</title>
     <link href="https://bianb-hehe.github.io/2025/09/24/28523795/"/>
     <id>https://bianb-hehe.github.io/2025/09/24/28523795/</id>
@@ -90,6 +69,27 @@
     <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="视频" scheme="https://bianb-hehe.github.io/tags/%E8%A7%86%E9%A2%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>「Disqus」为 hexo 博客添加文章推荐功能</title>
+    <link href="https://bianb-hehe.github.io/2025/09/24/2589378/"/>
+    <id>https://bianb-hehe.github.io/2025/09/24/2589378/</id>
+    <published>2025-09-23T20:17:35.000Z</published>
+    <updated>2024-06-08T05:53:48.060Z</updated>
+    
+    
+    <summary type="html">这是 Disqus 最近更新的一项功能。 如果您已经为自己的博客启用 Disqus 评论系统，直接打开 https://disqus.com/admin/settings/recommendations/ 选择站点，找到Enable Recommendations on your site，选定布局样式，暂时支持更改的项目有：   显示文章发表日期  显示评论数  推荐栏目的布局  推荐文章的日期</summary>
+    
+    
+    
+    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
   </entry>
   
