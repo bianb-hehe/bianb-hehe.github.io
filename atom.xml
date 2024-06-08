@@ -3,11 +3,11 @@
   <title>Mybbs</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://bianb-hehe.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://bianb-hehe.github.io/"/>
   <updated>2024-06-06T13:49:43.577Z</updated>
-  <id>http://example.com/</id>
+  <id>https://bianb-hehe.github.io/</id>
   
   <author>
     <name>Mybbs —— 开源MC社区</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>[Github] MCBBS-Client</title>
-    <link href="http://example.com/2026/05/26/8684/"/>
-    <id>http://example.com/2026/05/26/8684/</id>
+    <link href="https://bianb-hehe.github.io/2026/05/26/8684/"/>
+    <id>https://bianb-hehe.github.io/2026/05/26/8684/</id>
     <published>2026-05-26T05:03:32.000Z</published>
     <updated>2024-06-06T13:49:43.577Z</updated>
     
@@ -34,19 +34,19 @@
     
     
     
-    <category term="github" scheme="http://example.com/categories/github/"/>
+    <category term="github" scheme="https://bianb-hehe.github.io/categories/github/"/>
     
     
-    <category term="github" scheme="http://example.com/tags/github/"/>
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
-    <category term="工具" scheme="http://example.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://bianb-hehe.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>「Disqus」为 hexo 博客添加文章推荐功能</title>
-    <link href="http://example.com/2025/09/24/2589378/"/>
-    <id>http://example.com/2025/09/24/2589378/</id>
+    <link href="https://bianb-hehe.github.io/2025/09/24/2589378/"/>
+    <id>https://bianb-hehe.github.io/2025/09/24/2589378/</id>
     <published>2025-09-23T20:17:35.000Z</published>
     <updated>2024-06-03T08:59:35.881Z</updated>
     
@@ -55,19 +55,19 @@
     
     
     
-    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="github" scheme="http://example.com/tags/github/"/>
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
   </entry>
   
   <entry>
     <title>「视频」MC绷带指令</title>
-    <link href="http://example.com/2025/09/24/28523795/"/>
-    <id>http://example.com/2025/09/24/28523795/</id>
+    <link href="https://bianb-hehe.github.io/2025/09/24/28523795/"/>
+    <id>https://bianb-hehe.github.io/2025/09/24/28523795/</id>
     <published>2025-09-23T20:17:35.000Z</published>
     <updated>2024-06-03T08:59:35.883Z</updated>
     
@@ -82,19 +82,19 @@
     
     
     
-    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="视频" scheme="http://example.com/tags/%E8%A7%86%E9%A2%91/"/>
+    <category term="视频" scheme="https://bianb-hehe.github.io/tags/%E8%A7%86%E9%A2%91/"/>
     
   </entry>
   
   <entry>
     <title>「教程」在Deepin（Linux）下如何优雅地查词典？—— sdcv ⚡📚</title>
-    <link href="http://example.com/2025/02/25/57892389/"/>
-    <id>http://example.com/2025/02/25/57892389/</id>
+    <link href="https://bianb-hehe.github.io/2025/02/25/57892389/"/>
+    <id>https://bianb-hehe.github.io/2025/02/25/57892389/</id>
     <published>2025-02-25T06:04:55.000Z</published>
     <updated>2024-06-03T08:59:35.880Z</updated>
     
@@ -103,19 +103,19 @@
     
     
     
-    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="github" scheme="http://example.com/tags/github/"/>
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
   </entry>
   
   <entry>
     <title>[1.12.2][支持手机版|拔刀剑]祝福或诅咒：无限力量之征——关于剑与理想的故事</title>
-    <link href="http://example.com/2024/06/07/2384%E9%93%85389/"/>
-    <id>http://example.com/2024/06/07/2384%E9%93%85389/</id>
+    <link href="https://bianb-hehe.github.io/2024/06/07/2384%E9%93%85389/"/>
+    <id>https://bianb-hehe.github.io/2024/06/07/2384%E9%93%85389/</id>
     <published>2024-06-07T13:07:54.845Z</published>
     <updated>2024-06-07T13:36:45.485Z</updated>
     
@@ -130,21 +130,21 @@
     
     
     
-    <category term="MC" scheme="http://example.com/categories/MC/"/>
+    <category term="MC" scheme="https://bianb-hehe.github.io/categories/MC/"/>
     
-    <category term="分享" scheme="http://example.com/categories/MC/%E5%88%86%E4%BA%AB/"/>
+    <category term="分享" scheme="https://bianb-hehe.github.io/categories/MC/%E5%88%86%E4%BA%AB/"/>
     
     
-    <category term="分享" scheme="http://example.com/tags/%E5%88%86%E4%BA%AB/"/>
+    <category term="分享" scheme="https://bianb-hehe.github.io/tags/%E5%88%86%E4%BA%AB/"/>
     
-    <category term="Mod" scheme="http://example.com/tags/Mod/"/>
+    <category term="Mod" scheme="https://bianb-hehe.github.io/tags/Mod/"/>
     
   </entry>
   
   <entry>
     <title>Dominion | 新的领地插件，支持Folia！</title>
-    <link href="http://example.com/2024/06/07/Dominion/"/>
-    <id>http://example.com/2024/06/07/Dominion/</id>
+    <link href="https://bianb-hehe.github.io/2024/06/07/Dominion/"/>
+    <id>https://bianb-hehe.github.io/2024/06/07/Dominion/</id>
     <published>2024-06-07T13:00:41.187Z</published>
     <updated>2024-06-07T13:01:45.957Z</updated>
     
@@ -153,19 +153,19 @@
     
     
     
-    <category term="MC" scheme="http://example.com/categories/MC/"/>
+    <category term="MC" scheme="https://bianb-hehe.github.io/categories/MC/"/>
     
     
-    <category term="github" scheme="http://example.com/tags/github/"/>
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
-    <category term="分享" scheme="http://example.com/tags/%E5%88%86%E4%BA%AB/"/>
+    <category term="分享" scheme="https://bianb-hehe.github.io/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>使用新版opl联机mc教程 | Mybbs</title>
-    <link href="http://example.com/2024/06/07/opl_mc/"/>
-    <id>http://example.com/2024/06/07/opl_mc/</id>
+    <link href="https://bianb-hehe.github.io/2024/06/07/opl_mc/"/>
+    <id>https://bianb-hehe.github.io/2024/06/07/opl_mc/</id>
     <published>2024-06-07T12:41:59.057Z</published>
     <updated>2024-06-07T12:42:54.790Z</updated>
     
@@ -183,19 +183,19 @@
     
     
     
-    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="MC" scheme="http://example.com/tags/MC/"/>
+    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
     
   </entry>
   
   <entry>
     <title>ANine-LuckPermsEX | 九之称号的LP称号支持</title>
-    <link href="http://example.com/2024/06/07/ANine-LuckPermsEX/"/>
-    <id>http://example.com/2024/06/07/ANine-LuckPermsEX/</id>
+    <link href="https://bianb-hehe.github.io/2024/06/07/ANine-LuckPermsEX/"/>
+    <id>https://bianb-hehe.github.io/2024/06/07/ANine-LuckPermsEX/</id>
     <published>2024-06-07T12:37:22.479Z</published>
     <updated>2024-06-07T12:40:10.823Z</updated>
     
@@ -204,19 +204,19 @@
     
     
     
-    <category term="MC" scheme="http://example.com/categories/MC/"/>
+    <category term="MC" scheme="https://bianb-hehe.github.io/categories/MC/"/>
     
     
-    <category term="github" scheme="http://example.com/tags/github/"/>
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
-    <category term="分享" scheme="http://example.com/tags/%E5%88%86%E4%BA%AB/"/>
+    <category term="分享" scheme="https://bianb-hehe.github.io/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>【原创】搭建一个Chat-GPT Proxy</title>
-    <link href="http://example.com/2024/06/06/130442795/"/>
-    <id>http://example.com/2024/06/06/130442795/</id>
+    <link href="https://bianb-hehe.github.io/2024/06/06/130442795/"/>
+    <id>https://bianb-hehe.github.io/2024/06/06/130442795/</id>
     <published>2024-06-06T05:52:25.000Z</published>
     <updated>2024-06-06T13:53:38.560Z</updated>
     
@@ -232,19 +232,19 @@
     
     
     
-    <category term="github" scheme="http://example.com/categories/github/"/>
+    <category term="github" scheme="https://bianb-hehe.github.io/categories/github/"/>
     
     
-    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="github" scheme="http://example.com/tags/github/"/>
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
   </entry>
   
   <entry>
     <title>模组整合包 - 我的世界随机空岛1.1.4手机移植</title>
-    <link href="http://example.com/2024/06/03/481472347/"/>
-    <id>http://example.com/2024/06/03/481472347/</id>
+    <link href="https://bianb-hehe.github.io/2024/06/03/481472347/"/>
+    <id>https://bianb-hehe.github.io/2024/06/03/481472347/</id>
     <published>2024-06-03T11:14:46.237Z</published>
     <updated>2024-06-03T11:21:18.871Z</updated>
     
@@ -259,19 +259,19 @@
     
     
     
-    <category term="分享" scheme="http://example.com/categories/%E5%88%86%E4%BA%AB/"/>
+    <category term="分享" scheme="https://bianb-hehe.github.io/categories/%E5%88%86%E4%BA%AB/"/>
     
     
-    <category term="MC" scheme="http://example.com/tags/MC/"/>
+    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
     
-    <category term="整合包" scheme="http://example.com/tags/%E6%95%B4%E5%90%88%E5%8C%85/"/>
+    <category term="整合包" scheme="https://bianb-hehe.github.io/tags/%E6%95%B4%E5%90%88%E5%8C%85/"/>
     
   </entry>
   
   <entry>
     <title>Bedrock Dedicated Server - 官方我的世界基岩版专用服务端</title>
-    <link href="http://example.com/2024/06/02/178/"/>
-    <id>http://example.com/2024/06/02/178/</id>
+    <link href="https://bianb-hehe.github.io/2024/06/02/178/"/>
+    <id>https://bianb-hehe.github.io/2024/06/02/178/</id>
     <published>2024-06-02T05:03:45.459Z</published>
     <updated>2024-06-03T08:59:35.879Z</updated>
     
@@ -286,19 +286,19 @@
     
     
     
-    <category term="MC" scheme="http://example.com/categories/MC/"/>
+    <category term="MC" scheme="https://bianb-hehe.github.io/categories/MC/"/>
     
     
-    <category term="MC" scheme="http://example.com/tags/MC/"/>
+    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
     
-    <category term="服务端" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    <category term="服务端" scheme="https://bianb-hehe.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>HEXO系列教程 | 为HEXO绑定自己的域名 | 小白向教程 –</title>
-    <link href="http://example.com/2024/06/02/hexo-tutorial-use-your-domain-beginner/"/>
-    <id>http://example.com/2024/06/02/hexo-tutorial-use-your-domain-beginner/</id>
+    <link href="https://bianb-hehe.github.io/2024/06/02/hexo-tutorial-use-your-domain-beginner/"/>
+    <id>https://bianb-hehe.github.io/2024/06/02/hexo-tutorial-use-your-domain-beginner/</id>
     <published>2024-06-02T03:51:36.965Z</published>
     <updated>2024-06-03T08:59:35.873Z</updated>
     
@@ -307,21 +307,21 @@
     
     
     
-    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="github" scheme="http://example.com/tags/github/"/>
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
-    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    <category term="hexo" scheme="https://bianb-hehe.github.io/tags/hexo/"/>
     
-    <category term="精品" scheme="http://example.com/tags/%E7%B2%BE%E5%93%81/"/>
+    <category term="精品" scheme="https://bianb-hehe.github.io/tags/%E7%B2%BE%E5%93%81/"/>
     
   </entry>
   
   <entry>
     <title>Blog介绍</title>
-    <link href="http://example.com/2024/06/01/845792875/"/>
-    <id>http://example.com/2024/06/01/845792875/</id>
+    <link href="https://bianb-hehe.github.io/2024/06/01/845792875/"/>
+    <id>https://bianb-hehe.github.io/2024/06/01/845792875/</id>
     <published>2024-06-01T05:47:46.356Z</published>
     <updated>2024-06-03T08:59:35.875Z</updated>
     
@@ -336,44 +336,21 @@
     
     
     
-    <category term="github" scheme="http://example.com/categories/github/"/>
+    <category term="github" scheme="https://bianb-hehe.github.io/categories/github/"/>
     
     
-    <category term="github" scheme="http://example.com/tags/github/"/>
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
-    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    <category term="hexo" scheme="https://bianb-hehe.github.io/tags/hexo/"/>
     
-    <category term="blog" scheme="http://example.com/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[转载] [联机教程] [联机][2021.1.1][CPS].schematic文件格式详解</title>
-    <link href="http://example.com/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[%E8%81%94%E6%9C%BA][2021.1.1][CPS].schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://example.com/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[%E8%81%94%E6%9C%BA][2021.1.1][CPS].schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/</id>
-    <published>2024-05-31T10:24:06.311Z</published>
-    <updated>2024-06-08T02:38:16.912Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;联机教程&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="MC" scheme="http://example.com/tags/MC/"/>
-    
-    <category term="转载" scheme="http://example.com/tags/%E8%BD%AC%E8%BD%BD/"/>
+    <category term="blog" scheme="https://bianb-hehe.github.io/tags/blog/"/>
     
   </entry>
   
   <entry>
     <title>[转载] [联机教程] [Wiki][PCD]MythicMobs 帮助手册翻译 又更新了</title>
-    <link href="http://example.com/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[Wiki][PCD]MythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/"/>
-    <id>http://example.com/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[Wiki][PCD]MythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/</id>
+    <link href="https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[Wiki][PCD]MythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/"/>
+    <id>https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[Wiki][PCD]MythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/</id>
     <published>2024-05-31T10:24:06.311Z</published>
     <updated>2024-06-08T02:38:16.912Z</updated>
     
@@ -382,21 +359,44 @@
     
     
     
-    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="MC" scheme="http://example.com/tags/MC/"/>
+    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
     
-    <category term="转载" scheme="http://example.com/tags/%E8%BD%AC%E8%BD%BD/"/>
+    <category term="转载" scheme="https://bianb-hehe.github.io/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[转载] [联机教程] [联机][2021.1.1][CPS].schematic文件格式详解</title>
+    <link href="https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[%E8%81%94%E6%9C%BA][2021.1.1][CPS].schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/"/>
+    <id>https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[%E8%81%94%E6%9C%BA][2021.1.1][CPS].schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/</id>
+    <published>2024-05-31T10:24:06.311Z</published>
+    <updated>2024-06-08T02:38:16.912Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;联机教程&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
+    
+    <category term="转载" scheme="https://bianb-hehe.github.io/tags/%E8%BD%AC%E8%BD%BD/"/>
     
   </entry>
   
   <entry>
     <title>Mybbs发帖教程</title>
-    <link href="http://example.com/2024/05/31/%E5%8F%91%E5%B8%96/"/>
-    <id>http://example.com/2024/05/31/%E5%8F%91%E5%B8%96/</id>
+    <link href="https://bianb-hehe.github.io/2024/05/31/%E5%8F%91%E5%B8%96/"/>
+    <id>https://bianb-hehe.github.io/2024/05/31/%E5%8F%91%E5%B8%96/</id>
     <published>2024-05-31T10:24:06.311Z</published>
     <updated>2024-06-08T02:38:16.912Z</updated>
     
@@ -405,17 +405,17 @@
     
     
     
-    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>Mybbs友链</title>
-    <link href="http://example.com/2024/05/31/%E5%8F%8B%E9%93%BE/"/>
-    <id>http://example.com/2024/05/31/%E5%8F%8B%E9%93%BE/</id>
+    <link href="https://bianb-hehe.github.io/2024/05/31/%E5%8F%8B%E9%93%BE/"/>
+    <id>https://bianb-hehe.github.io/2024/05/31/%E5%8F%8B%E9%93%BE/</id>
     <published>2024-05-31T10:24:06.311Z</published>
     <updated>2024-06-08T02:38:16.912Z</updated>
     
@@ -424,15 +424,15 @@
     
     
     
-    <category term="公告" scheme="http://example.com/categories/%E5%85%AC%E5%91%8A/"/>
+    <category term="公告" scheme="https://bianb-hehe.github.io/categories/%E5%85%AC%E5%91%8A/"/>
     
     
   </entry>
   
   <entry>
     <title>[休闲] [整合包发布] [1.20.6-1.7.10]XPlus 2.0 原版整合 - 高效/稳定/便捷[Fabric/Forge]</title>
-    <link href="http://example.com/2024/05/31/%E6%95%B4%E5%90%88%E5%8C%851/"/>
-    <id>http://example.com/2024/05/31/%E6%95%B4%E5%90%88%E5%8C%851/</id>
+    <link href="https://bianb-hehe.github.io/2024/05/31/%E6%95%B4%E5%90%88%E5%8C%851/"/>
+    <id>https://bianb-hehe.github.io/2024/05/31/%E6%95%B4%E5%90%88%E5%8C%851/</id>
     <published>2024-05-31T10:24:06.311Z</published>
     <updated>2024-06-08T01:58:57.643Z</updated>
     
@@ -441,23 +441,23 @@
     
     
     
-    <category term="分享" scheme="http://example.com/categories/%E5%88%86%E4%BA%AB/"/>
+    <category term="分享" scheme="https://bianb-hehe.github.io/categories/%E5%88%86%E4%BA%AB/"/>
     
     
-    <category term="MC" scheme="http://example.com/tags/MC/"/>
+    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
     
-    <category term="转载" scheme="http://example.com/tags/%E8%BD%AC%E8%BD%BD/"/>
+    <category term="转载" scheme="https://bianb-hehe.github.io/tags/%E8%BD%AC%E8%BD%BD/"/>
     
-    <category term="整合包" scheme="http://example.com/tags/%E6%95%B4%E5%90%88%E5%8C%85/"/>
+    <category term="整合包" scheme="https://bianb-hehe.github.io/tags/%E6%95%B4%E5%90%88%E5%8C%85/"/>
     
-    <category term="休闲" scheme="http://example.com/tags/%E4%BC%91%E9%97%B2/"/>
+    <category term="休闲" scheme="https://bianb-hehe.github.io/tags/%E4%BC%91%E9%97%B2/"/>
     
   </entry>
   
   <entry>
     <title>[Github]hexo-theme-3-hexo</title>
-    <link href="http://example.com/2024/05/31/[%E4%B8%BB%E9%A2%98]3-hexo/"/>
-    <id>http://example.com/2024/05/31/[%E4%B8%BB%E9%A2%98]3-hexo/</id>
+    <link href="https://bianb-hehe.github.io/2024/05/31/[%E4%B8%BB%E9%A2%98]3-hexo/"/>
+    <id>https://bianb-hehe.github.io/2024/05/31/[%E4%B8%BB%E9%A2%98]3-hexo/</id>
     <published>2024-05-31T10:24:06.296Z</published>
     <updated>2024-06-08T02:38:16.912Z</updated>
     
@@ -472,19 +472,19 @@
     
     
     
-    <category term="github" scheme="http://example.com/categories/github/"/>
+    <category term="github" scheme="https://bianb-hehe.github.io/categories/github/"/>
     
     
-    <category term="github" scheme="http://example.com/tags/github/"/>
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
-    <category term="hexo主题" scheme="http://example.com/tags/hexo%E4%B8%BB%E9%A2%98/"/>
+    <category term="hexo主题" scheme="https://bianb-hehe.github.io/tags/hexo%E4%B8%BB%E9%A2%98/"/>
     
   </entry>
   
   <entry>
-    <title>[Github]hexo-theme-butterfly——推荐</title>
-    <link href="http://example.com/2024/05/31/[%E4%B8%BB%E9%A2%98]buty/"/>
-    <id>http://example.com/2024/05/31/[%E4%B8%BB%E9%A2%98]buty/</id>
+    <title>[Github]hexo-theme-Fluid</title>
+    <link href="https://bianb-hehe.github.io/2024/05/31/[%E4%B8%BB%E9%A2%98]fluid/"/>
+    <id>https://bianb-hehe.github.io/2024/05/31/[%E4%B8%BB%E9%A2%98]fluid/</id>
     <published>2024-05-31T10:24:06.296Z</published>
     <updated>2024-06-08T02:38:16.912Z</updated>
     
@@ -493,20 +493,24 @@
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://img.shields.io/github/package-json/v/jerryc127/hexo-theme-butterfly/master?color=%231ab1ad&amp;amp;label=master&quot;</summary>
+    <summary type="html">&lt;p align=&quot;center&quot;&gt;
+  &lt;img alt=&quot;Fluid Logo&quot; src=&quot;https://avatars2.githubusercontent.com/t/3419353?s=280&amp;amp;v=4&quot; width=&quot;128&quot;&gt;
+&lt;/p&gt;
+
+&lt;p</summary>
         
       
     
     
     
-    <category term="github" scheme="http://example.com/categories/github/"/>
+    <category term="github" scheme="https://bianb-hehe.github.io/categories/github/"/>
     
     
-    <category term="github" scheme="http://example.com/tags/github/"/>
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
-    <category term="hexo主题" scheme="http://example.com/tags/hexo%E4%B8%BB%E9%A2%98/"/>
+    <category term="hexo主题" scheme="https://bianb-hehe.github.io/tags/hexo%E4%B8%BB%E9%A2%98/"/>
     
-    <category term="精品" scheme="http://example.com/tags/%E7%B2%BE%E5%93%81/"/>
+    <category term="精品" scheme="https://bianb-hehe.github.io/tags/%E7%B2%BE%E5%93%81/"/>
     
   </entry>
   
