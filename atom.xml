@@ -44,6 +44,27 @@
   </entry>
   
   <entry>
+    <title>「Disqus」为 hexo 博客添加文章推荐功能</title>
+    <link href="https://bianb-hehe.github.io/2025/09/24/2589378/"/>
+    <id>https://bianb-hehe.github.io/2025/09/24/2589378/</id>
+    <published>2025-09-23T20:17:35.000Z</published>
+    <updated>2024-06-08T05:53:48.060Z</updated>
+    
+    
+    <summary type="html">这是 Disqus 最近更新的一项功能。 如果您已经为自己的博客启用 Disqus 评论系统，直接打开 https://disqus.com/admin/settings/recommendations/ 选择站点，找到Enable Recommendations on your site，选定布局样式，暂时支持更改的项目有：   显示文章发表日期  显示评论数  推荐栏目的布局  推荐文章的日期</summary>
+    
+    
+    
+    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
     <title>「视频」MC绷带指令</title>
     <link href="https://bianb-hehe.github.io/2025/09/24/28523795/"/>
     <id>https://bianb-hehe.github.io/2025/09/24/28523795/</id>
@@ -69,27 +90,6 @@
     <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="视频" scheme="https://bianb-hehe.github.io/tags/%E8%A7%86%E9%A2%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>「Disqus」为 hexo 博客添加文章推荐功能</title>
-    <link href="https://bianb-hehe.github.io/2025/09/24/2589378/"/>
-    <id>https://bianb-hehe.github.io/2025/09/24/2589378/</id>
-    <published>2025-09-23T20:17:35.000Z</published>
-    <updated>2024-06-08T05:53:48.060Z</updated>
-    
-    
-    <summary type="html">这是 Disqus 最近更新的一项功能。 如果您已经为自己的博客启用 Disqus 评论系统，直接打开 https://disqus.com/admin/settings/recommendations/ 选择站点，找到Enable Recommendations on your site，选定布局样式，暂时支持更改的项目有：   显示文章发表日期  显示评论数  推荐栏目的布局  推荐文章的日期</summary>
-    
-    
-    
-    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
   </entry>
   
@@ -430,11 +430,11 @@
   </entry>
   
   <entry>
-    <title>[转载] [联机教程] [Wiki][PCD]MythicMobs 帮助手册翻译 又更新了</title>
-    <link href="https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[Wiki][PCD]MythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/"/>
-    <id>https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[Wiki][PCD]MythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/</id>
+    <title>[转载] [联机教程] [联机][2021.1.1][CPS].schematic文件格式详解</title>
+    <link href="https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[%E8%81%94%E6%9C%BA][2021.1.1][CPS].schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/"/>
+    <id>https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[%E8%81%94%E6%9C%BA][2021.1.1][CPS].schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/</id>
     <published>2024-05-31T10:24:06.311Z</published>
-    <updated>2024-06-08T05:54:44.554Z</updated>
+    <updated>2024-06-08T05:54:36.972Z</updated>
     
     
     <summary type="html">&lt;p&gt;联机教程&lt;/p&gt;</summary>
@@ -453,11 +453,11 @@
   </entry>
   
   <entry>
-    <title>[转载] [联机教程] [联机][2021.1.1][CPS].schematic文件格式详解</title>
-    <link href="https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[%E8%81%94%E6%9C%BA][2021.1.1][CPS].schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/"/>
-    <id>https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[%E8%81%94%E6%9C%BA][2021.1.1][CPS].schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/</id>
+    <title>[转载] [联机教程] [Wiki][PCD]MythicMobs 帮助手册翻译 又更新了</title>
+    <link href="https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[Wiki][PCD]MythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/"/>
+    <id>https://bianb-hehe.github.io/2024/05/31/[%E8%BD%AC%E8%BD%BD]%20[%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B]%20[Wiki][PCD]MythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/</id>
     <published>2024-05-31T10:24:06.311Z</published>
-    <updated>2024-06-08T05:54:36.972Z</updated>
+    <updated>2024-06-08T05:54:44.554Z</updated>
     
     
     <summary type="html">&lt;p&gt;联机教程&lt;/p&gt;</summary>
