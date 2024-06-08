@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 11 风格网站</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.pixelbbs.cn/source/plugin/bphp_clouds/upload/4438/20240607/38a083d043acbcabc27385f76510ce69.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .top-nav {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .taskbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-top: 1px solid #ccc;
+            padding: 8px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .taskbar button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .taskbar button img {
+            width: 32px;
+            height: 32px;
+        }
+
+        #time,
+        #weather {
+            color: #fff;
+            margin-right: 20px;
+        }
+
+        .desktop-icon {
+            position: absolute;
+            left: 50px;
+            top: 120px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .desktop-icon img {
+            width: 100px;
+            height: auto;
+        }
+
+        .desktop-icon:hover {
+            transform: translateY(-5px);
+        }
+
+        .desktop-icon .tooltip {
+            display: none;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+            font-size: 12px;
+            padding: 5px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            text-align: center;
+        }
+
+        .desktop-icon:hover .tooltip {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-nav">Mynavigation —— Mybbs导航站</div>
+
+<div class="taskbar">
+    <div>
+        <span id="time"></span>
+        <span id="weather"></span>
+    </div>
+    <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Windows_logo%2C_2012-2021.svg/480px-Windows_logo%2C_2012-2021.svg.png" alt="Windows Logo"></button>
+    <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Windows_11_Logo.svg/1200px-Windows_11_Logo.svg.png" alt="Windows 11 Logo"></button>
+</div>
+
+<a href="https://www.mcbbs.net" target="_blank" class="desktop-icon">
+    <img src="https://ts1.cn.mm.bing.net/th/id/R-C.9a6de07448a467a377b44596d9ae5da0?rik=8WbMsGmKuRB5XA&riu=http%3a%2f%2fpic.2265.com%2fupload%2f2021-8%2f2021810928385817.png&ehk=Xi9L%2fFaaTMGPUxE7TnAHh3CKp6VDRo44YeVHbgK3Auk%3d&risl=&pid=ImgRaw&r=0" alt="Mcbbs图标">
+    <div class="tooltip">
+        <strong>Mcbbs</strong><br>
+        Minecraft中文论坛，国内最大的MC社区，拥有国内最大的国际版玩家群体及最多的社区资源。
+    </div>
+</a>
+
+<script>
+    const timeElement = document.getElementById('time');
+    const weatherElement = document.getElementById('weather');
+
+    function updateTime() {
+        const now = new Date();
+        const hours = now

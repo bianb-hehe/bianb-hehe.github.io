@@ -1,146 +1,109 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MYpicbed</title>
+    <title>My图床</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px auto;
-        }
-        #uploadForm {
-            width: 300px;
-            margin: 0 auto;
-        }
-        .form-group {
-            margin-bottom: 10px;
-        }
-        #fileInput {
-            display: block;
-            margin: 0 auto;
-        }
-        #uploadButton {
-            display: block;
-            margin: 10px auto;
-        }
-        #preview {
-            margin-top: 20px;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
-        .preview-item {
-            margin: 10px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 200px;
-            padding: 10px;
-            text-align: left;
-        }
-        .preview-item img, .preview-item video {
-            max-width: 100%;
-            max-height: 150px;
-            transition: transform 0.3s ease;
-        }
-        .preview-item p {
-            margin-top: 10px;
-            word-wrap: break-word;
-        }
-        .preview-item:hover img, .preview-item:hover video {
-            transform: scale(1.1);
-        }
-        .download-link {
-            display: block;
-            margin-top: 5px;
+
+        .header {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
             text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .upload-btn-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .btn {
+            border: 2px solid #4CAF50;
+            color: #4CAF50;
+            background-color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .upload-btn-wrapper input[type=file] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+
+        .preview {
+            margin-top: 20px;
+        }
+
+        .preview img {
+            max-width: 100%;
+            max-height: 300px;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <h2>Mypicbed</h2>
-    <form id="uploadForm" enctype="multipart/form-data">
-        <div class="form-group">
-            <input type="file" id="fileInput" name="fileInput" accept="image/*,video/*" required>
-            <button type="submit" id="uploadButton">上传</button>
-        </div>
-    </form>
-    <div id="preview"></div>
 
-    <script>
-        const uploadForm = document.getElementById('uploadForm');
-        const fileInput = document.getElementById('fileInput');
-        const preview = document.getElementById('preview');
+<div class="header">
+    <h1>My图床</h1>
+</div>
 
-        // 获取本地存储的多媒体数据并显示
-        window.onload = function() {
-            const uploadsData = localStorage.getItem('uploadedData');
-            if (uploadsData) {
-                const uploads = JSON.parse(uploadsData);
-                uploads.forEach(uploadData => {
-                    const previewItem = createPreviewItem(uploadData);
-                    preview.appendChild(previewItem);
-                });
-            }
-        };
+<div class="container">
+    <div class="upload-btn-wrapper">
+        <button class="btn">选择图片</button>
+        <input type="file" id="fileInput" accept="image/*">
+    </div>
+    <div class="preview" id="preview">
+        <!-- 预览上传的图片 -->
+    </div>
+</div>
 
-        uploadForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const file = fileInput.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function() {
-                    const uploadData = {
-                        type: file.type.startsWith('image') ? 'image' : 'video',
-                        src: reader.result,
-                        timestamp: new Date().getTime() 
-                    };
-                    const previewItem = createPreviewItem(uploadData);
-                    preview.appendChild(previewItem);
-                    saveUploadData(uploadData);
-                    fileInput.value = ''; 
-                }
-                reader.readAsDataURL(file);
-            }
-        });
-
-        // 创建上传项
-        function createPreviewItem(uploadData) {
-            const previewItem = document.createElement('div');
-            previewItem.classList.add('preview-item');
-            if (uploadData.type === 'image') {
-                const image = document.createElement('img');
-                image.src = uploadData.src;
-                previewItem.appendChild(image);
-            } else if (uploadData.type === 'video') {
-                const video = document.createElement('video');
-                video.src = uploadData.src;
-                video.controls = true;
-                previewItem.appendChild(video);
-            }
-            const downloadLink = document.createElement('a');
-            downloadLink.href = uploadData.src;
-            downloadLink.textContent = '下载';
-            downloadLink.classList.add('download-link');
-            previewItem.appendChild(downloadLink);
-            return previewItem;
+<script>
+    document.getElementById('fileInput').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                const preview = document.getElementById('preview');
+                preview.innerHTML = ''; // 清空之前的预览
+                preview.appendChild(img);
+            };
+            reader.readAsDataURL(file);
         }
+    });
+</script>
 
-        // 将多媒体数据保存到本地存储
-        function saveUploadData(uploadData) {
-            let uploads = localStorage.getItem('uploadedData');
-            if (uploads) {
-                uploads = JSON.parse(uploads);
-            } else {
-                uploads = [];
-            }
-            uploads.push(uploadData);
-            localStorage.setItem('uploadedData', JSON.stringify(uploads));
-        }
-    </script>
-	
 </body>
 </html>

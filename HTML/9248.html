@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .avatar {
+            position: relative;
+            display: inline-block;
+        }
+
+        .avatar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+        }
+
+        .upload-icon {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .upload-icon img {
+            width: 20px;
+            height: 20px;
+        }
+
+        #name {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .comment-section {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .comment-section input,
+        .comment-section textarea {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .comment-section button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .comment-section button:hover {
+            background-color: #45a049;
+        }
+
+        .comments {
+            margin-top: 20px;
+        }
+
+        .comment {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .like-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .like-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="avatar">
+        <img id="avatarImg" src="https://tse3-mm.cn.bing.net/th/id/OIP-C.E6AibbIXsKb1GflFshtwuwHaEo?rs=1&pid=ImgDetMain" alt="头像">
+        <div class="upload-icon" onclick="document.getElementById('avatarInput').click();">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Circle-icons-camera.svg" alt="上传头像">
+        </div>
+        <input type="file" id="avatarInput" style="display: none;" accept="image/*" onchange="uploadAvatar(event)">
+    </div>
+    <div id="name"></div>
+    
+    <div class="comment-section">
+        <h2>评论</h2>
+        <textarea id="commentText" rows="4" placeholder="写下你的评论..."></textarea>
+        <button onclick="addComment()">发表评论</button>
+        <div class="comments" id="comments"></div>
+    </div>
+
+    <button class="like-button" onclick="likePage()">点赞 (<span id="likeCount">0</span>)</button>
+</div>
+
+<script>
+    // 从URL参数中获取名字
+    document.getElementById('name').textContent = new URLSearchParams(window.location.search).get('name');
+
+    // 上传头像功能
+    function uploadAvatar(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('avatarImg').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    // 添加评论功能
+    function addComment() {
+        const commentText = document.getElementById('commentText').value;
+        if (commentText) {
+            const comment = document.createElement('div');
+            comment.className = 'comment';
+            comment.textContent = commentText;
+            document.getElementById('comments').appendChild(comment);
+            document.getElementById('commentText').value = ''; // 清空评论框
+        }
+    }
+
+    // 点赞功能
+    let likeCount = 0;
+    function likePage() {
+        likeCount++;
+        document.getElementById('likeCount').textContent = likeCount;
+    }
+</script>
+
+</body>
+</html>

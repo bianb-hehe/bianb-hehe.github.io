@@ -1,87 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>帖子编辑</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-    }
-    #editor {
-        width: 100%;
-        height: 300px;
-        border: 1px solid #ccc;
-        padding: 10px;
-    }
-    #preview {
-        width: 100%;
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin-top: 10px;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帖子编辑 —— Mybbs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            min-height: calc(100vh - 160px); /* Adjust to avoid footer overlap */
+            box-sizing: border-box;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+
+        textarea {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .button-group {
+            text-align: right; /* Align buttons to the right */
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            margin-left: 1rem;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>帖子编辑</h1>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>编辑您的帖子</h2>
+            <textarea id="markdown-content" placeholder="在这里输入Markdown文档内容..."></textarea>
+            <div class="button-group">
+                <button onclick="exportMarkdown()">导出为Markdown</button>
+                <button onclick="publishDocument()">发布帖子</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Mybbs</p>
+    </footer>
+    <script>
+        function generateRandomFilename() {
+            return Math.random().toString(36).substring(2, 10) + '.md';
+        }
 
-<h1>帖子编辑</h1>
+        function exportMarkdown() {
+            const content = document.getElementById('markdown-content').value;
+            const filename = generateRandomFilename();
+            const blob = new Blob([content], { type: 'text/markdown' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+            alert('文档已导出为 ' + filename);
+        }
 
-<textarea id="editor" placeholder="在此编写..."></textarea>
-<div id="preview"></div>
-
-<button onclick="exportMarkdown()">导出帖子</button>
-<button onclick="publishToMybbs()">发布到Mybbs</button> <!-- 添加发布到Mybbs按钮 -->
-<script>
-    // Function to convert Markdown to HTML
-    function markdownToHTML(markdown) {
-        return marked(markdown);
-    }
-
-    // Update preview
-    function updatePreview() {
-        var editor = document.getElementById('editor');
-        var preview = document.getElementById('preview');
-        preview.innerHTML = markdownToHTML(editor.value);
-    }
-
-    // Initial update
-    updatePreview();
-
-    // Add event listener for input changes
-    document.getElementById('editor').addEventListener('input', updatePreview);
-
-    // Function to export Markdown
-    function exportMarkdown() {
-        var markdownText = document.getElementById('editor').value;
-        
-        // Create FormData object
-        var formData = new FormData();
-        formData.append('markdownFile', new Blob([markdownText], { type: 'text/plain' }), 'markdown.md');
-
-        // Send POST request to backend
-        fetch('/upload', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (response.ok) {
-                alert('文件上传成功！');
-            } else {
-                alert('文件上传失败！');
-            }
-        })
-        .catch(error => {
-            console.error('文件上传错误:', error);
-            alert('文件上传错误！');
-        });
-    }
-
-    // Function to publish to Mybbs
-    function publishToMybbs() {
-        // Redirect to the desired page
-        window.location.href = '/HTML/index.html';
-    }
-</script>
-
+        function publishDocument() {
+            const content = document.getElementById('markdown-content').value;
+            const filename = generateRandomFilename();
+            
+            // Simulate publishing (this requires server-side support)
+            fetch('publish.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ filename: filename, content: content })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('文档已发布为 ' + filename);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
 </body>
 </html>

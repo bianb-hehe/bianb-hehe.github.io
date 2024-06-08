@@ -1,0 +1,1080 @@
+**🎉整合包在 CurseForge 下载量突破 55000！**
+**B 站相关视频播放量已超过四十万！<br> 感谢有你！**
+[https://www.curseforge.com/minecraft/modpacks/blessed-or-cursed-expedition-to-infinite-force](https://www.curseforge.com/minecraft/modpacks/blessed-or-cursed-expedition-to-infinite-force)
+
+**本整合包已 支持手机版，欢迎各位玩家体验！**
+手机版仅在交流群内发布，群内提供手机版安装教学和热心群友手把手指导安装，
+点击、扫描下方二维码，或搜索群号，加入我们的交流群！
+
+;;;
+**向参与了手机版制作的交流 1 群热心玩家 @.好好，@.金苹果 表示衷心感谢！**
+
+
+我们欢迎任何人制作本整合包的直播或视频，
+欢迎各位 UP 主联系我们，把你的大作展示在这里！
+
+本整合包提供专门的服务端，欢迎各位服主移步下方置顶楼层下载服务端包，
+一键架设你前所未见的拔刀剑服务器！
+
+
+
+# Blessed or Cursed: Expedition to Infinite Force
+
+
+
+一个关于剑与理想的，铸剑师的故事。
+
+
+
+## 国内下载地址
+
+
+**本整合包支持 MCBBS 整合包标准格式**
+
+点击这里下载整合包文件，即可一键导入 MultiMC 及主流国产 Minecraft 启动器：
+
+[https://pan.baidu.com/s/1cHFGYRsLFk1ben8q2r36fw](https://pan.baidu.com/s/1cHFGYRsLFk1ben8q2r36fw)
+
+提取码: a27w
+
+
+
+我们仍然推荐各位从 CurseForge 下载整合包，
+
+
+点点手指即可，不仅给我们提供一些微薄的收入，更是对我们意义重大的支持！
+
+[https://www.curseforge.com/minec ... nfinite-force/files](https://www.curseforge.com/minecraft/modpacks/blessed-or-cursed-expedition-to-infinite-force/files)
+
+如果你喜欢我们的整合包，请点击上方链接下载支持我们！
+
+
+
+## 整合包简介
+
+
+
+MCBBS 上的拔刀剑整合包实在太多了，我相信你也玩过不少。
+
+
+但是在你玩那些包含拔刀剑的整合包时，或许你只做过其中的一两把拔刀剑；
+
+
+你只是在玩其他的 MOD 时，捎带玩一下拔刀剑；
+
+
+那些其他的 MOD 提供的武器装备比拔刀剑强大很多，
+
+
+拔刀剑实际上并不是你的主菜。
+
+
+
+我今天想给你带来一个以拔刀剑 / 最后的太刀匠人为主题的 MOD 整合包。
+
+
+你需要收集拔刀剑、强化你的拔刀剑，
+
+
+只有付出杀敌数和耀魂，用越来越强大的拔刀剑战胜凶恶的敌人，
+
+
+用从它们那里缴获的战利品，为你的旅程铺路，
+
+
+你才能逐步探索整合包的发展线路，最终取得整合包的终极物品 - 无限之心，
+
+
+获得不死不朽的无限力量。
+
+
+
+整合包非常轻量，把优化 MOD、辅助 MOD 统统算上，单机端 MOD 总数为 70 个，
+
+
+而服务端 MOD 总数仅 51 个。
+
+
+单机不需要很高的配置也能玩，如果在服务器上使用，20 个玩家同时在线也能达到 18-19 的 TPS，
+
+
+可以说既适合单机游戏，也适合开服和大家一起玩，
+
+
+我们提供了做好的 Forge 官方端服务端包，下载地址请看置顶回复！
+
+
+
+感谢整合包玩家 ayaya 结合网上的现有教程和自己的游戏理解，
+
+
+仔细编纂的整合包完整教程：
+[https://shimo.im/docs/N2A1vYgE5LfRmj3D/read](plugin_id-link_redirect-target-https-shimo_im_docs_N2A1vYgE5LfRmj3D_read.html)
+
+在此感谢 ayaya 与所有为此教程提供了第一手素材的各位教程作者！
+
+
+如果你在游玩过程中遇到困难，不妨查阅这份教程，或许可以解答你的问题。
+
+
+## 整合包背景故事
+
+
+
+"繁星如许，明月如初。前尘往事，从何细数。"
+
+
+我放下手中的古卷，遥想千年前这片土地上发生的那场决战。
+
+
+邪魔与人类，侵略与反抗，
+
+
+无数的英雄在血染的战场上捐躯，无数的刀匠在沸腾的炉火前献身，
+
+
+无数的名刀在残酷的搏杀中折断，无数的史诗在后人的口耳间相传。
+
+
+在茫茫的时间长河中，我或许是一枚闪亮的金砂，
+
+
+我不愿随波逐流藉藉无名，我渴望着在历史面前证明自己，
+
+
+我要像传说中的那些英雄一样伟大。
+
+
+
+站在现代科学巨人的肩膀上，我伸手去触摸"无限力量"这颗天空中的明星。
+
+
+我对机械制造、金属冶炼、电子工程、化学工程都有涉猎，被人谬赞为"天才"的我，却不以这些成就而沾沾自喜。
+
+
+在我看来，这些现代科学的成就是我追求"无限力量"的垫脚石，
+
+
+但我却被"如何达到无限的力量"这一问题所困，我渴望有人为我指引一条道路。
+
+
+
+直到有一天，我从一个旧书贩子那里买到了一本残破不堪的古卷，
+
+
+这本带有挥之不去的血腥味的残卷，向我吐露出前人的秘密。
+
+
+书本的作者背负着种族的使命、追逐着个人的理想，
+
+
+同样为了"无限的力量"而苦苦求索，
+
+
+在熊熊燃烧的锻炉前挥汗如雨、为打造一把宝刀呕心沥血，
+
+
+他就这样独自战斗了一生，乃至最后献出宝贵的生命。
+
+
+他的手稿字字句句，在我读来都像是诱人的耳语：
+
+
+"跟我来吧，我带你去取得无限的力量！"
+
+
+于是我离开了繁华的人类社会，独自一人去往苍茫的旷野，
+
+
+我要在那里追寻属于我的理想，见证真正的无限之力从我的手中诞生！
+
+
+
+然而古卷以作者的牺牲画上句号，它淡淡的血腥味，也仿佛带着诅咒的意味。
+
+
+我求索无限力量的道路，前途究竟是光明还是黑暗？
+
+
+我.日夜追逐的理想，究竟应得祝福，还是当受诅咒？
+
+
+想到这里我不由得陷入沉思，再次捧起手中的古卷看了又看...
+
+
+
+## 给各位玩家的建议
+
+
+
+### 推荐配置
+
+
+
+运行内存：4 GB 及以上，6 GB 完全足够流畅游玩。
+
+
+Java 运行环境：推荐使用 64 位的 Java 8。
+
+**手机都能流畅游玩的 低配 整合包！**
+
+### 游玩指导
+
+
+
+1. 这个包的主线就是拔刀剑和最后的太刀匠人两个 MOD，
+
+
+整合包线路是跟随最后的太刀匠人的进度系统前进的。
+
+
+当你发现有拔刀剑合成不了、配方不能进行下去的时候，
+
+
+请检查进度系统中，最后的太刀匠人 MOD 的进度。
+
+
+最后的太刀匠人 MOD 的指南书也可以帮助你。
+
+
+指南书的配方被我修改为 4 块泥土 2x2 合成，当你丢失了指南书，记得做一本新的。
+
+
+
+2. 我在 JEI 和物品信息中埋了不少提示，记得看看。
+
+
+不仅可以解答一些游玩方面的问题，还可以发现这个整合包中我设置的彩蛋。
+
+
+### 常见问题
+
+
+
+Q：你这包怎么安装啊？
+
+
+A：我发布的整合包是 CurseForge 格式，MultiMC、HMCL 这些支持 Curseforge 整合包的启动器直接导入即可。
+
+
+你要是实在不会导入整合包，就看这个 B 站视频：
+[https://www.bilibili.com/video/av44819629](https://www.bilibili.com/video/av44819629)
+
+
+Q：安装提示"未能解析 Curse 整合包"，装不上怎么办呀？
+
+
+A：99% 安装失败问题的原因都是启动器太旧，甚至最新的"稳定版"启动器都有可能存在安装失败问题。
+
+
+务必确保你正在使用最新的"开发版"/"快照版"/"体验版"启动器，
+
+
+如果已经使用最新启动器仍然安装失败，欢迎直接加群咨询我本人。
+
+
+
+Q：你这包有没有 BQ 或者 FTBQ 之类的任务可以做啊？
+
+
+A：你自由玩就行了，任务这种东西挺束缚游玩体验的。
+
+
+看《妖刀的记录与锻造方法》这本游戏新人礼包中的指南书，
+
+
+或者是跟着最后的太刀匠人 MOD 的进度走就行了，就在原版进度系统中可以看到。
+
+
+
+Q：为啥你这包没有 Optifine 和自动汉化更新？
+
+
+A：CurseForge 实际上是不允许把 Optifine 放在整合包里的。
+**但我推荐你自己装一下。**
+
+自动汉化更新会把语言强制改为中文，你让外国人怎么玩嘛。
+
+目前整合包已经自带 JEI 的拼音搜索功能（由 HECH 模组实现）。
+
+Q：游戏崩溃怎么办？
+A：直接使用启动器的"导出崩溃报告"功能导出一份崩溃报告，
+回帖在下面提问时，作为帖子附件上传，发送给我，或者在加群询问我时发送给我。
+
+Q: 我游戏没崩，但是有其他的问题想问...
+
+A: 只管问！回复在这帖子底下或者直接加群询问都行，我看到就会回复。
+
+
+## 更新日志
+
+0. 1.12.0-hotfix 修复了 1.12.0 版本中导致工作台合成得到的深渊国度书本外观错误的问题。
+
+
+1. 用 HEI + HECH 拼音搜索代替 JEI，优化搜索物品性能和游戏内体验，卡顿得到缓解，也不再需要反复切换输入法了。
+
+
+2. 新增呼声颇高的游戏体验改善模组鼠标手势。
+
+
+3. 所有拔刀剑参与的配方不再检查 SA、SB 等属性，你可以任意修改拔刀剑了。
+
+
+4. 新增无限之心的两个功能：
+
+
+- 你可以在工作台上将任何你从无限之心中抽到但不想要的奖品回收为替身地藏，后者可以使你的女仆无敌。
+
+
+- 无限之心 + 任何物品 = 该物品的不毁版本。
+
+
+5. 尝试修复一个导致深渊锭不能合成的 bug。
+
+
+6. 加入一批定制的语言文件。
+
+**往期更新日志**
+
+1.11.0 更新日志：
+
+
+1. 删去上传崩溃报告功能损坏的 VanillaFix 模组。
+
+
+2. 删去在某些设备上导致整合包的所有汉字消失的 SmoothFonts 模组。
+
+
+3. 更新 LootTweaker 到 0.3.1 版本，以及更新 CraftTweaker 和 ContentTweaker 模组。
+
+
+4. Forge 版本从 14.23.5.2855 更新到 14.23.5.2860。
+
+
+5. 现在 SpecialAttack (SA) 、SummonedBlade（SB）、SpecialEffect (SE) 被修改过的拔刀剑，
+
+
+也可以提取杀敌数和耀魂点数了。
+
+
+6. 现在所有的山樱系列拔刀剑都可以提取杀敌数和耀魂点数了。
+
+
+7. 结月刀付丧移动到 T2 拔刀剑序列。
+
+
+8. 修复了一个脚本语法错误。
+
+
+
+1.10.2-BETA 修复了玩家丢出蓄力的拔刀剑可以复制该拔刀剑的恶性 Bug。
+
+
+1.10.1-BETA 修复了没有与扎哈尔战斗过的玩家吃下"扎哈尔的羞辱"导致的崩溃、
+
+
+拔刀剑杀死玩家的死亡信息字幕没有翻译的问题，和一个复制拔刀剑的恶性 Bug；
+
+
+新增楼观旋风刃的配方，新增工业时代 2 的纳米和量子护甲套装的车万女仆祭坛充电功能，
+
+
+并添加了相应的提示文字，此外消除了所有的红色报错。
+
+
+1.10.0-BETA 版本修复了 Log4j 漏洞，更新 CraftTweaker 版本到 4.1.20.672，
+
+
+新增 Boss 机制：经验吞噬者扎哈尔。
+
+
+> 你召唤的扎哈尔有 1/3 会变为经验吞噬者扎哈尔。
+他会吸取你的经验等级来回复生命值，如果你的经验值耗尽，他将逃离战斗。
+如果他击杀了你，他会给你一只鸡，吃下去你的经验值就会恢复。
+但如果你成功击败了他，他将给你 1-4 个额外的守门者精华作为奖励。
+
+
+1.9.0 版本回退 FutureMC MOD 到 0.2.6.1 版本，修复无法进行村民交易的问题，
+更新热量与气候 MOD 到 3.8.4 版本，更新 LootTweaker 到 0.3.0-with-old-parser version 版本
+1.8.0 版本更新 FutureMC mod 到 0.2.7.3 版本、更新 Modernity 资源包更新至 3.5.2 版本，
+修改机制：在你成功合成了"沾满魔力的铜钥匙"和"死灵之书"物品之后，反挂机机制会分别变得宽松两倍和三倍。
+1.7.2 版本移除了会打断连击和有刷物品 bug 的"反射"技能精英怪。
+阴影修格斯腐肉也可以用于清理扭曲。
+所有的修格斯腐肉清理扭曲的点数都会在其 JEI 描述中显示。
+所有修格斯腐肉清理扭曲的点数翻倍。
+1.7.1 版本修复了联机时攻击其他玩家，游戏聊天框出现红字报错的问题；
+修复了攻击修格斯，游戏聊天框出现红字报错的问题；
+修复了攻击带有"反射"词缀的精英怪，游戏聊天框出现红字报错的问题；
+修复了空手挖掘树叶，游戏聊天框出现红字报错的问题。
+禁止玩家食用反物质怪物的掉落物，手持反物质带骨腐肉右键点击，会直接变为反物质骨头，而不是吃掉。
+1.7.0 版本增加了 Clumps 经验合并模组，优化了大量经验球掉落时游戏的性能表现。
+1.6.0 版本更新热量与气候到 3.7.2 版本，
+更新自定义主菜单到 2.2.2 版本，解决了旧版本容易启动时崩溃的问题。
+**如果你经常遇到游戏无法启动，在启动中崩溃的情况，请立即更新！**
+此外豆腐史莱姆将不再成为精英怪物。
+1.5.1 版本狩猎祭坛的物品改为深层晶片、阴影野兽的召唤数量改为 1，
+灾厄武士的召唤量改为 16，怪物召唤概率之比调整为4：4：2
+1.5.0 版本向狩猎世界加入了全新的狩猎祭坛机制；
+现在可以用封印之布代替砂轮去除物品的附魔；
+禁用暮色森林的拆解台。
+1.4.0 版本新增了狩猎维度 MOD 及其配套机制。
+1.3.1 版本添加了蓝钢刀条合成虚空刀条的配方，
+修复了僵尸猪人在下界热死的 Bug，
+由于出现了两个严重的 Bug，暂时移除了Future MC 模组的砂轮，在修复完成后我们将恢复砂轮。
+1.3.0 版本加入平滑字体、
+修复了热量与气候的矿石覆盖暮色森林的 BOSS 刷怪箱的问题，并添加了豆腐魔杖的配方。
+1.2.1 版本移除了一些不必要的文件。
+1.2.0 版本更新了热量与气候 MOD ，新增了大量的新食物和机器！
+如果你想知道完整的更新内容，请查阅热量与气候 MOD 的更新日志！
+用纸破坏原版树叶可以得到蚕卵纸，解决了一直以来蚕卵纸不能获得，无法养蚕的问题。
+1.1.6 版本允许合成、采集悬赏榜，也可以在村庄里找到它了。
+解禁湮灭弹核心，现在可以通过阴影仪式安全地召唤萨托斯。
+1.1.5 版本将主菜单改为中英双语，修复了 FutureMC 模组的去皮木头（Stripped Woods）不能合成木板的问题。
+并更新 Modernity 资源包到 3.5.0.版本。
+1.1.4 版本修复了 1.1.3 版本中存在的一个引起进入存档时出现红色报错的小问题。
+1.1.3 版本删除了冗余文件，让整合包更小，运行更快。
+1.1.2 版本调整了刷怪机制，现在僵尸、骷髅、苦力怕等原版怪物不再无视亮度刷新了。
+1.1.1 版本在《妖刀的锻造方法》指南书的序言一章，加入了拔刀剑的基础使用教程。
+如果你从来没有玩过拔刀剑，现在你也可以在教程中了解它并轻松上手了。
+1.1.0 版本给所有与暮色森林传送门相关的物品加入了完整的说明文字，
+包括钻石、沾满魔力的铜钥匙和制作铜钥匙的拔刀剑和两种碎片。
+之前的版本中与深渊生物互动产生的扭曲无法清除，为了解决这一恼人的问题，
+1.1.0 版本新增了一种"扭曲清理仪式"，可以清除普通（粘性）扭曲。
+目前这一机制仍在测试阶段，欢迎各位玩家提出宝贵的建议。
+1.0.5 增加了用中阶耀魂之瓶合成自然碎片的配方，
+应该可以解决自然碎片在 T3 阶段之后消耗量很大，但又不得不从 T2 的拔刀剑中获得这个问题，
+你可以不再被迫在 T3 阶段使用樱剪这把 T2 拔刀了。
+1.0.4 版本删去了不必要的调试信息，你的游戏不再被这些东西打扰了。
+IC2 扳手现在可以制作了。
+此外我们修复了一些小的配方问题。
+1.0.3 版本进一步调整了蠹虫召唤机制，使其对非挂机玩家更友好。
+1.0.2 版本大幅优化了蠹虫召唤机制，改善了游戏体验。
+1.0.1 版本修复了游戏开始时左下角出现红色报错的问题。
+如果这使你感到困扰，请尽快更新！
+
+
+## 模组列表
+
+帖内展示的模组列表可能过期，仅供参考，以 CurseForge 展示的模组列表为准：
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/gravestone-mod](https://www.curseforge.com/minecraft/mc-mods/gravestone-mod)
+
+- GraveStone Mod (by henkelmax)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/thaumcraft](https://www.curseforge.com/minecraft/mc-mods/thaumcraft)
+
+- Thaumcraft (by Azanor13)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/clumps](https://www.curseforge.com/minecraft/mc-mods/clumps)
+
+- Clumps (by Jaredlll08)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/mixinbootstrap](https://www.curseforge.com/minecraft/mc-mods/mixinbootstrap)
+
+- MixinBootstrap (by LX_Gaming)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/redstone-flux](https://www.curseforge.com/minecraft/mc-mods/redstone-flux)
+
+- Redstone Flux (by TeamCoFH)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/inventory-tweaks](https://www.curseforge.com/minecraft/mc-mods/inventory-tweaks)
+
+- Inventory Tweaks [1.12 only] (by JimeoWan)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/contenttweaker](https://www.curseforge.com/minecraft/mc-mods/contenttweaker)
+
+- ContentTweaker (by Jaredlll08)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid)
+
+- Touhou Little Maid (by TartaricAcid)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/botania](https://www.curseforge.com/minecraft/mc-mods/botania)
+
+- Botania (by Vazkii)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/loottweaker](https://www.curseforge.com/minecraft/mc-mods/loottweaker)
+
+- LootTweaker (by Daomephsta)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/smooth-font](https://www.curseforge.com/minecraft/mc-mods/smooth-font)
+
+- Smooth Font (by bre2el)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/konkrete](https://www.curseforge.com/minecraft/mc-mods/konkrete)
+
+- Konkrete [Forge] (by Keksuccino)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/appleskin](https://www.curseforge.com/minecraft/mc-mods/appleskin)
+
+- AppleSkin (by squeek502)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/mtlib](https://www.curseforge.com/minecraft/mc-mods/mtlib)
+
+- MTLib (by Jaredlll08)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/baubles](https://www.curseforge.com/minecraft/mc-mods/baubles)
+
+- Baubles (by Azanor13)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/tree-chopper](https://www.curseforge.com/minecraft/mc-mods/tree-chopper)
+
+- Tree Chopper (by MrDuchy)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/no-recipe-book](https://www.curseforge.com/minecraft/mc-mods/no-recipe-book)
+
+- No Recipe Book (by Seneschal_Luwin)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/chargers](https://www.curseforge.com/minecraft/mc-mods/chargers)
+
+- Chargers (by GoryMoon)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/the-last-smith](https://www.curseforge.com/minecraft/mc-mods/the-last-smith)
+
+- The Last Smith (by sz0999312)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/zenutil](https://www.curseforge.com/minecraft/mc-mods/zenutil)
+
+- Zen Utils (by youyihj)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/modtweaker](https://www.curseforge.com/minecraft/mc-mods/modtweaker)
+
+- ModTweaker (by Jaredlll08)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/waila-harvestability](https://www.curseforge.com/minecraft/mc-mods/waila-harvestability)
+
+- Waila Harvestability (by squeek502)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/giselbaers-durability-viewer](https://www.curseforge.com/minecraft/mc-mods/giselbaers-durability-viewer)
+
+- Giselbaer's Durability Viewer (by Giselbaer)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/tofucraftreload](https://www.curseforge.com/minecraft/mc-mods/tofucraftreload)
+
+- TofuCraftReload (by sz0999312)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/dupefix-project](https://www.curseforge.com/minecraft/mc-mods/dupefix-project)
+
+- DupeFix Project (by Focamacho)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/fancymenu-forge](https://www.curseforge.com/minecraft/mc-mods/fancymenu-forge)
+
+- FancyMenu [Forge] (by Keksuccino)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/resource-loader](https://www.curseforge.com/minecraft/mc-mods/resource-loader)
+
+- Resource Loader (by Lumien231)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/ivtoolkit](https://www.curseforge.com/minecraft/mc-mods/ivtoolkit)
+
+- IvToolkit (by Ivorforce)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/abyssalcraft](https://www.curseforge.com/minecraft/mc-mods/abyssalcraft)
+
+- AbyssalCraft (by Shinoow)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/mob-spawner-control](https://www.curseforge.com/minecraft/mc-mods/mob-spawner-control)
+
+- Mob Spawner Control (by PyrofabTheModsmith)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/patchouli](https://www.curseforge.com/minecraft/mc-mods/patchouli)
+
+- Patchouli (by Vazkii)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/absent-by-design](https://www.curseforge.com/minecraft/mc-mods/absent-by-design)
+
+- Absent by Design (by Lothrazar)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/future-mc](https://www.curseforge.com/minecraft/mc-mods/future-mc)
+
+- Future MC (by thedarkcolour)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/building-gadgets](https://www.curseforge.com/minecraft/mc-mods/building-gadgets)
+
+- Building Gadgets (by Direwolf20)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/vanilla-anvil-repair](https://www.curseforge.com/minecraft/mc-mods/vanilla-anvil-repair)
+
+- Vanilla Anvil Repair (by eksekk)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/enchantment-descriptions](https://www.curseforge.com/minecraft/mc-mods/enchantment-descriptions)
+
+- Enchantment Descriptions (by DarkhaxDev)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/base](https://www.curseforge.com/minecraft/mc-mods/base)
+
+- B.A.S.E (by lanse505)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/slashblade](https://www.curseforge.com/minecraft/mc-mods/slashblade)
+
+- SlashBlade (by flammpfeil)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/abyssalcraft-integration](https://www.curseforge.com/minecraft/mc-mods/abyssalcraft-integration)
+
+- AbyssalCraft Integration (by Shinoow)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/probe](https://www.curseforge.com/minecraft/mc-mods/probe)
+
+- Probe (by yesterday17_p)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/hunting-dimension](https://www.curseforge.com/minecraft/mc-mods/hunting-dimension)
+
+- Hunting Dimension (by DarkhaxDev)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/slashblade-japanese-addon-pack](https://www.curseforge.com/minecraft/mc-mods/slashblade-japanese-addon-pack)
+
+- SlashBlade Japanese Addon Pack (by sz0999312)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/initial-inventory](https://www.curseforge.com/minecraft/mc-mods/initial-inventory)
+
+- Initial Inventory (by Jaredlll08)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/dans-mouse-tweaks](https://www.curseforge.com/minecraft/mc-mods/dans-mouse-tweaks)
+
+- dan's Mouse Tweaks (by CleanroomMC)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/champions](https://www.curseforge.com/minecraft/mc-mods/champions)
+
+- Champions (by TheIllusiveC4)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/applecore](https://www.curseforge.com/minecraft/mc-mods/applecore)
+
+- AppleCore (by squeek502)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/jade](https://www.curseforge.com/minecraft/mc-mods/jade)
+
+- Jade 🔍 (by Snownee_)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/bountiful](https://www.curseforge.com/minecraft/mc-mods/bountiful)
+
+- Bountiful (Forge) (by Ejektaflex)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/texture-packs/modernity](https://www.curseforge.com/minecraft/texture-packs/modernity)
+
+- Modernity (by AstroTibs)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/just-enough-resources-jer](https://www.curseforge.com/minecraft/mc-mods/just-enough-resources-jer)
+
+- Just Enough Resources (JER) (by way2muchnoise)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/macaws-furniture](https://www.curseforge.com/minecraft/mc-mods/macaws-furniture)
+
+- Macaw's Furniture (by sketch_macaw)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/sakura](https://www.curseforge.com/minecraft/mc-mods/sakura)
+
+- Sakura (by sz0999312)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/block-drops-jei-addon](https://www.curseforge.com/minecraft/mc-mods/block-drops-jei-addon)
+
+- Block Drops (JEI Addon) (by KidsDontPlay)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/recurrent-complex](https://www.curseforge.com/minecraft/mc-mods/recurrent-complex)
+
+- Recurrent Complex (by Ivorforce)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/bookshelf](https://www.curseforge.com/minecraft/mc-mods/bookshelf)
+
+- Bookshelf (by DarkhaxDev)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/mctitle](https://www.curseforge.com/minecraft/mc-mods/mctitle)
+
+- MCTitle (by _ForgeUser19510086)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/heat-and-climate](https://www.curseforge.com/minecraft/mc-mods/heat-and-climate)
+
+- Heat And Climate (by defeatedcrow)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/had-enough-characters](https://www.curseforge.com/minecraft/mc-mods/had-enough-characters)
+
+- Had Enough Characters (by CleanroomMC)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest](https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest)
+
+- The Twilight Forest (by Benimatic)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/hwyla](https://www.curseforge.com/minecraft/mc-mods/hwyla)
+
+- Hwyla (by TehNut)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/ic2-tweaker](https://www.curseforge.com/minecraft/mc-mods/ic2-tweaker)
+
+- IC2 Tweaker (by tttusk)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/heat-and-climate-lib](https://www.curseforge.com/minecraft/mc-mods/heat-and-climate-lib)
+
+- Heat And Climate Lib (by defeatedcrow)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/had-enough-items](https://www.curseforge.com/minecraft/mc-mods/had-enough-items)
+
+- Had Enough Items (by CleanroomMC)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/journeymap](https://www.curseforge.com/minecraft/mc-mods/journeymap)
+
+- JourneyMap (by techbrew)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/shadowfacts-forgelin](https://www.curseforge.com/minecraft/mc-mods/shadowfacts-forgelin)
+
+- Shadowfacts' Forgelin (by ShadowfactsDev)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/crafttweaker](https://www.curseforge.com/minecraft/mc-mods/crafttweaker)
+
+- CraftTweaker (by Jaredlll08)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/in-control](https://www.curseforge.com/minecraft/mc-mods/in-control)
+
+- In Control! (by McJty)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/energy-converters](https://www.curseforge.com/minecraft/mc-mods/energy-converters)
+
+- Energy Converters (by xalcon)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/industrial-craft](https://www.curseforge.com/minecraft/mc-mods/industrial-craft)
+
+- Industrial Craft (by sfPlayer1)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/customskinloader](https://www.curseforge.com/minecraft/mc-mods/customskinloader)
+
+- CustomSkinLoader (by xfl03)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/earthworks](https://www.curseforge.com/minecraft/mc-mods/earthworks)
+
+- Earthworks (by Forge_User_14975520)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/surge](https://www.curseforge.com/minecraft/mc-mods/surge)
+
+- Surge (by DarkhaxDev)
+
+
+CurseForge 链接：
+[https://www.curseforge.com/minecraft/mc-mods/mysterious-mountain-lib](https://www.curseforge.com/minecraft/mc-mods/mysterious-mountain-lib)
+
+- Mysterious Mountain Lib (by sz0999312)
+
+
+本整合包内嵌了 Modernity 资源包：
+
+[https://www.curseforge.com/minecraft/texture-packs/modernity](https://www.curseforge.com/minecraft/texture-packs/modernity)
+~~本整合包嵌入了开源字体[Source Sans 3 Light](https://github.com/adobe-fonts/source-sans/blob/release/LICENSE.md)和[Source Han Sans VF](https://github.com/adobe-fonts/source-han-sans/blob/master/LICENSE.txt)，点击链接查看开源协议。~~
+
+目前版本已不再内嵌字体。
+
+
+## 整合包视频实况
+
+
+
+
+祝福或诅咒：无限力量之征 拔刀剑+太刀生存
+
+
+by
+[@籽岷](https://space.bilibili.com/686127)
+
+
+
+【紫晶流光】我的世界祝福或诅咒：无限力量之征拔刀剑生存
+
+
+by
+[@紫晶流光](https://space.bilibili.com/171983684)
+
+
+
+从小刀匠到神匠的成神之路 - 第十二期
+
+
+by
+[@阿巴阿巴的安星天](https://space.bilibili.com/694503487)
+
+
+
+《从小刀匠到神匠的成神之路》全系列播放列表：
+
+[https://space.bilibili.com/694503487/channel/detail?cid=200128](https://space.bilibili.com/694503487/channel/detail?cid=200128)
+
+由国外玩家制作的 **英语**《祝福或诅咒：无限力量之征》整合包宣传视频
+
+https://youtu.be/SkXUB28q4rs?t=183
+
+我们甚至 **火到国外**！受到全球玩家喜爱的拔刀剑整合包！
+
+
+## 整合包概念图
+
+
+
+_我循着《妖刀的记录及锻造方法》的指引，来到锻刀工坊的故地。
+在丛生的杂草与嶙峋的乱石中，我拾到一把精钢锻造、寒光逼人的开山刀。
+
+传说，千年前那位天狗匠人，为寻觅一方宝地建造工坊，
+初次登上妖怪之山时，曾用此刀斩断荆棘开路。
+历经漫长岁月，其上铭文依旧如新、熠熠生辉：_
+_ **若热忱灼如烈阳，若极目可至远方**_
+
+![](static/image/common/none.gif)
+
+_ **又何惧风刀霜剑，又何惧前路茫茫**_
+
+![](static/image/common/none.gif)
+![](static/image/common/none.gif)
+
+
+## 鸣谢
+
+
+
+Minecraft 开发团队
+
+
+Minecraft Forge 团队
+
+
+本整合包中所有 MOD 的作者
+
+
+所有为本整合包中包含的 MOD 提供了汉化的玩家
+
+
+### 特别感谢
+
+
+
+虽然不幸失去了 1.12.2 模组开发环境，但是仍然克服困难，
+
+
+为最后的太刀匠人 MOD 修复了关键 BUG 的 @0999312
+
+
+尽管诸多事务缠身，仍然凭借高超的 Java 技术力和巨大的耐心，
+
+
+帮助我解决了 CraftTweaker 的各种问题的 @youyihj
+
+
+Minecraft 魔改交流群的各位群友，包括在 MCBBS 有账号和没有账号的各位，我都尽量@一下：
+
+[@GaryBBB](home_mod-space-uid-3716147.html) [@科星](home_mod-space-uid-1046331.html)
+
+@superhelo
+
+
+谢谢你们教我写 CrT 的事件，以及解答我现在看起来很低级，但当时确实困扰了我很久的问题。
+
+
+感谢我的朋友 Laevatain 为毕业物品绘制了材质。这个物品用了你的名字来命名，有排面吧。
+
+
+感谢
+[@妖月](home_mod-space-uid-658244.html)
+
+提供了部分物品的材质。
+
+
+感谢我的服务器的各位玩家担任了本整合包的测试员，找到了整合包的各种问题并被我逐一修复。
+
+
+感谢我的朋友
+[@東風](home_mod-space-uid-674849.html) [@菠萝_Yuuki1](home_mod-space-uid-3041158.html) [@弧寒](home_mod-space-uid-761520.html)
+
+对我的支持和信任，我爱你们。
+
+**感谢正在看这个帖子的你。**
+
+## 写给各位整合包作者的话
+
+
+
+这不是 MCBBS 第一个拔刀剑整合包，
+
+
+但或许这是 MCBBS 第一个魔改拔刀剑的整合包。
+
+
+第一次有人把拔刀剑放在整合包的 C 位，让它成为整合包真正的主角。
+
+
+我希望这不是最后一个魔改拔刀剑的整合包，因为我借着这个整合包，
+
+
+希望告诉整个国内 Minecraft 魔改整合包圈子，
+
+
+不管是国产 MOD、日式 MOD 还是国外 MOD，
+
+
+只要整合包作者能发挥创意、精心设计，用做独立游戏的思路来整合它们，
+
+
+任何 MOD 都能做成精彩的整合包，哪怕这听上去有多么不可能。
+
+
+
+我希望这个整合包能激励越来越多的整合包制作者，放下对于某些 MOD 的偏见，
+
+
+用自己的慧眼去发现那些有潜力的 MOD，让它们成为你设计的游戏的一部分。
+
+
+我相信，这样做能打开各位的思路，
+
+
+让 MC 整合包不被局限在那几个古典 MOD 划定的范围中，
+
+
+而是在更加广阔的天地里，创造出无限的可能。
+
+
+
+如果你喜欢这个整合包，
+请在帖子下方评分支持我们！
+
+
+
+
+
+

@@ -1,456 +1,212 @@
-<!DOCTYPE HTML>
-<html lang="zh-CN">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>hexo史上最全搭建教程 | Mybbs</title><meta name="keywords" content="教程,github,hexo"><meta name="author" content="Mybbs —— 开源MC社区"><meta name="copyright" content="Mybbs —— 开源MC社区"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="hexo史上最全搭建教程"><meta name="application-name" content="hexo史上最全搭建教程"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="hexo史上最全搭建教程"><meta property="og:url" content="http://example.com/2024/05/31/82729029/index.html"><meta property="og:site_name" content="Mybbs"><meta property="og:description" content="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-CF2m4SwD-1628816637063)(http:&amp;#x2F;&amp;#x2F;peu31tfv4.bkt.clouddn.com&amp;#x2F;1.jpg)] 花了几天搭建了个网站，先上链接，欢迎来访：fangzh的个人博客 现在市面上的博客很多，如C"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://ts1.cn.mm.bing.net/th/id/R-C.9a6de07448a467a377b44596d9ae5da0?rik=8WbMsGmKuRB5XA&amp;riu=http%3a%2f%2fpic.2265.com%2fupload%2f2021-8%2f2021810928385817.png&amp;ehk=Xi9L%2fFaaTMGPUxE7TnAHh3CKp6VDRo44YeVHbgK3Auk%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0"><meta property="article:author" content="Mybbs —— 开源MC社区"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://ts1.cn.mm.bing.net/th/id/R-C.9a6de07448a467a377b44596d9ae5da0?rik=8WbMsGmKuRB5XA&amp;riu=http%3a%2f%2fpic.2265.com%2fupload%2f2021-8%2f2021810928385817.png&amp;ehk=Xi9L%2fFaaTMGPUxE7TnAHh3CKp6VDRo44YeVHbgK3Auk%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0"><meta name="description" content="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-CF2m4SwD-1628816637063)(http:&amp;#x2F;&amp;#x2F;peu31tfv4.bkt.clouddn.com&amp;#x2F;1.jpg)] 花了几天搭建了个网站，先上链接，欢迎来访：fangzh的个人博客 现在市面上的博客很多，如C"><link rel="shortcut icon" href="https://img.pixelbbs.cn/LightPicture/2024/05/642ae2f5e0e131a7.ico"><link rel="canonical" href="http://example.com/2024/05/31/82729029/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":4000,"accessToken":"","mailMd5":""},
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: undefined,
+  authorStatus: {"skills":null},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Mybbs —— 开源MC社区","link":"链接: ","source":"来源: Mybbs","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Mybbs',
+  title: 'hexo史上最全搭建教程',
+  postAI: '',
+  pageFillDescription: 'Hexo简介, 第一部分, Hexo简介, Hexo搭建步骤, 1. 安装Git, 2. 安装nodejs, 3. 安装hexo, 4. GitHub创建个人仓库,   5. 生成SSH添加到GitHub, 6. 将hexo部署到GitHub, 7. 设置个人域名, 第二部分, 1. hexo基本配置, 网站, 网址, Front-matter, layout（布局）, page, draft, 2. 更换主题, menu（菜单栏）, customize(定制), 添加RSS, widgets(侧边栏), search(搜索框), comment(评论系统), miscellaneous(其他), 总结：, 3. git分支进行多终端工作, 机制,  上传分支, 更换电脑操作, 4. coding page上部署实现国内外分流, 第三部分, 1. SEO优化, 百度seo, google的SEO,   2. 评论系统, 3. 添加百度统计,   4. 文章阅读量统计leanCloud, 5. 引入不蒜子访问量和访问人次统计, 总结外链图片转存失败源站可能有防盗链机制建议将图片保存下来直接上传花了几天搭建了个网站先上链接欢迎来访的个人博客现在市面上的博客很多如博客园简书等平台可以直接在上面发表用户交互做的好写的文章百度也能搜索的到缺点是比较不自由会受到平台的各种限制和恶心的广告而自己购买域名和服务器搭建博客的成本实在是太高了不光是说这些购买成本单单是花力气去自己搭这么一个网站还要定期的维护它对于我们大多数人来说实在是没有这样的精力和时间那么就有第三种选择直接在平台上托管我们的博客这样就可以安心的来写作又不需要定期维护而且作为一个快速简洁的博客框架用它来搭建博客真的非常容易简介是一款基于的静态博客框架依赖少易于安装使用可以方便的生成静态网页托管在和上是搭建博客的首选框架大家可以进入官网进行详细查看因为的创建者是台湾人对中文的支持很友好可以选择中文进行查看教程分三个部分第一部分的初级搭建还有部署到上以及个人域名的绑定第二部分的基本配置更换主题实现多终端工作以及在部署实现国内外分流第三部分添加各种功能包括搜索的阅读量统计访问量统计和评论系统等第一部分的初级搭建还有部署到上以及个人域名的绑定简介是一款基于的静态博客框架依赖少易于安装使用可以方便的生成静态网页托管在和上是搭建博客的首选框架大家可以进入官网进行详细查看因为的创建者是台湾人对中文的支持很友好可以选择中文进行查看搭建步骤安装安装安装创建个人仓库生成添加到将部署到设置个人域名发布文章安装是目前世界上最先进的分布式版本控制系统可以有效高速的处理从很小到非常大的项目版本管理也就是用来管理你的博客文章上传到的工具非常强大我觉得建议每个人都去了解一下廖雪峰老师的教程写的非常好大家可以了解一下教程到官网上下载下载后会有一个的命令行工具以后就用这个工具来使用对来说实在是太简单了因为最早的就是在上编写的只需要一行代码安装好后用来查看一下版本安装是基于编写的所以需要安装一下和里面的工具选择版本就行了安装完后打开命令行检查一下有没有安装成功顺便说一下在安装完后就可以直接使用来敲命令行了不用自带的有点难用安装前面和安装好后就可以安装了你可以先创建一个文件夹然后到这个文件夹下或者在这个文件夹下直接右键打开输入命令依旧用查看一下版本至此就全部安装完了接下来初始化一下这个可以自己取什么名字都行然后进入这个文件夹新建完成后指定文件夹目录下有依赖包存放生成的页面生成文章的一些模板用来存放你的文章主题博客的配置文件打开的服务在浏览器输入就可以看到你生成的博客了大概长这样使用可以把服务关掉创建个人仓库首先你先要有一个账户去注册一个吧注册完登录后在中看到一个新建仓库创建一个和你用户名相同的仓库后面加只有这样将来要部署到的时候才会被识别也就是其中就是你注册的用户名我这里是已经建过了点击生成添加到回到你的中这里的输入你的用户名输入你的邮箱这样才能知道你是不是对应它的账户可以用以下两条检查一下你有没有输对然后创建一路回车这个时候它会告诉你已经生成了的文件夹在你的电脑中找到这个文件夹简单来讲就是一个秘钥其中是你这台电脑的私人秘钥不能给别人看的是公共秘钥可以随便给别人看把这个公钥放在上这样当你链接自己的账户时它就会根据公钥匹配你的私钥当能够相互匹配时才能够顺利的通过上传你的文件到上而后在的中找到的设置选项点击把你的里面的信息复制进去在中查看是否成功将部署到这一步我们就可以将和关联起来也就是将生成的文章部署到上打开站点配置文件翻到最后修改为就是你的账户这个时候需要先安装也就是部署的命令这样你才能用命令部署到然后其中清除了你之前生成的东西也可以不加顾名思义生成静态文章可以用缩写部署文章可以用缩写注意时可能要你输入和得到下图就说明部署成功了过一会儿就可以在这个网站看到你的博客了设置个人域名现在你的个人网站的地址是如果觉得这个网址逼格不太够这就需要你设置个人域名了但是需要花钱注册一个阿里云账户在阿里云上买一个域名我买的是各个后缀的价格不太一样比如最广泛的就比较贵看个人喜好咯你需要先去进行实名认证然后在域名控制台中看到你购买的域名点解析进去添加解析其中和是的服务器地址注意解析线路选择默认不要像我一样选境外这个境外是后面来做国内外分流用的在后面的博客中会讲到记得现在选择默认登录进入之前创建的仓库点击设置输入你的域名然后在你的博客文件中创建一个名为文件不要后缀写上你的域名最后在中输入过不了多久再打开你的浏览器输入你自己的域名就可以看到搭建的网站啦接下来你就可以正式开始写文章了然后在中打开文件就可以开始编辑了当你写完的时候再就可以看到更新了第二部分的基本配置更换主题实现多终端工作以及在部署实现国内外分流基本配置在文件根目录下的就是整个框架的配置文件了可以在里面修改大部分的配置详细可参考官方的配置描述网站参数描述网站标题网站副标题网站描述您的名字网站使用的语言网站时区默认使用您电脑的时区时区列表比如说和其中主要用于告诉搜索引擎一个关于您站点的简单描述通常建议在其中包含您网站的关键词参数用于主题显示文章的作者网址参数描述网址网站根目录文章的永久链接格式永久链接中各部分的默认值在这里你需要把改成你的网站域名也就是你生成某个文章时的那个链接格式比如我新建一个文章叫那么这个时候他自动生成的地址就是以下是官方给出的示例关于链接的变量还有很多需要的可以去官网上查找永久链接参数结果再往下翻中间这些都默认就好了就是选择什么主题也就是在这个文件夹下在官网上有很多个主题默认给你安装的是这个主题当你需要更换主题时在官网上下载把主题的文件放在文件夹下再修改这个参数就可以了接下来这个就是网站的部署的就是仓库的简写选择仓库的哪个分支这个在之前进行部署的时候已经修改过了不再赘述而这个在后面进行双平台部署的时候会再次用到是文件最上方以分隔的区域用于指定个别文件的变量举例来说下是预先定义的参数您可在模板中使用这些参数值并加以利用参数描述布局标题建立日期更新日期开启文章的评论功能标签不适用于分页分类不适用于分页覆盖文章网址其中分类和标签需要区别一下分类具有顺序性和层次性也就是说不等于而标签没有顺序和层次布局当你每一次使用代码它其实默认使用的是这个布局也就是在文件夹下的里面有三种默认布局和它们分别对应不同的路径而您自定义的其他布局和相同都将储存到文件夹布局路径而这个命令其实是只不过这个默认是罢了如果你想另起一页那么可以使用系统会自动给你在文件夹下创建一个文件夹以及文件夹中的这样你访问的对应的链接就是是草稿的意思也就是你如果想写文章又不希望被看到那么可以这样会在中新建一个文件如果你的草稿文件写的过程中想要预览一下那么可以使用在本地端口中开启服务预览如果你的草稿文件写完了想要发表到中就会自动把发送到中更换主题到这一步如果你觉得默认的主题不好看那么可以在官网的主题中选择你喜欢的一个主题进行修改就可以啦点这里这里有多个主题可以选不过最受欢迎的就是那么几个比如主题非常的简洁好看大多数人都选择这个关于这个的教程也比较多不过我选择的是这个主题好像是从移植过来的展示效果如下不管怎么样至少是符合我个人的审美直接在链接上下载下来然后放到文件夹下就行了然后再在刚才说的配置文件中把换成那个主题文件夹的名字它就会自动在文件夹中搜索你配置的主题而后进入这个文件夹可以看到里面也有一个配置文件貌似它默认是把它复制一份重命名为就可以了这个配置文件是修改你整个主题的配置文件菜单栏也就是上面菜单栏上的这些东西其中这个你是找不到网页的因为你的文章中没有这个东西如果你想要的话可以执行命令它就会在根目录下文件夹中新建了一个文件夹以及在中写上你想要写的东西就可以在网站上展示出来了如果你想要自己再自定义一个菜单栏的选项那么就然后在主题配置文件的菜单栏添加一个注意冒号后面要有空格以及前面的空格要和中默认的保持整齐然后在文件夹中找到在中添加就可以显示中文了定制在这里可以修改你的个人默认是那个在文件夹中放入自己要的再改一下的链接名字就可以了是网站中出现的那个小图标的找一张你喜欢的然后转换成格式放在文件夹下配置一下路径就行可以显示你的社交链接而且是有的在这里可以添加一个功能也就是那个符号像一样的东西添加什么是也就是订阅功能你可以理解为类似与订阅公众号的功能来订阅各种博客杂志等等为什么要用就如同订阅公众号一样你对某个公众号感兴趣你总不可能一直时不时搜索这个公众号来看它的文章吧博客也是一样如果你喜欢某个博主或者某个平台的内容你可以通过订阅它们然后在阅读器上可以实时推送这些消息现在网上的垃圾消息太多了如果你每一天都在看这些消息中度过漫无目的的浏览只会让你的时间一点一点的流逝太不值得了如果你关注的博主每次都发的消息都是精华而且不是每一天十几条几十条的轰炸你那么这个博主就值得你的关注你就可以通过订阅他在我的理解中如果你不想每天都被那些没有质量的消息轰炸只想安安静静的关注几个博主每天看一些有质量的内容也不用太多那么订阅值得你的拥有添加功能先安装插件而后在你整个项目的中找到添加这个时候你的链接就是域名了所以在主题配置文件中的这个开启的页面功能这样你网站上就有那个像一样符号的了注意空格如何关注首先你需要一个阅读器在这里我推荐宇宙第一阅读器而且中文支持的挺好不过它没有端的程序只有网页版上有插件在官网上用账号或者自己注册账号登录就可以开始你的关注之旅了每次需要关注某个博主时就点开他的链接把链接复制到上就能关注了当然如果是比较大众化的很厉害的博主你直接搜名字也可以的比如每个人都非常佩服的阮一峰大师直接在阅读器上搜索应该就能出来了我关注的比如阮一峰的网络日志月光博客知乎精选等都很不错当然还有我赶快关注我吧你值得拥有在安卓端也有下载不过因为国内是登录不了的你需要在官网上把你的密码修改了然后就可以用账户名和密码登录了在端没用过好像是可以支持账户还有个也不错可以去试试侧边栏侧边栏的小标签如果你想自己增加一个比如我增加了一个联系方式那么我把写在上面在中的添加然后在中添加一个填入模板这里添加你要写的内容搜索框默认搜索框是不能够用的它已经告诉你了如果想要使用就安装这个插件评论系统这里的多数都是国外的基本用不了这个好像不错还能统计文章阅读量可以自己试一试链接其他这里我就改了一个可以添加友链注意空格要对不然会报错总结整个主题看起来好像很复杂的样子但是仔细捋一捋其实也比较流畅顾名思义布局文件其实后期想要修改自定义网站上的东西添加各种各样的信息主要是在这里修改其中是评论系统是常规的布局最常修改的在这里面比如修改页面和的内容脚本暂时没什么用里面放了一些的样式以及图片分支进行多终端工作问题来了如果你现在在自己的笔记本上写的博客部署在了网站上那么你在家里用台式机或者实验室的台式机发现你电脑里面没有博客的文件或者要换电脑了最后不知道怎么移动文件怎么办在这里我们就可以利用的分支系统进行多终端工作了这样每次打开不一样的电脑只需要进行简单的配置和在上把文件同步下来就可以无缝操作了机制机制是这样的由于上传部署到的其实是编译后的文件是用来生成网页的不包含源文件也就是上传的是在本地目录里自动生成的里面其他文件包括我们写在里面的和配置文件主题文件都没有上传到所以可以利用的分支管理将源文件上传到的另一个分支即可上传分支首先先在上新建一个分支如图然后在这个仓库的中选择默认分支为分支这样每次同步的时候就不用指定分支比较方便然后在本地的任意目录下打开将其克隆到本地因为默认分支已经设成了所以时只了接下来在克隆到本地的中把除了文件夹外的所有文件都删掉把之前我们写的博客源文件全部复制过来除了这里应该说一句复制过来的源文件应该有一个用来忽略一些不需要的文件如果没有的话自己新建一个在里面写上如下表示这些类型文件不需要注意如果你之前克隆过中的主题文件那么应该把主题文件中的文件夹删掉因为不能嵌套上传最好是显示隐藏文件检查一下有没有否则上传的时候会出错导致你的主题文件无法上传这样你的配置在别的电脑上就用不了了而后这样就上传完了可以去你的上看一看分支有没有上传上去其中已经被忽略掉了没有关系不需要上传的因为在别的电脑上需要重新输入命令安装这样就上传完了更换电脑操作一样的跟之前的环境搭建一样安装设置全局邮箱和用户名设置安装安装但是已经不需要初始化了直接在任意文件夹下然后进入克隆到的文件夹生成部署然后就可以开始写你的新博客了不要忘了每次写完最好都把源文件上传一下如果是在已经编辑过的电脑上已经有文件夹了那么每次只要和远端同步一下就行了上部署实现国内外分流之前我们已经把托管在了但是是国外的而且百度的爬虫是不能够爬取的所以如果你希望你做的博客能够在百度引擎上被收录而且想要更快的访问那么可以在国内的做一个托管这样在国内访问就是国外就走申请账户新建项目先申请一个账户然后创建新的项目这一步项目名称应该是随意的添加这一步跟一样添加后检查一下是不是添加成功修改官方文档是这样的那么我们只需要部署保存一下直接这样就可以在的项目上看到你部署的文件了开启服务绑定域名如图阿里云添加解析这个时候就可以把之前的解析改成境外把的解析设为默认了去除的跳转广告的一个比较恶心人的地方就是你只是银牌会员的话访问会先跳转到一个广告再到你自己的域名那么它也给出了消除的办法右上角切换到的旧版界面默认新版是不行的然后再来到这里这里只要你在页面上添加一行文字写然后点下面的小勾勾两个工作日内它就会审核通过了我的选择是把这一行代码放在主题文件夹里面也就是本来在页面中看到的页脚部分当然为了统一我又在后面加上了哈哈可以不加这是最终加上去的代码第三部分添加各种功能包括搜索的阅读量统计访问量统计和评论系统等本文参考了这里面说的很详细了优化推广是很麻烦的事情怎么样别人才能知道我们呢首先需要让搜索引擎收录你的这个网站别人才能搜索的到那么这就需要优化了是由英文缩写而来中文意译为搜索引擎优化是指通过站内优化比如网站结构调整网站内容建设网站代码优化等以及站外优化百度刚建站的时候是没有搜索引擎收录我们的网站的可以在搜索引擎中输入域名域名来查看一下登录百度站长平台添加网站登录百度站长平台在站点管理中添加你自己的网站验证网站有三种方式文件验证标签验证验证第三种方式最简单只要将它提供给你的那个使用解析到就可以了也就是登录你的阿里云把这个解析填进去就了提交链接我们需要使用自动生成网站的然后将生成的提交到百度和其他搜索引擎这时候你需要在你的根目录下中看看有没有改成你自己的重新部署后就可以在文件夹下看到生成的和了然后就可以向百度提交你的站点地图了这里建议使用自动提交自动提交又分为三种主动推送自动推送可以三个一起提交不要紧我选择的是后两种自动推送把百度生成的自动推送代码放在主题文件的适当位置然后验证一下就可以了把两个地址提交上去看到状态正常就了百度收录比较慢慢慢等个十天半个月再去域名域名看看有没有被收录的流程一样更简单而且收录更快进入站点地图提交网站和就可以了如果你这个域名在这里出了问题那你就提交这个链接效果是一样的不出意外的话一天内就能收录你的网站了其他的搜索如搜狗搜索搜索流程是一样的这里就不再赘述评论系统评论系统有很多但是很多都是墙外的用不了之前说过这个好像集成在和主题里面了但是我还没有研究过我看的是这个博主用的来比力评论系统感觉也还不错来比力官网注册好后点击管理页面在中找到安装代码获取安装代码后在主题的下新建一个文件放入刚刚那段代码再找到文件找到如下代码若没有则直接在后面添加即可即为刚刚所创文件名称然后可以自己设置一些东西还可以设置评论提醒这样别人评论你的时候就可以及时知道了添加百度统计百度统计可以在后台上看到你网站的访问数浏览量浏览链接分布等很重要的信息所以添加百度统计能更有效的让你掌握你的网站情况百度统计注册一下这里的账号好像和百度账号不是一起的照样把代码复制到文件中然后再进行一下安装检查半小时左右就可以在百度统计里面看到自己的网站信息了文章阅读量统计进去后注册一下进入后创建一个应用在中创建命名为然后在设置页面看到你的在主题的配置文件中在中适当的位置添加如下这要看你让文章的阅读量统计显示在哪个地方了然后在的最后添加你的你的显示次数追加重新部署后就可以了引入不蒜子访问量和访问人次统计不蒜子的添加非常非常方便不蒜子在中的合适位置看你要显示在哪个地方添加这一段是不蒜子的访问量统计代码就可以了总结到这里就基本做完了其实都是参考别的博主的设置的不一定仅限于主题其他主题的设置也是大体相同的所以如果你希望设置别的主题那么仔细看一下这个主题的代码结构也能够把上边的功能添加进去多看看别的博主的那些功能如果有你能找到自己喜欢的功能那么好好发动搜索技能很快就能找到怎么做了加油吧',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-05-26 20:25:54',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-
-<head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="hexo史上最全搭建教程, Mybbs">
-    <meta name="description" content="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-CF2m4SwD-1628816637063)(http://peu31tfv4.bkt.clouddn.com/1.jpg)]
-花了几天搭建了个网站，先上链接，">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
-
-    <title>hexo史上最全搭建教程 | Mybbs</title>
-    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://img.pixelbbs.cn/LightPicture/2024/05/642ae2f5e0e131a7.ico">
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
     
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
 
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
 
-    <!-- bg-cover style     -->
-
-
-
-<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
-<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-<link rel="stylesheet" type="text/css" href="/css/matery.css">
-<link rel="stylesheet" type="text/css" href="/css/my.css">
-<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
-
-
-
-
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-    <link rel="stylesheet" href="/css/post.css">
-
-
-
-
+        document.head.appendChild(script)
+      })
     
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
 
-
-
-    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
-<meta name="generator" content="Hexo 7.2.0">
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.2.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <link rel="alternate" href="/atom.xml" title="Mybbs" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://tse3-mm.cn.bing.net/th/id/OIP-C.JuOzAHxU3g_zhnbJzyIDAwAAAA?rs=1&amp;pid=ImgDetMain"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
 
-
-<body>
-   
-    <header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper container">
-            <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="https://img.pixelbbs.cn/LightPicture/2024/05/642ae2f5e0e131a7.ico" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">Mybbs</span>
-                </a>
-            </div>
-            
-
-<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
-<ul class="right nav-menu">
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/" class="waves-effect waves-light">
-      
-      <i class="fas fa-home" style="zoom: 0.6;"></i>
-      
-      <span>首页</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/categories" class="waves-effect waves-light">
-      
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
-      
-      <span>分类</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/archives" class="waves-effect waves-light">
-      
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
-      <span>帖子</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/about" class="waves-effect waves-light">
-      
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
-      
-      <span>站点公告</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/HTML/index1.html" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>发帖子</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/HTML/tc.html" class="waves-effect waves-light">
-      
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
-      <span>图床</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a target="_blank" rel="noopener" href="https://www.pixelbbs.cn/source/plugin/bphp_clouds/upload/4438/20240601/417cb596663d3d5bf57708af2fa16eba.zip" class="waves-effect waves-light">
-      
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
-      
-      <span>源码</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/HTML/index2.html" class="waves-effect waves-light">
-      
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
-      
-      <span>服务器</span>
-    </a>
-    
-  </li>
-  
-  <li>
-    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
-    </a>
-  </li>
-  <li>
-    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
-      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
-    </a>
-  </li>
-</ul>
-
-
-<div id="mobile-nav" class="side-nav sidenav">
-
-    <div class="mobile-head bg-color">
-        
-        <img src="https://img.pixelbbs.cn/LightPicture/2024/05/642ae2f5e0e131a7.ico" class="logo-img circle responsive-img">
-        
-        <div class="logo-name">Mybbs</div>
-        <div class="logo-desc">
-            
-            Never really desperate, only the lost of the soul.
-            
-        </div>
-    </div>
-
-    <ul class="menu-list mobile-menu-list">
-        
-        <li class="m-nav-item">
-	  
-		<a href="/" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-home"></i>
-			
-			首页
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/categories" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-bookmark"></i>
-			
-			分类
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/archives" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-archive"></i>
-			
-			帖子
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/about" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-user-circle"></i>
-			
-			站点公告
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/HTML/index1.html" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			发帖子
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/HTML/tc.html" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-archive"></i>
-			
-			图床
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a target="_blank" rel="noopener" href="https://www.pixelbbs.cn/source/plugin/bphp_clouds/upload/4438/20240601/417cb596663d3d5bf57708af2fa16eba.zip" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-bookmark"></i>
-			
-			源码
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/HTML/index2.html" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-user-circle"></i>
-			
-			服务器
-		</a>
-          
-        </li>
-        
-        
-    </ul>
-</div>
-
-
-        </div>
-
-        
-    </nav>
-
-</header>
-
-    
-<script src="/libs/cryptojs/crypto-js.min.js"></script>
-<script>
-    (function() {
-        let pwd = '';
-        if (pwd && pwd.length > 0) {
-            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本帖子的密码')).toString(CryptoJS.enc.Hex)) {
-                alert('密码错误，将返回主页！');
-                location.href = '/';
-            }
-        }
-    })();
-</script>
-
-
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://pmo485225-pic2.ysjianzhan.cn/upload/b1g4.png')">
-    <div class="container" style="right: 0px;left: 0px;">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <h1 class="description center-align post-title">hexo史上最全搭建教程</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-<main class="post-container content">
-
-    
-    <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
-<div id="artDetail">
-    <div class="card">
-        <div class="card-content article-info">
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E6%95%99%E7%A8%8B/">
-                                <span class="chip bg-color">教程</span>
-                            </a>
-                        
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
-                            </a>
-                        
-                            <a href="/tags/github/">
-                                <span class="chip bg-color">github</span>
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/github/" class="post-category">
-                                github
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-
-            <div class="post-info">
-                
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-05-31
-                </div>
-                
-
-                
-
-                
-                <div class="info-break-policy">
-                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8.3k
-                </div>
-                
-
-                
-                <div class="info-break-policy">
-                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    31 分
-                </div>
-                
-
-                
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
-            </div>
-        </div>
-        <hr class="clearfix">
-
-        
-
-        
-
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-CF2m4SwD-1628816637063)(<a target="_blank" rel="noopener" href="http://peu31tfv4.bkt.clouddn.com/1.jpg)]">http://peu31tfv4.bkt.clouddn.com/1.jpg)]</a></p>
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Mybbs</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 本站</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 首页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/4238948.html"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 帮助</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 帖子</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 帖子</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 板块</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/index1.html"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 发帖子</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 更多</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/HTML/tc.html"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 图床</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://www.pixelbbs.cn/source/plugin/bphp_clouds/upload/4438/20240601/417cb596663d3d5bf57708af2fa16eba.zip"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 源码</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/contact"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/30588.html"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 导航站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 关于</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/index2.html"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 服务器</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/gl.html"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 个人中心</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CSDN/" style="font-size: 1.05rem;">CSDN<sup>1</sup></a><a href="/tags/MC/" style="font-size: 1.05rem;">MC<sup>13</sup></a><a href="/tags/Mod/" style="font-size: 1.05rem;">Mod<sup>1</sup></a><a href="/tags/blog/" style="font-size: 1.05rem;">blog<sup>1</sup></a><a href="/tags/github/" style="font-size: 1.05rem;">github<sup>27</sup></a><a href="/tags/hexo/" style="font-size: 1.05rem;">hexo<sup>4</sup></a><a href="/tags/hexo%E4%B8%BB%E9%A2%98/" style="font-size: 1.05rem;">hexo主题<sup>9</sup></a><a href="/tags/java/" style="font-size: 1.05rem;">java<sup>1</sup></a><a href="/tags/paper/" style="font-size: 1.05rem;">paper<sup>1</sup></a><a href="/tags/%E4%BC%91%E9%97%B2/" style="font-size: 1.05rem;">休闲<sup>1</sup></a><a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 1.05rem;">分享<sup>5</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">工具<sup>3</sup></a><a href="/tags/%E6%89%98%E7%AE%A1/" style="font-size: 1.05rem;">托管<sup>1</sup></a><a href="/tags/%E6%8E%A8%E8%8D%90/" style="font-size: 1.05rem;">推荐<sup>1</sup></a><a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 1.05rem;">插件<sup>1</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">教程<sup>15</sup></a><a href="/tags/%E6%95%B4%E5%90%88%E5%8C%85/" style="font-size: 1.05rem;">整合包<sup>3</sup></a><a href="/tags/%E6%96%B0%E9%97%BB/" style="font-size: 1.05rem;">新闻<sup>2</sup></a><a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 1.05rem;">服务器<sup>2</sup></a><a href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" style="font-size: 1.05rem;">服务端<sup>1</sup></a><a href="/tags/%E7%B2%BE%E5%93%81/" style="font-size: 1.05rem;">精品<sup>3</sup></a><a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 1.05rem;">视频<sup>1</sup></a><a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 1.05rem;">转载<sup>9</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/05/"><span class="card-archive-list-date">五月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/09/"><span class="card-archive-list-date">九月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/02/"><span class="card-archive-list-date">二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">9</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">五月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">25</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/github/" itemprop="url">github</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>教程</span></a><a class="article-meta__tags" href="/tags/github/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>github</span></a><a class="article-meta__tags" href="/tags/hexo/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>hexo</span></a></span></div></div><h1 class="post-title" itemprop="name headline">hexo史上最全搭建教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-05-31T10:24:06.233Z" title="发表于 2024-05-31 18:24:06">2024-05-31</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-05-26T12:25:54.631Z" title="更新于 2024-05-26 20:25:54">2024-05-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span id="" data-flag-title="hexo史上最全搭建教程"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="ArtalkPV"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为长沙"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>长沙</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src=""></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://example.com/2024/05/31/82729029/"><header><a class="post-meta-categories" href="/categories/github/" itemprop="url">github</a><a href="/tags/%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url">教程</a><a href="/tags/github/" tabindex="-1" itemprop="url">github</a><a href="/tags/hexo/" tabindex="-1" itemprop="url">hexo</a><h1 id="CrawlerTitle" itemprop="name headline">hexo史上最全搭建教程</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Mybbs —— 开源MC社区</span><time itemprop="dateCreated datePublished" datetime="2024-05-31T10:24:06.233Z" title="发表于 2024-05-31 18:24:06">2024-05-31</time><time itemprop="dateCreated datePublished" datetime="2024-05-26T12:25:54.631Z" title="更新于 2024-05-26 20:25:54">2024-05-26</time></header><p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-CF2m4SwD-1628816637063)(<a target="_blank" rel="noopener" href="http://peu31tfv4.bkt.clouddn.com/1.jpg)]">http://peu31tfv4.bkt.clouddn.com/1.jpg)]</a></p>
 <p>花了几天搭建了个网站，先上链接，欢迎来访：<a target="_blank" rel="noopener" href="http://fangzh.top/">fangzh的个人博客</a></p>
 <p>现在市面上的博客很多，如CSDN，博客园，简书等平台，可以直接在上面发表，用户交互做的好，写的文章百度也能搜索的到。缺点是比较不自由，会受到平台的各种限制和恶心的广告。</p>
 <p>而自己购买域名和服务器，搭建博客的成本实在是太高了，不光是说这些购买成本，单单是花力气去自己搭这么一个网站，还要定期的维护它，对于我们大多数人来说，实在是没有这样的精力和时间。</p>
@@ -514,11 +270,11 @@
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo server</span><br></pre></td></tr></tbody></table></figure>
 
 <p>打开hexo的服务，在浏览器输入localhost:4000就可以看到你生成的博客了。</p>
-<p>大概长这样：<br><img src="https://img.pixelbbs.cn/LightPicture/2024/05/2fa613cfa2eb3cb2.jpg"><br>使用ctrl+c可以把服务关掉。</p>
+<p>大概长这样：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img.pixelbbs.cn/LightPicture/2024/05/2fa613cfa2eb3cb2.jpg"><br>使用ctrl+c可以把服务关掉。</p>
 <h2 id="4-GitHub创建个人仓库"><a href="#4-GitHub创建个人仓库" class="headerlink" title="4. GitHub创建个人仓库"></a>4. GitHub创建个人仓库</h2><p>首先，你先要有一个GitHub账户，去注册一个吧。</p>
-<p>注册完登录后，在GitHub.com中看到一个New repository，新建仓库<br><img src="https://img.pixelbbs.cn/LightPicture/2024/05/c907fca977077f65.jpg"></p>
+<p>注册完登录后，在GitHub.com中看到一个New repository，新建仓库<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img.pixelbbs.cn/LightPicture/2024/05/c907fca977077f65.jpg"></p>
 <p>创建一个和你用户名相同的仓库，后面加.github.io，只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名。我这里是已经建过了。</p>
-<p><img src="https://img.pixelbbs.cn/LightPicture/2024/05/a79bc1ca9d5db885.jpg"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img.pixelbbs.cn/LightPicture/2024/05/a79bc1ca9d5db885.jpg"></p>
 <p>点击create repository。</p>
 <h2 id="5-生成SSH添加到GitHub"><a href="#5-生成SSH添加到GitHub" class="headerlink" title=";  5. 生成SSH添加到GitHub"></a><a name="5_sshgithub_141">;</a>  5. 生成SSH添加到GitHub</h2><p>回到你的git bash中，</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name "yourname"</span><br><span class="line">git config --global user.email "youremail"</span><br></pre></td></tr></tbody></table></figure>
@@ -531,10 +287,10 @@
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C "youremail"</span><br></pre></td></tr></tbody></table></figure>
 
 <p>这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。</p>
-<p><img src="https://img.pixelbbs.cn/LightPicture/2024/05/a92ece466d703932.jpg"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img.pixelbbs.cn/LightPicture/2024/05/a92ece466d703932.jpg"></p>
 <p>ssh，简单来讲，就是一个秘钥，其中， <code>id_rsa</code>是你这台电脑的私人秘钥，不能给别人看的， <code>id_rsa.pub</code>是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
 <p>而后在GitHub的setting中，找到SSH keys的设置选项，点击 <code>New SSH key</code><br>把你的 <code>id_rsa.pub</code>里面的信息复制进去。</p>
-<p><img src="https://img.pixelbbs.cn/LightPicture/2024/05/76909c9dcbec3cd3.jpg"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img.pixelbbs.cn/LightPicture/2024/05/76909c9dcbec3cd3.jpg"></p>
 <p>在gitbash中，查看是否成功</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></tbody></table></figure>
 
@@ -549,18 +305,18 @@
 
 <p>其中 <code>hexo clean</code>清除了你之前生成的东西，也可以不加。<br> <code>hexo generate</code> 顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写<br> <code>hexo deploy</code> 部署文章，可以用 <code>hexo d</code>缩写</p>
 <p>注意deploy时可能要你输入username和password。</p>
-<p>得到下图就说明部署成功了，过一会儿就可以在 <code>http://yourname.github.io</code> 这个网站看到你的博客了！！<br><img src="https://img.pixelbbs.cn/LightPicture/2024/05/fc3466d69b7be31a.jpg"></p>
+<p>得到下图就说明部署成功了，过一会儿就可以在 <code>http://yourname.github.io</code> 这个网站看到你的博客了！！<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img.pixelbbs.cn/LightPicture/2024/05/fc3466d69b7be31a.jpg"></p>
 <h2 id="7-设置个人域名"><a href="#7-设置个人域名" class="headerlink" title="7. 设置个人域名"></a>7. 设置个人域名</h2><p>现在你的个人网站的地址是 <code>yourname.github.io</code>，如果觉得这个网址逼格不太够，这就需要你设置个人域名了。但是需要花钱。</p>
 <p>注册一个阿里云账户,在<a target="_blank" rel="noopener" href="https://wanwang.aliyun.com/?spm=5176.8142029.digitalization.2.e9396d3e46JCc5">阿里云</a>上买一个域名，我买的是 <code>fangzh.top</code>，各个后缀的价格不太一样，比如最广泛的.com就比较贵，看个人喜好咯。</p>
 <p>你需要先去进行实名认证,然后在域名控制台中，看到你购买的域名。</p>
 <p>点 <strong>解析</strong>进去，添加解析。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/951e65614a195996cff7519f7fafdec1.png" alt="图片失效了"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/951e65614a195996cff7519f7fafdec1.png" alt="图片失效了"></p>
 <p>其中，192.30.252.153 和 192.30.252.154 是GitHub的服务器地址。<br><strong>注意，解析线路选择默认</strong>，不要像我一样选境外。这个境外是后面来做国内外分流用的,在后面的博客中会讲到。记得现在选择 <strong>默认</strong>！！</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/6ae646523b70539689b04866baf844c9.png" alt="图片失效了"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/6ae646523b70539689b04866baf844c9.png" alt="图片失效了"></p>
 <p>登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名 <code>fangzh.top</code></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/598c53e8b59a6b88ad484024879da694.png" alt="图片失效了"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/598c53e8b59a6b88ad484024879da694.png" alt="图片失效了"></p>
 <p>然后在你的博客文件source中创建一个名为CNAME文件，不要后缀。写上你的域名。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/170e6d6498ede45ec1950599fa74a260.png" alt="图片失效了"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/170e6d6498ede45ec1950599fa74a260.png" alt="图片失效了"></p>
 <p>最后，在gitbash中，输入</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></tbody></table></figure>
 
@@ -645,14 +401,14 @@
 
 <p>就会自动把newpage.md发送到post中。</p>
 <h2 id="2-更换主题"><a href="#2-更换主题" class="headerlink" title="2. 更换主题"></a>2. 更换主题</h2><p>到这一步，如果你觉得默认的 <code>landscape</code>主题不好看，那么可以在官网的主题中，选择你喜欢的一个主题进行修改就可以啦。<a target="_blank" rel="noopener" href="https://hexo.io/themes/">点这里</a></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/5499f5c70d21f130e51c5568de3549e2.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/5499f5c70d21f130e51c5568de3549e2.png"></p>
 <p>这里有200多个主题可以选。不过最受欢迎的就是那么几个，比如<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">NexT主题</a>，非常的简洁好看，大多数人都选择这个，关于这个的教程也比较多。不过我选择的是<a target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-hueman">hueman</a>这个主题，好像是从WordPress移植过来的，展示效果如下：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/243c5e2ca51f4e8b6f5ea3037b2d667a.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/243c5e2ca51f4e8b6f5ea3037b2d667a.png"></p>
 <p>不管怎么样，至少是符合我个人的审美。</p>
 <p>直接在github链接上下载下来，然后放到 <code>theme</code>文件夹下就行了，然后再在刚才说的配置文件中把 <code>theme</code>换成那个主题文件夹的名字，它就会自动在 <code>theme</code>文件夹中搜索你配置的主题。</p>
 <p>而后进入 <code>hueman</code>这个文件夹，可以看到里面也有一个配置文件 <code>_config.xml</code>，貌似它默认是 <code>_config.xml.example</code>，把它复制一份，重命名为 <code>_config.xml</code>就可以了。这个配置文件是修改你整个主题的配置文件。</p>
 <h4 id="menu（菜单栏）"><a href="#menu（菜单栏）" class="headerlink" title="menu（菜单栏）"></a>menu（菜单栏）</h4><p>也就是上面菜单栏上的这些东西。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/24081eeae96804090f36d58284a1b13a.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/24081eeae96804090f36d58284a1b13a.png"></p>
 <p>其中，About这个你是找不到网页的，因为你的文章中没有about这个东西。如果你想要的话，可以执行命令</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page about</span><br></pre></td></tr></tbody></table></figure>
 
@@ -709,15 +465,15 @@
 <h2 id="3-git分支进行多终端工作"><a href="#3-git分支进行多终端工作" class="headerlink" title="3. git分支进行多终端工作"></a>3. git分支进行多终端工作</h2><p>问题来了，如果你现在在自己的笔记本上写的博客，部署在了网站上，那么你在家里用台式机，或者实验室的台式机，发现你电脑里面没有博客的文件，或者要换电脑了，最后不知道怎么移动文件，怎么办？</p>
 <p>在这里我们就可以利用git的分支系统进行多终端工作了，这样每次打开不一样的电脑，只需要进行简单的配置和在github上把文件同步下来，就可以无缝操作了。</p>
 <h4 id="机制"><a href="#机制" class="headerlink" title="机制"></a>机制</h4><p>机制是这样的，由于 <code>hexo d</code>上传部署到github的其实是hexo编译后的文件，是用来生成网页的，不包含源文件。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/a043c79e9e69631259014b633a308776.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/a043c79e9e69631259014b633a308776.png"></p>
 <p>也就是上传的是在本地目录里自动生成的 <code>.deploy_git</code>里面。</p>
 <p>其他文件 ，包括我们写在source 里面的，和配置文件，主题文件，都没有上传到github</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/de6cb5a609ae31f7b871075a65fb9d08.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/de6cb5a609ae31f7b871075a65fb9d08.png"></p>
 <p>所以可以利用git的分支管理，将源文件上传到github的另一个分支即可。</p>
 <h4 id="上传分支"><a href="#上传分支" class="headerlink" title="; 上传分支"></a><a name="_645">;</a> 上传分支</h4><p>首先，先在github上新建一个hexo分支，如图：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9ef237aa346708b1f641902595664ec4.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/9ef237aa346708b1f641902595664ec4.png"></p>
 <p>然后在这个仓库的settings中，选择默认分支为hexo分支（这样每次同步的时候就不用指定分支，比较方便）。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/379e8bad592c693dc06066fcca13b625.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/379e8bad592c693dc06066fcca13b625.png"></p>
 <p>然后在本地的任意目录下，打开git bash，</p>
 <figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:ZJUFangzh/ZJUFangzh.github.io.git</span><br></pre></td></tr></tbody></table></figure>
 
@@ -731,7 +487,7 @@
 <figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit –m "add branch"</span><br><span class="line">git push</span><br></pre></td></tr></tbody></table></figure>
 
 <p>这样就上传完了，可以去你的github上看一看hexo分支有没有上传上去，其中 <code>node_modules</code>、 <code>public</code>、 <code>db.json</code>已经被忽略掉了，没有关系，不需要上传的，因为在别的电脑上需要重新输入命令安装 。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/0039e2039209460ea6e15deb7e47bdaa.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/0039e2039209460ea6e15deb7e47bdaa.png"></p>
 <p>这样就上传完了。</p>
 <h4 id="更换电脑操作"><a href="#更换电脑操作" class="headerlink" title="更换电脑操作"></a>更换电脑操作</h4><p>一样的，跟之前的环境搭建一样，</p>
 <ul>
@@ -805,19 +561,19 @@
 <p>这样就可以在coding的项目上看到你部署的文件了。</p>
 <p><strong>5. 开启coding pages服务，绑定域名</strong></p>
 <p>如图：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/10a1bbb64e8a644bafb91a2cc772e5a3.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/10a1bbb64e8a644bafb91a2cc772e5a3.png"></p>
 <p><strong>6. 阿里云添加解析</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/74c4eee3ea9dde8c1cecbaadf05d2f9a.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/74c4eee3ea9dde8c1cecbaadf05d2f9a.png"></p>
 <p>这个时候就可以把之前github的解析改成境外，把coding的解析设为默认了。</p>
 <p><strong>7. 去除coding page的跳转广告</strong></p>
 <p>coding page的一个比较恶心人的地方就是，你只是银牌会员的话，访问会先跳转到一个广告，再到你自己的域名。那么它也给出了消除的办法。右上角切换到coding的旧版界面，默认新版是不行的。然后再来到 <code>pages&amp;#x670D;&amp;#x52A1;</code>这里。</p>
 <p>这里：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/30b3a764555f9c5b36c5a92c786b8719.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/30b3a764555f9c5b36c5a92c786b8719.png"></p>
 <p>只要你在页面上添加一行文字，写 <code>Hosted by Coding Pages</code>，然后点下面的小勾勾，两个工作日内它就会审核通过了。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Hosted by &lt;a href="https://pages.coding.me" style="font-weight: bold"&gt;Coding Pages&lt;/a&gt;&lt;/p&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>我的选择是把这一行代码放在主题文件夹 <code>/layout/common/footer.ejs</code>里面，也就是本来在页面中看到的页脚部分。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/cd1a623e7c46deaa5bf02c00f0dc53b5.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/cd1a623e7c46deaa5bf02c00f0dc53b5.png"></p>
 <p>当然，为了统一，我又在后面加上了and <strong>Github</strong>哈哈，可以不加。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;span&gt;Hosted by &lt;a href="https://pages.coding.me" style="font-weight: bold"&gt;Coding Pages&lt;/a&gt;&lt;/span&gt; and &lt;span&gt;&lt;a href="https://github.com" style="font-weight: bold"&gt;Github&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;</span><br></pre></td></tr></tbody></table></figure>
 
@@ -839,41 +595,41 @@
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></tbody></table></figure>
 
 <p>这时候你需要在你的根目录下 <code>_config.xml</code>中看看url有没有改成你自己的：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/d15a2de073246209dee33dfd74fc7505.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/d15a2de073246209dee33dfd74fc7505.png"></p>
 <p>重新部署后，就可以在public文件夹下看到生成的sitemap.xml和baidusitemap.xml了。</p>
 <p>然后就可以向百度提交你的站点地图了。</p>
 <p>这里建议使用自动提交。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/e9c830bf284910f23b9c8f8505395a3c.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/e9c830bf284910f23b9c8f8505395a3c.png"></p>
 <p>自动提交又分为三种：主动推送、自动推送、sitemap。</p>
 <p>可以三个一起提交不要紧，我选择的是后两种。</p>
 <ul>
 <li>自动推送：把百度生成的自动推送代码，放在主题文件 <code>/layout/common/head.ejs</code>的适当位置，然后验证一下就可以了。</li>
 <li>sitemap：把两个sitemap地址，提交上去，看到状态正常就OK了。</li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/bb66cfa619e41b4598a0598f3bbdeb4a.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/bb66cfa619e41b4598a0598f3bbdeb4a.png"></p>
 <p><strong>ps:</strong> 百度收录比较慢，慢慢等个十天半个月再去 <code>site:&lt;域名&gt;&lt;/域名&gt;</code>看看有没有被收录。</p>
 <h4 id="google的SEO"><a href="#google的SEO" class="headerlink" title="google的SEO"></a>google的SEO</h4><p>流程一样，google更简单，而且收录更快，进入<a target="_blank" rel="noopener" href="https://search.google.com/search-console/sitemaps?resource_id=http://fangzh.top/&amp;hl=zh-CN">google站点地图</a>，提交网站和sitemap.xml，就可以了。</p>
 <p>如果你这个域名在google这里出了问题，那你就提交 yourname.github.io，这个链接，效果是一样的。</p>
 <p>不出意外的话一天内google就能收录你的网站了。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/57a23694869f490d30d4f6fd9dcf7a68.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/57a23694869f490d30d4f6fd9dcf7a68.png"></p>
 <p>其他的搜索，如搜狗搜索，360搜索，流程是一样的，这里就不再赘述。</p>
 <h2 id="2-评论系统"><a href="#2-评论系统" class="headerlink" title=";  2. 评论系统"></a><a name="2__980">;</a>  2. 评论系统</h2><p>评论系统有很多，但是很多都是墙外的用不了，之前说过这个valine好像集成在hueman和next主题里面了，但是我还没有研究过，我看的是<a target="_blank" rel="noopener" href="http://visugar.com/2017/08/01/20170801HexoPlugins/">visugar</a>这个博主用的来比力评论系统，感觉也还不错。</p>
 <p><a target="_blank" rel="noopener" href="https://livere.com/">来比力官网</a>，注册好后，点击管理页面，在 <code>&amp;#x4EE3;&amp;#x7801;&amp;#x7BA1;&amp;#x7406;</code>中找到安装代码：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/4b68111ca1736e5aee54974763fd2ba0.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/4b68111ca1736e5aee54974763fd2ba0.png"></p>
 <p>获取安装代码后，在主题的comment下新建一个文件放入刚刚那段代码，再找到article文件，找到如下代码，若没有则直接在footer后面添加即可。livebe即为刚刚所创文件名称。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- partial('comment livebe') %&gt;</span><br><span class="line">&lt;/%-&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>然后可以自己设置一些东西：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/341c058799572737832bdfb661b883d5.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/341c058799572737832bdfb661b883d5.png"></p>
 <p>还可以设置评论提醒，这样别人评论你的时候就可以及时知道了。</p>
 <h2 id="3-添加百度统计"><a href="#3-添加百度统计" class="headerlink" title="3. 添加百度统计"></a>3. 添加百度统计</h2><p>百度统计可以在后台上看到你网站的访问数，浏览量，浏览链接分布等很重要的信息。所以添加百度统计能更有效的让你掌握你的网站情况。</p>
 <p><a target="_blank" rel="noopener" href="https://tongji.baidu.com/">百度统计</a>，注册一下，这里的账号好像和百度账号不是一起的。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/78605ca97255b53fd75d90f8b0fc858d.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/78605ca97255b53fd75d90f8b0fc858d.png"></p>
 <p>照样把代码复制到 <code>head.ejs</code>文件中，然后再进行一下安装检查，半小时左右就可以在百度统计里面看到自己的网站信息了。</p>
 <h2 id="4-文章阅读量统计leanCloud"><a href="#4-文章阅读量统计leanCloud" class="headerlink" title=";  4. 文章阅读量统计leanCloud"></a><a name="4_leancloud_1026">;</a>  4. 文章阅读量统计leanCloud</h2><p><a target="_blank" rel="noopener" href="https://leancloud.cn/">leanCloud</a>，进去后注册一下，进入后创建一个应用：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/fda4f72f190ff5910ff790b05641096c.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/fda4f72f190ff5910ff790b05641096c.png"></p>
 <p>在 <code>&amp;#x5B58;&amp;#x50A8;</code>中创建Class，命名为Counter,</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/16843063bfd1ae6f2e743001bc06067e.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/16843063bfd1ae6f2e743001bc06067e.png"></p>
 <p>然后在设置页面看到你的 <code>&amp;#x5E94;&amp;#x7528;Key</code>，在主题的配置文件中：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line">  enable: true</span><br><span class="line">  app_id: &amp;#x4F60;&amp;#x7684;id</span><br><span class="line">  app_key: &amp;#x4F60;&amp;#x7684;key</span><br></pre></td></tr></tbody></table></figure>
 
@@ -891,709 +647,310 @@
 <p>就可以了。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>到这里就基本做完了。其实都是参考别的博主的设置的，不一定仅限于hueman主题，其他主题的设置也是大体相同的，所以如果你希望设置别的主题，那么仔细看一下这个主题的代码结构，也能够把上边的功能添加进去。</p>
 <p>多看看别的博主的那些功能，如果有你能找到自己喜欢的功能，那么好好发动搜索技能，很快就能找到怎么做了。加油吧！</p>
-
-                
-            </div>
-            <hr/>
-
-            
-
-    <div class="reprint" id="reprint-statement">
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://ts1.cn.mm.bing.net/th/id/R-C.9a6de07448a467a377b44596d9ae5da0?rik=8WbMsGmKuRB5XA&amp;riu=http%3a%2f%2fpic.2265.com%2fupload%2f2021-8%2f2021810928385817.png&amp;ehk=Xi9L%2fFaaTMGPUxE7TnAHh3CKp6VDRo44YeVHbgK3Auk%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://ts1.cn.mm.bing.net/th/id/R-C.9a6de07448a467a377b44596d9ae5da0?rik=8WbMsGmKuRB5XA&amp;riu=http%3a%2f%2fpic.2265.com%2fupload%2f2021-8%2f2021810928385817.png&amp;ehk=Xi9L%2fFaaTMGPUxE7TnAHh3CKp6VDRo44YeVHbgK3Auk%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" title="头像" alt="头像"></a><div class="post-copyright__author_name">Mybbs —— 开源MC社区</div><div class="post-copyright__author_desc"></div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://example.com/2024/05/31/82729029/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/2024/05/31/82729029/')">hexo史上最全搭建教程</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/2024/05/31/82729029/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=hexo史上最全搭建教程&amp;url=http://example.com/2024/05/31/82729029/&amp;pic=" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Mybbs</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E6%95%99%E7%A8%8B/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>教程<span class="tagsPageCount">15</span></a><a class="post-meta__box__tags" href="/tags/github/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>github<span class="tagsPageCount">27</span></a><a class="post-meta__box__tags" href="/tags/hexo/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>hexo<span class="tagsPageCount">4</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://ts1.cn.mm.bing.net/th/id/R-C.9a6de07448a467a377b44596d9ae5da0?rik=8WbMsGmKuRB5XA&amp;riu=http%3a%2f%2fpic.2265.com%2fupload%2f2021-8%2f2021810928385817.png&amp;ehk=Xi9L%2fFaaTMGPUxE7TnAHh3CKp6VDRo44YeVHbgK3Auk%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/05/31/18142/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" onerror="onerror=null;src='https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&amp;riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&amp;ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Cloudflare Pages + Hexo 搭建个人博客</div></div></a></div><div class="next-post pull-right"><a href="/2024/05/31/86661502/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" onerror="onerror=null;src='https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&amp;riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&amp;ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hexo博客优化之Next主题美化</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2024/05/31/18142/" title="Cloudflare Pages + Hexo 搭建个人博客"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-05-31</div><div class="title">Cloudflare Pages + Hexo 搭建个人博客</div></div></a></div><div><a href="/2024/04/16/128750716/" title="csdn博客转markdown"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-04-16</div><div class="title">csdn博客转markdown</div></div></a></div><div><a href="/2024/06/06/130442795/" title="【原创】搭建一个Chat-GPT Proxy"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-06-06</div><div class="title">【原创】搭建一个Chat-GPT Proxy</div></div></a></div><div><a href="/2025/09/24/2589378/" title="「Disqus」为 hexo 博客添加文章推荐功能"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-09-24</div><div class="title">「Disqus」为 hexo 博客添加文章推荐功能</div></div></a></div><div><a href="/2020/05/12/4893589/" title="[github]Minecraft我的世界Spigot插件保姆级开发教程"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2020-05-12</div><div class="title">[github]Minecraft我的世界Spigot插件保姆级开发教程</div></div></a></div><div><a href="/2025/02/25/57892389/" title="「教程」在Deepin（Linux）下如何优雅地查词典？—— sdcv ⚡📚"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-02-25</div><div class="title">「教程」在Deepin（Linux）下如何优雅地查词典？—— sdcv ⚡📚</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div></div><div class="comment-wrap"><div><div id="artalk-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://ts1.cn.mm.bing.net/th/id/R-C.9a6de07448a467a377b44596d9ae5da0?rik=8WbMsGmKuRB5XA&amp;riu=http%3a%2f%2fpic.2265.com%2fupload%2f2021-8%2f2021810928385817.png&amp;ehk=Xi9L%2fFaaTMGPUxE7TnAHh3CKp6VDRo44YeVHbgK3Auk%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">Hexo简介</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86"><span class="toc-number"></span> <span class="toc-text">第一部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo%E7%AE%80%E4%BB%8B-1"><span class="toc-number"></span> <span class="toc-text">Hexo简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4"><span class="toc-number"></span> <span class="toc-text">Hexo搭建步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85Git"><span class="toc-number"></span> <span class="toc-text">1. 安装Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85nodejs"><span class="toc-number"></span> <span class="toc-text">2. 安装nodejs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85hexo"><span class="toc-number"></span> <span class="toc-text">3. 安装hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-GitHub%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%BB%93%E5%BA%93"><span class="toc-number"></span> <span class="toc-text">4. GitHub创建个人仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%94%9F%E6%88%90SSH%E6%B7%BB%E5%8A%A0%E5%88%B0GitHub"><span class="toc-number"></span> <span class="toc-text">  5. 生成SSH添加到GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0GitHub"><span class="toc-number"></span> <span class="toc-text">6. 将hexo部署到GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E8%AE%BE%E7%BD%AE%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D"><span class="toc-number"></span> <span class="toc-text">7. 设置个人域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86"><span class="toc-number"></span> <span class="toc-text">第二部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-hexo%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-number"></span> <span class="toc-text">1. hexo基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%AB%99"><span class="toc-number">0.1.</span> <span class="toc-text">网站</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E5%9D%80"><span class="toc-number">0.2.</span> <span class="toc-text">网址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Front-matter"><span class="toc-number">0.3.</span> <span class="toc-text">Front-matter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#layout%EF%BC%88%E5%B8%83%E5%B1%80%EF%BC%89"><span class="toc-number">0.4.</span> <span class="toc-text">layout（布局）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#page"><span class="toc-number">0.4.1.</span> <span class="toc-text">page</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#draft"><span class="toc-number">0.4.2.</span> <span class="toc-text">draft</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="toc-number"></span> <span class="toc-text">2. 更换主题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#menu%EF%BC%88%E8%8F%9C%E5%8D%95%E6%A0%8F%EF%BC%89"><span class="toc-number">0.1.</span> <span class="toc-text">menu（菜单栏）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#customize-%E5%AE%9A%E5%88%B6"><span class="toc-number">0.2.</span> <span class="toc-text">customize(定制)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0RSS"><span class="toc-number">0.3.</span> <span class="toc-text">添加RSS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#widgets-%E4%BE%A7%E8%BE%B9%E6%A0%8F"><span class="toc-number">0.4.</span> <span class="toc-text">widgets(侧边栏)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#search-%E6%90%9C%E7%B4%A2%E6%A1%86"><span class="toc-number">0.5.</span> <span class="toc-text">search(搜索框)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#comment-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F"><span class="toc-number">0.6.</span> <span class="toc-text">comment(评论系统)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#miscellaneous-%E5%85%B6%E4%BB%96"><span class="toc-number">0.7.</span> <span class="toc-text">miscellaneous(其他)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="toc-number">0.8.</span> <span class="toc-text">总结：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-git%E5%88%86%E6%94%AF%E8%BF%9B%E8%A1%8C%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%B7%A5%E4%BD%9C"><span class="toc-number"></span> <span class="toc-text">3. git分支进行多终端工作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%BA%E5%88%B6"><span class="toc-number">0.1.</span> <span class="toc-text">机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E5%88%86%E6%94%AF"><span class="toc-number">0.2.</span> <span class="toc-text"> 上传分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E6%93%8D%E4%BD%9C"><span class="toc-number">0.3.</span> <span class="toc-text">更换电脑操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-coding-page%E4%B8%8A%E9%83%A8%E7%BD%B2%E5%AE%9E%E7%8E%B0%E5%9B%BD%E5%86%85%E5%A4%96%E5%88%86%E6%B5%81"><span class="toc-number"></span> <span class="toc-text">4. coding page上部署实现国内外分流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86"><span class="toc-number"></span> <span class="toc-text">第三部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-SEO%E4%BC%98%E5%8C%96"><span class="toc-number"></span> <span class="toc-text">1. SEO优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%99%BE%E5%BA%A6seo"><span class="toc-number">0.1.</span> <span class="toc-text">百度seo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#google%E7%9A%84SEO"><span class="toc-number">0.2.</span> <span class="toc-text">google的SEO</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F"><span class="toc-number"></span> <span class="toc-text">  2. 评论系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%B7%BB%E5%8A%A0%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1"><span class="toc-number"></span> <span class="toc-text">3. 添加百度统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1leanCloud"><span class="toc-number"></span> <span class="toc-text">  4. 文章阅读量统计leanCloud</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%BC%95%E5%85%A5%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%BF%E9%97%AE%E9%87%8F%E5%92%8C%E8%AE%BF%E9%97%AE%E4%BA%BA%E6%AC%A1%E7%BB%9F%E8%AE%A1"><span class="toc-number"></span> <span class="toc-text">5. 引入不蒜子访问量和访问人次统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number"></span> <span class="toc-text">总结</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/26/8684/" title="[Github] MCBBS-Client">[Github] MCBBS-Client</a><time datetime="2026-05-26T05:03:32.000Z" title="发表于 2026-05-26 13:03:32">2026-05-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/24/2589378/" title="「Disqus」为 hexo 博客添加文章推荐功能">「Disqus」为 hexo 博客添加文章推荐功能</a><time datetime="2025-09-23T20:17:35.000Z" title="发表于 2025-09-24 04:17:35">2025-09-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/24/28523795/" title="「视频」MC绷带指令">「视频」MC绷带指令</a><time datetime="2025-09-23T20:17:35.000Z" title="发表于 2025-09-24 04:17:35">2025-09-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/25/57892389/" title="「教程」在Deepin（Linux）下如何优雅地查词典？—— sdcv ⚡📚">「教程」在Deepin（Linux）下如何优雅地查词典？—— sdcv ⚡📚</a><time datetime="2025-02-25T06:04:55.000Z" title="发表于 2025-02-25 14:04:55">2025-02-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/07/2384%E9%93%85389/" title="[1.12.2][支持手机版|拔刀剑]祝福或诅咒：无限力量之征——关于剑与理想的故事">[1.12.2][支持手机版|拔刀剑]祝福或诅咒：无限力量之征——关于剑与理想的故事</a><time datetime="2024-06-07T13:07:54.845Z" title="发表于 2024-06-07 21:07:54">2024-06-07</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2024 By <a class="footer-bar-link" href="/" title="Mybbs —— 开源MC社区" target="_blank">Mybbs —— 开源MC社区</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">45</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">8</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">推荐网站</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com" title="Github"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://tse1-mm.cn.bing.net/th/id/OIP-C.NGIDdVP6vw9ue_D-mrEVFQHaHa?rs=1&amp;pid=ImgDetMainhttps://tse1-mm.cn.bing.net/th/id/OIP-C.NGIDdVP6vw9ue_D-mrEVFQHaHa?rs=1&amp;pid=ImgDetMain" alt="Github"/><span class="back-menu-item-text">Github</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">暂无</div><div class="back-menu-list"><a class="back-menu-item" href="/%E9%83%BD%E8%AF%B4%E4%BA%86%E6%9A%82%E6%97%A0%E4%BA%86%EF%BC%81" title="暂无"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&amp;riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&amp;ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" alt="暂无"/><span class="back-menu-item-text">暂无</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 本站</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 首页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/4238948.html"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 帮助</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 帖子</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 帖子</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 板块</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/index1.html"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 发帖子</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 更多</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/HTML/tc.html"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 图床</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://www.pixelbbs.cn/source/plugin/bphp_clouds/upload/4438/20240601/417cb596663d3d5bf57708af2fa16eba.zip"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 源码</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/contact"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/30588.html"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 导航站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 关于</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/index2.html"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 服务器</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/gl.html"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 个人中心</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CSDN/" style="font-size: 0.88rem;">CSDN<sup>1</sup></a><a href="/tags/MC/" style="font-size: 0.88rem;">MC<sup>13</sup></a><a href="/tags/Mod/" style="font-size: 0.88rem;">Mod<sup>1</sup></a><a href="/tags/blog/" style="font-size: 0.88rem;">blog<sup>1</sup></a><a href="/tags/github/" style="font-size: 0.88rem;">github<sup>27</sup></a><a href="/tags/hexo/" style="font-size: 0.88rem;">hexo<sup>4</sup></a><a href="/tags/hexo%E4%B8%BB%E9%A2%98/" style="font-size: 0.88rem;">hexo主题<sup>9</sup></a><a href="/tags/java/" style="font-size: 0.88rem;">java<sup>1</sup></a><a href="/tags/paper/" style="font-size: 0.88rem;">paper<sup>1</sup></a><a href="/tags/%E4%BC%91%E9%97%B2/" style="font-size: 0.88rem;">休闲<sup>1</sup></a><a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 0.88rem;">分享<sup>5</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">工具<sup>3</sup></a><a href="/tags/%E6%89%98%E7%AE%A1/" style="font-size: 0.88rem;">托管<sup>1</sup></a><a href="/tags/%E6%8E%A8%E8%8D%90/" style="font-size: 0.88rem;">推荐<sup>1</sup></a><a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 0.88rem;">插件<sup>1</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 0.88rem;">教程<sup>15</sup></a><a href="/tags/%E6%95%B4%E5%90%88%E5%8C%85/" style="font-size: 0.88rem;">整合包<sup>3</sup></a><a href="/tags/%E6%96%B0%E9%97%BB/" style="font-size: 0.88rem;">新闻<sup>2</sup></a><a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 0.88rem;">服务器<sup>2</sup></a><a href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" style="font-size: 0.88rem;">服务端<sup>1</sup></a><a href="/tags/%E7%B2%BE%E5%93%81/" style="font-size: 0.88rem;">精品<sup>3</sup></a><a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 0.88rem;">视频<sup>1</sup></a><a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 0.88rem;">转载<sup>9</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><a id="switch-commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
         
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        帖子作者:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">站长</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        帖子链接:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="http://example.com/2024/05/31/82729029/">http://example.com/2024/05/31/82729029/</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        版权声明:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    本论坛所有帖子除特別声明外，均采用
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    许可协议。转载请注明来源
-                    <a href="/about" target="_blank">站长</a>
-                    !
-                </span>
-            </div>
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
         
-    </div>
-
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
-
-
-
-            <div class="tag_share" style="display: block;">
-                <div class="post-meta__tag-list" style="display: inline-block;">
-                    
-                        <div class="article-tag">
-                            
-                                <a href="/tags/%E6%95%99%E7%A8%8B/">
-                                    <span class="chip bg-color">教程</span>
-                                </a>
-                            
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
-                                </a>
-                            
-                                <a href="/tags/github/">
-                                    <span class="chip bg-color">github</span>
-                                </a>
-                            
-                        </div>
-                    
-                </div>
-                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-<div id="article-share">
-
-    
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
-    
-
-    
-
-</div>
-
-                </div>
-            </div>
-            
-        </div>
-    </div>
-
-    
-
-    
-
-    
-
-    
-    <div class="livere-card card" data-aos="fade-up">
-    <!-- 来必力City版安装代码 -->
-    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">
-        <script type="text/javascript">
-            (function (d, s) {
-                let j, e = d.getElementsByTagName(s)[0];
-                if (typeof LivereTower === 'function') {
-                    return;
-                }
-
-                j = d.createElement(s);
-                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                j.async = true;
-
-                e.parentNode.insertBefore(j, e);
-            })(document, 'script');
-        </script>
-        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
-    </div>
-    <!-- City版安装代码已完成 -->
-</div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2024/05/31/848/">
-                    <div class="card-image">
-                        
-                        <img src="https://img1.minecraftzw.com/wp-content/uploads/2019/09/minecraftzw_20190918_1568765993.gif" class="responsive-img" alt="我的世界1.20.4-1.10.2苹果皮 AppleSkin Mod下载">
-                        
-                        <span class="card-title">我的世界1.20.4-1.10.2苹果皮 AppleSkin Mod下载</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-05-31
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%88%86%E4%BA%AB/" class="post-category">
-                                    分享
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/MC/">
-                        <span class="chip bg-color">MC</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%BD%AC%E8%BD%BD/">
-                        <span class="chip bg-color">转载</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%88%86%E4%BA%AB/">
-                        <span class="chip bg-color">分享</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2024/05/31/18142/">
-                    <div class="card-image">
-                        
-                        <img src="https://photo-jager.oss-cn-hangzhou.aliyuncs.com/img/PicGo/202401051810645.png" class="responsive-img" alt="Cloudflare Pages + Hexo 搭建个人博客">
-                        
-                        <span class="card-title">Cloudflare Pages + Hexo 搭建个人博客</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-31
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/github/" class="post-category">
-                                    github
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">教程</span>
-                    </a>
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                    <a href="/tags/github/">
-                        <span class="chip bg-color">github</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%BD%AC%E8%BD%BD/">
-                        <span class="chip bg-color">转载</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-    </div>
-</article>
-
-</div>
-
-
-
-<!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-
-
-
-<!-- 代码语言 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
-
-<!-- 代码块复制 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-
-
-<!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
-
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
-
-    
-
-</main>
-
-
-
-
-    <footer class="page-footer bg-color">
-    
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="/libs/aplayer/Meting.min.js"></script>
-
-    
-
-    <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
-        <div class="col s12 m8 l8 copy-right">
-            Copyright&nbsp;&copy;
-            
-                <span id="year">2019-2024</span>
-            
-            <a href="/about" target="_blank">站长</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
-            
-            <br>
-            
-                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">107.3k</span>
-            
-            
-            
-                
-            
-            
-                <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
-                    <span id="busuanzi_value_site_pv" class="white-color"></span>
-            </span>
-            
-            
-                <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
-                    <span id="busuanzi_value_site_uv" class="white-color"></span>
-            </span>
-            
-            <br>
-
-            <!-- 运行天数提醒. -->
-            
-            <br>
-            
-        </div>
-        <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/bianb-hehe" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:2898734480@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2898734480" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2898734480" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-
-
-</div>
-    </div>
-</footer>
-
-<div class="progress-bar"></div>
-
-
-    <!-- 搜索遮罩框 -->
-<div id="searchModal" class="modal">
-    <div class="modal-content">
-        <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
-                   class="search-input">
-        </div>
-        <div id="searchResult"></div>
-    </div>
-</div>
-
-<script type="text/javascript">
-$(function () {
-    var searchFunc = function (path, search_id, content_id) {
-        'use strict';
-        $.ajax({
-            url: path,
-            dataType: "xml",
-            success: function (xmlResponse) {
-                // get the contents from search data
-                var datas = $("entry", xmlResponse).map(function () {
-                    return {
-                        title: $("title", this).text(),
-                        content: $("content", this).text(),
-                        url: $("url", this).text()
-                    };
-                }).get();
-                var $input = document.getElementById(search_id);
-                var $resultContent = document.getElementById(content_id);
-                $input.addEventListener('input', function () {
-                    var str = '<ul class=\"search-result-list\">';
-                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                    $resultContent.innerHTML = "";
-                    if (this.value.trim().length <= 0) {
-                        return;
-                    }
-                    // perform local searching
-                    datas.forEach(function (data) {
-                        var isMatch = true;
-                        var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
-                        var data_url = data.url;
-                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
-                        var index_title = -1;
-                        var index_content = -1;
-                        var first_occur = -1;
-                        // only match artiles with not empty titles and contents
-                        if (data_title !== '' && data_content !== '') {
-                            keywords.forEach(function (keyword, i) {
-                                index_title = data_title.indexOf(keyword);
-                                index_content = data_content.indexOf(keyword);
-                                if (index_title < 0 && index_content < 0) {
-                                    isMatch = false;
-                                } else {
-                                    if (index_content < 0) {
-                                        index_content = 0;
-                                    }
-                                    if (i === 0) {
-                                        first_occur = index_content;
-                                    }
-                                }
-                            });
-                        }
-                        // show search results
-                        if (isMatch) {
-                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
-                            var content = data.content.trim().replace(/<[^>]+>/g, "");
-                            if (first_occur >= 0) {
-                                // cut out 100 characters
-                                var start = first_occur - 20;
-                                var end = first_occur + 80;
-                                if (start < 0) {
-                                    start = 0;
-                                }
-                                if (start === 0) {
-                                    end = 100;
-                                }
-                                if (end > content.length) {
-                                    end = content.length;
-                                }
-                                var match_content = content.substr(start, end);
-                                // highlight all keywords
-                                keywords.forEach(function (keyword) {
-                                    var regS = new RegExp(keyword, "gi");
-                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
-                                });
-
-                                str += "<p class=\"search-result\">" + match_content + "...</p>"
-                            }
-                            str += "</li>";
-                        }
-                    });
-                    str += "</ul>";
-                    $resultContent.innerHTML = str;
-                });
-            }
-        });
-    };
-
-    searchFunc('/search.xml', 'searchInput', 'searchResult');
-});
-</script>
-
-    <!-- 白天和黑夜主题 -->
-<div class="stars-con">
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>  
-</div>
-
-<script>
-    function switchNightMode() {
-        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
-        setTimeout(function () {
-            $('body').hasClass('DarkMode') 
-            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
-            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
-            
-            setTimeout(function () {
-            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
-                $(this).remove()
-            })
-            }, 2e3)
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Mybbs —— 开源MC社区 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const initArtalk = () => {
+    window.artalkItem = new Artalk(Object.assign({
+      el: '#artalk-wrap',
+      server: 'https://www.pixelbbs.cn/',
+      site: 'blog',
+      pageKey: location.pathname,
+      darkMode: document.documentElement.getAttribute('data-theme') === 'dark',
+      countEl: '.artalk-count'
+    },null))
+
+    if (GLOBAL_CONFIG.lightbox === 'null') return
+    window.artalkItem.use(ctx => {
+      ctx.on('list-loaded', () => {
+        ctx.getCommentList().forEach(comment => {
+          const $content = comment.getRender().$content
+          anzhiyu.loadLightbox($content.querySelectorAll('img:not([atk-emoticon])'))
         })
+      })
+    })
+  }
+
+  const loadArtalk = async () => {
+    if (typeof window.artalkItem === 'object') {
+      initArtalk()
+      
+    } else {
+      await getCSS('https://cdn.cbd.int/artalk@2.6.4/dist/Artalk.css')
+      await getScript('https://cdn.cbd.int/artalk@2.6.4/dist/Artalk.js')
+      initArtalk()
+      
     }
-</script>
+  }
 
-    <!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</div>
+  const getCount = () => {
+    Artalk.loadCountWidget({
+      server: 'https://www.pixelbbs.cn/',
+      site: 'blog',
+      countEl: '.artalk-count'
+    })
+  }
+
+  const artalkChangeMode = theme => {
+    const artalkWrap = document.getElementById('artalk-wrap')
+    if (!(artalkWrap && artalkWrap.children.length)) return
+    const isDark = theme === 'dark'
+    window.artalkItem.setDarkMode(isDark)
+  }
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
+  anzhiyu.addGlobalFn('themeChange', artalkChangeMode, 'artalk')
+  
+  if ('Artalk' === 'Artalk' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('artalk-wrap'), loadArtalk)
+    else loadArtalk()
+  } else {
+    window.loadOtherComment = loadArtalk
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
 
-    
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
 
-    
-    
-    
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
 
-    <!-- 雪花特效 -->
-    
+  const generateHtml = array => {
+    let result = ''
 
-    <!-- 鼠标星星特效 -->
-    
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
 
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
-    
-
-    <!-- Baidu Analytics -->
-
-    <!-- Baidu Push -->
-
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
         }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
 
-    
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
 
-    
+  const getSetting = async () => {
+    try {
+      const res = await fetch('https://www.pixelbbs.cn//api/conf', { method: 'GET' })
+      return await res.json()
+    } catch (e) {
+      console.log(e)
+    }
+  }
 
-    <!--腾讯兔小巢-->
-    
-    
+  const headerList = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Origin': window.location.origin
+    },
+    body: new URLSearchParams({
+      'site_name': 'blog',
+      'limit': '6',
+      'type':'latest_comments'
+    })
+  }
 
-    
+  const getComment = async () => {
+    try {
+      const res = await fetch('https://www.pixelbbs.cn//api/stat', headerList)
+      const result = await res.json()
+      const avatarStr = await getSetting()
+      const { mirror, params, default:defaults } = avatarStr.data.frontend_conf.gravatar
+      const avatarCdn = false || mirror
+      let avatarDefault = false || params || defaults
+      avatarDefault = avatarDefault.startsWith('d=') ? avatarDefault : `d=${avatarDefault}`
+      const artalk = result.data.map(function (e) {
+        return {
+          'avatar': `${avatarCdn}${e.email_encrypted}?${avatarDefault}`,
+          'content': changeContent(e.content_marked),
+          'nick': e.nick,
+          'url': e.page_url,
+          'date': e.date,
+        }
+      })
+      saveToLocal.set('artalk-newest-comments', JSON.stringify(artalk), 10/(60*24))
+      generateHtml(artalk)
+    } catch (e) {
+      console.log(e)
+      const $dom = document.querySelector('#card-newest-comments .aside-list')
+      $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+    }
+  }
 
-    
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('artalk-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
 
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script>var visitorMail = "2898734480@qq.com";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
 
-</body>
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
 
-</html>
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
