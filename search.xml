@@ -247,6 +247,33 @@
     
     
     <entry>
+      <title>FastAsyncWorldEdit | 异步创世神插件</title>
+      <link href="/2024/06/09/FastAsyncWorldEdit/"/>
+      <url>/2024/06/09/FastAsyncWorldEdit/</url>
+      
+        <content type="html"><![CDATA[<h2 id="FastAsyncWorldEdit-–-针对-WorldEdit-的高性能改良"><a href="#FastAsyncWorldEdit-–-针对-WorldEdit-的高性能改良" class="headerlink" title="FastAsyncWorldEdit – 针对 WorldEdit 的高性能改良"></a>FastAsyncWorldEdit – 针对 WorldEdit 的高性能改良</h2><ul><li>支持版本：<img src="https://img.shields.io/spiget/tested-versions/13932?label=Bukkit"> Sponge(1.12.2)</li><li>社区评价：<img src="https://img.shields.io/spiget/rating/13932?label=Spigot%20%E8%AF%84%E5%88%86&amp;style=flat-square"><img src="https://img.shields.io/github/stars/IntellectualSites/FastAsyncWorldEdit?label=GitHub%20stars&amp;style=flat-square"></li></ul><p>FastAsyncWorldEdit 是一个对 WorldEdit 的性能改良版本。它确实很快，能在短短几秒内处理上 千万级别的方块，但这也意味着它并不完全稳定，推荐在使用前进行备份。<br>如果您正在开一个创造服，追求极高的效率，那么 FAWE 无疑是您的选择。需要注意的是，FAWE 在一定程度上破坏了 WorldEdit 的 API，部分依赖于该 API 的插件可能会工作不正常。</p><p>它的开发团队 IntellectualSites 旗下大多数 Minecraft 插件作品均为开源，同时 PlotSquare 也是他们的作品，他们对开源的热爱使他们的代码更加健硕，经过迭代我们有理由相信这是一个追求效能的合理解决方案。</p><p>在插件兼容性方面，它增添了许多 WorldEdit 不曾有的功能，它的笔刷与遮罩系统支持了很多插件， 在大部分情况下，它都能稳定完成 WorldEdit 能完成的任务(以几十倍的效率)。</p><p>目前 FastAysncWorldEdit 支持以下插件:</p><p>选项过滤[WorldGuard，GriefPrevention，GriefDefender]</p><p>遮罩[WorldGuard，GriefPrevention，Residence，Towny，GriefDefender]</p><p>信息共享[LogBlock]</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MC </tag>
+            
+            <tag> 插件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>服务器配置文件优化 —— 让测试数据来说话吧！TPS最高提...</title>
       <link href="/2024/06/09/t-3385-1-1/"/>
       <url>/2024/06/09/t-3385-1-1/</url>
@@ -635,6 +662,25 @@
     
     
     <entry>
+      <title>Mybbs友链</title>
+      <link href="/2024/05/31/%E5%8F%8B%E9%93%BE/"/>
+      <url>/2024/05/31/%E5%8F%8B%E9%93%BE/</url>
+      
+        <content type="html"><![CDATA[<p>Mybbs友链</p><span id="more"></span><p>Mypicgo ——图床<br><a href="http://microqing.lhost.fun/data/Mypicgo.html">http://microqing.lhost.fun/data/Mypicgo.html</a></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 公告 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Mybbs发帖教程</title>
       <link href="/2024/05/31/%E5%8F%91%E5%B8%96/"/>
       <url>/2024/05/31/%E5%8F%91%E5%B8%96/</url>
@@ -654,25 +700,6 @@
             <tag> 教程 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Mybbs友链</title>
-      <link href="/2024/05/31/%E5%8F%8B%E9%93%BE/"/>
-      <url>/2024/05/31/%E5%8F%8B%E9%93%BE/</url>
-      
-        <content type="html"><![CDATA[<p>Mybbs友链</p><span id="more"></span><p>Mypicgo ——图床<br><a href="http://microqing.lhost.fun/data/Mypicgo.html">http://microqing.lhost.fun/data/Mypicgo.html</a></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 公告 </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -766,6 +793,33 @@
     
     
     <entry>
+      <title>[Github]hexo-theme-mnh</title>
+      <link href="/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dhexo-theme-mnh/"/>
+      <url>/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dhexo-theme-mnh/</url>
+      
+        <content type="html"><![CDATA[<p>修改自 <a href="https://github.com/henryhuang/hexo-theme-polarbearsimple">hexo-theme-polarbearsimple</a></p><p>看了很多主题，都没有满意的，所以选了一个比较好的底子，自己修改了</p><p><a href="https://mnh.gao.tn/">在线预览 Demo</a></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>1.安装 Hexo 插件 <code>hexo-renderer-sass</code> <code>hexo-renderer-swig</code> <code>hexo-generator-archive</code> and <code>hexo-algoliasearch</code></p>  <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-scss@github:meannoharm/hexo-renderer-sass hexo-renderer-swig hexo-generator-archive hexo-algoliasearch --save</span><br></pre></td></tr></tbody></table></figure><p>  如果使用的 <code>nodejs</code> 版本大于 12, <code>hexo-renderer-sass</code> 包可能会安装错误, 可以查看 <a href="https://github.com/knksmith57/hexo-renderer-sass/issues/43">Issue</a> 和 <a href="https://github.com/knksmith57/hexo-renderer-sass/pull/46">Pull request</a>.</p><p>  可以运行下面的命令，安装 <a href="https://github.com/kmuncie">@kmuncie</a> 版本的 <code>hexo-renderer-sass</code> </p>  <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save https://github.com/kmuncie/hexo-renderer-sass</span><br></pre></td></tr></tbody></table></figure><p>2.将主题下载到 Hexo 主题文件夹</p>  <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/meannoharm/hexo-theme-mnh themes/mnh</span><br></pre></td></tr></tbody></table></figure><p>3.修改 <code>your_site/_config.yml</code> 文件</p><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: http://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: http://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">mnh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Show all articles at archive page.</span></span><br><span class="line"><span class="comment"># Need to install hexo-generator-archive</span></span><br><span class="line"><span class="attr">archive_generator:</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">yearly:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">monthly:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">daily:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Global search based on Algolia https://www.algolia.com/</span></span><br><span class="line"><span class="comment"># Need to install and config hexo-algoliasearch</span></span><br><span class="line"><span class="attr">algolia:</span></span><br><span class="line">  <span class="attr">applicationID:</span> <span class="string">"&lt;APP_ID&gt;"</span></span><br><span class="line">  <span class="attr">apiKey:</span> <span class="string">"&lt;API_KEY&gt;"</span></span><br><span class="line">  <span class="attr">adminApiKey:</span> <span class="string">"&lt;ADMIN_API_KEY&gt;"</span></span><br><span class="line">  <span class="attr">chunkSize:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">indexName:</span> <span class="string">"&lt;INDEX_NAME&gt;"</span></span><br><span class="line">  <span class="attr">fields:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">content:strip:truncate,0,500</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">excerpt:strip</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">permalink</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">cover</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">slug</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">tags</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">categories</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">title</span></span><br></pre></td></tr></tbody></table></figure><h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>修改 <code>your_site/themes/mnh/_config.yml</code></p><h3 id="配置主题组件功能"><a href="#配置主题组件功能" class="headerlink" title="配置主题组件功能"></a>配置主题组件功能</h3><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># widget function</span></span><br><span class="line"><span class="comment"># false: disable</span></span><br><span class="line"><span class="comment"># widget_custom: custom your widget</span></span><br><span class="line"><span class="comment">#   title: your widget title</span></span><br><span class="line"><span class="comment">#   content: Add your html code in here. Example: &lt;p&gt;testing...&lt;/p&gt;</span></span><br><span class="line"><span class="attr">widget:</span></span><br><span class="line">  <span class="attr">Tags:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">Categories:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">Custom:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">widget_custom:</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">Test</span></span><br><span class="line">    <span class="attr">content:</span> <span class="string">&lt;p&gt;testing...&lt;/p&gt;</span></span><br></pre></td></tr></tbody></table></figure><h3 id="网站分析"><a href="#网站分析" class="headerlink" title="网站分析"></a>网站分析</h3><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Baidu Analytics</span></span><br><span class="line"><span class="attr">baidu_analytics:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">key:</span> <span class="string">"[BAIDU ANALYTICS KEY]"</span></span><br><span class="line"><span class="comment"># Google Analytics</span></span><br><span class="line"><span class="comment"># use google analytics 4</span></span><br><span class="line"><span class="attr">google_analytics:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">gtag:</span> <span class="string">"[GOOGLE ANALYTICS GTAG]"</span></span><br></pre></td></tr></tbody></table></figure><h3 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h3><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Duoshuo</span></span><br><span class="line"><span class="attr">duoshuo_shortname:</span></span><br><span class="line"><span class="comment"># Disqus</span></span><br><span class="line"><span class="attr">disqus_shortname:</span></span><br><span class="line"><span class="comment"># utterances</span></span><br><span class="line"><span class="attr">utterances:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">"[ENTER REPO HERE]"</span></span><br><span class="line">  <span class="attr">issueTerm:</span> <span class="string">pathname</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">github-light</span></span><br></pre></td></tr></tbody></table></figure><h3 id="许可证配置"><a href="#许可证配置" class="headerlink" title="许可证配置"></a>许可证配置</h3><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">license:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">CC-BY-NC-SA</span> <span class="number">4.0</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://creativecommons.org/licenses/by-nc-sa/4.0/</span></span><br></pre></td></tr></tbody></table></figure><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+            <tag> hexo主题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[Github]hexo-theme-Fluid</title>
       <link href="/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dfluid/"/>
       <url>/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dfluid/</url>
@@ -787,33 +841,6 @@
             <tag> hexo主题 </tag>
             
             <tag> 精品 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>[Github]hexo-theme-mnh</title>
-      <link href="/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dhexo-theme-mnh/"/>
-      <url>/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dhexo-theme-mnh/</url>
-      
-        <content type="html"><![CDATA[<p>修改自 <a href="https://github.com/henryhuang/hexo-theme-polarbearsimple">hexo-theme-polarbearsimple</a></p><p>看了很多主题，都没有满意的，所以选了一个比较好的底子，自己修改了</p><p><a href="https://mnh.gao.tn/">在线预览 Demo</a></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>1.安装 Hexo 插件 <code>hexo-renderer-sass</code> <code>hexo-renderer-swig</code> <code>hexo-generator-archive</code> and <code>hexo-algoliasearch</code></p>  <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-scss@github:meannoharm/hexo-renderer-sass hexo-renderer-swig hexo-generator-archive hexo-algoliasearch --save</span><br></pre></td></tr></tbody></table></figure><p>  如果使用的 <code>nodejs</code> 版本大于 12, <code>hexo-renderer-sass</code> 包可能会安装错误, 可以查看 <a href="https://github.com/knksmith57/hexo-renderer-sass/issues/43">Issue</a> 和 <a href="https://github.com/knksmith57/hexo-renderer-sass/pull/46">Pull request</a>.</p><p>  可以运行下面的命令，安装 <a href="https://github.com/kmuncie">@kmuncie</a> 版本的 <code>hexo-renderer-sass</code> </p>  <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save https://github.com/kmuncie/hexo-renderer-sass</span><br></pre></td></tr></tbody></table></figure><p>2.将主题下载到 Hexo 主题文件夹</p>  <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/meannoharm/hexo-theme-mnh themes/mnh</span><br></pre></td></tr></tbody></table></figure><p>3.修改 <code>your_site/_config.yml</code> 文件</p><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: http://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: http://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">mnh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Show all articles at archive page.</span></span><br><span class="line"><span class="comment"># Need to install hexo-generator-archive</span></span><br><span class="line"><span class="attr">archive_generator:</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">yearly:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">monthly:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">daily:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Global search based on Algolia https://www.algolia.com/</span></span><br><span class="line"><span class="comment"># Need to install and config hexo-algoliasearch</span></span><br><span class="line"><span class="attr">algolia:</span></span><br><span class="line">  <span class="attr">applicationID:</span> <span class="string">"&lt;APP_ID&gt;"</span></span><br><span class="line">  <span class="attr">apiKey:</span> <span class="string">"&lt;API_KEY&gt;"</span></span><br><span class="line">  <span class="attr">adminApiKey:</span> <span class="string">"&lt;ADMIN_API_KEY&gt;"</span></span><br><span class="line">  <span class="attr">chunkSize:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">indexName:</span> <span class="string">"&lt;INDEX_NAME&gt;"</span></span><br><span class="line">  <span class="attr">fields:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">content:strip:truncate,0,500</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">excerpt:strip</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">permalink</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">cover</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">slug</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">tags</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">categories</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">title</span></span><br></pre></td></tr></tbody></table></figure><h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>修改 <code>your_site/themes/mnh/_config.yml</code></p><h3 id="配置主题组件功能"><a href="#配置主题组件功能" class="headerlink" title="配置主题组件功能"></a>配置主题组件功能</h3><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># widget function</span></span><br><span class="line"><span class="comment"># false: disable</span></span><br><span class="line"><span class="comment"># widget_custom: custom your widget</span></span><br><span class="line"><span class="comment">#   title: your widget title</span></span><br><span class="line"><span class="comment">#   content: Add your html code in here. Example: &lt;p&gt;testing...&lt;/p&gt;</span></span><br><span class="line"><span class="attr">widget:</span></span><br><span class="line">  <span class="attr">Tags:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">Categories:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">Custom:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">widget_custom:</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">Test</span></span><br><span class="line">    <span class="attr">content:</span> <span class="string">&lt;p&gt;testing...&lt;/p&gt;</span></span><br></pre></td></tr></tbody></table></figure><h3 id="网站分析"><a href="#网站分析" class="headerlink" title="网站分析"></a>网站分析</h3><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Baidu Analytics</span></span><br><span class="line"><span class="attr">baidu_analytics:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">key:</span> <span class="string">"[BAIDU ANALYTICS KEY]"</span></span><br><span class="line"><span class="comment"># Google Analytics</span></span><br><span class="line"><span class="comment"># use google analytics 4</span></span><br><span class="line"><span class="attr">google_analytics:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">gtag:</span> <span class="string">"[GOOGLE ANALYTICS GTAG]"</span></span><br></pre></td></tr></tbody></table></figure><h3 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h3><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Duoshuo</span></span><br><span class="line"><span class="attr">duoshuo_shortname:</span></span><br><span class="line"><span class="comment"># Disqus</span></span><br><span class="line"><span class="attr">disqus_shortname:</span></span><br><span class="line"><span class="comment"># utterances</span></span><br><span class="line"><span class="attr">utterances:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">"[ENTER REPO HERE]"</span></span><br><span class="line">  <span class="attr">issueTerm:</span> <span class="string">pathname</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">github-light</span></span><br></pre></td></tr></tbody></table></figure><h3 id="许可证配置"><a href="#许可证配置" class="headerlink" title="许可证配置"></a>许可证配置</h3><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">license:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">CC-BY-NC-SA</span> <span class="number">4.0</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://creativecommons.org/licenses/by-nc-sa/4.0/</span></span><br></pre></td></tr></tbody></table></figure><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> github </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> github </tag>
-            
-            <tag> hexo主题 </tag>
             
         </tags>
       
@@ -1334,11 +1361,11 @@
       
         <tags>
             
-            <tag> github </tag>
-            
             <tag> 托管 </tag>
             
             <tag> 推荐 </tag>
+            
+            <tag> github </tag>
             
             <tag> 转载 </tag>
             
