@@ -171,6 +171,33 @@
   </entry>
   
   <entry>
+    <title>[MCBE][指令]多功能箭</title>
+    <link href="https://bianb-hehe.github.io/2024/08/08/2964/"/>
+    <id>https://bianb-hehe.github.io/2024/08/08/2964/</id>
+    <published>2024-08-08T05:53:56.000Z</published>
+    <updated>2024-06-09T11:52:09.485Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;给玩家提供各种火箭箭&quot;&gt;&lt;a href=&quot;#给玩家提供各种火箭箭&quot; class=&quot;headerlink&quot; title=&quot;给玩家提供各种火箭箭&quot;&gt;&lt;/a&gt;给玩家提供各种火箭箭&lt;/h1&gt;&lt;p&gt;/give @p firework_rocket 64</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
+    
+    <category term="指令" scheme="https://bianb-hehe.github.io/tags/%E6%8C%87%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[1.8x+]LuckPerms</title>
     <link href="https://bianb-hehe.github.io/2024/08/08/2593/"/>
     <id>https://bianb-hehe.github.io/2024/08/08/2593/</id>
@@ -195,33 +222,6 @@
     <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
     
     <category term="插件" scheme="https://bianb-hehe.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[MCBE][指令]多功能箭</title>
-    <link href="https://bianb-hehe.github.io/2024/08/08/2964/"/>
-    <id>https://bianb-hehe.github.io/2024/08/08/2964/</id>
-    <published>2024-08-08T05:53:56.000Z</published>
-    <updated>2024-06-09T11:52:09.485Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;给玩家提供各种火箭箭&quot;&gt;&lt;a href=&quot;#给玩家提供各种火箭箭&quot; class=&quot;headerlink&quot; title=&quot;给玩家提供各种火箭箭&quot;&gt;&lt;/a&gt;给玩家提供各种火箭箭&lt;/h1&gt;&lt;p&gt;/give @p firework_rocket 64</summary>
-        
-      
-    
-    
-    
-    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
-    
-    <category term="指令" scheme="https://bianb-hehe.github.io/tags/%E6%8C%87%E4%BB%A4/"/>
     
   </entry>
   
@@ -281,11 +281,11 @@
   </entry>
   
   <entry>
-    <title>[MC整合包]</title>
+    <title>[MC整合包]DIMpaperspigot</title>
     <link href="https://bianb-hehe.github.io/2024/08/08/46996/"/>
     <id>https://bianb-hehe.github.io/2024/08/08/46996/</id>
     <published>2024-08-08T05:53:56.000Z</published>
-    <updated>2024-06-09T12:30:31.903Z</updated>
+    <updated>2024-06-09T12:33:32.413Z</updated>
     
     
       
@@ -428,18 +428,20 @@
   </entry>
   
   <entry>
-    <title>TAB插件如何将头上的id改成cmi的nick设置的假名字</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/39658/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/39658/</id>
+    <title>[Wiki][CY/SCT] CMI – 插件文档帮助 –</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/3858/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/3858/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T10:01:43.384Z</updated>
+    <updated>2024-06-09T10:19:15.533Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;要将玩家在 TAB 插件中的头上显示的 ID 改为 CMI 插件中的 &lt;code&gt;nick&lt;/code&gt; 设置的假名字，你需要确保两个插件能够互相兼容，并且 TAB 插件能够读取到 CMI 设置的昵称。这通常涉及到对 TAB 插件的配置进行调整，使其使用 CMI</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;游戏时间奖励 | PlayTime Rewards&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;游戏时间奖励系统可以在玩家积累到了一定时长的游戏时间后执行一段命令.&lt;/p&gt;
+&lt;p&gt;你可以设置每过 X 秒或游戏时长共 X</summary>
         
       
     
@@ -459,20 +461,18 @@
   </entry>
   
   <entry>
-    <title>[Wiki][CY/SCT] CMI – 插件文档帮助 –</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/3858/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/3858/</id>
+    <title>TAB插件如何将头上的id改成cmi的nick设置的假名字</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/39658/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/39658/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T10:19:15.533Z</updated>
+    <updated>2024-06-09T10:01:43.384Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;strong&gt;游戏时间奖励 | PlayTime Rewards&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;游戏时间奖励系统可以在玩家积累到了一定时长的游戏时间后执行一段命令.&lt;/p&gt;
-&lt;p&gt;你可以设置每过 X 秒或游戏时长共 X</summary>
+    <summary type="html">&lt;p&gt;要将玩家在 TAB 插件中的头上显示的 ID 改为 CMI 插件中的 &lt;code&gt;nick&lt;/code&gt; 设置的假名字，你需要确保两个插件能够互相兼容，并且 TAB 插件能够读取到 CMI 设置的昵称。这通常涉及到对 TAB 插件的配置进行调整，使其使用 CMI</summary>
         
       
     
