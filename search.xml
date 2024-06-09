@@ -139,6 +139,33 @@
     
     
     <entry>
+      <title>[1.8x+][插件]CSS</title>
+      <link href="/2024/06/09/35898/"/>
+      <url>/2024/06/09/35898/</url>
+      
+        <content type="html"><![CDATA[<h1 id="什么是CSS"><a href="#什么是CSS" class="headerlink" title="什么是CSS"></a>什么是CSS</h1><hr><p>CSS 是我们对旧项目 SCR 的重制版。<br>我们试图以简单、极简主义为目标，但最重要的是性能。<br>插件使用尽可能少的 RAM 资源，并且在插件中执行操作时尽可能少的 CPU。<br>其中很大一部分是异步工作的，因此该插件绝对可以最小地加载服务器的主线程，<br>从而为其他插件，尤其是服务器本身提供自由。该插件的主要关注点是使其自包含，<br>因此无需在带有该插件的服务器上安装其他“核心”插件，例如 CMI 或 Essentials。</p><hr><h1 id="主要功能是什么"><a href="#主要功能是什么" class="headerlink" title="主要功能是什么?"></a>主要功能是什么?</h1><hr><p>在插件中，您将找到在其他“核心”插件中找到的所有基本命令，例如 fly、god、heal、invsee、tpa、msg、kit、home、warp 等。</p><h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><ul><li><strong>玩家聊天</strong>（能够发送JSON消息 - 对于高级用户，可以防止聊天发送广告和链接到其他服务器，防止咒骂，泛滥和垃圾邮件相同或相似的消息）</li><li><strong>选项卡列表</strong>（在选项卡中经典编辑页眉、页脚、玩家名称，可以在黄色数字中添加 ping，尤其是可以编辑播放器）</li><li><strong>记分牌</strong>（从 1.13 版开始，行和标题中的字母不受限制）</li><li>与<strong>保险库</strong>关联的自定义<strong>经济</strong>（可以通过 /pay 命令控制支付时的费用，在一定时间段内控制玩家可以向某人发送一定金额的钱的限制）</li><li><strong>Serverlist motd</strong> 控件，能够设置多个 motd（随机选择）</li></ul><hr><p>MySQL的系统 #要求</p><ul><li><a href="https://www.spigotmc.org/resources/theapi.72679/">插件THapi</a></li></ul><hr><h1 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h1><ul><li><a href="https://www.spigotmc.org/resources/vault.34315/">Vault</a></li><li><a href="https://www.spigotmc.org/resources/luckperms.28140/">Luckperms</a> <div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg=="><script type="text/javascript">  (function(d, s) {    var j, e = d.getElementsByTagName(s)[0];    if (typeof LivereTower === 'function') { return; }    j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;    e.parentNode.insertBefore(j, e);  })(document, 'script');</script></div></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MC </tag>
+            
+            <tag> 插件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[1.8x+][插件]Theapi</title>
       <link href="/2024/06/09/9395/"/>
       <url>/2024/06/09/9395/</url>
@@ -496,35 +523,6 @@
     
     
     <entry>
-      <title>[转载] [联机教程] [联机][2021.1.1][CPS].schematic文件格式详解</title>
-      <link href="/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5B%E8%81%94%E6%9C%BA%5D%5B2021.1.1%5D%5BCPS%5D.schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/"/>
-      <url>/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5B%E8%81%94%E6%9C%BA%5D%5B2021.1.1%5D%5BCPS%5D.schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<p>联机教程</p><span id="more"></span><p>前言<br>大多数服主应该对于Schematic文件格式又熟悉又陌生，通常在导入地图时，一般使用替换地图文件的方式，而使用Schematic格式文件的方法使用较少，因此可能对Schematic文件格式较为陌生，加之近期有较多人询问我Schematic格式文件如何导入等问题，因此便写出此教程供服主们学习，教程将会用通俗易懂的语言对Schematic文件格式进行详细的讲解</p><p>字数统计<br>字数1707，字符数（不计空格）3137，字符数（计空格）3197，非中文单词208，中文字符1499（来自WPS字数统计）</p><p>什么是schematic文件格式？<br>Schematic文件格式为一种由玩家社区所创建的用于存储Minecraft世界信息，进而可以通过第三方应用程序（如MCEdit、Minecraft Note Block Studio、红石模拟器、WorldEdit以及Schematica等）进行编辑。地形以NBT格式储存并松散地基于Indev世界格式。方块和数据的目录以YZX的排序存储，也就是说X坐标的变化最频繁。这与Classic，Indev以及Anvil文件格式中的方块排序相似。这种格式不能将应该覆盖已有方块的空气方块和不应覆盖已有方块的空气方块区分开。（摘自Minecraft Wiki）<br>总而言之，schematic文件格式是用来储存Minecraft世界信息的工具，可以导出保存，也可以导入使用，也可以通过第三方工具对此格式文件内容进行编辑</p><p>NBT格式详解<br>Schematic:<br>Width: 沿X轴方向的大小<br>Height: 沿Y轴方向的大小<br>Length: 沿Z轴方向的大小<br>Materials: 版本世界类型<br>Blocks: 地图中所用到的物品ID<br>AddBlocks: 可用于编辑的空余地图区域<br>Add: 已启用<br>Data: 在地图中用到的其它方块<br>Entities: 在地图中的每个实体<br>TileEntities: 在地图中的每个实体<br>Icon: 用于地图图标的物品<br>SchematicaMapping: 此地图中所保存版本的ID<br>ExtendedMetadata: Schematica为扩展提供的任意附加数据<br>WEOriginX: 沿X的中心坐标（WorldEdit）<br>WEOriginY: 沿Y的中心坐标（WorldEdit）<br>WEOriginZ: 沿Z的中心坐标（WorldEdit）<br>WEOffsetX: 沿X的偏移坐标（WorldEdit）<br>WEOffsetY: 沿Y的偏移坐标（WorldEdit）<br>WEOffsetZ: 沿Z的偏移坐标（WorldEdit）<br>itemStackVersion: 仅用于MCEdit2，游戏版本<br>BlockIDs: 地图中的方块ID（MCEdit2）<br>ItemIDs: 地图中的物品ID（MCEdit2）<br>TileTicks: 地图中方块更新的列表（MCEdit-Unified）<br>i：方块的ID<br>t：处理时所需的时刻（tick）<br>p：同一时刻处理的优先值<br>x：地图中X坐标<br>y：地图中Y坐标<br>z：地图中Z坐标<br>Biomes: 地图中所有生物群系（MCEdit-Unified）</p><p>什么是schematic数据库？<br>Schematic数据库是一种免费的用于上传、下载、浏览、收藏schematic格式文件的网站<br>网站地址：<br>minecraft-schematics.com<br>minecraft-schematics.net</p><p>如何创建schematics文件夹？<br>单人游戏1.下载安装worldeditMOD<br>1.打开Minecraft.minecraft\config\worldedit目录<br>2.在worldedit目录下创建一个名为schematics的文件夹</p><p>多人联机<br>1.下载安装worldedit插件<br>2.打开Minecraft Sever\plugins\WorldEdit目录<br>3.在WorldEdit目录下创建一个名为schematics的文件夹</p><p>如何导入schematic格式文件?<br>单人游戏<br>1.下载安装worldedit游戏MOD<br>2.将你要使用的.schematic格式文件放到Minecraft.minecraft\config\worldedit\schematics目录下3.进入游戏，输入指令//schem load 文件名（如：//schem load skyworld），将此文件中的建筑会导入到worldedit的剪贴板中<br>提示：若出现skyblock.schematic loaded. Paste it with //paste则证明剪贴成功<br>4.输入指令//paste，将此文件的建筑添加到你所在的位置</p><p>多人联机<br>1.下载安装WorldEdit插件<br>2.将你要使用的.schematic格式文件放到Minecraft Sever\plugins\WorldEdit目录下<br>3.进入游戏，输入指令//schem load 文件名（如：//schem load skyworld），将此文件中的建筑会导入到worldedit的剪贴板中<br>提示：若出现skyblock.schematic loaded. Paste it with //paste则证明剪贴成功<br>4.输入指令//paste，将此文件的建筑添加到你所在的位置</p><p>如何导出schematic格式文件？<br>单人游戏<br>1.下载安装worldedit游戏MOD<br>2.进入游戏，用木斧选择你要导出的地图区域<br>3.输入//copy对选择区域进行复制<br>4.输入//schem save 文件名 将选择区域以 文件名.schematic 导出<br>5.导出后文件将会生存在Minecraft.minecraft\config\worldedit\schematics目录下</p><p>多人联机<br>1.下载安装WorldEdit插件<br>2.进入游戏，用木斧选择你要导出的地图区域<br>3.输入//copy对选择区域进行复制<br>4.输入//schem save 文件名 将选择区域以 文件名.schematic 导出<br>5.导出后文件将会生存在Minecraft Server.minecraft\config\worldedit\schematics目录下</p><p>如何导出/导入规模较大的建筑？<br>对于规模较为大的建筑来说，使用worldedit导入或导出，会导致后台报错、服务器卡顿甚至崩溃<br>部分服主会通过使用MCedit导出/导入大地图来解决，但是大部分服主对于MCedit的操作较为生疏，此部分将会提供其他较为不错的方法来解决此问题<br>在编写教程的时候，为了让教程内容丰富，本人对相关知识进行了大量的搜索和学习。在此期间，发现了一款名为FastAsyncWorldEdit的插件，此插件为WorldEdit的优化插件，插件主要用于减少WorldEdit插件在操作过程中的卡顿，安装此插件后可以导出/导入较大规模的建筑，且几乎无卡顿，使用方便操作简单<br>提示：在1.12.2之前此插件需要WorldEdit插件作为前置，而1.12.2版本后FastAsyncWorldEdit便成为一个独立的插件，无需WorldEdit插件作为前置<br>FastAsyncWorldEdit插件的使用方法和WorldEdit插件的使用方法一样，格式为//指令<br>站内搬运：<a href="https://www.mcbbs.net/thread-781901-1-1.html">https://www.mcbbs.net/thread-781901-1-1.html</a><br>原贴：<a href="https://github.com/boy0001/FastAsyncWorldedit/releases">https://github.com/boy0001/FastAsyncWorldedit/releases</a></p><p>注意事项<br>1.按照上述过程使用时必须安装worldedit插件或MOD<br>2.使用worldedit粘贴建筑时，需要一段的等待时间，若出现报错或者内存溢出等非正常情况，可能是文件过大导致的，此情况请仔细阅读如何导出规模较大的建筑？部分<br>3.在WorldEdit 7.0.0（Minecraft1.13之后的版本），无法再使用.schematic的格式导出地图文件，只允许使用.schem的格式导出，但仍可以使用旧版本的.schematic文件导入地图</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 教程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 教程 </tag>
-            
-            <tag> MC </tag>
-            
-            <tag> 转载 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>[转载] [联机教程] [Wiki][PCD]MythicMobs 帮助手册翻译 又更新了</title>
       <link href="/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5BWiki%5D%5BPCD%5DMythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/"/>
       <url>/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5BWiki%5D%5BPCD%5DMythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/</url>
@@ -554,11 +552,11 @@
     
     
     <entry>
-      <title>Mybbs发帖教程</title>
-      <link href="/2024/05/31/%E5%8F%91%E5%B8%96/"/>
-      <url>/2024/05/31/%E5%8F%91%E5%B8%96/</url>
+      <title>[转载] [联机教程] [联机][2021.1.1][CPS].schematic文件格式详解</title>
+      <link href="/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5B%E8%81%94%E6%9C%BA%5D%5B2021.1.1%5D%5BCPS%5D.schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/"/>
+      <url>/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5B%E8%81%94%E6%9C%BA%5D%5B2021.1.1%5D%5BCPS%5D.schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://img.pixelbbs.cn/LightPicture/2024/05/cfcfa66857ba57c1.jpg"></p><span id="more"></span><p>由于这个网站没有直接的发帖路径<br>所以版主制作了一个发布系统<br>*注意:网址会变动，时不时404,加裙获取最新网址 群号:971519377<br>按如下格式编写</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 写上你的标题</span><br><span class="line">categories: </span><br><span class="line">- 你的分类</span><br><span class="line">tags:</span><br><span class="line">- 标签1</span><br><span class="line">- 便签2</span><br><span class="line">comments: 设置评论为打开(<span class="literal">true</span>)关闭(<span class="literal">false</span>)</span><br><span class="line">img: （封面图，填网址！网址！)</span><br><span class="line">---</span><br><span class="line">&lt;帖子内容&gt;</span><br><span class="line">(在帖子内容中，可以随意使用md语法以及html标签</span><br></pre></td></tr></tbody></table></figure><p><a href=".\download\模板.md" download="">打包下载模板</a><br>教程完毕！有问题评论区发言</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+        <content type="html"><![CDATA[<p>联机教程</p><span id="more"></span><p>前言<br>大多数服主应该对于Schematic文件格式又熟悉又陌生，通常在导入地图时，一般使用替换地图文件的方式，而使用Schematic格式文件的方法使用较少，因此可能对Schematic文件格式较为陌生，加之近期有较多人询问我Schematic格式文件如何导入等问题，因此便写出此教程供服主们学习，教程将会用通俗易懂的语言对Schematic文件格式进行详细的讲解</p><p>字数统计<br>字数1707，字符数（不计空格）3137，字符数（计空格）3197，非中文单词208，中文字符1499（来自WPS字数统计）</p><p>什么是schematic文件格式？<br>Schematic文件格式为一种由玩家社区所创建的用于存储Minecraft世界信息，进而可以通过第三方应用程序（如MCEdit、Minecraft Note Block Studio、红石模拟器、WorldEdit以及Schematica等）进行编辑。地形以NBT格式储存并松散地基于Indev世界格式。方块和数据的目录以YZX的排序存储，也就是说X坐标的变化最频繁。这与Classic，Indev以及Anvil文件格式中的方块排序相似。这种格式不能将应该覆盖已有方块的空气方块和不应覆盖已有方块的空气方块区分开。（摘自Minecraft Wiki）<br>总而言之，schematic文件格式是用来储存Minecraft世界信息的工具，可以导出保存，也可以导入使用，也可以通过第三方工具对此格式文件内容进行编辑</p><p>NBT格式详解<br>Schematic:<br>Width: 沿X轴方向的大小<br>Height: 沿Y轴方向的大小<br>Length: 沿Z轴方向的大小<br>Materials: 版本世界类型<br>Blocks: 地图中所用到的物品ID<br>AddBlocks: 可用于编辑的空余地图区域<br>Add: 已启用<br>Data: 在地图中用到的其它方块<br>Entities: 在地图中的每个实体<br>TileEntities: 在地图中的每个实体<br>Icon: 用于地图图标的物品<br>SchematicaMapping: 此地图中所保存版本的ID<br>ExtendedMetadata: Schematica为扩展提供的任意附加数据<br>WEOriginX: 沿X的中心坐标（WorldEdit）<br>WEOriginY: 沿Y的中心坐标（WorldEdit）<br>WEOriginZ: 沿Z的中心坐标（WorldEdit）<br>WEOffsetX: 沿X的偏移坐标（WorldEdit）<br>WEOffsetY: 沿Y的偏移坐标（WorldEdit）<br>WEOffsetZ: 沿Z的偏移坐标（WorldEdit）<br>itemStackVersion: 仅用于MCEdit2，游戏版本<br>BlockIDs: 地图中的方块ID（MCEdit2）<br>ItemIDs: 地图中的物品ID（MCEdit2）<br>TileTicks: 地图中方块更新的列表（MCEdit-Unified）<br>i：方块的ID<br>t：处理时所需的时刻（tick）<br>p：同一时刻处理的优先值<br>x：地图中X坐标<br>y：地图中Y坐标<br>z：地图中Z坐标<br>Biomes: 地图中所有生物群系（MCEdit-Unified）</p><p>什么是schematic数据库？<br>Schematic数据库是一种免费的用于上传、下载、浏览、收藏schematic格式文件的网站<br>网站地址：<br>minecraft-schematics.com<br>minecraft-schematics.net</p><p>如何创建schematics文件夹？<br>单人游戏1.下载安装worldeditMOD<br>1.打开Minecraft.minecraft\config\worldedit目录<br>2.在worldedit目录下创建一个名为schematics的文件夹</p><p>多人联机<br>1.下载安装worldedit插件<br>2.打开Minecraft Sever\plugins\WorldEdit目录<br>3.在WorldEdit目录下创建一个名为schematics的文件夹</p><p>如何导入schematic格式文件?<br>单人游戏<br>1.下载安装worldedit游戏MOD<br>2.将你要使用的.schematic格式文件放到Minecraft.minecraft\config\worldedit\schematics目录下3.进入游戏，输入指令//schem load 文件名（如：//schem load skyworld），将此文件中的建筑会导入到worldedit的剪贴板中<br>提示：若出现skyblock.schematic loaded. Paste it with //paste则证明剪贴成功<br>4.输入指令//paste，将此文件的建筑添加到你所在的位置</p><p>多人联机<br>1.下载安装WorldEdit插件<br>2.将你要使用的.schematic格式文件放到Minecraft Sever\plugins\WorldEdit目录下<br>3.进入游戏，输入指令//schem load 文件名（如：//schem load skyworld），将此文件中的建筑会导入到worldedit的剪贴板中<br>提示：若出现skyblock.schematic loaded. Paste it with //paste则证明剪贴成功<br>4.输入指令//paste，将此文件的建筑添加到你所在的位置</p><p>如何导出schematic格式文件？<br>单人游戏<br>1.下载安装worldedit游戏MOD<br>2.进入游戏，用木斧选择你要导出的地图区域<br>3.输入//copy对选择区域进行复制<br>4.输入//schem save 文件名 将选择区域以 文件名.schematic 导出<br>5.导出后文件将会生存在Minecraft.minecraft\config\worldedit\schematics目录下</p><p>多人联机<br>1.下载安装WorldEdit插件<br>2.进入游戏，用木斧选择你要导出的地图区域<br>3.输入//copy对选择区域进行复制<br>4.输入//schem save 文件名 将选择区域以 文件名.schematic 导出<br>5.导出后文件将会生存在Minecraft Server.minecraft\config\worldedit\schematics目录下</p><p>如何导出/导入规模较大的建筑？<br>对于规模较为大的建筑来说，使用worldedit导入或导出，会导致后台报错、服务器卡顿甚至崩溃<br>部分服主会通过使用MCedit导出/导入大地图来解决，但是大部分服主对于MCedit的操作较为生疏，此部分将会提供其他较为不错的方法来解决此问题<br>在编写教程的时候，为了让教程内容丰富，本人对相关知识进行了大量的搜索和学习。在此期间，发现了一款名为FastAsyncWorldEdit的插件，此插件为WorldEdit的优化插件，插件主要用于减少WorldEdit插件在操作过程中的卡顿，安装此插件后可以导出/导入较大规模的建筑，且几乎无卡顿，使用方便操作简单<br>提示：在1.12.2之前此插件需要WorldEdit插件作为前置，而1.12.2版本后FastAsyncWorldEdit便成为一个独立的插件，无需WorldEdit插件作为前置<br>FastAsyncWorldEdit插件的使用方法和WorldEdit插件的使用方法一样，格式为//指令<br>站内搬运：<a href="https://www.mcbbs.net/thread-781901-1-1.html">https://www.mcbbs.net/thread-781901-1-1.html</a><br>原贴：<a href="https://github.com/boy0001/FastAsyncWorldedit/releases">https://github.com/boy0001/FastAsyncWorldedit/releases</a></p><p>注意事项<br>1.按照上述过程使用时必须安装worldedit插件或MOD<br>2.使用worldedit粘贴建筑时，需要一段的等待时间，若出现报错或者内存溢出等非正常情况，可能是文件过大导致的，此情况请仔细阅读如何导出规模较大的建筑？部分<br>3.在WorldEdit 7.0.0（Minecraft1.13之后的版本），无法再使用.schematic的格式导出地图文件，只允许使用.schem的格式导出，但仍可以使用旧版本的.schematic文件导入地图</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
       
       
       <categories>
@@ -572,7 +570,30 @@
             
             <tag> 教程 </tag>
             
+            <tag> MC </tag>
+            
+            <tag> 转载 </tag>
+            
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mybbs友链</title>
+      <link href="/2024/05/31/%E5%8F%8B%E9%93%BE/"/>
+      <url>/2024/05/31/%E5%8F%8B%E9%93%BE/</url>
+      
+        <content type="html"><![CDATA[<p>Mybbs友链</p><span id="more"></span><p>Mypicgo ——图床<br><a href="http://microqing.lhost.fun/data/Mypicgo.html">http://microqing.lhost.fun/data/Mypicgo.html</a></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 公告 </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -610,46 +631,23 @@
     
     
     <entry>
-      <title>Mybbs友链</title>
-      <link href="/2024/05/31/%E5%8F%8B%E9%93%BE/"/>
-      <url>/2024/05/31/%E5%8F%8B%E9%93%BE/</url>
+      <title>Mybbs发帖教程</title>
+      <link href="/2024/05/31/%E5%8F%91%E5%B8%96/"/>
+      <url>/2024/05/31/%E5%8F%91%E5%B8%96/</url>
       
-        <content type="html"><![CDATA[<p>Mybbs友链</p><span id="more"></span><p>Mypicgo ——图床<br><a href="http://microqing.lhost.fun/data/Mypicgo.html">http://microqing.lhost.fun/data/Mypicgo.html</a></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 公告 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>[Github]hexo-theme-butterfly——推荐</title>
-      <link href="/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dbuty/"/>
-      <url>/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dbuty/</url>
-      
-        <content type="html"><![CDATA[<p><img src="https://img.shields.io/github/package-json/v/jerryc127/hexo-theme-butterfly/master?color=%231ab1ad&amp;label=master" alt="master version"><br><img src="https://img.shields.io/github/package-json/v/jerryc127/hexo-theme-butterfly/dev?label=dev" alt="master version"><br><img src="https://img.shields.io/npm/v/hexo-theme-butterfly?color=%09%23bf00ff" alt="https://img.shields.io/npm/v/hexo-theme-butterfly?color=%09%23bf00ff"><br><img src="https://img.shields.io/badge/hexo-5.3.0+-0e83c" alt="hexo version"><br><img src="https://img.shields.io/github/license/jerryc127/hexo-theme-butterfly?color=FF5531" alt="license"></p><p><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/theme-butterfly-readme.png"></p><p>📢 預覽: <a href="https://butterfly.js.org/">Butterfly</a> || <a href="https://blog.crazywong.com/">CrazyWong</a></p><p>📖 文檔: <a href="https://butterfly.js.org/posts/21cfbf15/">中文</a> || <a href="https://butterfly.js.org/en/posts/butterfly-docs-en-get-started/">English</a></p><p>一款基於<a href="https://github.com/Molunerfinn/hexo-theme-melody">hexo-theme-melody</a>修改的主題</p><h2 id="💻-安裝"><a href="#💻-安裝" class="headerlink" title="💻 安裝"></a>💻 安裝</h2><h3 id="Git-安裝"><a href="#Git-安裝" class="headerlink" title="Git 安裝"></a>Git 安裝</h3><blockquote><p>本倉庫同時上傳到 <a href="https://gitee.com/immyw/hexo-theme-butterfly.git">Gitee</a>，如果你訪問 Github 緩慢，可從 Gitee 中下載。</p></blockquote><p>在博客根目錄裡安裝穩定版【推薦】</p><figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone <span class="literal">-b</span> master https://github.com/jerryc127/hexo<span class="literal">-theme-butterfly</span>.git themes/butterfly</span><br></pre></td></tr></tbody></table></figure><p>如果想要安裝比較新的dev分支，可以</p><figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone <span class="literal">-b</span> dev https://github.com/jerryc127/hexo<span class="literal">-theme-butterfly</span>.git themes/butterfly</span><br></pre></td></tr></tbody></table></figure><h3 id="npm-安裝"><a href="#npm-安裝" class="headerlink" title="npm 安裝"></a>npm 安裝</h3><blockquote><p>此方法只支持Hexo 5.0.0以上版本</p></blockquote><p>在博客根目錄裡</p><figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo<span class="literal">-theme-butterfly</span></span><br></pre></td></tr></tbody></table></figure><h2 id="⚙-應用主題"><a href="#⚙-應用主題" class="headerlink" title="⚙ 應用主題"></a>⚙ 應用主題</h2><p>修改hexo配置文件<code>_config.yml</code>，把主題改為<code>Butterfly</code></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: butterfly</span><br></pre></td></tr></tbody></table></figure><blockquote><p>如果你沒有pug以及stylus的渲染器，請下載安裝： npm install hexo-renderer-pug hexo-renderer-stylus –save</p></blockquote><h2 id="🎉-特色"><a href="#🎉-特色" class="headerlink" title="🎉 特色"></a>🎉 特色</h2><ul><li><input checked="" disabled="" type="checkbox"> 卡片化設計</li><li><input checked="" disabled="" type="checkbox"> 支持二級目錄</li><li><input checked="" disabled="" type="checkbox"> 雙欄設計</li><li><input checked="" disabled="" type="checkbox"> 響應式主題</li><li><input checked="" disabled="" type="checkbox"> 夜間模式</li><li><input checked="" disabled="" type="checkbox"> Pjax</li><li><input checked="" disabled="" type="checkbox"> 文章閲讀模式</li><li><input checked="" disabled="" type="checkbox"> 簡體和繁體轉換</li><li><input checked="" disabled="" type="checkbox"> 電腦和手機都可查看TOC目錄</li><li><input checked="" disabled="" type="checkbox"> 內置多種代碼配色（darker/pale night/light/ocean），可自定義代碼配色</li><li><input checked="" disabled="" type="checkbox"> 代碼塊顯示代碼語言/關閉或展開代碼塊/代碼複製/代碼自動換行</li><li><input checked="" disabled="" type="checkbox"> 可關閉文字複製/可開啟內容複製增加版權信息）</li><li><input checked="" disabled="" type="checkbox"> 兩種搜索（ Algolia 搜索和本地搜索）</li><li><input checked="" disabled="" type="checkbox"> Mathjax 和 Katex</li><li><input checked="" disabled="" type="checkbox"> 內置404頁面</li><li><input checked="" disabled="" type="checkbox"> 顯示字數統計</li><li><input checked="" disabled="" type="checkbox"> 顯示相關文章</li><li><input checked="" disabled="" type="checkbox"> 過期文章提醒</li><li><input checked="" disabled="" type="checkbox"> 多種分享系統（Sharejs/Addtoany）</li><li><input checked="" disabled="" type="checkbox"> 多種評論系統（Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/artalk）</li><li><input checked="" disabled="" type="checkbox"> 支持雙評論部署</li><li><input checked="" disabled="" type="checkbox"> 多種在線聊天（Chatra/Tidio/Daovoice/Crisp/messenger）</li><li><input checked="" disabled="" type="checkbox"> 多種分析系統</li><li><input checked="" disabled="" type="checkbox"> 谷歌廣告/手動廣告位置</li><li><input checked="" disabled="" type="checkbox"> 各種站長驗證</li><li><input checked="" disabled="" type="checkbox"> 修改網站配色</li><li><input checked="" disabled="" type="checkbox"> 打字特效 activate_power_mode</li><li><input checked="" disabled="" type="checkbox"> 多種背景特效（靜止彩帶/動態彩帶/Canvas Nest）</li><li><input checked="" disabled="" type="checkbox"> 多種鼠標點擊特效（煙花/文字/愛心）</li><li><input checked="" disabled="" type="checkbox"> 內置一種 Preloader 加載動畫和 pace.js 加載動畫條</li><li><input checked="" disabled="" type="checkbox"> 不蒜子訪問統計</li><li><input checked="" disabled="" type="checkbox"> 兩種大圖模式（Medium Zoom/Fancybox）</li><li><input checked="" disabled="" type="checkbox"> Mermaid 圖表顯示</li><li><input checked="" disabled="" type="checkbox"> 照片牆</li><li><input checked="" disabled="" type="checkbox"> 圖片懶加載</li><li><input checked="" disabled="" type="checkbox"> Instantpage/Pangu/Snackbar彈窗/PWA……</li></ul><h2 id="✨-貢獻者"><a href="#✨-貢獻者" class="headerlink" title="✨ 貢獻者"></a>✨ 貢獻者</h2><a href="https://github.com/jerryc127/hexo-theme-butterfly/graphs/contributors">  <img src="https://contrib.rocks/image?repo=jerryc127/hexo-theme-butterfly"></a><h2 id="📷-截圖"><a href="#📷-截圖" class="headerlink" title="📷 截圖"></a>📷 截圖</h2><p><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-1.jpg"><br><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-2.jpg"><br><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-3.jpg"><br><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-4.jpg"><br><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/theme-butterfly-readme-homepage-1.png"><br><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/theme-butterfly-readme-homepage-2.png"></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://img.pixelbbs.cn/LightPicture/2024/05/cfcfa66857ba57c1.jpg"></p><span id="more"></span><p>由于这个网站没有直接的发帖路径<br>所以版主制作了一个发布系统<br>*注意:网址会变动，时不时404,加裙获取最新网址 群号:971519377<br>按如下格式编写</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 写上你的标题</span><br><span class="line">categories: </span><br><span class="line">- 你的分类</span><br><span class="line">tags:</span><br><span class="line">- 标签1</span><br><span class="line">- 便签2</span><br><span class="line">comments: 设置评论为打开(<span class="literal">true</span>)关闭(<span class="literal">false</span>)</span><br><span class="line">img: （封面图，填网址！网址！)</span><br><span class="line">---</span><br><span class="line">&lt;帖子内容&gt;</span><br><span class="line">(在帖子内容中，可以随意使用md语法以及html标签</span><br></pre></td></tr></tbody></table></figure><p><a href=".\download\模板.md" download="">打包下载模板</a><br>教程完毕！有问题评论区发言</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
       
       
       <categories>
           
-          <category> github </category>
+          <category> 教程 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> github </tag>
-            
-            <tag> hexo主题 </tag>
-            
-            <tag> 精品 </tag>
+            <tag> 教程 </tag>
             
         </tags>
       
@@ -677,6 +675,64 @@
             <tag> github </tag>
             
             <tag> hexo主题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[Github]hexo-theme-Fluid</title>
+      <link href="/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dfluid/"/>
+      <url>/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dfluid/</url>
+      
+        <content type="html"><![CDATA[<p align="center">  <img alt="Fluid Logo" src="https://avatars2.githubusercontent.com/t/3419353?s=280&amp;v=4" width="128"></p><p align="center">一款 Material Design 风格的主题</p><p align="center">An elegant Material-Design theme for Hexo</p><p><img src="https://cdn.jsdelivr.net/gh/fluid-dev/static@master/hexo-theme-fluid/screenshots/index.png" alt="ScreenShot"></p><p align="center">  <a title="Hexo Version" target="_blank" href="https://hexo.io/zh-cn/"><img alt="Hexo Version" src="https://img.shields.io/badge/Hexo-%3E%3D%205.0-orange?style=flat"></a>  <a title="Node Version" target="_blank" href="https://nodejs.org/zh-cn/"><img alt="Node Version" src="https://img.shields.io/badge/Node-%3E%3D%2010.13.0-yellowgreen?style=flat"></a>  <a title="License" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/fluid-dev/hexo-theme-fluid.svg?style=flat"></a>  <br>  <a title="GitHub Release" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/releases"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/fluid-dev/hexo-theme-fluid?style=flat"></a>  <a title="Npm Downloads" target="_blank" href="https://www.npmjs.com/package/hexo-theme-fluid"><img alt="Npm Downloads" src="https://img.shields.io/npm/dt/hexo-theme-fluid?color=red&amp;label=npm"></a>  <a title="GitHub Commits" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/commits/master"><img alt="GitHub Commits" src="https://img.shields.io/github/commit-activity/m/fluid-dev/hexo-theme-fluid.svg?style=flat&amp;color=brightgreen&amp;label=commits"></a>  <br><br>  <a title="GitHub Watchers" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/watchers"><img alt="GitHub Watchers" src="https://img.shields.io/github/watchers/fluid-dev/hexo-theme-fluid.svg?label=Watchers&amp;style=social"></a>    <a title="GitHub Stars" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/fluid-dev/hexo-theme-fluid.svg?label=Stars&amp;style=social"></a>    <a title="GitHub Forks" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/fluid-dev/hexo-theme-fluid.svg?label=Forks&amp;style=social"></a>  </p><p align="center">🇨🇳 中文简体  |  <a title="English" href="README_en.md">🇬🇧 English</a></p><p align="center">  <span>文档：</span>  <a href="https://hexo.fluid-dev.com/docs/guide/">主题配置</a> |   <a href="https://hexo.io/zh-cn/docs/front-matter">文章配置</a></p><p align="center">  <span>预览：</span>  <a href="https://hexo.fluid-dev.com/">Fluid's blog</a> |   <a href="https://zkqiang.cn">zkqiang's blog</a></p><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h4 id="1-搭建-Hexo-博客"><a href="#1-搭建-Hexo-博客" class="headerlink" title="1. 搭建 Hexo 博客"></a>1. 搭建 Hexo 博客</h4><p>如果你还没有 Hexo 博客，请按照 <a href="https://hexo.io/zh-cn/docs/">Hexo 官方文档</a> 进行安装、建站。</p><h4 id="2-获取主题最新版本"><a href="#2-获取主题最新版本" class="headerlink" title="2. 获取主题最新版本"></a>2. 获取主题最新版本</h4><p><strong>方式一：</strong></p><p>Hexo 5.0.0 版本以上，推荐通过 npm 直接安装，进入博客目录执行命令：</p><figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-theme-fluid</span><br></pre></td></tr></tbody></table></figure><p>然后在博客目录下创建 <code>_config.fluid.yml</code>，将主题的 <a href="https://github.com/fluid-dev/hexo-theme-fluid/blob/master/_config.yml">_config.yml</a> 内容复制进去。</p><p><strong>方式二：</strong></p><p>下载 <a href="https://github.com/fluid-dev/hexo-theme-fluid/releases">最新 release 版本</a> 解压到 themes 目录，并将解压出的文件夹重命名为 <code>fluid</code>。</p><h4 id="3-指定主题"><a href="#3-指定主题" class="headerlink" title="3. 指定主题"></a>3. 指定主题</h4><p>如下修改 Hexo 博客目录中的 <code>_config.yml</code>：</p><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">fluid</span>  <span class="comment"># 指定主题</span></span><br><span class="line"></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span>  <span class="comment"># 指定语言，会影响主题显示的语言，按需修改</span></span><br></pre></td></tr></tbody></table></figure><h4 id="4-创建「关于页」"><a href="#4-创建「关于页」" class="headerlink" title="4. 创建「关于页」"></a>4. 创建「关于页」</h4><p>首次使用主题的「关于页」需要手动创建：</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page about</span><br></pre></td></tr></tbody></table></figure><p>创建成功后，编辑博客目录下 <code>/source/about/index.md</code>，添加 <code>layout</code> 属性。</p><p>修改后的文件示例如下：</p><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">about</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">about</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="string">这里写关于页的正文，支持</span> <span class="string">Markdown,</span> <span class="string">HTML</span></span><br></pre></td></tr></tbody></table></figure><h2 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h2><p>更新主题的方式<a href="https://hexo.fluid-dev.com/docs/start/#%E6%9B%B4%E6%96%B0%E4%B8%BB%E9%A2%98">参照这里</a>。</p><h2 id="功能特性"><a href="#功能特性" class="headerlink" title="功能特性"></a>功能特性</h2><ul><li><input checked="" disabled="" type="checkbox"> 无比详实的<a href="https://hexo.fluid-dev.com/docs/">用户文档</a></li><li><input checked="" disabled="" type="checkbox"> 页面组件懒加载</li><li><input checked="" disabled="" type="checkbox"> 多种代码高亮方案</li><li><input checked="" disabled="" type="checkbox"> 多语言配置</li><li><input checked="" disabled="" type="checkbox"> 内置多款评论插件</li><li><input checked="" disabled="" type="checkbox"> 内置网页访问统计</li><li><input checked="" disabled="" type="checkbox"> 内置文章本地搜索</li><li><input checked="" disabled="" type="checkbox"> 支持暗色模式</li><li><input checked="" disabled="" type="checkbox"> 支持脚注语法</li><li><input checked="" disabled="" type="checkbox"> 支持 LaTeX 数学公式</li><li><input checked="" disabled="" type="checkbox"> 支持 mermaid 流程图</li></ul><h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><table>  <thead>    <tr>      <th align="center" style="width: 240px;">        <a href="https://flowus.cn/share/eebf2144-8db7-4d68-b31e-bc2c116871de">          <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/32983588/243899272-092eeb46-9172-4c10-9e72-53561ff37a00.png" height="200px"><br>          <sub>首席赞助商 ORENCEAI</sub><br>          <sub>全新的 ChatGPT 人工智能对话平台</sub>        </a>      </th>      <th align="center" style="width: 240px;">        <a href="https://www.jetbrains.com/?from=hexo-theme-fluid">          <img src="https://raw.githubusercontent.com/fluid-dev/static/690616966f34a58d66aa15ac7b550dd7bbc03967/hexo-theme-fluid/jetbrains.svg" height="200px"><br>          <sub>免费开发工具提供方 JetBrains</sub><br>          <sub>专注于创建智能开发工具</sub>        </a>      </th>    </tr>  </thead></table><h2 id="贡献者"><a href="#贡献者" class="headerlink" title="贡献者"></a>贡献者</h2><p><a href="https://github.com/fluid-dev/hexo-theme-fluid/graphs/contributors"><img src="https://opencollective.com/hexo-theme-fluid/contributors.svg?width=890&amp;button=false" alt="contributors"></a></p><p>英文文档翻译：<a href="https://eatrice.top/">@EatRice</a> <a href="https://ruru.eatrice.top/">@橙子杀手</a> <a href="https://sinetian.github.io/">@Sinetian</a></p><p>其他贡献：<a href="https://github.com/zhugaoqi">@zhugaoqi</a> <a href="https://github.com/julydate">@julydate</a> <a href="https://xiyu.pro/">@xiyuvi</a></p><p>如你也想贡献代码，可参照<a href="https://hexo.fluid-dev.com/docs/contribute/">贡献指南</a></p><h2 id="支持我们"><a href="#支持我们" class="headerlink" title="支持我们"></a>支持我们</h2><p>如果你觉得这个项目有帮助，并愿意支持它的发展，可以通过以下方式支持我们的开源创作：</p><table>  <thead>    <tr>      <th align="center" style="width: 240px;">        <div>          <img src="https://github.com/fluid-dev/static/blob/master/hexo-theme-fluid/sponsor.png?s=200&amp;v=4" height="200px" alt="微信赞赏码"><br>          <sub>微信赞赏码</sub>        </div>      </th>      <th align="center" style="width: 240px;">        <div>          <a href="https://etherscan.io/address/0x0021395954710be29c0BFDCB3f98f4D2fa5A1448">            <img src="https://avatars.githubusercontent.com/u/6250754?s=200&amp;v=4" height="200px" alt="ERC20 Token">          </a>          <br>          <sub>ERC20 Token: 0x0021395954710<br>be29c0BFDCB3f98f4D2fa5A1448</sub>        </div>      </th>    </tr>  </thead></table><p>同时我们正在<strong>寻求商业赞助</strong>，如果贵司想在本页显著位置展示广告位（每月 6K+ Views 定向流量曝光），或者有其他赞助形式，可将联系方式发送邮件至 zkqiang#126.com (#替换为@)。</p><h2 id="Star-趋势"><a href="#Star-趋势" class="headerlink" title="Star 趋势"></a>Star 趋势</h2><p><a href="https://starchart.cc/fluid-dev/hexo-theme-fluid"><img src="https://starchart.cc/fluid-dev/hexo-theme-fluid.svg" alt="Stargazers over time"></a></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+            <tag> hexo主题 </tag>
+            
+            <tag> 精品 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[Github]hexo-theme-butterfly——推荐</title>
+      <link href="/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dbuty/"/>
+      <url>/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dbuty/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://img.shields.io/github/package-json/v/jerryc127/hexo-theme-butterfly/master?color=%231ab1ad&amp;label=master" alt="master version"><br><img src="https://img.shields.io/github/package-json/v/jerryc127/hexo-theme-butterfly/dev?label=dev" alt="master version"><br><img src="https://img.shields.io/npm/v/hexo-theme-butterfly?color=%09%23bf00ff" alt="https://img.shields.io/npm/v/hexo-theme-butterfly?color=%09%23bf00ff"><br><img src="https://img.shields.io/badge/hexo-5.3.0+-0e83c" alt="hexo version"><br><img src="https://img.shields.io/github/license/jerryc127/hexo-theme-butterfly?color=FF5531" alt="license"></p><p><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/theme-butterfly-readme.png"></p><p>📢 預覽: <a href="https://butterfly.js.org/">Butterfly</a> || <a href="https://blog.crazywong.com/">CrazyWong</a></p><p>📖 文檔: <a href="https://butterfly.js.org/posts/21cfbf15/">中文</a> || <a href="https://butterfly.js.org/en/posts/butterfly-docs-en-get-started/">English</a></p><p>一款基於<a href="https://github.com/Molunerfinn/hexo-theme-melody">hexo-theme-melody</a>修改的主題</p><h2 id="💻-安裝"><a href="#💻-安裝" class="headerlink" title="💻 安裝"></a>💻 安裝</h2><h3 id="Git-安裝"><a href="#Git-安裝" class="headerlink" title="Git 安裝"></a>Git 安裝</h3><blockquote><p>本倉庫同時上傳到 <a href="https://gitee.com/immyw/hexo-theme-butterfly.git">Gitee</a>，如果你訪問 Github 緩慢，可從 Gitee 中下載。</p></blockquote><p>在博客根目錄裡安裝穩定版【推薦】</p><figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone <span class="literal">-b</span> master https://github.com/jerryc127/hexo<span class="literal">-theme-butterfly</span>.git themes/butterfly</span><br></pre></td></tr></tbody></table></figure><p>如果想要安裝比較新的dev分支，可以</p><figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone <span class="literal">-b</span> dev https://github.com/jerryc127/hexo<span class="literal">-theme-butterfly</span>.git themes/butterfly</span><br></pre></td></tr></tbody></table></figure><h3 id="npm-安裝"><a href="#npm-安裝" class="headerlink" title="npm 安裝"></a>npm 安裝</h3><blockquote><p>此方法只支持Hexo 5.0.0以上版本</p></blockquote><p>在博客根目錄裡</p><figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo<span class="literal">-theme-butterfly</span></span><br></pre></td></tr></tbody></table></figure><h2 id="⚙-應用主題"><a href="#⚙-應用主題" class="headerlink" title="⚙ 應用主題"></a>⚙ 應用主題</h2><p>修改hexo配置文件<code>_config.yml</code>，把主題改為<code>Butterfly</code></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: butterfly</span><br></pre></td></tr></tbody></table></figure><blockquote><p>如果你沒有pug以及stylus的渲染器，請下載安裝： npm install hexo-renderer-pug hexo-renderer-stylus –save</p></blockquote><h2 id="🎉-特色"><a href="#🎉-特色" class="headerlink" title="🎉 特色"></a>🎉 特色</h2><ul><li><input checked="" disabled="" type="checkbox"> 卡片化設計</li><li><input checked="" disabled="" type="checkbox"> 支持二級目錄</li><li><input checked="" disabled="" type="checkbox"> 雙欄設計</li><li><input checked="" disabled="" type="checkbox"> 響應式主題</li><li><input checked="" disabled="" type="checkbox"> 夜間模式</li><li><input checked="" disabled="" type="checkbox"> Pjax</li><li><input checked="" disabled="" type="checkbox"> 文章閲讀模式</li><li><input checked="" disabled="" type="checkbox"> 簡體和繁體轉換</li><li><input checked="" disabled="" type="checkbox"> 電腦和手機都可查看TOC目錄</li><li><input checked="" disabled="" type="checkbox"> 內置多種代碼配色（darker/pale night/light/ocean），可自定義代碼配色</li><li><input checked="" disabled="" type="checkbox"> 代碼塊顯示代碼語言/關閉或展開代碼塊/代碼複製/代碼自動換行</li><li><input checked="" disabled="" type="checkbox"> 可關閉文字複製/可開啟內容複製增加版權信息）</li><li><input checked="" disabled="" type="checkbox"> 兩種搜索（ Algolia 搜索和本地搜索）</li><li><input checked="" disabled="" type="checkbox"> Mathjax 和 Katex</li><li><input checked="" disabled="" type="checkbox"> 內置404頁面</li><li><input checked="" disabled="" type="checkbox"> 顯示字數統計</li><li><input checked="" disabled="" type="checkbox"> 顯示相關文章</li><li><input checked="" disabled="" type="checkbox"> 過期文章提醒</li><li><input checked="" disabled="" type="checkbox"> 多種分享系統（Sharejs/Addtoany）</li><li><input checked="" disabled="" type="checkbox"> 多種評論系統（Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/artalk）</li><li><input checked="" disabled="" type="checkbox"> 支持雙評論部署</li><li><input checked="" disabled="" type="checkbox"> 多種在線聊天（Chatra/Tidio/Daovoice/Crisp/messenger）</li><li><input checked="" disabled="" type="checkbox"> 多種分析系統</li><li><input checked="" disabled="" type="checkbox"> 谷歌廣告/手動廣告位置</li><li><input checked="" disabled="" type="checkbox"> 各種站長驗證</li><li><input checked="" disabled="" type="checkbox"> 修改網站配色</li><li><input checked="" disabled="" type="checkbox"> 打字特效 activate_power_mode</li><li><input checked="" disabled="" type="checkbox"> 多種背景特效（靜止彩帶/動態彩帶/Canvas Nest）</li><li><input checked="" disabled="" type="checkbox"> 多種鼠標點擊特效（煙花/文字/愛心）</li><li><input checked="" disabled="" type="checkbox"> 內置一種 Preloader 加載動畫和 pace.js 加載動畫條</li><li><input checked="" disabled="" type="checkbox"> 不蒜子訪問統計</li><li><input checked="" disabled="" type="checkbox"> 兩種大圖模式（Medium Zoom/Fancybox）</li><li><input checked="" disabled="" type="checkbox"> Mermaid 圖表顯示</li><li><input checked="" disabled="" type="checkbox"> 照片牆</li><li><input checked="" disabled="" type="checkbox"> 圖片懶加載</li><li><input checked="" disabled="" type="checkbox"> Instantpage/Pangu/Snackbar彈窗/PWA……</li></ul><h2 id="✨-貢獻者"><a href="#✨-貢獻者" class="headerlink" title="✨ 貢獻者"></a>✨ 貢獻者</h2><a href="https://github.com/jerryc127/hexo-theme-butterfly/graphs/contributors">  <img src="https://contrib.rocks/image?repo=jerryc127/hexo-theme-butterfly"></a><h2 id="📷-截圖"><a href="#📷-截圖" class="headerlink" title="📷 截圖"></a>📷 截圖</h2><p><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-1.jpg"><br><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-2.jpg"><br><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-3.jpg"><br><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-4.jpg"><br><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/theme-butterfly-readme-homepage-1.png"><br><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/theme-butterfly-readme-homepage-2.png"></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+            <tag> hexo主题 </tag>
+            
+            <tag> 精品 </tag>
             
         </tags>
       
@@ -764,35 +820,6 @@
             <tag> 工具 </tag>
             
             <tag> CSDN </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>[Github]hexo-theme-Fluid</title>
-      <link href="/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dfluid/"/>
-      <url>/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5Dfluid/</url>
-      
-        <content type="html"><![CDATA[<p align="center">  <img alt="Fluid Logo" src="https://avatars2.githubusercontent.com/t/3419353?s=280&amp;v=4" width="128"></p><p align="center">一款 Material Design 风格的主题</p><p align="center">An elegant Material-Design theme for Hexo</p><p><img src="https://cdn.jsdelivr.net/gh/fluid-dev/static@master/hexo-theme-fluid/screenshots/index.png" alt="ScreenShot"></p><p align="center">  <a title="Hexo Version" target="_blank" href="https://hexo.io/zh-cn/"><img alt="Hexo Version" src="https://img.shields.io/badge/Hexo-%3E%3D%205.0-orange?style=flat"></a>  <a title="Node Version" target="_blank" href="https://nodejs.org/zh-cn/"><img alt="Node Version" src="https://img.shields.io/badge/Node-%3E%3D%2010.13.0-yellowgreen?style=flat"></a>  <a title="License" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/fluid-dev/hexo-theme-fluid.svg?style=flat"></a>  <br>  <a title="GitHub Release" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/releases"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/fluid-dev/hexo-theme-fluid?style=flat"></a>  <a title="Npm Downloads" target="_blank" href="https://www.npmjs.com/package/hexo-theme-fluid"><img alt="Npm Downloads" src="https://img.shields.io/npm/dt/hexo-theme-fluid?color=red&amp;label=npm"></a>  <a title="GitHub Commits" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/commits/master"><img alt="GitHub Commits" src="https://img.shields.io/github/commit-activity/m/fluid-dev/hexo-theme-fluid.svg?style=flat&amp;color=brightgreen&amp;label=commits"></a>  <br><br>  <a title="GitHub Watchers" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/watchers"><img alt="GitHub Watchers" src="https://img.shields.io/github/watchers/fluid-dev/hexo-theme-fluid.svg?label=Watchers&amp;style=social"></a>    <a title="GitHub Stars" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/fluid-dev/hexo-theme-fluid.svg?label=Stars&amp;style=social"></a>    <a title="GitHub Forks" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/fluid-dev/hexo-theme-fluid.svg?label=Forks&amp;style=social"></a>  </p><p align="center">🇨🇳 中文简体  |  <a title="English" href="README_en.md">🇬🇧 English</a></p><p align="center">  <span>文档：</span>  <a href="https://hexo.fluid-dev.com/docs/guide/">主题配置</a> |   <a href="https://hexo.io/zh-cn/docs/front-matter">文章配置</a></p><p align="center">  <span>预览：</span>  <a href="https://hexo.fluid-dev.com/">Fluid's blog</a> |   <a href="https://zkqiang.cn">zkqiang's blog</a></p><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h4 id="1-搭建-Hexo-博客"><a href="#1-搭建-Hexo-博客" class="headerlink" title="1. 搭建 Hexo 博客"></a>1. 搭建 Hexo 博客</h4><p>如果你还没有 Hexo 博客，请按照 <a href="https://hexo.io/zh-cn/docs/">Hexo 官方文档</a> 进行安装、建站。</p><h4 id="2-获取主题最新版本"><a href="#2-获取主题最新版本" class="headerlink" title="2. 获取主题最新版本"></a>2. 获取主题最新版本</h4><p><strong>方式一：</strong></p><p>Hexo 5.0.0 版本以上，推荐通过 npm 直接安装，进入博客目录执行命令：</p><figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-theme-fluid</span><br></pre></td></tr></tbody></table></figure><p>然后在博客目录下创建 <code>_config.fluid.yml</code>，将主题的 <a href="https://github.com/fluid-dev/hexo-theme-fluid/blob/master/_config.yml">_config.yml</a> 内容复制进去。</p><p><strong>方式二：</strong></p><p>下载 <a href="https://github.com/fluid-dev/hexo-theme-fluid/releases">最新 release 版本</a> 解压到 themes 目录，并将解压出的文件夹重命名为 <code>fluid</code>。</p><h4 id="3-指定主题"><a href="#3-指定主题" class="headerlink" title="3. 指定主题"></a>3. 指定主题</h4><p>如下修改 Hexo 博客目录中的 <code>_config.yml</code>：</p><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">fluid</span>  <span class="comment"># 指定主题</span></span><br><span class="line"></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span>  <span class="comment"># 指定语言，会影响主题显示的语言，按需修改</span></span><br></pre></td></tr></tbody></table></figure><h4 id="4-创建「关于页」"><a href="#4-创建「关于页」" class="headerlink" title="4. 创建「关于页」"></a>4. 创建「关于页」</h4><p>首次使用主题的「关于页」需要手动创建：</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page about</span><br></pre></td></tr></tbody></table></figure><p>创建成功后，编辑博客目录下 <code>/source/about/index.md</code>，添加 <code>layout</code> 属性。</p><p>修改后的文件示例如下：</p><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">about</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">about</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="string">这里写关于页的正文，支持</span> <span class="string">Markdown,</span> <span class="string">HTML</span></span><br></pre></td></tr></tbody></table></figure><h2 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h2><p>更新主题的方式<a href="https://hexo.fluid-dev.com/docs/start/#%E6%9B%B4%E6%96%B0%E4%B8%BB%E9%A2%98">参照这里</a>。</p><h2 id="功能特性"><a href="#功能特性" class="headerlink" title="功能特性"></a>功能特性</h2><ul><li><input checked="" disabled="" type="checkbox"> 无比详实的<a href="https://hexo.fluid-dev.com/docs/">用户文档</a></li><li><input checked="" disabled="" type="checkbox"> 页面组件懒加载</li><li><input checked="" disabled="" type="checkbox"> 多种代码高亮方案</li><li><input checked="" disabled="" type="checkbox"> 多语言配置</li><li><input checked="" disabled="" type="checkbox"> 内置多款评论插件</li><li><input checked="" disabled="" type="checkbox"> 内置网页访问统计</li><li><input checked="" disabled="" type="checkbox"> 内置文章本地搜索</li><li><input checked="" disabled="" type="checkbox"> 支持暗色模式</li><li><input checked="" disabled="" type="checkbox"> 支持脚注语法</li><li><input checked="" disabled="" type="checkbox"> 支持 LaTeX 数学公式</li><li><input checked="" disabled="" type="checkbox"> 支持 mermaid 流程图</li></ul><h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><table>  <thead>    <tr>      <th align="center" style="width: 240px;">        <a href="https://flowus.cn/share/eebf2144-8db7-4d68-b31e-bc2c116871de">          <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/32983588/243899272-092eeb46-9172-4c10-9e72-53561ff37a00.png" height="200px"><br>          <sub>首席赞助商 ORENCEAI</sub><br>          <sub>全新的 ChatGPT 人工智能对话平台</sub>        </a>      </th>      <th align="center" style="width: 240px;">        <a href="https://www.jetbrains.com/?from=hexo-theme-fluid">          <img src="https://raw.githubusercontent.com/fluid-dev/static/690616966f34a58d66aa15ac7b550dd7bbc03967/hexo-theme-fluid/jetbrains.svg" height="200px"><br>          <sub>免费开发工具提供方 JetBrains</sub><br>          <sub>专注于创建智能开发工具</sub>        </a>      </th>    </tr>  </thead></table><h2 id="贡献者"><a href="#贡献者" class="headerlink" title="贡献者"></a>贡献者</h2><p><a href="https://github.com/fluid-dev/hexo-theme-fluid/graphs/contributors"><img src="https://opencollective.com/hexo-theme-fluid/contributors.svg?width=890&amp;button=false" alt="contributors"></a></p><p>英文文档翻译：<a href="https://eatrice.top/">@EatRice</a> <a href="https://ruru.eatrice.top/">@橙子杀手</a> <a href="https://sinetian.github.io/">@Sinetian</a></p><p>其他贡献：<a href="https://github.com/zhugaoqi">@zhugaoqi</a> <a href="https://github.com/julydate">@julydate</a> <a href="https://xiyu.pro/">@xiyuvi</a></p><p>如你也想贡献代码，可参照<a href="https://hexo.fluid-dev.com/docs/contribute/">贡献指南</a></p><h2 id="支持我们"><a href="#支持我们" class="headerlink" title="支持我们"></a>支持我们</h2><p>如果你觉得这个项目有帮助，并愿意支持它的发展，可以通过以下方式支持我们的开源创作：</p><table>  <thead>    <tr>      <th align="center" style="width: 240px;">        <div>          <img src="https://github.com/fluid-dev/static/blob/master/hexo-theme-fluid/sponsor.png?s=200&amp;v=4" height="200px" alt="微信赞赏码"><br>          <sub>微信赞赏码</sub>        </div>      </th>      <th align="center" style="width: 240px;">        <div>          <a href="https://etherscan.io/address/0x0021395954710be29c0BFDCB3f98f4D2fa5A1448">            <img src="https://avatars.githubusercontent.com/u/6250754?s=200&amp;v=4" height="200px" alt="ERC20 Token">          </a>          <br>          <sub>ERC20 Token: 0x0021395954710<br>be29c0BFDCB3f98f4D2fa5A1448</sub>        </div>      </th>    </tr>  </thead></table><p>同时我们正在<strong>寻求商业赞助</strong>，如果贵司想在本页显著位置展示广告位（每月 6K+ Views 定向流量曝光），或者有其他赞助形式，可将联系方式发送邮件至 zkqiang#126.com (#替换为@)。</p><h2 id="Star-趋势"><a href="#Star-趋势" class="headerlink" title="Star 趋势"></a>Star 趋势</h2><p><a href="https://starchart.cc/fluid-dev/hexo-theme-fluid"><img src="https://starchart.cc/fluid-dev/hexo-theme-fluid.svg" alt="Stargazers over time"></a></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> github </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> github </tag>
-            
-            <tag> hexo主题 </tag>
-            
-            <tag> 精品 </tag>
             
         </tags>
       
@@ -1253,11 +1280,11 @@
       
         <tags>
             
+            <tag> github </tag>
+            
             <tag> 托管 </tag>
             
             <tag> 推荐 </tag>
-            
-            <tag> github </tag>
             
             <tag> 转载 </tag>
             
