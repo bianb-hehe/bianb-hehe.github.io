@@ -58,9 +58,9 @@
     <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
     <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
+    
+    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -164,9 +164,37 @@
     <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
+    
     <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
+  </entry>
+  
+  <entry>
+    <title>[1.8x+]LuckPerms</title>
+    <link href="https://bianb-hehe.github.io/2024/08/08/2593/"/>
+    <id>https://bianb-hehe.github.io/2024/08/08/2593/</id>
+    <published>2024-08-08T05:53:56.000Z</published>
+    <updated>2024-06-09T11:31:02.235Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.pixelbbs.cn/source/plugin/bphp_clouds/upload/4438/20240609/468bd479b11c1a662e1aec755cc975b9.jar&quot;&gt;下载&lt;/a&gt;&lt;/p&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="分享" scheme="https://bianb-hehe.github.io/categories/%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
+    
+    <category term="插件" scheme="https://bianb-hehe.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
@@ -175,7 +203,7 @@
     <link href="https://bianb-hehe.github.io/2024/08/08/397/"/>
     <id>https://bianb-hehe.github.io/2024/08/08/397/</id>
     <published>2024-08-08T05:53:56.000Z</published>
-    <updated>2024-06-09T10:41:55.487Z</updated>
+    <updated>2024-06-09T10:42:22.461Z</updated>
     
     
       
@@ -322,19 +350,20 @@
   </entry>
   
   <entry>
-    <title>Cmi的nick变量是什么</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/690/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/690/</id>
+    <title>[Wiki][CY/SCT] CMI – 插件文档帮助 –</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/3858/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/3858/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T09:58:14.089Z</updated>
+    <updated>2024-06-09T10:19:15.533Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;在 CMI（Content Management Interface）插件中，&lt;code&gt;nick&lt;/code&gt; 变量用于表示玩家的昵称。这个变量可以在多种场景下使用，包括显示在聊天消息、公告、以及其他玩家相关信息中。以下是一些常见的使用场景和示例：&lt;/p&gt;
-&lt;h2</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;游戏时间奖励 | PlayTime Rewards&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;游戏时间奖励系统可以在玩家积累到了一定时长的游戏时间后执行一段命令.&lt;/p&gt;
+&lt;p&gt;你可以设置每过 X 秒或游戏时长共 X</summary>
         
       
     
@@ -354,20 +383,19 @@
   </entry>
   
   <entry>
-    <title>[Wiki][CY/SCT] CMI – 插件文档帮助 –</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/3858/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/3858/</id>
+    <title>Cmi的nick变量是什么</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/690/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/690/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T10:19:15.533Z</updated>
+    <updated>2024-06-09T09:58:14.089Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;strong&gt;游戏时间奖励 | PlayTime Rewards&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;游戏时间奖励系统可以在玩家积累到了一定时长的游戏时间后执行一段命令.&lt;/p&gt;
-&lt;p&gt;你可以设置每过 X 秒或游戏时长共 X</summary>
+    <summary type="html">&lt;p&gt;在 CMI（Content Management Interface）插件中，&lt;code&gt;nick&lt;/code&gt; 变量用于表示玩家的昵称。这个变量可以在多种场景下使用，包括显示在聊天消息、公告、以及其他玩家相关信息中。以下是一些常见的使用场景和示例：&lt;/p&gt;
+&lt;h2</summary>
         
       
     
@@ -548,36 +576,6 @@
     <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LL3 - LovePlugin——跟玩家处cp吧！[结婚插件][支持1.20.81]</title>
-    <link href="https://bianb-hehe.github.io/2024/06/08/loveplugin-cp-1-20-81.8441/"/>
-    <id>https://bianb-hehe.github.io/2024/06/08/loveplugin-cp-1-20-81.8441/</id>
-    <published>2024-06-08T05:53:56.000Z</published>
-    <updated>2024-06-09T03:01:27.969Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;插件支持版本：1.20.81【LL3】&lt;/p&gt;
-&lt;p&gt;需要前置：GMLIB-LegacyRemoteCallApi和GMLIB&lt;/p&gt;
-&lt;p&gt;玩家使用指令：/cp&lt;br&gt;管理员管理指令：/cp_op&lt;/p&gt;
-&lt;p&gt;:吓:插件功能：&lt;br&gt;①可以实现gui请求，双方同意即可结</summary>
-        
-      
-    
-    
-    
-    <category term="分享" scheme="https://bianb-hehe.github.io/categories/%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
-    
-    <category term="插件" scheme="https://bianb-hehe.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
