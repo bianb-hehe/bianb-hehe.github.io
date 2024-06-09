@@ -139,32 +139,6 @@
     
     
     <entry>
-      <title>rating</title>
-      <link href="/2024/06/08/rating-1/"/>
-      <url>/2024/06/08/rating-1/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>rating</title>
-      <link href="/2024/06/08/rating/"/>
-      <url>/2024/06/08/rating/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>[1.12.2][支持手机版|拔刀剑]祝福或诅咒：无限力量之征——关于剑与理想的故事</title>
       <link href="/2024/06/07/2384%E9%93%85389/"/>
       <url>/2024/06/07/2384%E9%93%85389/</url>
@@ -441,35 +415,6 @@
     
     
     <entry>
-      <title>[转载] [联机教程] [联机][2021.1.1][CPS].schematic文件格式详解</title>
-      <link href="/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5B%E8%81%94%E6%9C%BA%5D%5B2021.1.1%5D%5BCPS%5D.schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/"/>
-      <url>/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5B%E8%81%94%E6%9C%BA%5D%5B2021.1.1%5D%5BCPS%5D.schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<p>联机教程</p><span id="more"></span><p>前言<br>大多数服主应该对于Schematic文件格式又熟悉又陌生，通常在导入地图时，一般使用替换地图文件的方式，而使用Schematic格式文件的方法使用较少，因此可能对Schematic文件格式较为陌生，加之近期有较多人询问我Schematic格式文件如何导入等问题，因此便写出此教程供服主们学习，教程将会用通俗易懂的语言对Schematic文件格式进行详细的讲解</p><p>字数统计<br>字数1707，字符数（不计空格）3137，字符数（计空格）3197，非中文单词208，中文字符1499（来自WPS字数统计）</p><p>什么是schematic文件格式？<br>Schematic文件格式为一种由玩家社区所创建的用于存储Minecraft世界信息，进而可以通过第三方应用程序（如MCEdit、Minecraft Note Block Studio、红石模拟器、WorldEdit以及Schematica等）进行编辑。地形以NBT格式储存并松散地基于Indev世界格式。方块和数据的目录以YZX的排序存储，也就是说X坐标的变化最频繁。这与Classic，Indev以及Anvil文件格式中的方块排序相似。这种格式不能将应该覆盖已有方块的空气方块和不应覆盖已有方块的空气方块区分开。（摘自Minecraft Wiki）<br>总而言之，schematic文件格式是用来储存Minecraft世界信息的工具，可以导出保存，也可以导入使用，也可以通过第三方工具对此格式文件内容进行编辑</p><p>NBT格式详解<br>Schematic:<br>Width: 沿X轴方向的大小<br>Height: 沿Y轴方向的大小<br>Length: 沿Z轴方向的大小<br>Materials: 版本世界类型<br>Blocks: 地图中所用到的物品ID<br>AddBlocks: 可用于编辑的空余地图区域<br>Add: 已启用<br>Data: 在地图中用到的其它方块<br>Entities: 在地图中的每个实体<br>TileEntities: 在地图中的每个实体<br>Icon: 用于地图图标的物品<br>SchematicaMapping: 此地图中所保存版本的ID<br>ExtendedMetadata: Schematica为扩展提供的任意附加数据<br>WEOriginX: 沿X的中心坐标（WorldEdit）<br>WEOriginY: 沿Y的中心坐标（WorldEdit）<br>WEOriginZ: 沿Z的中心坐标（WorldEdit）<br>WEOffsetX: 沿X的偏移坐标（WorldEdit）<br>WEOffsetY: 沿Y的偏移坐标（WorldEdit）<br>WEOffsetZ: 沿Z的偏移坐标（WorldEdit）<br>itemStackVersion: 仅用于MCEdit2，游戏版本<br>BlockIDs: 地图中的方块ID（MCEdit2）<br>ItemIDs: 地图中的物品ID（MCEdit2）<br>TileTicks: 地图中方块更新的列表（MCEdit-Unified）<br>i：方块的ID<br>t：处理时所需的时刻（tick）<br>p：同一时刻处理的优先值<br>x：地图中X坐标<br>y：地图中Y坐标<br>z：地图中Z坐标<br>Biomes: 地图中所有生物群系（MCEdit-Unified）</p><p>什么是schematic数据库？<br>Schematic数据库是一种免费的用于上传、下载、浏览、收藏schematic格式文件的网站<br>网站地址：<br>minecraft-schematics.com<br>minecraft-schematics.net</p><p>如何创建schematics文件夹？<br>单人游戏1.下载安装worldeditMOD<br>1.打开Minecraft.minecraft\config\worldedit目录<br>2.在worldedit目录下创建一个名为schematics的文件夹</p><p>多人联机<br>1.下载安装worldedit插件<br>2.打开Minecraft Sever\plugins\WorldEdit目录<br>3.在WorldEdit目录下创建一个名为schematics的文件夹</p><p>如何导入schematic格式文件?<br>单人游戏<br>1.下载安装worldedit游戏MOD<br>2.将你要使用的.schematic格式文件放到Minecraft.minecraft\config\worldedit\schematics目录下3.进入游戏，输入指令//schem load 文件名（如：//schem load skyworld），将此文件中的建筑会导入到worldedit的剪贴板中<br>提示：若出现skyblock.schematic loaded. Paste it with //paste则证明剪贴成功<br>4.输入指令//paste，将此文件的建筑添加到你所在的位置</p><p>多人联机<br>1.下载安装WorldEdit插件<br>2.将你要使用的.schematic格式文件放到Minecraft Sever\plugins\WorldEdit目录下<br>3.进入游戏，输入指令//schem load 文件名（如：//schem load skyworld），将此文件中的建筑会导入到worldedit的剪贴板中<br>提示：若出现skyblock.schematic loaded. Paste it with //paste则证明剪贴成功<br>4.输入指令//paste，将此文件的建筑添加到你所在的位置</p><p>如何导出schematic格式文件？<br>单人游戏<br>1.下载安装worldedit游戏MOD<br>2.进入游戏，用木斧选择你要导出的地图区域<br>3.输入//copy对选择区域进行复制<br>4.输入//schem save 文件名 将选择区域以 文件名.schematic 导出<br>5.导出后文件将会生存在Minecraft.minecraft\config\worldedit\schematics目录下</p><p>多人联机<br>1.下载安装WorldEdit插件<br>2.进入游戏，用木斧选择你要导出的地图区域<br>3.输入//copy对选择区域进行复制<br>4.输入//schem save 文件名 将选择区域以 文件名.schematic 导出<br>5.导出后文件将会生存在Minecraft Server.minecraft\config\worldedit\schematics目录下</p><p>如何导出/导入规模较大的建筑？<br>对于规模较为大的建筑来说，使用worldedit导入或导出，会导致后台报错、服务器卡顿甚至崩溃<br>部分服主会通过使用MCedit导出/导入大地图来解决，但是大部分服主对于MCedit的操作较为生疏，此部分将会提供其他较为不错的方法来解决此问题<br>在编写教程的时候，为了让教程内容丰富，本人对相关知识进行了大量的搜索和学习。在此期间，发现了一款名为FastAsyncWorldEdit的插件，此插件为WorldEdit的优化插件，插件主要用于减少WorldEdit插件在操作过程中的卡顿，安装此插件后可以导出/导入较大规模的建筑，且几乎无卡顿，使用方便操作简单<br>提示：在1.12.2之前此插件需要WorldEdit插件作为前置，而1.12.2版本后FastAsyncWorldEdit便成为一个独立的插件，无需WorldEdit插件作为前置<br>FastAsyncWorldEdit插件的使用方法和WorldEdit插件的使用方法一样，格式为//指令<br>站内搬运：<a href="https://www.mcbbs.net/thread-781901-1-1.html">https://www.mcbbs.net/thread-781901-1-1.html</a><br>原贴：<a href="https://github.com/boy0001/FastAsyncWorldedit/releases">https://github.com/boy0001/FastAsyncWorldedit/releases</a></p><p>注意事项<br>1.按照上述过程使用时必须安装worldedit插件或MOD<br>2.使用worldedit粘贴建筑时，需要一段的等待时间，若出现报错或者内存溢出等非正常情况，可能是文件过大导致的，此情况请仔细阅读如何导出规模较大的建筑？部分<br>3.在WorldEdit 7.0.0（Minecraft1.13之后的版本），无法再使用.schematic的格式导出地图文件，只允许使用.schem的格式导出，但仍可以使用旧版本的.schematic文件导入地图</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 教程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 教程 </tag>
-            
-            <tag> MC </tag>
-            
-            <tag> 转载 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>[转载] [联机教程] [Wiki][PCD]MythicMobs 帮助手册翻译 又更新了</title>
       <link href="/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5BWiki%5D%5BPCD%5DMythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/"/>
       <url>/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5BWiki%5D%5BPCD%5DMythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/</url>
@@ -499,11 +444,11 @@
     
     
     <entry>
-      <title>Mybbs发帖教程</title>
-      <link href="/2024/05/31/%E5%8F%91%E5%B8%96/"/>
-      <url>/2024/05/31/%E5%8F%91%E5%B8%96/</url>
+      <title>[转载] [联机教程] [联机][2021.1.1][CPS].schematic文件格式详解</title>
+      <link href="/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5B%E8%81%94%E6%9C%BA%5D%5B2021.1.1%5D%5BCPS%5D.schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/"/>
+      <url>/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5B%E8%81%94%E6%9C%BA%5D%5B2021.1.1%5D%5BCPS%5D.schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://img.pixelbbs.cn/LightPicture/2024/05/cfcfa66857ba57c1.jpg"></p><span id="more"></span><p>由于这个网站没有直接的发帖路径<br>所以版主制作了一个发布系统<br>*注意:网址会变动，时不时404,加裙获取最新网址 群号:971519377<br>按如下格式编写</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 写上你的标题</span><br><span class="line">categories: </span><br><span class="line">- 你的分类</span><br><span class="line">tags:</span><br><span class="line">- 标签1</span><br><span class="line">- 便签2</span><br><span class="line">comments: 设置评论为打开(<span class="literal">true</span>)关闭(<span class="literal">false</span>)</span><br><span class="line">img: （封面图，填网址！网址！)</span><br><span class="line">---</span><br><span class="line">&lt;帖子内容&gt;</span><br><span class="line">(在帖子内容中，可以随意使用md语法以及html标签</span><br></pre></td></tr></tbody></table></figure><p><a href=".\download\模板.md" download="">打包下载模板</a><br>教程完毕！有问题评论区发言</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+        <content type="html"><![CDATA[<p>联机教程</p><span id="more"></span><p>前言<br>大多数服主应该对于Schematic文件格式又熟悉又陌生，通常在导入地图时，一般使用替换地图文件的方式，而使用Schematic格式文件的方法使用较少，因此可能对Schematic文件格式较为陌生，加之近期有较多人询问我Schematic格式文件如何导入等问题，因此便写出此教程供服主们学习，教程将会用通俗易懂的语言对Schematic文件格式进行详细的讲解</p><p>字数统计<br>字数1707，字符数（不计空格）3137，字符数（计空格）3197，非中文单词208，中文字符1499（来自WPS字数统计）</p><p>什么是schematic文件格式？<br>Schematic文件格式为一种由玩家社区所创建的用于存储Minecraft世界信息，进而可以通过第三方应用程序（如MCEdit、Minecraft Note Block Studio、红石模拟器、WorldEdit以及Schematica等）进行编辑。地形以NBT格式储存并松散地基于Indev世界格式。方块和数据的目录以YZX的排序存储，也就是说X坐标的变化最频繁。这与Classic，Indev以及Anvil文件格式中的方块排序相似。这种格式不能将应该覆盖已有方块的空气方块和不应覆盖已有方块的空气方块区分开。（摘自Minecraft Wiki）<br>总而言之，schematic文件格式是用来储存Minecraft世界信息的工具，可以导出保存，也可以导入使用，也可以通过第三方工具对此格式文件内容进行编辑</p><p>NBT格式详解<br>Schematic:<br>Width: 沿X轴方向的大小<br>Height: 沿Y轴方向的大小<br>Length: 沿Z轴方向的大小<br>Materials: 版本世界类型<br>Blocks: 地图中所用到的物品ID<br>AddBlocks: 可用于编辑的空余地图区域<br>Add: 已启用<br>Data: 在地图中用到的其它方块<br>Entities: 在地图中的每个实体<br>TileEntities: 在地图中的每个实体<br>Icon: 用于地图图标的物品<br>SchematicaMapping: 此地图中所保存版本的ID<br>ExtendedMetadata: Schematica为扩展提供的任意附加数据<br>WEOriginX: 沿X的中心坐标（WorldEdit）<br>WEOriginY: 沿Y的中心坐标（WorldEdit）<br>WEOriginZ: 沿Z的中心坐标（WorldEdit）<br>WEOffsetX: 沿X的偏移坐标（WorldEdit）<br>WEOffsetY: 沿Y的偏移坐标（WorldEdit）<br>WEOffsetZ: 沿Z的偏移坐标（WorldEdit）<br>itemStackVersion: 仅用于MCEdit2，游戏版本<br>BlockIDs: 地图中的方块ID（MCEdit2）<br>ItemIDs: 地图中的物品ID（MCEdit2）<br>TileTicks: 地图中方块更新的列表（MCEdit-Unified）<br>i：方块的ID<br>t：处理时所需的时刻（tick）<br>p：同一时刻处理的优先值<br>x：地图中X坐标<br>y：地图中Y坐标<br>z：地图中Z坐标<br>Biomes: 地图中所有生物群系（MCEdit-Unified）</p><p>什么是schematic数据库？<br>Schematic数据库是一种免费的用于上传、下载、浏览、收藏schematic格式文件的网站<br>网站地址：<br>minecraft-schematics.com<br>minecraft-schematics.net</p><p>如何创建schematics文件夹？<br>单人游戏1.下载安装worldeditMOD<br>1.打开Minecraft.minecraft\config\worldedit目录<br>2.在worldedit目录下创建一个名为schematics的文件夹</p><p>多人联机<br>1.下载安装worldedit插件<br>2.打开Minecraft Sever\plugins\WorldEdit目录<br>3.在WorldEdit目录下创建一个名为schematics的文件夹</p><p>如何导入schematic格式文件?<br>单人游戏<br>1.下载安装worldedit游戏MOD<br>2.将你要使用的.schematic格式文件放到Minecraft.minecraft\config\worldedit\schematics目录下3.进入游戏，输入指令//schem load 文件名（如：//schem load skyworld），将此文件中的建筑会导入到worldedit的剪贴板中<br>提示：若出现skyblock.schematic loaded. Paste it with //paste则证明剪贴成功<br>4.输入指令//paste，将此文件的建筑添加到你所在的位置</p><p>多人联机<br>1.下载安装WorldEdit插件<br>2.将你要使用的.schematic格式文件放到Minecraft Sever\plugins\WorldEdit目录下<br>3.进入游戏，输入指令//schem load 文件名（如：//schem load skyworld），将此文件中的建筑会导入到worldedit的剪贴板中<br>提示：若出现skyblock.schematic loaded. Paste it with //paste则证明剪贴成功<br>4.输入指令//paste，将此文件的建筑添加到你所在的位置</p><p>如何导出schematic格式文件？<br>单人游戏<br>1.下载安装worldedit游戏MOD<br>2.进入游戏，用木斧选择你要导出的地图区域<br>3.输入//copy对选择区域进行复制<br>4.输入//schem save 文件名 将选择区域以 文件名.schematic 导出<br>5.导出后文件将会生存在Minecraft.minecraft\config\worldedit\schematics目录下</p><p>多人联机<br>1.下载安装WorldEdit插件<br>2.进入游戏，用木斧选择你要导出的地图区域<br>3.输入//copy对选择区域进行复制<br>4.输入//schem save 文件名 将选择区域以 文件名.schematic 导出<br>5.导出后文件将会生存在Minecraft Server.minecraft\config\worldedit\schematics目录下</p><p>如何导出/导入规模较大的建筑？<br>对于规模较为大的建筑来说，使用worldedit导入或导出，会导致后台报错、服务器卡顿甚至崩溃<br>部分服主会通过使用MCedit导出/导入大地图来解决，但是大部分服主对于MCedit的操作较为生疏，此部分将会提供其他较为不错的方法来解决此问题<br>在编写教程的时候，为了让教程内容丰富，本人对相关知识进行了大量的搜索和学习。在此期间，发现了一款名为FastAsyncWorldEdit的插件，此插件为WorldEdit的优化插件，插件主要用于减少WorldEdit插件在操作过程中的卡顿，安装此插件后可以导出/导入较大规模的建筑，且几乎无卡顿，使用方便操作简单<br>提示：在1.12.2之前此插件需要WorldEdit插件作为前置，而1.12.2版本后FastAsyncWorldEdit便成为一个独立的插件，无需WorldEdit插件作为前置<br>FastAsyncWorldEdit插件的使用方法和WorldEdit插件的使用方法一样，格式为//指令<br>站内搬运：<a href="https://www.mcbbs.net/thread-781901-1-1.html">https://www.mcbbs.net/thread-781901-1-1.html</a><br>原贴：<a href="https://github.com/boy0001/FastAsyncWorldedit/releases">https://github.com/boy0001/FastAsyncWorldedit/releases</a></p><p>注意事项<br>1.按照上述过程使用时必须安装worldedit插件或MOD<br>2.使用worldedit粘贴建筑时，需要一段的等待时间，若出现报错或者内存溢出等非正常情况，可能是文件过大导致的，此情况请仔细阅读如何导出规模较大的建筑？部分<br>3.在WorldEdit 7.0.0（Minecraft1.13之后的版本），无法再使用.schematic的格式导出地图文件，只允许使用.schem的格式导出，但仍可以使用旧版本的.schematic文件导入地图</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
       
       
       <categories>
@@ -516,6 +461,10 @@
         <tags>
             
             <tag> 教程 </tag>
+            
+            <tag> MC </tag>
+            
+            <tag> 转载 </tag>
             
         </tags>
       
@@ -566,6 +515,31 @@
             <tag> 整合包 </tag>
             
             <tag> 休闲 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mybbs发帖教程</title>
+      <link href="/2024/05/31/%E5%8F%91%E5%B8%96/"/>
+      <url>/2024/05/31/%E5%8F%91%E5%B8%96/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://img.pixelbbs.cn/LightPicture/2024/05/cfcfa66857ba57c1.jpg"></p><span id="more"></span><p>由于这个网站没有直接的发帖路径<br>所以版主制作了一个发布系统<br>*注意:网址会变动，时不时404,加裙获取最新网址 群号:971519377<br>按如下格式编写</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 写上你的标题</span><br><span class="line">categories: </span><br><span class="line">- 你的分类</span><br><span class="line">tags:</span><br><span class="line">- 标签1</span><br><span class="line">- 便签2</span><br><span class="line">comments: 设置评论为打开(<span class="literal">true</span>)关闭(<span class="literal">false</span>)</span><br><span class="line">img: （封面图，填网址！网址！)</span><br><span class="line">---</span><br><span class="line">&lt;帖子内容&gt;</span><br><span class="line">(在帖子内容中，可以随意使用md语法以及html标签</span><br></pre></td></tr></tbody></table></figure><p><a href=".\download\模板.md" download="">打包下载模板</a><br>教程完毕！有问题评论区发言</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
             
         </tags>
       
@@ -686,35 +660,6 @@
     
     
     <entry>
-      <title>[Github] CSDNExporter</title>
-      <link href="/2024/05/31/%5B%E5%B7%A5%E5%85%B7%5DCSDNE/"/>
-      <url>/2024/05/31/%5B%E5%B7%A5%E5%85%B7%5DCSDNE/</url>
-      
-        <content type="html"><![CDATA[<p><a href="/download/CSDNExporter-master.zip" download="">打包下载本zip</a></p><h2 id="重要说明"><a href="#重要说明" class="headerlink" title="重要说明"></a>重要说明</h2><ul><li>2024-05-22 通知：<strong>估计CSDN加入了反爬虫机制，代码已无法请求CSDN网页，因此本项目已凉~</strong></li></ul><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>CSDN 博客导出工具, 用于将 CSDN 博客导出为 Markdown / PDF 格式. 比较赞的地方在于, 它<br>不仅支持一篇博文的导出, 还支持将某个类目下的博文批量导出, 以及将导出的多篇博文汇总为<br>一篇, 以便用于全局搜索, 具体效果可以查看 <a href="https://blog.csdn.net/Eric_1993/article/details/104772437">导出 CSDN 博客至 Markdown 或 PDF 格式 (近乎完美)</a>.</p><h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><p>另外要说明的是:</p><ol start="0"><li><p>安装必要的 Python 库, 如 <code>httpx</code>, <code>requests</code>, <code>BeautifulSoup</code>, 直接运行 <code>pip install -r requirements.txt</code> 即可;</p><ul><li>2024-04-24 更新：<code>BeautifulSoup</code> 升级为 <code>beautifulsoup4</code>，已在 Ubuntu 和 Windows 系统测试过没啥问题;</li></ul></li><li><p>为了解析图片链接, 需要安装 <a href="https://aria2.github.io/">aria2</a>, 并保证能在命令行启动;</p><ul><li>将软件的安装目录加入到环境变量中即可, 加入后最好重启或刷新终端, 如 Bash、Zsh、Terminal、Powershell 等等，如果运行命令 <code>aria2c --verison</code> 不报错，说明成功；</li></ul></li><li><p>为了转换为 PDF, 需要安装 <a href="https://pandoc.org/">Pandoc</a></p><ul><li>有同学反映转换 pdf 时，遇到 pandoc 的报错 <code>pandoc: unrecognized option '--pdf-engine=xelatex'</code>, 因此还需要安装 xelatex, 具体查阅下 pandoc 的安装说明吧。<ul><li>Ubuntu 上可以使用 <code>sudo apt-get install texlive-xetex</code> + <code>sudo apt install latex-cjk-all</code> 安装 texlive 相关的内容 (注意 [LaTeX Error: File `ctex.sty’ not found</li></ul></li></ul></li></ol><p>](<a href="https://tex.stackexchange.com/questions/687540/latex-error-file-ctex-sty-not-found">https://tex.stackexchange.com/questions/687540/latex-error-file-ctex-sty-not-found</a>))<br>        - Pandoc 使用 <code>sudo apt-get install pandoc</code> 安装<br>        - 代码中使用了 ‘Source Code Pro’ 字体，是我个人很喜欢的编程字体，可以参考 <a href="https://askubuntu.com/questions/193072/how-to-use-the-adobe-source-code-pro-font">Source Code Pro Font</a> 中 edwin 的回答，从 <a href="https://fonts.google.com/">Google Font</a> 获取该字体，并按回答中的方法安装到系统中。当然，如果不想使用该字体，只需要将 <code>main.py</code> 中关于 ‘Source Code Pro’ 的两行代码给注释掉即可。</p><p>此外, 正如博客标题 <a href="https://blog.csdn.net/Eric_1993/article/details/104772437">导出 CSDN 博客至 Markdown 或 PDF 格式 (近乎完美)</a> 中说的, “近乎完美”,<br>是因为该博客导出工具还有一些细节没有考虑, 没有需求就没有动力去改代码, 精力有限, 目前该工具让我满意 😂😂😂.</p><h2 id="运行脚本"><a href="#运行脚本" class="headerlink" title="运行脚本"></a>运行脚本</h2><ul><li>Linux系统运行<br>启动脚本为 <code>./run.sh</code>, 使用 <code>chmod +x run.sh</code> 增加其可执行权限;</li><li>Windows系统启动<br>启动脚本为<code>run.bat</code>, 双击打开或者在cmd中运行<code>run.bat</code></li></ul><h2 id="更新历史"><a href="#更新历史" class="headerlink" title="更新历史"></a>更新历史</h2><ul><li>2024-04-26: 增加对表格解析的支持</li><li>2024-04-25: 修复 Windows 下使用绝对路径报错的问题</li></ul><h2 id="特别感谢"><a href="#特别感谢" class="headerlink" title="特别感谢"></a>特别感谢</h2><p>因个人原因，仓库疏于维护，非常感谢社区成员的关注与支持，尤其感谢如下成员的付出：</p><p><a href="https://github.com/yaunsine">@yaunsine</a>, <a href="https://github.com/Tim-Saijun">@Tim-Saijun</a>, <a href="https://github.com/66my">@66my</a></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div><div class="rating">  <span class="star" data-value="5">★</span>  <span class="star" data-value="4">★</span>  <span class="star" data-value="3">★</span>  <span class="star" data-value="2">★</span>  <span class="star" data-value="1">★</span></div><p id="rating-value">Rating: <span id="rating-score">0</span></p><style>  .rating {    direction: rtl;    font-size: 2em;    unicode-bidi: bidi-override;  }  .star {    cursor: pointer;    color: gray;  }  .star:hover,  .star:hover ~ .star {    color: gold;  }  .star.selected,  .star.selected ~ .star {    color: gold;  }</style><script>  document.addEventListener('DOMContentLoaded', function() {    const stars = document.querySelectorAll('.star');    const ratingScore = document.getElementById('rating-score');    stars.forEach(star => {      star.addEventListener('click', function() {        const value = this.getAttribute('data-value');        ratingScore.textContent = value;        stars.forEach(s => {          s.classList.remove('selected');          if (s.getAttribute('data-value') <= value) {            s.classList.add('selected');          }        });      });    });  });</script>]]></content>
-      
-      
-      <categories>
-          
-          <category> github </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> github </tag>
-            
-            <tag> 工具 </tag>
-            
-            <tag> CSDN </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>[卡通]ExPixel 精致像素纹理包 - 一款精心打造的卡通材质</title>
       <link href="/2024/05/31/%5B%E5%8D%A1%E9%80%9A%5DExPixel%20%E7%B2%BE%E8%87%B4%E5%83%8F%E7%B4%A0%E7%BA%B9%E7%90%86%E5%8C%85%20-%20%E4%B8%80%E6%AC%BE%E7%B2%BE%E5%BF%83%E6%89%93%E9%80%A0%E7%9A%84%E5%8D%A1%E9%80%9A%E6%9D%90%E8%B4%A8/"/>
       <url>/2024/05/31/%5B%E5%8D%A1%E9%80%9A%5DExPixel%20%E7%B2%BE%E8%87%B4%E5%83%8F%E7%B4%A0%E7%BA%B9%E7%90%86%E5%8C%85%20-%20%E4%B8%80%E6%AC%BE%E7%B2%BE%E5%BF%83%E6%89%93%E9%80%A0%E7%9A%84%E5%8D%A1%E9%80%9A%E6%9D%90%E8%B4%A8/</url>
@@ -738,6 +683,35 @@
             <tag> 分享 </tag>
             
             <tag> 整合包 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[Github] CSDNExporter</title>
+      <link href="/2024/05/31/%5B%E5%B7%A5%E5%85%B7%5DCSDNE/"/>
+      <url>/2024/05/31/%5B%E5%B7%A5%E5%85%B7%5DCSDNE/</url>
+      
+        <content type="html"><![CDATA[<p><a href="/download/CSDNExporter-master.zip" download="">打包下载本zip</a></p><h2 id="重要说明"><a href="#重要说明" class="headerlink" title="重要说明"></a>重要说明</h2><ul><li>2024-05-22 通知：<strong>估计CSDN加入了反爬虫机制，代码已无法请求CSDN网页，因此本项目已凉~</strong></li></ul><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>CSDN 博客导出工具, 用于将 CSDN 博客导出为 Markdown / PDF 格式. 比较赞的地方在于, 它<br>不仅支持一篇博文的导出, 还支持将某个类目下的博文批量导出, 以及将导出的多篇博文汇总为<br>一篇, 以便用于全局搜索, 具体效果可以查看 <a href="https://blog.csdn.net/Eric_1993/article/details/104772437">导出 CSDN 博客至 Markdown 或 PDF 格式 (近乎完美)</a>.</p><h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><p>另外要说明的是:</p><ol start="0"><li><p>安装必要的 Python 库, 如 <code>httpx</code>, <code>requests</code>, <code>BeautifulSoup</code>, 直接运行 <code>pip install -r requirements.txt</code> 即可;</p><ul><li>2024-04-24 更新：<code>BeautifulSoup</code> 升级为 <code>beautifulsoup4</code>，已在 Ubuntu 和 Windows 系统测试过没啥问题;</li></ul></li><li><p>为了解析图片链接, 需要安装 <a href="https://aria2.github.io/">aria2</a>, 并保证能在命令行启动;</p><ul><li>将软件的安装目录加入到环境变量中即可, 加入后最好重启或刷新终端, 如 Bash、Zsh、Terminal、Powershell 等等，如果运行命令 <code>aria2c --verison</code> 不报错，说明成功；</li></ul></li><li><p>为了转换为 PDF, 需要安装 <a href="https://pandoc.org/">Pandoc</a></p><ul><li>有同学反映转换 pdf 时，遇到 pandoc 的报错 <code>pandoc: unrecognized option '--pdf-engine=xelatex'</code>, 因此还需要安装 xelatex, 具体查阅下 pandoc 的安装说明吧。<ul><li>Ubuntu 上可以使用 <code>sudo apt-get install texlive-xetex</code> + <code>sudo apt install latex-cjk-all</code> 安装 texlive 相关的内容 (注意 [LaTeX Error: File `ctex.sty’ not found</li></ul></li></ul></li></ol><p>](<a href="https://tex.stackexchange.com/questions/687540/latex-error-file-ctex-sty-not-found">https://tex.stackexchange.com/questions/687540/latex-error-file-ctex-sty-not-found</a>))<br>        - Pandoc 使用 <code>sudo apt-get install pandoc</code> 安装<br>        - 代码中使用了 ‘Source Code Pro’ 字体，是我个人很喜欢的编程字体，可以参考 <a href="https://askubuntu.com/questions/193072/how-to-use-the-adobe-source-code-pro-font">Source Code Pro Font</a> 中 edwin 的回答，从 <a href="https://fonts.google.com/">Google Font</a> 获取该字体，并按回答中的方法安装到系统中。当然，如果不想使用该字体，只需要将 <code>main.py</code> 中关于 ‘Source Code Pro’ 的两行代码给注释掉即可。</p><p>此外, 正如博客标题 <a href="https://blog.csdn.net/Eric_1993/article/details/104772437">导出 CSDN 博客至 Markdown 或 PDF 格式 (近乎完美)</a> 中说的, “近乎完美”,<br>是因为该博客导出工具还有一些细节没有考虑, 没有需求就没有动力去改代码, 精力有限, 目前该工具让我满意 😂😂😂.</p><h2 id="运行脚本"><a href="#运行脚本" class="headerlink" title="运行脚本"></a>运行脚本</h2><ul><li>Linux系统运行<br>启动脚本为 <code>./run.sh</code>, 使用 <code>chmod +x run.sh</code> 增加其可执行权限;</li><li>Windows系统启动<br>启动脚本为<code>run.bat</code>, 双击打开或者在cmd中运行<code>run.bat</code></li></ul><h2 id="更新历史"><a href="#更新历史" class="headerlink" title="更新历史"></a>更新历史</h2><ul><li>2024-04-26: 增加对表格解析的支持</li><li>2024-04-25: 修复 Windows 下使用绝对路径报错的问题</li></ul><h2 id="特别感谢"><a href="#特别感谢" class="headerlink" title="特别感谢"></a>特别感谢</h2><p>因个人原因，仓库疏于维护，非常感谢社区成员的关注与支持，尤其感谢如下成员的付出：</p><p><a href="https://github.com/yaunsine">@yaunsine</a>, <a href="https://github.com/Tim-Saijun">@Tim-Saijun</a>, <a href="https://github.com/66my">@66my</a></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div><div class="rating">  <span class="star" data-value="5">★</span>  <span class="star" data-value="4">★</span>  <span class="star" data-value="3">★</span>  <span class="star" data-value="2">★</span>  <span class="star" data-value="1">★</span></div><p id="rating-value">Rating: <span id="rating-score">0</span></p><style>  .rating {    direction: rtl;    font-size: 2em;    unicode-bidi: bidi-override;  }  .star {    cursor: pointer;    color: gray;  }  .star:hover,  .star:hover ~ .star {    color: gold;  }  .star.selected,  .star.selected ~ .star {    color: gold;  }</style><script>  document.addEventListener('DOMContentLoaded', function() {    const stars = document.querySelectorAll('.star');    const ratingScore = document.getElementById('rating-score');    stars.forEach(star => {      star.addEventListener('click', function() {        const value = this.getAttribute('data-value');        ratingScore.textContent = value;        stars.forEach(s => {          s.classList.remove('selected');          if (s.getAttribute('data-value') <= value) {            s.classList.add('selected');          }        });      });    });  });</script>]]></content>
+      
+      
+      <categories>
+          
+          <category> github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+            <tag> 工具 </tag>
+            
+            <tag> CSDN </tag>
             
         </tags>
       
