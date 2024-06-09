@@ -175,7 +175,7 @@
     <link href="https://bianb-hehe.github.io/2024/07/07/396/"/>
     <id>https://bianb-hehe.github.io/2024/07/07/396/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T09:47:45.441Z</updated>
+    <updated>2024-06-09T09:48:14.140Z</updated>
     
     
       
@@ -185,6 +185,38 @@
     <summary type="html">&lt;p&gt; CMI 插件的聊天功能，你可以通过修改 CMI 的配置文件来实现。以下是步骤：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;1.找到配置文件：在你的服务器目录中找到 CMI 的配置文件，通常位于</summary>
+        
+      
+    
+    
+    
+    <category term="茶馆" scheme="https://bianb-hehe.github.io/categories/%E8%8C%B6%E9%A6%86/"/>
+    
+    <category term="问答" scheme="https://bianb-hehe.github.io/categories/%E8%8C%B6%E9%A6%86/%E9%97%AE%E7%AD%94/"/>
+    
+    
+    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
+    
+    <category term="茶馆" scheme="https://bianb-hehe.github.io/tags/%E8%8C%B6%E9%A6%86/"/>
+    
+    <category term="问答" scheme="https://bianb-hehe.github.io/tags/%E9%97%AE%E7%AD%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cmi的nick变量是什么</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/690/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/690/</id>
+    <published>2024-07-07T04:12:13.000Z</published>
+    <updated>2024-06-09T09:57:45.980Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在 CMI（Content Management Interface）插件中，&lt;code&gt;nick&lt;/code&gt; 变量用于表示玩家的昵称。这个变量可以在多种场景下使用，包括显示在聊天消息、公告、以及其他玩家相关信息中。以下是一些常见的使用场景和示例：&lt;/p&gt;
+&lt;h2</summary>
         
       
     
@@ -525,33 +557,6 @@
     <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>模组整合包 - 我的世界随机空岛1.1.4手机移植</title>
-    <link href="https://bianb-hehe.github.io/2024/06/03/481472347/"/>
-    <id>https://bianb-hehe.github.io/2024/06/03/481472347/</id>
-    <published>2024-06-03T11:14:46.237Z</published>
-    <updated>2024-06-08T05:51:52.490Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;这是一个受启发于原版随机空岛数据包的整合包，整合包每3分钟会随机刷新出原版及模组的方块【【保姆级一键自动安装】中配科技空岛我的世界随机空岛1.1.4手机移植版（FCL启动器制作）&lt;br&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="分享" scheme="https://bianb-hehe.github.io/categories/%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
-    
-    <category term="整合包" scheme="https://bianb-hehe.github.io/tags/%E6%95%B4%E5%90%88%E5%8C%85/"/>
     
   </entry>
   
