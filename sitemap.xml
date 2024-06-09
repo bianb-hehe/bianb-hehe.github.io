@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bianb-hehe.github.io/2024/06/08/loveplugin-cp-1-20-81.8441/</loc>
+    
+    <lastmod>2024-06-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bianb-hehe.github.io/2024/05/31/[%E5%B7%A5%E5%85%B7]CSDNE/</loc>
     
     <lastmod>2024-06-08</lastmod>
@@ -609,13 +618,6 @@
   </url>
   
   <url>
-    <loc>https://bianb-hehe.github.io/tags/hexo/</loc>
-    <lastmod>2024-06-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://bianb-hehe.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/</loc>
     <lastmod>2024-06-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -631,6 +633,13 @@
   
   <url>
     <loc>https://bianb-hehe.github.io/tags/Mod/</loc>
+    <lastmod>2024-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bianb-hehe.github.io/tags/hexo/</loc>
     <lastmod>2024-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -686,14 +695,14 @@
   </url>
   
   <url>
-    <loc>https://bianb-hehe.github.io/tags/%E7%B2%BE%E5%93%81/</loc>
+    <loc>https://bianb-hehe.github.io/tags/java/</loc>
     <lastmod>2024-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://bianb-hehe.github.io/tags/java/</loc>
+    <loc>https://bianb-hehe.github.io/tags/%E7%B2%BE%E5%93%81/</loc>
     <lastmod>2024-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
