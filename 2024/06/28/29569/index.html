@@ -1,0 +1,856 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>我的世界命令设计 | Mybbs</title><meta name="keywords" content="教程,MC"><meta name="author" content="Mybbs —— 开源MC社区"><meta name="copyright" content="Mybbs —— 开源MC社区"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="我的世界命令设计"><meta name="application-name" content="我的世界命令设计"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="我的世界命令设计"><meta property="og:url" content="https://bianb-hehe.github.io/2024/06/28/29569/index.html"><meta property="og:site_name" content="Mybbs"><meta property="og:description" content="第 1 节本节最后修改于 2022 &amp;#x2F; 11 &amp;#x2F; 12 条件判断条件判断在我的世界指令设计中具有极大的用途。条件判断逻辑一般以两种形式体现在指令中，分别是“有条件的命令方块”和“选择器”。下面分别介绍这两种形式。  有条件命令方块对于一个开启的有条件连锁命令方块，如果指向它的命令方块的指令执行成功，"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://ts1.cn.mm.bing.net/th/id/R-C.9a6de07448a467a377b44596d9ae5da0?rik=8WbMsGmKuRB5XA&amp;riu=http%3a%2f%2fpic.2265.com%2fupload%2f2021-8%2f2021810928385817.png&amp;ehk=Xi9L%2fFaaTMGPUxE7TnAHh3CKp6VDRo44YeVHbgK3Auk%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0"><meta property="article:author" content="Mybbs —— 开源MC社区"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://ts1.cn.mm.bing.net/th/id/R-C.9a6de07448a467a377b44596d9ae5da0?rik=8WbMsGmKuRB5XA&amp;riu=http%3a%2f%2fpic.2265.com%2fupload%2f2021-8%2f2021810928385817.png&amp;ehk=Xi9L%2fFaaTMGPUxE7TnAHh3CKp6VDRo44YeVHbgK3Auk%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0"><meta name="description" content="第 1 节本节最后修改于 2022 &amp;#x2F; 11 &amp;#x2F; 12 条件判断条件判断在我的世界指令设计中具有极大的用途。条件判断逻辑一般以两种形式体现在指令中，分别是“有条件的命令方块”和“选择器”。下面分别介绍这两种形式。  有条件命令方块对于一个开启的有条件连锁命令方块，如果指向它的命令方块的指令执行成功，"><link rel="shortcut icon" href="https://img.pixelbbs.cn/LightPicture/2024/05/642ae2f5e0e131a7.ico"><link rel="canonical" href="https://bianb-hehe.github.io/2024/06/28/29569/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":4000,"accessToken":"","mailMd5":""},
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Mybbs —— 开源MC社区","link":"链接: ","source":"来源: Mybbs","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Mybbs',
+  title: '我的世界命令设计',
+  postAI: '',
+  pageFillDescription: '第 1 节, 条件判断, 有条件命令方块, 选择器, MP过程, 第 2 节, MP事件, MP事件的实现, MP事件的简单用途, 第 3 节, MP事件的主动触发, MP事件实现的异步, 第 4 节, MP模块, 带参数调用MP模块, 第 5 节, MP模块的递归, 定量给东西, 等差数列, 斐波那契数列, 第 6 节, MP模块的无限制递归猜想, 第 7 节, 搞个雪球菜单, 架构, 变量命名, 计分板, 各种功能MP模块, 第 7.5 节, 搞个雪球菜单·续, 用户MP事件监听器, 提示MP模块, 界面MP模块, 全部指令, 第 8 节, 条件的逻辑运算, 逻辑运算的种类, 我的世界实现逻辑运算, 第 9 节, 条件的进阶逻辑运算, 与非, 或非, 异或, 逻辑运算对照表, 第 10 节, 基于设计模式的指令生成, 代指令, 解析器, 宣传第节本节最后修改于条件判断条件判断在我的世界指令设计中具有极大的用途条件判断逻辑一般以两种形式体现在指令中分别是有条件的命令方块和选择器下面分别介绍这两种形式有条件命令方块对于一个开启的有条件连锁命令方块如果指向它的命令方块的指令执行成功则这个命令方块中的指令将会被执行否则将不会被执行这是有条件命令方块较为普遍的使用方法例子如果有人背包里有床就提示有床啊有床啊选择器选择器也是条件判断的一种形式这个判断是对实体的判断每次选择都可以看作把全部实体挨个判断一次符合选择器条件就会被选中否则就不会被选中通常的用法就是通常的用法选择作用的实体选择器参数可以使选择更加精准例子我们希望给所有叫做重工业玉米的玩家打上帅比标签或者可以换个说法我们判断一个人叫不叫重工业玉米如果叫那么打上帅比标签重工业玉米帅比选择器还可以搭配指令用来代替指令搭配有条件命令方块实现的判断这个用法在以实体为主的指令设计中十分实用本教程系列就是以实体为主的指令设计例子检测有没有玩家叫重工业玉米如果有就提示玉米大人驾到重工业玉米玉米大人驾到条件判断和逻辑在后面会继续讨论感兴趣的可以跳跃阅读过程条件判断很常用但过多的条件和过长的指令分支会让构建和维护较为滑稽在以实体为主的指令设计中我们可以打标签来标记符合条件的实体通过此标签来进一步操作实体操作完就删除标签取消标记这样优点很多比如可以减少条件判断的数量降低指令执行中的不可预测性防止标签泄露还有愉悦我们的心情之类因为我的世界中指令单线程执行相邻连锁命令方块之间指令的执行几乎没有时间间隔所以这种方法有一定的封闭性为了方便我们可以给这个方法起个名在本文中叫做过程一串命令方块从打上标记到取消标记的部分可以称作一个过程为了区分这种我的世界指令的过程和其他各种过程我们可以管这种我的世界指令中的过程叫做过程是我的世界指令设计模式的简写打上的标记就可以叫过程标记例子检测有没有玩家叫做重工业玉米还带着标签帅比如果有就私聊他你真帅然后在聊天栏提示玉米是大帅比重工业玉米帅比夸奖打上过程标记夸奖你真帅夸奖玉米是大帅比夸奖夸奖删除过程标记结束过程第节本节最后修改于事件我们上一节讲到过程是在一串连锁命令方块中通过给符合特定条件的实体打标签使用此标签对其操作最后去掉标签来结束过程一共三步来对实体更方便安全地进行操作我们同时还讲到选择器体现了一种条件判断的思想过程的第一步打标签就需要选择器进行判断那么我们换个视角来看能不能把这套流程解释为判断有无符合特定条件的实体如果有则进行操作否则不进行操作呢当然是可以的于是对于一个接在循环命令方块后面不停地循环执行的过程它就可以被看作是不停地判断实体判断成功时执行操作在计算机程序界中在其他地方也有可能对于一个不停判断条件一旦条件满足就进行动作的东西我们可以说它属于一种事件监听器不停判断条件就是在监听判断的条件即为事件而进行的动作名字就多了比如回调响应函数钩子函数等等于是我们可以说当这个东西监听到事件发生时才执行响应函数若事件没有发生就不执行响应函数十分的形象仿照计算机程序界其他地方或许也有的概念我们可以管一个不停检测条件的过程叫做事件监听器于是我们便成功把过程套到了一个简单易懂的事件模式中类似的我们可以把这种事件模式称为事件模式或简称事件当我们的过程监听到有特定条件的实体出现这一事件发生后便执行响应指令否则就不执行事件的实现听起来这个概念貌似还挺容易理解的那么如何实现呢我们跟着上面走搭一个过程的命令方块串试试首先这个要不停地检测来监听那么最好是接在一个循环命令方块上面好接下来监听是判断事件有没有发生我们讲过条件判断有两种形式那就是选择器或者有条件命令方块任选一个比如就选择器吧最简单的实现就是给符合条件的人打标签就是过程的标记那么这个命令方块串的第一个指令就是给人打标签然后监听完了就是执行响应指令这里我们发现一个问题如果我们直接把无条件连锁命令方块的指令接在命令方块串后面那么不论检测事件发生没发生指令都会执行那怎么办我们发现有两个办法一种是判断一下如果有人有过程的标记那就执行一种是改成有条件连锁命令方块响应指令一般不止一个啊我们还得继续加指令是吧再加无条件连锁命令方块发现又出现了上一次的问题要不然用判断要不然改成有条件命令方块于是有条件命令方块的缺点在此显露了这时的有条件并不是第一个命令执行成功而是第一个命令执行成功后第二个命令执行并且成功也就是说若第二个命令没成功即使第一个命令成功了事件发生了响应也不会继续执行所以我们一般使用判断其他的响应指令都一样了最后我们别忘了事件是特殊的过程还要把标记给去掉结束这个过程防止干扰下一次检测例子当有人抬头时提示有人抬头了并杀光所有玩家然后在聊天栏提示玉米是大帅比抬头抬头有人抬头了抬头抬头玉米是大帅比抬头抬头事件的简单用途最后我们发现这个所谓事件的响应指令前面全都有一个你可能会说这一点也不优雅简单个鸡毛是的我的世界不存在真正的事件模型这只是我们通过奇技淫巧搞出来的类似事件的东西本系列所讲述的与其说是设计模式倒不如说是设计技巧有的时候这些技巧不仅不会让编写指令变简单还会增加指令的复杂度那么什么时候这些技巧会让指令变简单呢对于事件比较简单的用法是将相同的条件判断串到一串上这样子不仅提高了可维护性还减少了命令方块串的数量是简单的指令复用例子当有标签的人抬头时给他俩鸡蛋当有标签还有帅比标签的人抬头时给他四个鸡蛋抬头抬头抬头帅比抬头抬头这样子就不需要分别为重工业玉米和其他不是帅比的人分别弄个抬头检测了要是之后还有需要抬头的指令直接在中间加命令方块就可以了如果条件和指令又变得更多可以在这个事件里再串一个过程进行条件判断的复用第节本节最后修改于事件的主动触发我们上一节说了事件事件不止有玩家扔雪球或者抬头这一类我们还可以用指令主动触发事件来执行响应例子每秒给玩家在名叫的计分板上加积分当玩家到达积分时提示玩家为老玩家监听器提示老玩家提示老玩家是老玩家提示老玩家提示老玩家上面这个例子我们可以发现监听器所监听的事件是有人的积分为于是我们可以通过指令设定玩家的积分项目来触发此事件上面例子中就是一个每秒加分的指令会触发此事件事件实现的异步我们讲可以用指令来主动触发事件那么事件能不能在响应指令里触发事件呢当然也是可以的于是我们可以借此搞出异步指令例子如果有人身上有了帅比标签那就给他提示你真帅提示完了之后如果他抬头就提示你把老天帅死了然后给他把帅比标签扔了我们管这一套叫做夸系统标签前面加上来和其他命令进行区分事件出现帅比标签帅比夸奖夸奖你真帅夸奖夸完了夸奖夸奖事件抬头抬头抬头夸完了抬头了抬头抬头事件抬头完了就再夸抬头了再夸再夸抬头了再夸你把老天帅死了再夸帅比再夸再夸上面的例子中对于一个夸奖完了的帅比我们是不知道他什么时候会抬头的所以抬头之后的动作算作抬头这个异步操作的回调指令通过事件之间的相互触发我们能够把回调指令放到事件里可以叫做回调事件当异步操作完成后触发回调事件完成回调指令有些眼尖的读者可能会发现例子中的回调指令不需要放到回调事件的命令方块串中直接放进抬头事件的命令方块串里也可以这是没错的不过异步操作不止玩家抬头还可以是某时刻的红石信号某个不知名指令操作后的结果等这里是出于演示目的将回调指令单独放到回调事件里虽然是这么说但是建议实际编写指令时也把回调指令单独放到回调事件里方便指令的维护第节本节最后修改于模块上面我们说事件能使用指令来主动触发这意味着我们可以从不同地方通过触发事件的方式执行同一个响应指令这就是以事件为基础的指令复用例子每秒给玩家在名叫的计分板上加积分当玩家到达积分时提示玩家为老玩家重工业玉米想不停告诉每个人他是老玩家监听器提示老玩家提示老玩家是老玩家提示老玩家提示老玩家重工业玉米上面这个例子中监听器中的响应指令同时被老玩家提示功能和重工业玉米的大喇叭功能通过事件触发的方式使用这个时候我们可以把监听器单独叫做一个模块比如可以叫提示老玩家模块那么激活监听器来执行响应指令就可以称作调用模块如果想再提高模块的内聚性可以像这样例子每秒给玩家在名叫的计分板上加积分当玩家到达积分时聊天栏提示为老玩家重工业玉米想不停告诉每个人他是老玩家提示老玩家提示老玩家模块入口标签提示老玩家提示老玩家是老玩家提示老玩家提示老玩家重工业玉米提示老玩家于是不仅可以触发事件只要想的话任何条件都可以作为触发事件的方式因为我们将监听器作为过程的第一步打标签的那个命令方块从监听器移动到了其他触发这个事件的命令方块串上相当于由其他命令方块串来激活监听器这个过程所打的这个标签可以被称作模块的入口标签带参数调用模块调用模块一般来说就是给实体加标签或者设置积分什么的来激活事件这就是说我们调用模块实际上是给出了一个实体模块能够通过选择器获取到这个实体所以我们如果想给模块传递参数我们可以在这个实体上增加标签计分板分数等例子当有人抬头时给他一句话生活就像巧克力如果是第二次抬头就给他下一句下一句我忘了之后再抬头就忘了事件抬头抬头抬头抬头次数抬头话编号抬头次数抬头次数话编号抬头给一句话抬头抬头给一句话模块入口标签给一句话给一句话话编号生活就像巧克力给一句话话编号下一句我忘了给一句话话编号忘了给一句话给一句话上面的例子中话编号计分项目是给一句话模块的参数入口改变实体的话编号项目调用给一句话模块后得到的结果也不一样但是和真正的函数与参数的关系不同这里的所谓参数类似于绑定在全局作用域而模块也不像真的在接受参数更像是在访问特定的全局变量来获得执行信息我们可以管模块的参数叫模块参数第节本节最后修改于模块的递归上节中我们讲了带参数调用模块有人立马会想到可调用带参数能递归递归是什么其实就是自己调用自己那不就成死循环了吗其实不是因为递归到了一定程度会停止继续递归这个程度叫边界条件之所以在某种程度上可以说可调用带参数能递归是因为可调用意味着能自己调用自己带参数意味着能判断边界条件来防止变成死循环调用模块实际上就是满足某个条件而模块会循环检查这个条件根据其是否满足来决定是否执行命令所以模块的递归其实就是在执行完一次命令后条件仍然满足自己再执行一次直到模块遇到边界条件才会修改实体使其不满足激活条件但是由于模块的参数是全局的而基岩版我的世界中又没有二维的计分板没法实现计分板堆栈模块调用自己会丢失现在的计分板参数所以只能实现尾递归或者用一些奇技淫巧定量给东西定量给东西可以说是最简单的递归形式了它不需要返回计分板值而且貌似很有用可以说是非常经典了例子实现一个定量给鸡蛋模块入口计分板为对于一个的值为的人在运行结束后要让他的背包里有个鸡蛋定量给东西有二分法的实现感兴趣的读者可以了解一下在此我们就不对其深入研究了等差数列除了给鸡蛋这种简单的没有返回值的模块修改计分板这种有返回值的模块更复杂一些例如获取数列特定项的模块等差数列意思就是一个数列任意相邻两项的差相同例如或者求等差数列是很好的一个尾递归的例子求数列第项一般来说有两种方法一种是把代入到通项公式里例如的通项公式为求第项就是但是世界上有很多数列并没有通项公式这时可以使用第二种方法叫递推公式递推公式就是根据前面项得出后面项的公式例如的递推公式就是求第项就得求第项就得求第项直到我们发现第项是那么第项就是第项就是最终得到第项就是这就是一种递归我们在不断的调用递推公式只不过每次的参数都不一样第一次我们代入的发现也就是的值不知道于是我们调用第二次这时发现的值又不知道于是第三次云云直到时就是边界条件我们知道就是所以没有不知道的值了就不用再调用什么东西了这时别忘了之前调用的公式还等着我们的值呢于是我们开始返回结果第一次返回的值是于是继而直到我们要练习模块的递归于是我们就假装不知道等差数列的通项公式吧例子实现一个等差数列模块入口计分版为出口计分板为对于一个的值为的人要使其为数列的第项初始化部分开始还没开始算的人的值为还没开始算的人现在算到了第项初始化部分结束边界处理部分开始如果为说明已经算到了该算到的项就是算完了算完的人清空入口计分板算完的人重置临时计分板重置临时计分板边界处理部分结束正在算的人的值正在算的人多算了一项这个模块的调用方法给实体设置分数获取返回值方法当实体时获取实体的分数并重置和斐波那契数列用点奇技淫巧也可以做出不是尾递归的递归众所周知斐波那契数列是一个数列每一项等于前两项之和而且例如前项就是想要知道第项就必须得知道第和第项这里我们用模块的递归奇技淫巧来实现不难发现斐波那契数列不能只通过上一项来求出这一项所以无法简单地写成尾递归的形式这里我们采用的奇技淫巧是使用两个计分板一个存储上一项的值一个存储上上一项的值我们将这一项求出来后将这一项的值覆盖到存储上上一项的计分板上这样子对于下一次调用模块来说这两个计分板仍然是一个存储上一项一个存储上上一项根据调用次数的奇偶两个计分板哪个是上一项哪个是上上一项也不同这是使用有限的计分板把结果存储了起来例子实现一个斐波那契模块入口计分板为出口计分板为对于一个的值为的人要使其为斐波那契数列的第项玩家的计分板的值为用以取模判断奇偶初始化部分开始还没开始算的人的前面两项都为还没开始算的人现在算到了第项初始化部分结束获取调用奇偶部分开始获取调用奇偶部分结束边界处理部分开始如果为说明已经算到了该算到的项就是算完了算完的人清空入口计分板算完的人重置临时计分板偶数调用次数的人设置为真正的上一项的值重置临时计分板重置临时计分板边界处理部分结束正在算的偶数调用次数的人覆盖为这一项的值正在算的奇数调用次数的人覆盖为这一项的值正在算的人多算了一项重置临时计分板这个模块的调用方法给实体设置分数获取返回值方法当实体时获取实体的分数并重置和第节本节最后修改于模块的无限制递归猜想我们上一节讲过但是由于模块的参数是全局的而基岩版我的世界中又没有二维的计分板没法实现计分板堆栈模块调用自己会丢失现在的计分板参数所以只能实现尾递归或者用一些奇技淫巧现在我表示这段话不一定正确因为最近我找到了计分板堆栈可能的实现方法计分板堆栈是什么不就是一大堆计分板吗这是原来的计分板结构计分板计分板计分板实体分数分数分数实体分数分数分数实体分数分数分数这是我们希望的计分板结构计分板计分板计分板实体数组数组数组实体数组数组数组实体数组数组数组我们可以发现什么首先我们希望的大概是不可能实现的因为基岩版中计分板值不可能是个数组以及版我没了解过但是我们还可以发现其实我们需要的不是一个数组而是一个方格没错实际上我们需要的是已知横坐标计分板和纵坐标实体就可得到的唯一一个数组数组的形式不重要重要的是我们能根据一个计分板和一个实体确定这一个数组到这里就明了了我们只需要创造一大堆额外的实体然后让这堆实体都和实体实体等已有的实体联系起来就可以了我们就能根据一个确定的已有实体也就是实体得到一大堆与其联系的实体这个时候再来一个确定的计分板我们就能得到已知实体的分数及其联系着的实体们的分数这就是传说中的根据已有实体和计分板得到一大堆分数就能达到目的实现计分板堆栈主要的技术难点就在于如何把一大堆实体同一个确定的已知实体联系起来第节本节最后修改于搞个雪球菜单之前几节讲了条件判断过程事件模块等设计模式只是讲的话可能没有什么感受而一个雪球菜单基本上能把简单条件判断过程事件和模块都应用到于是我们可以试着从雪球菜单入手试一试这些设计模式作为演示这个雪球菜单的功能可以是扔出雪球显示菜单再扔雪球切换选项抬头确认低头返回上一级菜单或者取消菜单有三个选项切换创造生存索要雪球夸赞玉米菜单选中切换创造生存后创造变成生存生存变成创造选中索要雪球后得到个雪球再选中就给个选中的第次给个雪球夸赞玉米菜单又有三个选项玉米好帅玉米真帅玉米很帅选项被选中后在聊天栏提示对应选项架构在编写指令前先简单思考一下雪球菜单的架构雪球菜单通常有三个操作扔雪球抬头低头这意味着我们可能需要搞三个事件监听器来对用户的操作进行响应雪球菜单通常有显示在的作为界面这告诉我们可能需要搞一个模块用以显示界面这里我们考虑一套菜单有多少选项就有多少指令还有不止一套菜单就是所谓多菜单不难发现对于不同选项或者不同菜单实际上都是执行不同的所以可将菜单也看作是一种选项这样子就是单菜单了这个模块当然不能给谁都显示一样的东西所以至少还需要一个模块参数用来控制显示的界面这里可以选择计分板雪球菜单通常有各种功能我们可以把每个功能都做成模块到时候只要让雪球菜单调用就可以了雪球菜单通常有各种提示比如使用功能成功您没有权限已关闭菜单等等这些大部分是在使用完功能再提示然而我们发现这是异步操作而且那么多功能模块总不能给每个都写一个提示所以可以把提示抽离为模块再用一个计分板作为模块参数控制提示内容思考完这些之后我们发现这个雪球菜单大体可以分成四部分用户事件监听器界面模块各种功能模块和提示模块还有两个作为模块参数的计分板一个是界面模块的一个是提示模块的为了方便可以合二为一变量命名为了方便维护计分板和标签应该有一套命名规范因为这是雪球菜单所以我们可以在所有标签和计分板前面加个标识表示这是相关标签和计分板类似的表示表示表示然后可以在过程标签最后增加用以区分表示这个标签不可用在过程之外对于过程内的过程标签可以在尾部使用追加信息来命名例如表示这是过程里的过程的标签有读者可能会好奇有的模块也相当于一个过程它们的入口标签就相当于过程的过程标签为何末尾却不带呢带主要是为了让人注意到这是个封闭标签来避免在过程之外使用保证过程的封闭性但是一般来说调用模块的命令并不在模块命令方块串上这还意味着在添加标签到执行模块之间一般会有一块空档入口标签是暴露出来的入口标签本来就没有封闭性也就不需要加后缀计分板由于这个计分板控制着提示和界面我们可以命名这个计分板为我们知道这个计分板需要控制界面和提示所以可以规定一下计分板分数的范围显示主菜单的界面显示夸赞玉米菜单的界面显示提示没有分数值的人就不显示虽然不是每个界面都有十个选项但是给每个界面都分配十个分数可以方便以后给菜单再添加界面各种功能模块在编写雪球菜单前我们可以将雪球菜单需要的各种功能模块先编写完雪球菜单有切换模式模块索要雪球模块和夸赞玉米模块三个主要模块如果指令不太能看懂可以只看代码块下方介绍的调用方法在功能执行完之后需要再反过来通过既是模块参数同时也是入口计分板的来调用雪球菜单的提示模块告诉玩家执行成功切换模式模块入口标签这里的参数是为了让这条命令只对使用雪球菜单的人起作用这样其他地方也能调用此模块这个模块用来给人切换模式如果一个人有入口标签那么如果他是创造他就会变成生存如果他是生存他就会变成创造索要雪球模块入口标签索要雪球模块的给雪球模块入口计分板这个模块用来索要雪球如果一个人有入口标签那么这是他第几次有这个标签他就会得到几个雪球夸赞玉米模块入口计分板玉米好帅玉米真帅玉米很帅这个模块用来夸赞玉米如果一个人的入口计分板为那就提示玉米好帅如果为就提示玉米真帅为就提示玉米很帅这样子我们就把所有需要的功能模块都实现了第节本节最后修改于搞个雪球菜单续一节写太多读起来不太舒服就分了一节我们接着来搞上一节是弄完了除了主体指令之外的所有东西那么这一节我们就来弄主体指令用户事件监听器我们知道一共有三个操作扔雪球抬头低头那不用多说先来三组监听器扔雪球监听器这里是扔雪球过程内的指令抬头监听器这里是抬头过程内的指令低头监听器这里是低头过程内的指令监听器框架有了然后我们可以开始一个一个往里填指令了首先是扔雪球监听器这个雪球菜单的要求是扔一次菜单就出现再仍一次切换选项在最后一个选项切换的时候返回开头扔雪球过程内的指令让扔雪球的人加目的是切换选项让扔雪球且的人的变成目的是让主菜单选完的人选回第一项让扔雪球且的人的变成目的是让夸赞玉米菜单选完的人选回第一项理论上我们的扔雪球监听器就这么简单的写完了扔雪球后面的事件是抬头我们知道在不同时候抬头会有不同的效果例如在选中索要雪球选项时抬头会调用索要雪球模块在选中夸赞玉米菜单时抬头会进入夸赞玉米菜单等等抬头过程内的指令调用切换模式模块调用索要雪球模块进入夸赞玉米菜单调用夸赞玉米模块继续调用夸赞玉米模块最后还差一个低头的监听器低头主要就是取消或者返回上一页菜单那就比较简单了低头过程内的指令调用雪球菜单提示模块提示取消回到上一级菜单提示模块我们从上面写到下面发现好像只需要两种提示一种是成功提示一种是取消提示这倒是好事至少写的指令挺少的雪球菜单提示模块入口计分板已成功提示成功已取消提示取消重设计分板界面模块于是到了现在万事俱备只欠东风我们已经把所有逻辑都写完了就差提供一个界面了由于我们的逻辑和界面是分开的几个模块所以我们只需要给不同的人显示不同的界面就可以不需要再关心逻辑雪球菜单界面模块入口计分板切换创造生存索要雪球夸赞玉米切换创造生存索要雪球夸赞玉米切换创造生存索要雪球夸赞玉米玉米好帅玉米真帅玉米很帅玉米好帅玉米真帅玉米很帅玉米好帅玉米真帅玉米很帅全部指令切换模式模块入口标签索要雪球模块入口标签索要雪球模块的给雪球模块入口计分板夸赞玉米模块入口计分板玉米好帅玉米真帅玉米很帅扔雪球监听器抬头监听器低头监听器雪球菜单提示模块入口计分板已成功已取消雪球菜单界面模块入口计分板切换创造生存索要雪球夸赞玉米菜单切换创造生存索要雪球夸赞玉米菜单切换创造生存索要雪球夸赞玉米菜单玉米好帅玉米真帅玉米很帅玉米好帅玉米真帅玉米很帅玉米好帅玉米真帅玉米很帅虽然我不是特别了解雪球菜单不知道这个命令量算多还是算少但是可以知道的一点是这个雪球菜单对维护和拓展开发非常友好这是设计模式的价值这就写完了其实不是如果你搞出来了你会发现在选择夸赞玉米菜单试着抬头后还没等你反应过来就已把玉米夸赞了究其原因是没有菜单之间的缓冲解决方法是让一个人抬头后两秒之内不再计算抬头事件如果读者有兴趣的话可以尝试自己编写出来碍于篇幅这里就不详述了第节本节最后修改于条件的逻辑运算我们第节讲了简单的条件判断那么众所周知如果同时有多个条件的话相互之间一般会存在逻辑说到逻辑那主要就是与非和或了除此之外还有与非或非异或和同或逻辑运算的种类与与就是若都为真则与为真否则与为假也就是而且的意思符号为或者如果我又吃饭又喝水那么我吃饭而且喝水这件事就发生了如果吃饭喝水至少一个没发生那么我吃饭而且喝水就不能说是发生了非非就是若为真则非为假否则非为真也就是没有的意思符号为或者如果我吃饭这件事没发生那么我没有吃饭这件事就发生了如果我吃饭了那么我没有吃饭这件事就没发生或或就是若都为假则或为假否则或为真也就是或者的意思符号为或者如果我既没吃饭也没喝水那么我就没有吃饭或者喝水如果我吃饭和喝水这俩件事中至少干了一件事那么就可以说我吃饭或者喝水与非与非就是若都为真则与非为假否则与非为真也就是没有又的意思符号为如果我又吃饭又喝水那么我没有吃饭又喝水就没发生如果吃饭喝水至少一个没发生那么我没有吃饭又喝水可以看出或非或非就是若都为假则或非为真否则或非为假也就是没有也没有的意思符号为如果我既没吃饭也没喝水那么我就没有吃饭也没有喝水如果我吃饭和喝水这俩件事中至少干了一件事那么我就不是没有吃饭也没有喝水可以看出异或异或就是若都为真或都为假则异或为假否则异或为真也就是和不同符号为如果我吃饭但不喝水或者没吃饭但喝水了那我吃饭和喝水不同这件事就发生了如果我吃饭又喝水或者两个都没干我就不是吃饭和喝水不同可以看出同或同或就是若都为真或都为假则同或为真否则同或为假也就是像一样符号为如果我吃饭又喝水或者两个都没干就可以说我吃饭像喝水一样如果我吃饭但不喝水或者没吃饭但喝水了那就并非吃饭像喝水一样可以看出由此可以看出与非或与非或非异或和同或这七种逻辑最后都可以用与非和或这三种逻辑组合得到只要实现了与非和或这三种逻辑我们就能实现全部七种逻辑那么我的世界中能不能实现与非和或呢我的世界实现逻辑运算与命令方块中的与是最容易实现的在第一节中我们讲条件判断的形式一般是有条件命令方块和选择器有条件命令方块的实现很简单只需要把两个有条件命令方块接在一起就可以了例子当重工业玉米的背包里同时有和床时提示重工业玉米好帅重工业玉米重工业玉米重工业玉米好帅选择器的实现就更简单了在方括号中使用逗号把两个条件连接起来就可以例子当有一个人叫重工业玉米且有熊孩子标签时提示重工业玉米好帅重工业玉米熊孩子重工业玉米好帅上面是两个条件都为有条件命令方块或都为选择器时的与那如果一个条件是有条件命令方块另一个条件是选择器呢貌似这两种形式的条件没法通过简单的方式组合到一起但是他们之间可以相互转化我们可以将其都转化为选择器例子当重工业玉米有熊孩子标签背包里还有时提示重工业玉米好帅重工业玉米重工业玉米将有条件命令方块转化为标签重工业玉米熊孩子重工业玉米好帅也可以都转化为有条件命令方块例子当重工业玉米有熊孩子标签背包里还有时提示重工业玉米好帅重工业玉米重工业玉米熊孩子将标签转化为有条件命令方块重工业玉米好帅看起来都转化为有条件命令方块可以少用一个命令方块别忘了我们第节时提到可以用代替例子当重工业玉米有熊孩子标签背包里还有时提示重工业玉米好帅重工业玉米重工业玉米熊孩子重工业玉米好帅这样子就又可以少用一个命令方块于是我们可以说找到了两个条件类型不同时的与至此全部的与我们都找到了实现方法非命令方块中的非一般通过选择器来取反也就是取补集来得到例子当有一个人叫重工业玉米且没有熊孩子标签时提示重工业玉米太帅了重工业玉米熊孩子重工业玉米太帅了对于有条件命令方块的非可以通过设置一个临时标签来使用选择器取反例子当重工业玉米的背包里没有时提示重工业玉米太帅了重工业玉米重工业玉米熊孩子重工业玉米熊孩子重工业玉米太帅了熊孩子熊孩子或我的世界中没有直接的或想要实现或一般是给两个条件分别搞个命令方块使满足任意条件就满足第三个条件再判断第三个条件来实现或一般来说有条件命令方块只能被自己的上一个命令方块满足而选择器条件由于操作的是实体可以被任意多个命令方块满足因为上文第三个条件需要能被两个命令方块满足所以我们的第三个条件只能使用选择器的形式例子当重工业玉米有熊孩子标签或者背包里有时提示重工业玉米怎么这么帅重工业玉米熊孩子重工业玉米重工业玉米重工业玉米怎么这么帅上面例子中两个条件分别是有熊孩子标签和背包里有而这两个条件满足时都会给重工业玉米增加标签来满足第三个条件有人带标签通过检测第三个条件有没有被满足可以实现或第节本节最后修改于条件的进阶逻辑运算上节讲了与非和或的实现我们还知道世界上有与非或非异或和同或等逻辑那么能不能在我的世界中通过与非和或组合出这些呢与非例子如果重工业玉米并非同时有熊孩子标签和也就是有熊孩子标签与非背包有为真提示重工业玉米简直是风流倜傥英俊潇洒人见人爱花见花开重工业玉米重工业玉米熊孩子得到与的标签重工业玉米重工业玉米简直是风流倜傥英俊潇洒人见人爱花见花开看起来我们就轻松地实现了与非或非例子如果重工业玉米既没有熊孩子标签也没有也就是有熊孩子标签或非背包有为真提示重工业玉米英俊的面庞在我心中挥之不去如同静夜月光照亮了我的心房重工业玉米重工业玉米得到或的标签重工业玉米熊孩子得到或的标签重工业玉米重工业玉米英俊的面庞在我心中挥之不去如同静夜月光照亮了我的心房或非的实现也比较简单异或例子如果重工业玉米熊孩子标签和二者只有一个也就是有熊孩子标签异或背包有为真提示秒与他的擦肩而过我的脑海中便深深烙下了他的身影不知为何即便不去确认我也心中了然他就是重工业玉米了重工业玉米重工业玉米得到或的标签重工业玉米熊孩子得到或的标签重工业玉米重工业玉米熊孩子得到与的标签重工业玉米得到非与的标签重工业玉米秒与他的擦肩而过我的脑海中便深深烙下了他的身影不知为何即便不去确认我也心中了然他就是重工业玉米了这就是异或的实现发现在指令编写到一定程度时有条件命令方块基本不会再出现了我们会一直以选择器的形式进行条件运算选择器一般的用法是标签那么对于着繁多的标签和运算怎么才能防止自己犯迷糊呢可以使用表达式作为标签的名称来表示含义这样可以使运算的操作数和返回值都变得非常清晰甚至让我在计算中有一丝享受的感觉原始的思想是使用大写字母例如来表示条件使用和来表示运算符这样子如果有一个人带标签我们就能清晰的知道这个人的身份既满足条件也满足条件那么既不满足条件也不满足条件的人所应该带的标签就应该是以此类推非与与或的人应该就是真的吗我们发现这个更简单的写法是对于不同的表达式结果却相同那我们还不如用结果来命名我们知道对于和他们只可能为两个值我们可以称其真或假也可以说是或既然如此对于和的运算的结果也一定是有限的随机搭配可能有四种可能结果就是四种可能我们就可以说那么对于结果相同的标签等等就都可以改写成这种并列计算手工算有点麻烦了我为此搞了一个在线并列计算器点击左下角导入基础配置后将列宽设置为在右边表达式栏里即可输入表达式比如或者等点击计算即可得到结果有点长我们就可以用十六进制表示为于是标签就可以叫仅仅三个字符的标签就可表示任意一类人群在命令方块串的最后我们别忘了把这些临时标签都去掉逻辑运算对照表读者可自己尝试将标签都用指令实现出来相信对上面段所介绍的逻辑运算会有更深的理解下方表格显示了标签分别包含和排除了哪些情况的实体还有各个标签的表达式标签运算结果全部符合只符合只符合全都不符最简表达式排除排除排除排除排除排除排除包含非或排除排除包含排除非与排除排除包含包含非排除包含排除排除与非排除包含排除包含非排除包含包含排除或与非与排除包含包含包含非与包含排除排除排除与包含排除排除包含非或或与包含排除包含排除包含排除包含包含非或包含包含排除排除包含包含排除包含或非包含包含包含排除或包含包含包含包含可以发现这个表具有上下对称性这是因为对于任意十六进制数都有也就是说对于任意来说就是对进行取反的得数我们可以验证一下比如选择来验证可以发现是成立的所以如果我们已实现了那我们就不需从头实现只要对前者进行非运算就能得到后者类似的情况还有很多实现一个标签后就可用于计算另一个标签使用上文中提到的并列计算工具或者直接手动进行演算找到运算最少的方法可以让标签的实现更加简单到现在为止我们一直在研究两个条件之间的运算那么三个以上的条件怎么办呢其实多个条件的运算就是多来几次两条件运算只要弄懂了两条件运算就能套到其他多个条件的运算中一样解决第节本节最后修改于基于设计模式的指令生成我们讨论了很多指令设计模式相关与计算机领域相似的一旦我们得到了一个较为普遍的原理我们便可以写入程序大规模地使用于是一个野心勃勃的计划被提出来了我们可以使用更简洁的语言来描述指令最终使用某种解析器搭配指令设计模式对其中的细节进行补全这个计划更通俗的描述就是指令生成这个计划中的更简洁的语言学名叫做领域限定语言为了方便我们可以管它叫代指令由于我的世界指令语法十分拉跨没有编程语言应有的大部分特征甚至其本身就是一种通用性较弱的所以我们不可能利用指令写一个解析器来实现代指令而需借助外部的力量考虑到我们最终需要搞一个解析器这种外部力量与实现解析器的编程语言就有很大关系了从灵活性的角度来讲使用作为代指令是不错的选择甚至可能还有接轨一种适用于各种编程语言的黑魔法解析器翻译成其他语言的光明前景但是从跨平台性以及本人的代码水平方面来讲我觉得是一个更好的选择代指令由于本人十分抵触复杂的编译原理代指令可以是由各种构成的的一种内部听起来比较抽象意思就是说代指令实际上不能算一种新的语言而只是一种有特殊代码风格的举个例子比如我们如果想判断现在有没有实体如果有的话就说玉米真的好帅否则就玉米实在太帅了如果代指令是一种基于的新的语言玉米真的好帅玉米实在太帅了如果代指令是一种由实现的的内部玉米真的好帅玉米实在太帅了这里等都是预先声明好的函数也就是所谓的不难发现上面的第二个示例中也就是我们的做法相较于第一个示例更加的复杂繁琐也没那么易懂但是第二个示例可以直接作为运行也就是说我们可以通过直接运行这个有特殊代码风格的来对其进行解析而不是对其进行各种繁琐的各种静态分析于是我们就这样绕过了编译原理实际上没有由于代指令的结构较为复杂我们实际上还是要由代指令对的调用生成抽象语法树再通过对的操作实现指令的生成相当于我们是只绕过了词法分析和语法分析解析器知道了代指令的形式之后我们可以着眼于另一重点解析器上面已经提到我们使用编写解析器实际上本人赶潮流最近很流行我是用的写的解析器这些都不重要重要的是解析器的基本架构运行代指令这一部分帮助我们跳过了词法分析和文法分析充当了对代指令进行分析的角色所以这部分也可以叫做分析代指令中包含对的调用我们需要使用一些奇技淫巧完成这一步骤就拿本文中的模块做示例每个模块实际上都可以看作是一个函数有输入值有返回值这意味着为了使结构更加清晰我们也需要让代指令在声明函数后可以直接调用例如声明一个夸赞玉米模块再调用它本人猜想仅供参考玉米太帅一个很显而易见的事实是我们一定要让这个返回一个真正的函数要不然我们就会在运行时报错对于的设计这里就不展开讲了实际开发中发现最终得到指令的一个更方便接下来的工作所以本质上是一堆对进行增删改查等工作的函数补全指令细节在得到指令的后树上的各种条件分支条件运算函数声明等节点让人心惊胆战我们根本没法通过这么花里胡哨多彩多样的直接生成对应的指令于是我们不得不对进行转译这个步骤的正式名称叫做转译我们在其中插入更多平平无奇的命令节点来代替各种花里胡哨的其他节点最终把整颗花里胡哨的树压成两层的数组来表示每个命令方块组中的每个指令如何使用普通的命令节点代替这些结构性节点呢这便是本文中指令设计模式发挥作用的时候就像条件分支本文中使用过程这一基于标签或计分板的封闭系统而过程的特征是普遍的就如套路模板一样我们只需要根据对应的模式把对应的东西套上去就可以了除了本文所描述的各种设计模式还可以提供些额外服务这里举个例子有些条件分支的条件是一个命令是否成功运行相对应的条件也可以是一个函数是否运行成功根据我们的模块相关知识这个条件实际上是一串命令方块是否全部运行成功一个简单的方法是将这串命令方块全弄成有条件命令方块然后在这串命令方块最后插入一个给任意实体打标签的连锁命令方块检测到是否任意实体有这个标签可以判断最后这个命令方块是否成功运行也就是整串命令方块是否成功运行如此我们便将一个条件分支节点转化为了一个打标签命令和一个检测标签的命令但是如果这串命令方块中已经有命令方块是有条件命令方块我们又要怎么判断是否成功运行呢这种情况下一个比较合理的解决方法是在有条件命令方块的前一个命令方块前面把命令方块串劈成两半视作两个命令方块组分别检测是否成功运行最终判断两个命令方块是否都成功运行若是则整条命令方块串都成功运行这虽然不属于本文所介绍的设计模式之一但确实可以应用到程序中转译便是通过上述这些指令设计套路来对进行处理输出指令当我们有了一个结构简单的转译过的后实际上我们就得到了我们生成的指令我们唯一需要做的是把这个弄为人类理解的样式虽然这个步骤不是最困难的但这个步骤是最困难的让人理解命令方块是一个比较困难的东西现在貌似也没有普遍的描述命令方块的标准图片等可视化的也是一种选择但是太麻烦了实际上本人还有一个项目是命令方块图片生成器如果能直接套用这个项目就很好但是目前这个项目进度缓慢估计是指望不了了当然还有一种方法是直接生成但是目前基岩版还不能这么搞宣传作为一个惊天地泣鬼神前无古人后无来者的看起来挺有用的玩意却没有人关注无疑是十分蛋疼的于是宣传便成为了比较重要的一个环节其实可以说我现在就是用一个章节对这个东西进行宣传当然还是希望本章节确实对诸读者有一定启发性所以大概意思就是这玩意我确实搞起来了项目是协议开源的大家可以访问代码仓库一起来搞这个项目相对于手动使用设计模式进行重复性劳动将设计模式套入程序中生成指令无疑是生产力的大进步在这个项目完成后我希望可以借助这个项目代替我编写指令我的注意力便可从使用设计模式移到发现更多设计模式并应用到这个项目我也希望诸读者可以试着采取我的这种方法如果大家都把使用设计模式的精力放到发现设计模式上就像共产主义摆脱了低级劳动那一定是设计模式的新世纪',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-06-09 12:16:26',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="msvalidate.01" content="9425B9ADD6D9B15FB7E7E42C9DF4F63A" /><meta name="generator" content="Hexo 7.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Mybbs" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://www.kuaidaili.com/img/loading.gif"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Mybbs</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 本站</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 首页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/4238948.html"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 帮助</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&amp;k=AVD1Y5VnrY8z603_1dFsQrHfY1Uodp1O&amp;authKey=bX2RSjVq%2BYvjD2fsZ3PpEz4r2UAeV0e4lMLr4gTi7agxGPNsEfOP2M%2F%2Bw7i1mryp&amp;noverify=0&amp;group_code=565126072"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 交流群</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 帖子</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 帖子</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 板块</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/index1.html"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 发帖子</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 更多</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/HTML/tc.html"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 图床</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://www.pixelbbs.cn/source/plugin/bphp_clouds/upload/4438/20240601/417cb596663d3d5bf57708af2fa16eba.zip"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 源码</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/30588.html"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 导航站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/HTML/index2.html"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 服务器</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/gl.html"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 个人中心</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 小游戏</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/HTML/tcs.html"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 2048</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/tcc.html"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 贪吃蛇</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CSDN/" style="font-size: 1.05rem;">CSDN<sup>1</sup></a><a href="/tags/MC/" style="font-size: 1.05rem;">MC<sup>19</sup></a><a href="/tags/Mod/" style="font-size: 1.05rem;">Mod<sup>1</sup></a><a href="/tags/blog/" style="font-size: 1.05rem;">blog<sup>1</sup></a><a href="/tags/github/" style="font-size: 1.05rem;">github<sup>29</sup></a><a href="/tags/hexo/" style="font-size: 1.05rem;">hexo<sup>4</sup></a><a href="/tags/hexo%E4%B8%BB%E9%A2%98/" style="font-size: 1.05rem;">hexo主题<sup>9</sup></a><a href="/tags/java/" style="font-size: 1.05rem;">java<sup>1</sup></a><a href="/tags/paper/" style="font-size: 1.05rem;">paper<sup>1</sup></a><a href="/tags/%E4%BC%91%E9%97%B2/" style="font-size: 1.05rem;">休闲<sup>1</sup></a><a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 1.05rem;">分享<sup>5</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">工具<sup>4</sup></a><a href="/tags/%E6%89%98%E7%AE%A1/" style="font-size: 1.05rem;">托管<sup>1</sup></a><a href="/tags/%E6%8E%A8%E8%8D%90/" style="font-size: 1.05rem;">推荐<sup>1</sup></a><a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 1.05rem;">插件<sup>5</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">教程<sup>18</sup></a><a href="/tags/%E6%95%B4%E5%90%88%E5%8C%85/" style="font-size: 1.05rem;">整合包<sup>3</sup></a><a href="/tags/%E6%96%B0%E9%97%BB/" style="font-size: 1.05rem;">新闻<sup>2</sup></a><a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 1.05rem;">服务器<sup>2</sup></a><a href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" style="font-size: 1.05rem;">服务端<sup>1</sup></a><a href="/tags/%E7%B2%BE%E5%93%81/" style="font-size: 1.05rem;">精品<sup>3</sup></a><a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 1.05rem;">视频<sup>1</sup></a><a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 1.05rem;">转载<sup>9</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/05/"><span class="card-archive-list-date">五月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/09/"><span class="card-archive-list-date">九月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/04/"><span class="card-archive-list-date">四月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/02/"><span class="card-archive-list-date">二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">15</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">五月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">26</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url">教程</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>教程</span></a><a class="article-meta__tags" href="/tags/MC/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>MC</span></a></span></div></div><h1 class="post-title" itemprop="name headline">我的世界命令设计</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-06-28T05:53:56.000Z" title="发表于 2024-06-28 13:53:56">2024-06-28</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-06-09T04:16:26.058Z" title="更新于 2024-06-09 12:16:26">2024-06-09</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为长沙"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>长沙</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src=""></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://bianb-hehe.github.io/2024/06/28/29569/"><header><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url">教程</a><a href="/tags/%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url">教程</a><a href="/tags/MC/" tabindex="-1" itemprop="url">MC</a><h1 id="CrawlerTitle" itemprop="name headline">我的世界命令设计</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Mybbs —— 开源MC社区</span><time itemprop="dateCreated datePublished" datetime="2024-06-28T05:53:56.000Z" title="发表于 2024-06-28 13:53:56">2024-06-28</time><time itemprop="dateCreated datePublished" datetime="2024-06-09T04:16:26.058Z" title="更新于 2024-06-09 12:16:26">2024-06-09</time></header><h1 id="第-1-节"><a href="#第-1-节" class="headerlink" title="第 1 节"></a>第 1 节</h1><p>本节最后修改于 <code>2022 / 11 / 12</code></p>
+<h2 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h2><p>条件判断在我的世界指令设计中具有极大的用途。条件判断逻辑一般以两种形式体现在指令中，分别是“有条件的命令方块”和“选择器”。下面分别介绍这两种形式。</p>
+<ul>
+<li><h3 id="有条件命令方块"><a href="#有条件命令方块" class="headerlink" title="有条件命令方块"></a>有条件命令方块</h3><p>对于一个开启的有条件连锁命令方块，如果指向它的命令方块的指令执行成功，则这个命令方块中的指令将会被执行。否则将不会被执行。这是有条件命令方块较为普遍的使用方法。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 如果有人背包里有床，就提示“有床啊！”</span><br><span class="line"></span><br><span class="line">[~,~,~,~] clear @a bed</span><br><span class="line">[+,L,+,0] say 有床啊！</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3><p>选择器也是条件判断的一种形式，这个判断是对实体的判断：每次选择都可以看作把全部实体挨个判断一次，符合选择器条件就会被选中，否则就不会被选中。</p>
+<p>通常的用法就是通常的用法：选择作用的实体。选择器参数可以使选择更加精准。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 我们希望给所有叫做“重工业玉米”的玩家打上“帅比”标签</span><br><span class="line"># 或者可以换个说法：我们判断一个人叫不叫“重工业玉米”，如果叫，那么打上“帅比”标签。</span><br><span class="line"></span><br><span class="line">[~,~,~,~] tag @a[name=重工业玉米] add 帅比</span><br></pre></td></tr></tbody></table></figure>
+
+<p>选择器还可以搭配<code>execute</code>指令，用来代替<code>testfor</code>指令搭配有条件命令方块实现的判断。这个用法在以实体为主的指令设计中十分实用——本教程系列就是以实体为主的指令设计。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 检测有没有玩家叫“重工业玉米”，如果有，就提示“玉米大人驾到！”</span><br><span class="line"></span><br><span class="line">[~,~,~,~] execute @a[name=重工业玉米] ~~~ say 玉米大人驾到！</span><br></pre></td></tr></tbody></table></figure></li>
+</ul>
+<p>条件判断和逻辑在后面会继续讨论，感兴趣的可以跳跃阅读。</p>
+<h2 id="MP过程"><a href="#MP过程" class="headerlink" title="MP过程"></a>MP过程</h2><p>条件判断很常用，但过多的条件和过长的指令分支会让构建和维护较为滑稽。在以实体为主的指令设计中，我们可以打标签来“标记”符合条件的实体，通过此标签来进一步操作实体。操作完就删除标签，取消“标记”。这样优点很多，比如可以减少条件判断的数量，降低指令执行中的不可预测性，防止标签泄露，还有愉悦我们的心情之类。</p>
+<p>因为我的世界中指令单线程执行，相邻连锁命令方块之间指令的执行几乎没有时间间隔，所以这种方法有一定的封闭性。为了方便，我们可以给这个方法起个名。在本文中，叫做“过程”。一串命令方块，从打上标记到取消标记的部分，可以称作一个“过程”。</p>
+<p>为了区分这种我的世界指令的“过程”和其他各种过程，我们可以管这种我的世界指令中的“过程”叫做MP过程，“MP”是“我的世界指令设计模式(Minecraft command design Pattern)”的简写。打上的标记就可以叫MP过程标记</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 检测有没有玩家叫做“重工业玉米”，还带着标签“帅比”。如果有，就私聊他“你真帅！”，然后在聊天栏提示“玉米是大帅比”。</span><br><span class="line"></span><br><span class="line">[~,~,~,~] tag @a[name=重工业玉米,tag=帅比] add 夸奖-ing //打上过程标记</span><br><span class="line">[+,L,-,0] w @a[tag=夸奖-ing] 你真帅！</span><br><span class="line">[+,L,-,0] execute @a[tag=夸奖-ing] ~~~ say 玉米是大帅比</span><br><span class="line">[+,L,-,0] tag @a[tag=夸奖-ing] remove 夸奖-ing //删除过程标记，结束过程</span><br></pre></td></tr></tbody></table></figure>
+<h1 id="第-2-节"><a href="#第-2-节" class="headerlink" title="第 2 节"></a>第 2 节</h1><p>本节最后修改于 <code>2022 / 11 / 12</code></p>
+<h2 id="MP事件"><a href="#MP事件" class="headerlink" title="MP事件"></a>MP事件</h2><p>我们上一节讲到MP过程是在一串连锁命令方块中，通过给符合特定条件的实体打标签，使用此标签对其操作，最后去掉标签来结束MP过程——一共三步来对实体更方便安全地进行操作。</p>
+<p>我们同时还讲到，选择器体现了一种条件判断的思想。MP过程的第一步打标签，就需要选择器进行判断。</p>
+<p>那么我们换个视角来看，能不能把这套流程解释为“判断有无符合特定条件的实体，如果有则进行操作，否则不进行操作”呢？当然是可以的。于是对于一个接在循环命令方块后面——不停地循环执行——的MP过程，它就可以被看作是不停地判断实体，判断成功时执行操作。</p>
+<p>在计算机程序界中（在其他地方也有可能），对于一个不停判断条件，一旦条件满足就进行动作的东西，我们可以说它属于一种“事件监听器”；不停判断条件就是在“监听”；判断的条件即为“事件”；而进行的动作，名字就多了，比如“回调”“响应函数”“钩子函数”等等。于是我们可以说，当这个东西“监听”到“事件”发生时，才执行“响应函数”；若“事件”没有发生，就不执行“响应函数”。十分的形象。</p>
+<p>仿照计算机程序界（其他地方或许也有）的概念，我们可以管一个不停检测条件的MP过程叫做“事件监听器”，于是我们便成功把MP过程套到了一个简单易懂的“事件”模式中。类似的，我们可以把这种事件模式称为MP事件模式或简称MP事件。当我们的MP过程“监听”到“有特定条件的实体出现”这一“事件”发生后，便执行“响应指令”；否则就不执行。</p>
+<h2 id="MP事件的实现"><a href="#MP事件的实现" class="headerlink" title="MP事件的实现"></a>MP事件的实现</h2><p>听起来这个概念貌似还挺容易理解的，那么如何实现呢？我们跟着上面走，搭一个MP过程的命令方块串试试。</p>
+<p>首先这个要不停地检测来“监听”，那么最好是接在一个循环命令方块上面。</p>
+<p>好，接下来“监听”是判断事件有没有发生。我们讲过条件判断有两种形式，那就是选择器或者有条件命令方块。任选一个，比如就选择器吧，最简单的实现就是给符合条件的人打标签，就是MP过程的标记。那么这个命令方块串的第一个指令就是给人打标签。</p>
+<p>然后监听完了，就是执行响应指令。这里我们发现一个问题，如果我们直接把无条件连锁命令方块的指令接在命令方块串后面，那么不论检测事件发生没发生，指令都会执行。那怎么办？我们发现有两个办法，一种是execute判断一下，如果有人有MP过程的标记，那就执行。一种是改成有条件连锁命令方块。</p>
+<p>响应指令一般不止一个啊，我们还得继续加指令是吧。再加无条件连锁命令方块，发现又出现了上一次的问题：要不然用execute判断，要不然改成有条件命令方块。于是有条件命令方块的缺点在此显露了：这时的有条件并不是“第一个命令执行成功”，而是“第一个命令执行成功后，第二个命令执行，并且成功”。也就是说若第二个命令没成功，即使第一个命令成功了，事件发生了，响应也不会继续执行。所以我们一般使用execute判断。</p>
+<p>其他的响应指令都一样了，最后我们别忘了MP事件是特殊的MP过程，还要把标记给去掉，结束这个MP过程，防止干扰下一次检测。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 当有人抬头时，提示“有人抬头了！”并杀光所有玩家，然后在聊天栏提示“玉米是大帅比”</span><br><span class="line"></span><br><span class="line">[+,X,-,~] tag @a[rx=-89] add 抬头-ing</span><br><span class="line">[+,L,-,0] execute @a[tag=抬头-ing] ~~~ say 有人抬头了！</span><br><span class="line">[+,L,-,0] execute @a[tag=抬头-ing] ~~~ kill @a</span><br><span class="line">[+,L,-,0] execute @a[tag=抬头-ing] ~~~ say 玉米是大帅比</span><br><span class="line">[+,L,-,0] tag @a[tag=抬头-ing] remove 抬头-ing</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="MP事件的简单用途"><a href="#MP事件的简单用途" class="headerlink" title="MP事件的简单用途"></a>MP事件的简单用途</h2><p>最后我们发现这个所谓MP事件的响应指令前面全都有一个execute！你可能会说这“一点也不优雅，‘简单’个鸡毛！”。</p>
+<p>是的，我的世界不存在真正的事件模型，这只是我们通过奇技淫巧搞出来的类似事件的东西。本系列所讲述的与其说是设计模式，倒不如说是设计技巧。有的时候这些技巧不仅不会让编写指令变简单，还会增加指令的复杂度。</p>
+<p>那么什么时候这些技巧会让指令变简单呢？对于MP事件，比较简单的用法是将相同的条件判断串到一串上。这样子不仅提高了可维护性，还减少了命令方块串的数量，是简单的指令复用。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 当有“Eggless”标签的人抬头时，给他俩鸡蛋。</span><br><span class="line"># 当有“Eggless”标签还有“帅比”标签的人抬头时，给他四个鸡蛋。</span><br><span class="line"></span><br><span class="line">[+,X,-,~] tag @a[rx=-89,tag=Eggless] add 抬头-ing</span><br><span class="line">[+,L,-,0] give @a[tag=抬头-ing] egg 0 2</span><br><span class="line">[+,L,-,0] give @a[tag=抬头-ing,tag=帅比] egg 0 2</span><br><span class="line">[+,L,-,0] tag @a[tag=抬头-ing] remove 抬头-ing</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样子就不需要分别为重工业玉米和其他不是帅比的人分别弄个抬头检测了。要是之后还有需要抬头的指令，直接在中间加命令方块就可以了。如果条件和指令又变得更多，可以在这个MP事件里再串一个MP过程，进行条件判断的复用。</p>
+<h1 id="第-3-节"><a href="#第-3-节" class="headerlink" title="第 3 节"></a>第 3 节</h1><p>本节最后修改于 <code>2022 / 11 / 12</code></p>
+<h2 id="MP事件的主动触发"><a href="#MP事件的主动触发" class="headerlink" title="MP事件的主动触发"></a>MP事件的主动触发</h2><p>我们上一节说了MP事件。事件不止有玩家扔雪球或者抬头这一类，我们还可以用指令主动触发MP事件来执行响应。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 每秒给玩家在名叫playTime的计分板上加1积分</span><br><span class="line"># 当玩家到达999999积分时提示玩家为老玩家</span><br><span class="line"></span><br><span class="line">[+,X,-,20] scoreboard players add @a playTime 1</span><br><span class="line"></span><br><span class="line"># 监听器1</span><br><span class="line">[+,X,-,20] tag @a[scores={playTime=999999}] add 提示老玩家-ing</span><br><span class="line">[+,L,-,0] execute @a[tag=提示老玩家-ing] ~~~ say @s 是老玩家</span><br><span class="line">[+,L,-,0] tag @a[tag=提示老玩家-ing] remove 提示老玩家-ing</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上面这个例子我们可以发现，监听器1所监听的事件是“有人的<code>playTime</code>积分为<code>999999</code>”，于是我们可以通过指令设定玩家的积分项目来触发此事件——上面例子中就是一个每秒加分的指令会触发此事件。</p>
+<h2 id="MP事件实现的异步"><a href="#MP事件实现的异步" class="headerlink" title="MP事件实现的异步"></a>MP事件实现的异步</h2><p>我们讲可以用指令来主动触发MP事件，那么MP事件能不能在响应指令里触发MP事件呢？当然也是可以的。于是我们可以借此搞出异步指令。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 如果有人身上有了“帅比”标签，那就给他提示“你真帅！”</span><br><span class="line"># 提示完了之后如果他抬头，就提示“你把老天帅死了！”，然后给他把“帅比”标签扔了。</span><br><span class="line"># 我们管这一套叫做“夸”系统，标签前面加上“K_”来和其他命令进行区分。</span><br><span class="line"></span><br><span class="line"># 事件：出现“帅比”标签</span><br><span class="line">[+,X,-,~] tag @a[tag=帅比] add K_夸奖-ing</span><br><span class="line">[+,L,-,0] title @a[tag=K_夸奖-ing] title 你真帅！</span><br><span class="line">[+,L,-,0] tag @a[tag=K_夸奖-ing] add K_夸完了</span><br><span class="line">[+,L,-,0] tag @a[tag=K_夸奖-ing] remove K_夸奖-ing</span><br><span class="line"></span><br><span class="line"># 事件：抬头</span><br><span class="line">[+,X,-,~] tag @a[rx=-89] add 抬头-ing</span><br><span class="line">[+,L,-,0] execute @a[tag=抬头-ing] ~~~ tag @s[tag=K_夸完了] add K_抬头了</span><br><span class="line">[+,L,-,0] tag @a[tag=抬头-ing] remove 抬头-ing</span><br><span class="line"></span><br><span class="line"># 事件：抬头完了就再夸</span><br><span class="line">[+,X,-,~] tag @a[tag=K_抬头了] add K_再夸-ing</span><br><span class="line">[+,L,-,0] tag @a[tag=K_再夸-ing] remove K_抬头了</span><br><span class="line">[+,L,-,0] title @a[tag=K_再夸-ing] title 你把老天帅死了！</span><br><span class="line">[+,L,-,0] tag @a[tag=K_再夸-ing] remove 帅比</span><br><span class="line">[+,L,-,0] tag @a[tag=K_再夸-ing] remove K_再夸-ing</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上面的例子中，对于一个夸奖完了的帅比，我们是不知道他什么时候会抬头的，所以抬头之后的动作算作抬头这个“异步操作”的“回调指令”。通过MP事件之间的相互触发，我们能够把回调指令放到MP事件里，可以叫做“回调事件”，当异步操作完成后触发回调事件完成回调指令。</p>
+<p>有些眼尖的读者可能会发现例子中的回调指令不需要放到回调事件的命令方块串中，直接放进抬头事件的命令方块串里也可以。这是没错的。不过异步操作不止玩家抬头，还可以是某时刻的红石信号、某个不知名指令操作后的结果等。这里是出于演示目的，将回调指令单独放到回调事件里。虽然是这么说，但是建议实际编写指令时也把回调指令单独放到回调事件里，方便指令的维护。</p>
+<h1 id="第-4-节"><a href="#第-4-节" class="headerlink" title="第 4 节"></a>第 4 节</h1><p>本节最后修改于 <code>2022 / 11 / 12</code></p>
+<h2 id="MP模块"><a href="#MP模块" class="headerlink" title="MP模块"></a>MP模块</h2><p>上面我们说MP事件能使用指令来主动触发，这意味着我们可以从不同地方通过触发事件的方式执行同一个响应指令。这就是以MP事件为基础的指令复用。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 每秒给玩家在名叫playTime的计分板上加1积分</span><br><span class="line"># 当玩家到达999999积分时提示玩家为老玩家</span><br><span class="line"># 重工业玉米想不停告诉每个人他是老玩家</span><br><span class="line"></span><br><span class="line">[+,X,-,20] scoreboard players add @a playTime 1</span><br><span class="line"></span><br><span class="line"># 监听器1</span><br><span class="line">[+,X,-,20] tag @a[scores={playTime=999999}] add 提示老玩家-ing</span><br><span class="line">[+,L,-,0] execute @a[tag=提示老玩家-ing] ~~~ say @s 是老玩家</span><br><span class="line">[+,L,-,0] tag @a[tag=提示老玩家-ing] remove 提示老玩家-ing</span><br><span class="line"></span><br><span class="line">[+,X,-,20] scoreboard players set 重工业玉米 playTime 999999</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上面这个例子中，<code>监听器1</code>中的响应指令同时被老玩家提示功能和重工业玉米的大喇叭功能通过事件触发的方式使用。这个时候我们可以把<code>监听器1</code>单独叫做一个MP模块，比如可以叫<code>提示老玩家模块</code>，那么激活<code>监听器1</code>来执行响应指令就可以称作调用MP模块。</p>
+<p>如果想再提高模块的内聚性，可以像这样。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 每秒给玩家在名叫playTime的计分板上加1积分</span><br><span class="line"># 当玩家到达999999积分时聊天栏提示为老玩家</span><br><span class="line"># 重工业玉米想不停告诉每个人他是老玩家</span><br><span class="line"></span><br><span class="line">[+,X,-,20] scoreboard players add @a playTime 1</span><br><span class="line">[+,L,-,0] tag @a[scores={playTime=999999}] add 提示老玩家</span><br><span class="line"></span><br><span class="line"># 提示老玩家模块 入口标签：“提示老玩家”</span><br><span class="line">[+,X,-,20] execute @a[tag=提示老玩家] ~~~ say @s 是老玩家</span><br><span class="line">[+,L,-,0] tag @a[tag=提示老玩家] remove 提示老玩家</span><br><span class="line"></span><br><span class="line">[+,X,-,20] tag 重工业玉米 add 提示老玩家</span><br></pre></td></tr></tbody></table></figure>
+
+<p>于是不仅<code>playTime=999999</code>可以触发事件，只要想的话，任何条件都可以作为触发事件的方式。因为我们将<code>监听器1</code>作为MP过程的第一步——打标签——的那个命令方块从<code>监听器1</code>移动到了其他触发这个事件的命令方块串上，相当于由其他命令方块串来激活<code>监听器1</code>这个MP过程。所打的这个标签可以被称作MP模块的入口标签。</p>
+<h2 id="带参数调用MP模块"><a href="#带参数调用MP模块" class="headerlink" title="带参数调用MP模块"></a>带参数调用MP模块</h2><p>调用MP模块一般来说就是给实体加标签或者设置积分什么的来激活MP事件，这就是说我们调用MP模块实际上是给出了一个实体，MP模块能够通过选择器获取到这个实体。所以我们如果想给MP模块传递参数，我们可以在这个实体上增加标签、计分板分数等。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 当有人抬头时给他一句话“生活就像巧克力”。</span><br><span class="line"># 如果是第二次抬头就给他下一句“下一句我忘了”</span><br><span class="line"># 之后再抬头就“忘了”</span><br><span class="line"></span><br><span class="line"># 事件：抬头</span><br><span class="line">[+,X,-,~] tag @a[rx=-89] add 抬头-ing</span><br><span class="line">[+,L,-,0] scoreboard players add @a[tag=抬头-ing] 抬头次数 1</span><br><span class="line">[+,L,-,0] execute @a[tag=抬头-ing] ~~~ scoreboard players operation @s 话编号 = @s 抬头次数</span><br><span class="line">[+,L,-,0] scoreboard players set @a[scores={抬头次数=4..}] 话编号 3</span><br><span class="line">[+,L,-,0] tag @a[tag=抬头-ing] ~~~ add 给一句话</span><br><span class="line">[+,L,-,0] tag @a[tag=抬头-ing] remove 抬头-ing</span><br><span class="line"></span><br><span class="line"># 给一句话模块 入口标签：“给一句话”</span><br><span class="line">[+,X,-,~] title @a[tag=给一句话,scores={话编号=1}] title 生活就像巧克力</span><br><span class="line">[+,L,-,0] title @a[tag=给一句话,scores={话编号=2}] title 下一句我忘了</span><br><span class="line">[+,L,-,0] title @a[tag=给一句话,scores={话编号=3}] title 忘了</span><br><span class="line">[+,L,-,0] tag @a[tag=给一句话] remove 给一句话</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上面的例子中<code>话编号</code>计分项目是<code>给一句话模块</code>的参数入口。改变实体的<code>话编号</code>项目，调用<code>给一句话模块</code>后得到的结果也不一样。但是和真正的函数与参数的关系不同，这里的所谓“参数”类似于“绑定在全局作用域”；而模块也不像真的在接受参数，更像是在访问特定的“全局变量”来获得执行信息。我们可以管MP模块的参数叫MP模块参数。</p>
+<h1 id="第-5-节"><a href="#第-5-节" class="headerlink" title="第 5 节"></a>第 5 节</h1><p>本节最后修改于 <code>2022 / 11 / 12</code></p>
+<h2 id="MP模块的递归"><a href="#MP模块的递归" class="headerlink" title="MP模块的递归"></a>MP模块的递归</h2><p>上节中我们讲了带参数调用MP模块。有人立马会想到：可调用 + 带参数 = 能递归。</p>
+<p>——递归是什么？其实就是自己调用自己。那不就成死循环了吗？其实不是，因为递归到了一定程度会停止继续递归，这个程度叫边界条件。之所以在某种程度上可以说：可调用 + 带参数 = 能递归，是因为“可调用”意味着能自己调用自己；“带参数”意味着能判断边界条件来防止变成死循环——</p>
+<p>调用MP模块实际上就是满足某个条件，而MP模块会循环检查这个条件，根据其是否满足来决定是否执行命令。所以MP模块的递归其实就是在执行完一次命令后，条件仍然满足自己再执行一次。直到MP模块遇到边界条件才会修改实体使其不满足激活条件。</p>
+<p>但是由于MP模块的参数是“全局”的，而基岩版我的世界中又没有二维的计分板没法实现计分板堆栈，MP模块调用自己会丢失现在的计分板参数，所以只能实现尾递归或者用一些奇技淫巧。</p>
+<h2 id="定量给东西"><a href="#定量给东西" class="headerlink" title="定量给东西"></a>定量给东西</h2><p>定量给东西可以说是最简单的递归形式了。它不需要返回计分板值，而且貌似很有用，可以说是非常经典了。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 实现一个定量给鸡蛋模块，入口计分板为GE_eggNeed</span><br><span class="line"># 对于一个GE_eggNeed的值为n的人，在运行结束后要让他的背包里有n个鸡蛋</span><br><span class="line"></span><br><span class="line">[+,X,-,0] give @a[scores={GE_eggNeed=1..}] egg</span><br><span class="line">[+,L,-,0] scoreboard players remove @a[scores={GE_eggNeed=1..}] GE_eggNeed 1</span><br><span class="line">[+,L,-,0] scoreboard players reset @a[scores={GE_eggNeed=0}] GE_eggNeed</span><br></pre></td></tr></tbody></table></figure>
+
+<p>定量给东西有二分法的实现，感兴趣的读者可以了解一下，在此我们就不对其深入研究了。</p>
+<h2 id="等差数列"><a href="#等差数列" class="headerlink" title="等差数列"></a>等差数列</h2><p>除了给鸡蛋这种简单的没有返回值的MP模块，修改计分板这种有返回值的MP模块更复杂一些。例如获取数列特定项的MP模块。</p>
+<p>等差数列意思就是一个数列，任意相邻两项的差相同。例如 $1,3,5,7,9$ 或者 $5,4,3,2,1$ 。求等差数列是很好的一个尾递归的例子。</p>
+<p>求数列第 $n$ 项，一般来说有两种方法。</p>
+<p>一种是把 $n$ 代入到通项公式里。例如 $1,3,5,7,9$ 的通项公式为 $a_n=2n-1$ ，求第 $10$ 项就是 $2\times 10-1=19$ 。</p>
+<p>但是世界上有很多数列并没有通项公式，这时可以使用第二种方法叫递推公式。递推公式就是根据前面项得出后面项的公式。例如 $5,4,3,2,1$ 的递推公式就是 $a_n=a_{n-1}-1$ ，求第 $10$ 项就得求第 $9$ 项，就得求第 $8$ 项……直到我们发现第 $1$ 项是 $5$ ，那么第 $2$ 项就是 $4$ ，第 $3$ 项就是 $3$ ……最终得到第 $10$ 项就是 $-4$ 。</p>
+<p>这就是一种递归，我们在不断的调用递推公式，只不过每次的参数都不一样：第一次我们代入的 $n=10$ ，发现 $a_{n-1}$ 也就是 $a_9$ 的值不知道！于是我们调用第二次，这时 $n=9$ ，发现 $a_8$ 的值又不知道；于是第三次， $n=8$ ……云云。直到 $n=1$ 时，就是边界条件，我们知道 $a_1$ 就是 $5$ ，所以没有不知道的值了，就不用再调用什么东西了。这时别忘了，之前调用的公式还等着我们的值呢！于是我们开始返回结果。第一次返回 $a_1$ 的值是 $5$ ，于是 $a_2=a_1-1=4$ ，继而 $a_3=a_2-1=3$ ……直到 $a_10=a_9-1=-4$ 。</p>
+<p>我们要练习MP模块的递归，于是我们就假装不知道等差数列的通项公式吧。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 实现一个等差数列模块，入口计分版为AP_n，出口计分板为AP_value</span><br><span class="line"># 对于一个AP_n的值为n的人，要使其AP_value为数列5,4,3,2,1,...的第n项</span><br><span class="line"></span><br><span class="line">[+,X,-,0] tag @a[scores={AP_nNow=1..}] add AP_inited //初始化部分开始</span><br><span class="line">[+,L,-,0] scoreboard players set @a[scores={AP_n=1..},tag=!AP_inited] AP_value 5 //还没开始算的人的值为5</span><br><span class="line">[+,L,-,0] scoreboard players set @a[scores={AP_n=1..},tag=!AP_inited] AP_nNow 1 //还没开始算的人现在算到了第1项</span><br><span class="line">[+,L,-,0] tag @a[tag=AP_inited] remove AP_inited //初始化部分结束</span><br><span class="line">[+,L,-,0] execute @a[scores={AP_n=1..}] ~~~ scoreboard players operation @s AP_diff = @s AP_n //边界处理部分开始</span><br><span class="line">[+,L,-,0] execute @a[scores={AP_n=1..}] ~~~ scoreboard players operation @s AP_diff -= @s AP_nNow //如果AP_diff为0说明已经算到了该算到的项，就是算完了</span><br><span class="line">[+,L,-,0] scoreboard players set @a[scores={AP_diff=0}] AP_n 0 //算完的人清空入口计分板</span><br><span class="line">[+,L,-,0] scoreboard players reset @a[scores={AP_diff=0}] AP_nNow //算完的人重置临时计分板</span><br><span class="line">[+,L,-,0] scoreboard players reset @a[scores={AP_diff=0..}] AP_diff //重置临时计分板，边界处理部分结束</span><br><span class="line">[+,L,-,0] scoreboard players remove @a[scores={AP_n=1..}] AP_value 1 //正在算的人的值-1</span><br><span class="line">[+,L,-,0] scoreboard players add @a[scores={AP_n=1..}] AP_nNow 1 //正在算的人多算了一项</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这个模块的调用方法：给实体设置<code>AP_n</code>分数。获取返回值方法：当实体<code>AP_n=0</code>时，获取实体<code>AP_value</code>的分数并重置<code>AP_value</code>和<code>AP_n</code>。</p>
+<h2 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h2><p>用点奇技淫巧也可以做出不是尾递归的递归。</p>
+<p>众所周知，斐波那契数列 $\{\ Fi_n\ \}$ 是一个数列，每一项等于前两项之和，而且 $Fi_0=Fi_1=1$ 。例如前 $7$ 项就是 $1,1,2,3,5,8,13$ 。想要知道第 $n$ 项就必须得知道第 $n-1$ 和第 $n-2$ 项。这里我们用MP模块的递归（with奇技淫巧）来实现。</p>
+<p>不难发现，斐波那契数列不能只通过上一项来求出这一项，所以无法简单地写成尾递归的形式。这里我们采用的奇技淫巧是使用两个计分板，一个存储上一项的值，一个存储上上一项的值。我们将这一项求出来后，将这一项的值覆盖到存储上上一项的计分板上。这样子对于下一次调用模块来说，这两个计分板仍然是一个存储上一项，一个存储上上一项。根据调用次数的奇偶，两个计分板，哪个是上一项哪个是上上一项也不同。这是使用有限的计分板把结果存储了起来。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 实现一个斐波那契模块，入口计分板为Fi_n，出口计分板为Fi_value</span><br><span class="line"># 对于一个Fi_n的值为n的人，要使其Fi_value为斐波那契数列的第n项</span><br><span class="line"># 玩家_2的计分板C_num的值为2，用以取模判断奇偶</span><br><span class="line"></span><br><span class="line">[+,X,-,0] tag @a[scores={Fi_nNow=1..}] add Fi_inited //初始化部分开始</span><br><span class="line">[+,L,-,0] scoreboard players set @a[scores={Fi_n=1..},tag=!Fi_inited] Fi_valueAno 1</span><br><span class="line">[+,L,-,0] scoreboard players set @a[scores={Fi_n=1..},tag=!Fi_inited] Fi_value 1 //还没开始算的人的前面两项都为1</span><br><span class="line">[+,L,-,0] scoreboard players set @a[scores={Fi_n=1..},tag=!Fi_inited] Fi_nNow 2 //还没开始算的人现在算到了第2项</span><br><span class="line">[+,L,-,0] tag @a[tag=Fi_inited] remove Fi_inited //初始化部分结束</span><br><span class="line">[+,L,-,0] execute @a[scores={Fi_n=1..}] ~~~ scoreboard players operation @s Fi_type = @s Fi_nNow //获取调用奇偶部分开始</span><br><span class="line">[+,L,-,0] execute @a[scores={Fi_n=1..}] ~~~ scoreboard players operation @s Fi_type %= _2 C_num //获取调用奇偶部分结束</span><br><span class="line">[+,L,-,0] execute @a[scores={Fi_n=1..}] ~~~ scoreboard players operation @s Fi_diff = @s Fi_n //边界处理部分开始</span><br><span class="line">[+,L,-,0] execute @a[scores={Fi_n=1..}] ~~~ scoreboard players operation @s Fi_diff -= @s Fi_nNow //如果Fi_diff为0说明已经算到了该算到的项，就是算完了</span><br><span class="line">[+,L,-,0] scoreboard players set @a[scores={Fi_diff=..0}] Fi_n 0 //算完的人清空入口计分板</span><br><span class="line">[+,L,-,0] scoreboard players reset @a[scores={Fi_diff=..0}] Fi_nNow //算完的人重置临时计分板</span><br><span class="line">[+,L,-,0] execute @a[scores={Fi_diff=..0,Fi_type=0}] ~~~ scoreboard players operation @s Fi_value = @s Fi_valueAno //偶数调用次数的人设置Fi_value为真正的上一项的值</span><br><span class="line">[+,L,-,0] scoreboard players reset @a[scores={Fi_diff=..0}] Fi_valueAno //重置临时计分板</span><br><span class="line">[+,L,-,0] scoreboard players reset @a[scores={Fi_diff=-1..}] Fi_diff //重置临时计分板，边界处理部分结束</span><br><span class="line">[+,L,-,0] execute @a[scores={Fi_n=1..,Fi_type=0}] ~~~ scoreboard players operation @s Fi_value += @s Fi_valueAno //正在算的偶数调用次数的人覆盖Fi_value为这一项的值</span><br><span class="line">[+,L,-,0] execute @a[scores={Fi_n=1..,Fi_type=1}] ~~~ scoreboard players operation @s Fi_valueAno += @s Fi_value //正在算的奇数调用次数的人覆盖Fi_valueAno为这一项的值</span><br><span class="line">[+,L,-,0] scoreboard players add @a[scores={Fi_n=1..}] Fi_nNow 1 //正在算的人多算了一项</span><br><span class="line">[+,L,-,0] scoreboard players reset @a[scores={Fi_type=0..}] Fi_type //重置临时计分板</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这个模块的调用方法：给实体设置<code>Fi_n</code>分数。获取返回值方法：当实体<code>Fi_n=0</code>时，获取实体<code>Fi_value</code>的分数并重置<code>Fi_value</code>和<code>Fi_n</code>。</p>
+<h1 id="第-6-节"><a href="#第-6-节" class="headerlink" title="第 6 节"></a>第 6 节</h1><p>本节最后修改于 <code>2022 / 11 / 12</code></p>
+<h2 id="MP模块的无限制递归猜想"><a href="#MP模块的无限制递归猜想" class="headerlink" title="MP模块的无限制递归猜想"></a>MP模块的无限制递归猜想</h2><p>我们上一节讲过，</p>
+<blockquote>
+<p>但是由于MP模块的参数是“全局”的，而基岩版我的世界中又没有二维的计分板没法实现计分板堆栈，MP模块调用自己会丢失现在的计分板参数，所以只能实现尾递归或者用一些奇技淫巧。</p>
+</blockquote>
+<p>现在我表示，这段话不一定正确，因为最近我找到了计分板堆栈可能的实现方法。</p>
+<p>计分板堆栈是什么，不就是一大堆计分板吗？</p>
+<p>这是原来的计分板结构：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">　 　|计分板A|计分板B|计分板C ...</span><br><span class="line">-----|-------|-------|-------</span><br><span class="line">实体1| 分数A1| 分数B1| 分数C1</span><br><span class="line">实体2| 分数A2| 分数B2| 分数C2</span><br><span class="line">实体3| 分数A3| 分数B3| 分数C3</span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这是我们希望的计分板结构：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">　 　|计分板A|计分板B|计分板C ...</span><br><span class="line">-----|-------|-------|-------</span><br><span class="line">实体1| 数组A1| 数组B1| 数组C1</span><br><span class="line">实体2| 数组A2| 数组B2| 数组C2</span><br><span class="line">实体3| 数组A3| 数组B3| 数组C3</span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure>
+
+<p>我们可以发现什么？</p>
+<p>首先，我们希望的大概是不可能实现的，因为基岩版中计分板值不可能是个数组——以及Java版我没了解过。</p>
+<p>但是，我们还可以发现，其实我们需要的不是一个数组，而是一个“方格”！</p>
+<p>没错，实际上我们需要的是已知横坐标（计分板）和纵坐标（实体）就可得到的唯一一个数组。数组的形式不重要，重要的是我们能根据一个计分板和一个实体确定这一个数组。</p>
+<p>到这里就明了了。我们只需要创造一大堆额外的实体，然后让这堆实体都和“实体1”、“实体2”等已有的实体联系起来，就可以了。我们就能根据一个确定的已有实体（也就是实体1、2、3）得到一大堆与其联系的实体。这个时候再来一个确定的计分板，我们就能得到已知实体的分数，及其联系着的实体们的分数。这就是传说中的根据已有实体和计分板，得到一大堆分数，就能达到目的，实现计分板堆栈。</p>
+<p>主要的技术难点就在于，如何把一大堆实体同一个确定的已知实体联系起来。</p>
+<h1 id="第-7-节"><a href="#第-7-节" class="headerlink" title="第 7 节"></a>第 7 节</h1><p>本节最后修改于 <code>2022 / 11 / 12</code></p>
+<h2 id="搞个雪球菜单"><a href="#搞个雪球菜单" class="headerlink" title="搞个雪球菜单"></a>搞个雪球菜单</h2><p>之前几节讲了条件判断、MP过程、MP事件、MP模块等设计模式。只是讲的话可能没有什么感受，而一个雪球菜单基本上能把简单条件判断、MP过程、MP事件和MP模块都应用到，于是我们可以试着从雪球菜单入手，试一试这些设计模式。</p>
+<p>作为演示，这个雪球菜单的功能可以是：</p>
+<ul>
+<li>扔出雪球显示菜单，再扔雪球切换选项。抬头确认，低头返回上一级菜单或者取消；</li>
+<li>菜单有三个选项：切换创造/生存、索要雪球、夸赞玉米菜单；</li>
+<li>选中切换创造/生存后，创造变成生存，生存变成创造；</li>
+<li>选中索要雪球后，得到 $1$ 个雪球。再选中就给 $2$ 个。选中的第 $n$ 次给 $n$ 个雪球；</li>
+<li>夸赞玉米菜单又有三个选项：玉米好帅、玉米真帅、玉米很帅。选项被选中后，在聊天栏提示对应选项。</li>
+</ul>
+<h3 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h3><p>在编写指令前，先简单思考一下雪球菜单的架构。</p>
+<ul>
+<li>雪球菜单通常有三个操作：扔雪球、抬头、低头。这意味着我们可能需要搞三个MP事件监听器来对用户的操作进行响应。</li>
+<li>雪球菜单通常有显示在actionbar的title作为界面。这告诉我们可能需要搞一个MP模块用以显示界面。这里我们考虑一套菜单有多少选项就有多少title指令，还有不止一套菜单，就是所谓“多菜单”。不难发现对于不同选项或者不同菜单，实际上都是执行不同的title，所以可将菜单也看作是一种选项，这样子就是“单菜单”了。这个MP模块当然不能给谁都显示一样的东西，所以至少还需要一个MP模块参数用来控制显示的界面，这里可以选择计分板。</li>
+<li>雪球菜单通常有各种功能。我们可以把每个功能都做成MP模块，到时候只要让雪球菜单调用就可以了。</li>
+<li>雪球菜单通常有各种提示。比如“使用功能成功”、“您没有权限”、“已关闭菜单”等等。这些大部分是在使用完功能再提示。然而我们发现这是异步操作，而且那么多功能MP模块总不能给每个都写一个提示。所以可以把提示抽离为MP模块，再用一个计分板作为MP模块参数控制提示内容。</li>
+</ul>
+<p>思考完这些之后，我们发现这个雪球菜单大体可以分成四部分：<code>用户事件监听器</code>、<code>界面模块</code>、各种功能MP模块和<code>提示模块</code>。还有两个作为MP模块参数的计分板，一个是<code>界面模块</code>的，一个是<code>提示模块</code>的——为了方便可以合二为一。</p>
+<h3 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h3><p>为了方便维护，计分板和标签应该有一套命名规范。</p>
+<p>因为这是雪球菜单，所以我们可以在所有标签和计分板前面加个标识<code>SB_</code>表示这是<strong>S</strong>now <strong>B</strong>all menu相关标签和计分板。类似的，<code>CM_</code>表示<strong>C</strong>hange <strong>M</strong>ode、<code>GS_</code>表示<strong>G</strong>ive <strong>S</strong>nowball，<code>HS_</code>表示yǜ mǐ <strong>H</strong>ǎo <strong>S</strong>huài。</p>
+<p>然后可以在MP过程标签最后增加<code>-ing</code>用以区分，表示这个标签不可用在MP过程之外。</p>
+<p>对于MP过程内的MP过程标签，可以在尾部使用<code>_</code>追加信息来命名。例如<code>SB_A-ing_B-ing</code>表示这是<code>过程A</code>里的<code>过程B</code>的标签。</p>
+<p>有读者可能会好奇，有的MP模块也相当于一个MP过程，它们的入口标签就相当于MP过程的过程标签，为何末尾却不带<code>-ing</code>呢？带<code>-ing</code>主要是为了让人注意到这是个封闭标签，来避免在MP过程之外使用，保证MP过程的封闭性。但是一般来说调用MP模块的命令并不在MP模块命令方块串上，这还意味着在添加标签到执行MP模块之间一般会有一块空档，入口标签是暴露出来的。入口标签本来就没有封闭性，也就不需要加后缀。</p>
+<h3 id="计分板"><a href="#计分板" class="headerlink" title="计分板"></a>计分板</h3><p>由于这个计分板控制着提示和界面，我们可以命名这个计分板为<code>SB_ui</code>。</p>
+<p>我们知道这个计分板需要控制界面和提示，所以可以规定一下计分板分数的范围。 $[0,9]$ 显示主菜单的界面、 $[10,19]$ 显示夸赞玉米菜单的界面、 $[-10,-1]$ 显示提示，没有分数值的人就不显示。虽然不是每个界面都有十个选项，但是给每个界面都分配十个分数可以方便以后给菜单再添加界面。</p>
+<h3 id="各种功能MP模块"><a href="#各种功能MP模块" class="headerlink" title="各种功能MP模块"></a>各种功能MP模块</h3><p>在编写雪球菜单前，我们可以将雪球菜单需要的各种功能MP模块先编写完。雪球菜单有<code>切换模式模块</code>、<code>索要雪球模块</code>和<code>夸赞玉米模块</code>三个主要模块。如果指令不太能看懂，可以只看代码块下方介绍的调用方法。在功能执行完之后，需要再反过来通过既是MP模块参数同时也是入口计分板的<code>SB_ui</code>来调用雪球菜单的<code>提示模块</code>，告诉玩家执行成功。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 切换模式模块 入口标签：“CM_do”</span><br><span class="line">[+,X,-,4] tag @a[tag=CM_do,m=0] add CM_m0</span><br><span class="line">[+,L,-,0] gamemode 0 @a[tag=CM_do,m=1]</span><br><span class="line">[+,L,-,0] gamemode 1 @a[tag=CM_do,tag=CM_m0]</span><br><span class="line">[+,L,-,0] tag @a[tag=CM_m0] remove CM_m0</span><br><span class="line">[+,L,-,0] scoreboard players set @a[tag=CM_do,scores={SB_ui=0..}] SB_ui -1 //这里“SB_ui=0..”的参数是为了让这条命令只对使用雪球菜单的人起作用，这样其他地方也能调用此模块</span><br><span class="line">[+,L,-,0] tag @a[tag=CM_do] remove CM_do</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这个MP模块用来给人切换模式。如果一个人有入口标签<code>CM_do</code>，那么如果他是创造，他就会变成生存；如果他是生存，他就会变成创造。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 索要雪球模块 入口标签：“GS_do”</span><br><span class="line">[+,X,-,4] scoreboard players add @a[tag=GS_do] add GS_sbNum 1</span><br><span class="line">[+,L,-,0] execute @a[tag=GS_do] ~~~ scoreboard players operation @s GS_sbNeed = @s GS_sbNum</span><br><span class="line">[+,L,-,0] tag @a[tag=GS_do] remove GS_do</span><br><span class="line"></span><br><span class="line"># 索要雪球模块 的 给雪球模块 入口计分板：“GS_sbNeed”</span><br><span class="line">[+,X,-,0] give @a[scores={GS_sbNeed=1..}] snowball</span><br><span class="line">[+,L,-,0] scoreboard players remove @a[scores={GS_sbNeed=1..}] GS_sbNeed 1</span><br><span class="line">[+,L,-,0] scoreboard players set @a[scores={GS_sbNeed=0,SB_ui=0..}] SB_ui -1</span><br><span class="line">[+,L,-,0] scoreboard players reset @a[scores={GS_sbNeed=0}] GS_sbNeed</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这个MP模块用来索要雪球。如果一个人有入口标签<code>GS_do</code>，那么这是他第几次有这个标签，他就会得到几个雪球。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 夸赞玉米模块 入口计分板：“HS_num”</span><br><span class="line">[+,X,-,4] execute @a[scores={HS_num=1}] ~~~ say 玉米好帅</span><br><span class="line">[+,L,-,0] execute @a[scores={HS_num=2}] ~~~ say 玉米真帅</span><br><span class="line">[+,L,-,0] execute @a[scores={HS_num=3}] ~~~ say 玉米很帅</span><br><span class="line">[+,L,-,0] scoreboard players set @a[scores={HS_num=0..,SB_ui=0..}] SB_ui -1</span><br><span class="line">[+,L,-,0] scoreboard players reset @a[scores={HS_num=0..}] HS_num</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这个MP模块用来夸赞玉米。如果一个人的入口计分板<code>HS_num</code>为<code>1</code>，那就提示“玉米好帅”；如果为<code>2</code>就提示“玉米真帅”；为<code>3</code>就提示“玉米很帅”。</p>
+<p>这样子，我们就把所有需要的功能MP模块都实现了。</p>
+<h1 id="第-7-5-节"><a href="#第-7-5-节" class="headerlink" title="第 7.5 节"></a>第 7.5 节</h1><p>本节最后修改于 <code>2022 / 11 / 12</code></p>
+<h2 id="搞个雪球菜单·续"><a href="#搞个雪球菜单·续" class="headerlink" title="搞个雪球菜单·续"></a>搞个雪球菜单·续</h2><p>一节写太多读起来不太舒服，就分了一节，我们接着来搞。</p>
+<p>上一节是弄完了除了主体指令之外的所有东西，那么这一节我们就来弄主体指令。</p>
+<h3 id="用户MP事件监听器"><a href="#用户MP事件监听器" class="headerlink" title="用户MP事件监听器"></a>用户MP事件监听器</h3><p>我们知道一共有三个操作：扔雪球、抬头、低头。那不用多说先来三组监听器！</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 扔雪球监听器</span><br><span class="line">[+,X,-,4] execute @e[type=snowball] ~~~ tag @p[r=0.2] add SB_sb-ing</span><br><span class="line">[+,L,-,0] kill @e[type=snowball]</span><br><span class="line">[+,L,-,0] # 这里是扔雪球MP过程内的指令</span><br><span class="line">[+,L,-,0] tag @a[tag=SB_sb-ing] remove SB_sb-ing</span><br><span class="line"></span><br><span class="line"># 抬头监听器</span><br><span class="line">[+,X,-,4] tag @a[rx=-89] add SB_hdUp-ing</span><br><span class="line">[+,L,-,0] # 这里是抬头MP过程内的指令</span><br><span class="line">[+,L,-,0] tag @a[tag=SB_hdUp-ing] remove SB_hdUp-ing</span><br><span class="line"></span><br><span class="line"># 低头监听器</span><br><span class="line">[+,X,-,4] tag @a[rxm=89] add SB_hdDn-ing</span><br><span class="line">[+,L,-,0] # 这里是低头MP过程内的指令</span><br><span class="line">[+,L,-,0] tag @a[tag=SB_hdDn-ing] remove SB_hdDn-ing</span><br></pre></td></tr></tbody></table></figure>
+
+<p>监听器框架有了，然后我们可以开始一个一个往里填指令了。</p>
+<p>首先是扔雪球监听器。这个雪球菜单的要求是扔一次菜单就出现，再仍一次切换选项。在最后一个选项切换的时候返回开头。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 扔雪球MP过程内的指令</span><br><span class="line">[+,L,-,0] scoreboard players add @a[tag=SB_sb-ing] SB_ui 1 //让扔雪球的人SB_ui加1，目的是切换选项</span><br><span class="line">[+,L,-,0] scoreboard players set @a[tag=SB_sb-ing,scores={SB_ui=3}] SB_ui 0 //让扔雪球且SB_ui=3的人的SB_ui变成0，目的是让主菜单选完的人选回第一项</span><br><span class="line">[+,L,-,0] scoreboard players set @a[tag=SB_sb-ing,scores={SB_ui=13}] SB_ui 10 //让扔雪球且SB_ui=13的人的SB_ui变成10，目的是让夸赞玉米菜单选完的人选回第一项</span><br></pre></td></tr></tbody></table></figure>
+
+<p>理论上我们的扔雪球监听器就这么简单的写完了。</p>
+<p>扔雪球后面的MP事件是抬头。我们知道在不同时候抬头会有不同的效果，例如在选中索要雪球选项时抬头会调用<code>索要雪球模块</code>、在选中夸赞玉米菜单时抬头会进入夸赞玉米菜单等等。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 抬头MP过程内的指令</span><br><span class="line">[+,L,-,0] tag @a[tag=SB_hdUp-ing,scores={SB_ui=0}] add CM_do //调用切换模式模块</span><br><span class="line">[+,L,-,0] tag @a[tag=SB_hdUp-ing,scores={SB_ui=1}] add GS_do //调用索要雪球模块</span><br><span class="line">[+,L,-,0] scoreboard players set @a[tag=SB_hdUp-ing,scores={SB_ui=2}] SB_ui 10 //进入夸赞玉米菜单</span><br><span class="line">[+,L,-,0] execute @a[tag=SB_hdUp-ing,scores={SB_ui=10..19}] ~~~ scoreboard players operation @s HS_num = @s SB_ui //调用夸赞玉米模块</span><br><span class="line">[+,L,-,0] scoreboard players remove @a[scores={HS_num=10..19}] HS_num 9 //继续调用夸赞玉米模块</span><br></pre></td></tr></tbody></table></figure>
+
+<p>最后还差一个低头的监听器。低头主要就是取消或者返回上一页菜单，那就比较简单了。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 低头MP过程内的指令</span><br><span class="line">[+,L,-,0] scoreboard players set @a[tag=SB_hdDn-ing,scores={SB_ui=0..9}] SB_ui -2 //调用雪球菜单提示模块，提示“取消”</span><br><span class="line">[+,L,-,0] scoreboard players set @a[tag=SB_hdDn-ing,scores={SB_ui=10..19}] SB_ui 0 //回到上一级菜单</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="提示MP模块"><a href="#提示MP模块" class="headerlink" title="提示MP模块"></a>提示MP模块</h3><p>我们从上面写到下面，发现好像只需要两种提示，一种是成功提示，一种是取消提示。</p>
+<p>这倒是好事，至少写的指令挺少的。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 雪球菜单提示模块 入口计分板：“SB_ui”</span><br><span class="line">[+,X,-,4] title @a[scores={SB_ui=-1}] actionbar 已成功 //提示“成功”</span><br><span class="line">[+,L,-,0] title @a[scores={SB_ui=-2}] actionbar 已取消 //提示“取消”</span><br><span class="line">[+,L,-,0] scoreboard players reset @a[scores={SB_ui=-10..-1}] SB_ui //重设计分板</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="界面MP模块"><a href="#界面MP模块" class="headerlink" title="界面MP模块"></a>界面MP模块</h3><p>于是到了现在，万事俱备只欠东风。我们已经把所有逻辑都写完了，就差提供一个界面了。</p>
+<p>由于我们的逻辑和界面是分开的几个MP模块，所以我们只需要给<code>SB_ui</code>不同的人显示不同的界面就可以，不需要再关心逻辑。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 雪球菜单界面模块 入口计分板：“SB_ui”</span><br><span class="line">[+,X,-,4] title @a[scores={SB_ui=0}] actionbar |&lt;切换创造/生存&gt;| 索要雪球 | 夸赞玉米 |</span><br><span class="line">[+,L,-,0] title @a[scores={SB_ui=1}] actionbar | 切换创造/生存 |&lt;索要雪球&gt;| 夸赞玉米 |</span><br><span class="line">[+,L,-,0] title @a[scores={SB_ui=2}] actionbar | 切换创造/生存 | 索要雪球 |&lt;夸赞玉米&gt;|</span><br><span class="line">[+,L,-,0] title @a[scores={SB_ui=10}] actionbar |&lt;玉米好帅&gt;| 玉米真帅 | 玉米很帅 |</span><br><span class="line">[+,L,-,0] title @a[scores={SB_ui=11}] actionbar | 玉米好帅 |&lt;玉米真帅&gt;| 玉米很帅 |</span><br><span class="line">[+,L,-,0] title @a[scores={SB_ui=12}] actionbar | 玉米好帅 | 玉米真帅 |&lt;玉米很帅&gt;|</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="全部指令"><a href="#全部指令" class="headerlink" title="全部指令"></a>全部指令</h3><figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 切换模式模块 入口标签：“CM_do”</span><br><span class="line">[+,X,-,4] tag @a[tag=CM_do,m=0] add CM_m0</span><br><span class="line">[+,L,-,0] gamemode 0 @a[tag=CM_do,m=1]</span><br><span class="line">[+,L,-,0] gamemode 1 @a[tag=CM_do,tag=CM_m0]</span><br><span class="line">[+,L,-,0] tag @a[tag=CM_m0] remove CM_m0</span><br><span class="line">[+,L,-,0] scoreboard players set @a[tag=CM_do,scores={SB_ui=0..}] SB_ui -1</span><br><span class="line">[+,L,-,0] tag @a[tag=CM_do] remove CM_do</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 索要雪球模块 入口标签：“GS_do”</span><br><span class="line">[+,X,-,4] scoreboard players add @a[tag=GS_do] add GS_sbNum 1</span><br><span class="line">[+,L,-,0] execute @a[tag=GS_do] ~~~ scoreboard players operation @s GS_sbNeed = @s GS_sbNum</span><br><span class="line">[+,L,-,0] tag @a[tag=GS_do] remove GS_do</span><br><span class="line"></span><br><span class="line"># 索要雪球模块 的 给雪球模块 入口计分板：“GS_sbNeed”</span><br><span class="line">[+,X,-,0] give @a[scores={GS_sbNeed=1..}] snowball</span><br><span class="line">[+,L,-,0] scoreboard players remove @a[scores={GS_sbNeed=1..}] GS_sbNeed 1</span><br><span class="line">[+,L,-,0] scoreboard players set @a[scores={GS_sbNeed=0,SB_ui=0..}] SB_ui -1</span><br><span class="line">[+,L,-,0] scoreboard players reset @a[scores={GS_sbNeed=0}] GS_sbNeed</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 夸赞玉米模块 入口计分板：“HS_num”</span><br><span class="line">[+,X,-,4] execute @a[scores={HS_num=1}] ~~~ say 玉米好帅</span><br><span class="line">[+,L,-,0] execute @a[scores={HS_num=2}] ~~~ say 玉米真帅</span><br><span class="line">[+,L,-,0] execute @a[scores={HS_num=3}] ~~~ say 玉米很帅</span><br><span class="line">[+,L,-,0] scoreboard players set @a[scores={HS_num=0..,SB_ui=0..}] SB_ui -1</span><br><span class="line">[+,L,-,0] scoreboard players reset @a[scores={HS_num=0..}] HS_num</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 扔雪球监听器</span><br><span class="line">[+,X,-,4] execute @e[type=snowball] ~~~ tag @p[r=0.2] add SB_sb-ing</span><br><span class="line">[+,L,-,0] kill @e[type=snowball]</span><br><span class="line">[+,L,-,0] scoreboard players add @a[tag=SB_sb-ing] SB_ui 1</span><br><span class="line">[+,L,-,0] scoreboard players set @a[tag=SB_sb-ing,scores={SB_ui=3}] SB_ui 0</span><br><span class="line">[+,L,-,0] scoreboard players set @a[tag=SB_sb-ing,scores={SB_ui=13}] SB_ui 10</span><br><span class="line">[+,L,-,0] tag @a[tag=SB_sb-ing] remove SB_sb-ing</span><br><span class="line"></span><br><span class="line"># 抬头监听器</span><br><span class="line">[+,X,-,4] tag @a[rx=-89] add SB_hdUp-ing</span><br><span class="line">[+,L,-,0] tag @a[tag=SB_hdUp-ing,scores={SB_ui=0}] add CM_do</span><br><span class="line">[+,L,-,0] tag @a[tag=SB_hdUp-ing,scores={SB_ui=1}] add GS_do</span><br><span class="line">[+,L,-,0] scoreboard players set @a[tag=SB_hdUp-ing,scores={SB_ui=2}] SB_ui 10</span><br><span class="line">[+,L,-,0] execute @a[tag=SB_hdUp-ing,scores={SB_ui=10..19}] ~~~ scoreboard players operation @s HS_num = @s SB_ui</span><br><span class="line">[+,L,-,0] scoreboard players remove @a[scores={HS_num=10..19}] HS_num 9</span><br><span class="line">[+,L,-,0] tag @a[tag=SB_hdUp-ing] remove SB_hdUp-ing</span><br><span class="line"></span><br><span class="line"># 低头监听器</span><br><span class="line">[+,X,-,4] tag @a[rxm=89] add SB_hdDn-ing</span><br><span class="line">[+,L,-,0] scoreboard players set @a[tag=SB_hdDn-ing,scores={SB_ui=0..9}] SB_ui -2</span><br><span class="line">[+,L,-,0] scoreboard players set @a[tag=SB_hdDn-ing,scores={SB_ui=10..19}] SB_ui 0</span><br><span class="line">[+,L,-,0] tag @a[tag=SB_hdDn-ing] remove SB_hdDn-ing</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 雪球菜单提示模块 入口计分板：“SB_ui”</span><br><span class="line">[+,X,-,4] title @a[scores={SB_ui=-1}] actionbar 已成功</span><br><span class="line">[+,L,-,0] title @a[scores={SB_ui=-2}] actionbar 已取消</span><br><span class="line">[+,L,-,0] scoreboard players reset @a[scores={SB_ui=-10..-1}] SB_ui</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 雪球菜单界面模块 入口计分板：“SB_ui”</span><br><span class="line">[+,X,-,4] title @a[scores={SB_ui=0}] actionbar |&lt;切换创造/生存&gt;| 索要雪球 | 夸赞玉米菜单 |</span><br><span class="line">[+,L,-,0] title @a[scores={SB_ui=1}] actionbar | 切换创造/生存 |&lt;索要雪球&gt;| 夸赞玉米菜单 |</span><br><span class="line">[+,L,-,0] title @a[scores={SB_ui=2}] actionbar | 切换创造/生存 | 索要雪球 |&lt;夸赞玉米菜单&gt;|</span><br><span class="line">[+,L,-,0] title @a[scores={SB_ui=10}] actionbar |&lt;玉米好帅&gt;| 玉米真帅 | 玉米很帅 |</span><br><span class="line">[+,L,-,0] title @a[scores={SB_ui=11}] actionbar | 玉米好帅 |&lt;玉米真帅&gt;| 玉米很帅 |</span><br><span class="line">[+,L,-,0] title @a[scores={SB_ui=12}] actionbar | 玉米好帅 | 玉米真帅 |&lt;玉米很帅&gt;|</span><br></pre></td></tr></tbody></table></figure>
+
+<p>虽然我不是特别了解雪球菜单，不知道这个命令量算多还是算少。但是可以知道的一点是，这个雪球菜单对维护和拓展开发非常友好。这是设计模式的价值。</p>
+<p>这就写完了？其实不是。如果你搞出来了，你会发现在选择夸赞玉米菜单试着抬头后，还没等你反应过来，就已把玉米夸赞了！</p>
+<p>究其原因是没有菜单之间的缓冲。解决方法是让一个人抬头后两秒之内不再计算抬头事件。如果读者有兴趣的话可以尝试自己编写出来，碍于篇幅这里就不详述了。</p>
+<h1 id="第-8-节"><a href="#第-8-节" class="headerlink" title="第 8 节"></a>第 8 节</h1><p>本节最后修改于 <code>2023 / 03 / 28</code></p>
+<h2 id="条件的逻辑运算"><a href="#条件的逻辑运算" class="headerlink" title="条件的逻辑运算"></a>条件的逻辑运算</h2><p>我们第 2 节讲了简单的条件判断。那么众所周知，如果同时有多个条件的话，相互之间一般会存在逻辑。说到逻辑那主要就是与（ $\mathrm{and}$ ）、非（ $\mathrm{not}$ ）和或（ $\mathrm{or}$ ）了，除此之外还有与非（ $\mathrm{nand}$ ）、或非（ $\mathrm{nor}$ ）、异或（ $\mathrm{xor}$ ）和同或（ $\mathrm{xnor}$ ）。</p>
+<h3 id="逻辑运算的种类"><a href="#逻辑运算的种类" class="headerlink" title="逻辑运算的种类"></a>逻辑运算的种类</h3><ul>
+<li><p><strong>与</strong></p>
+<p>与就是“若 A、B 都为真，则 A 与 B 为真；否则 A 与 B 为假”，也就是“<strong>……而且……</strong>”的意思。符号为 $\mathrm{and}$ 或者 <code>&amp;</code>。</p>
+<p>如果我又“吃饭”又“喝水”，那么“我吃饭<strong>而且</strong>喝水”这件事就发生了；如果“吃饭”、“喝水”至少一个没发生，那么“我吃饭<strong>而且</strong>喝水”就不能说是发生了。</p>
+</li>
+<li><p><strong>非</strong></p>
+<p>非就是“若 A 为真，则非 A 为假；否则非 A 为真”，也就是“<strong>没有……</strong>”的意思。符号为 $\mathrm{not}$ 或者 <code>!</code>。</p>
+<p>如果“我吃饭”这件事没发生，那么“我<strong>没有</strong>吃饭”这件事就发生了；如果我“吃饭”了，那么“我<strong>没有</strong>吃饭”这件事就没发生。</p>
+</li>
+<li><p><strong>或</strong></p>
+<p>或就是“若 A、B 都为假，则 A 或 B 为假；否则 A 或 B 为真”，也就是“<strong>……或者……</strong>”的意思。符号为 $\mathrm{or}$ 或者 <code>|</code>。</p>
+<p>如果我既没“吃饭”也没“喝水”，那么我就没有“吃饭<strong>或者</strong>喝水”；如果我“吃饭”和“喝水”这俩件事中至少干了一件事，那么就可以说我“吃饭<strong>或者</strong>喝水”。</p>
+</li>
+<li><p><strong>与非</strong></p>
+<p>与非就是“若 A、B 都为真，则 A 与非 B 为假；否则 A 与非 B 为真”，也就是“<strong>没有……又……</strong>”的意思。符号为 $\mathrm{nand}$ 。</p>
+<p>如果我又“吃饭”又“喝水”，那么“我<strong>没有</strong>吃饭<strong>又</strong>喝水”就没发生；如果“吃饭”、“喝水”至少一个没发生，那么“我<strong>没有</strong>吃饭<strong>又</strong>喝水”。</p>
+<p>可以看出<br>$$A \ \mathrm{nand} \ B=\mathrm{not}\ (A\ \mathrm{and}\ B)$$</p>
+</li>
+<li><p><strong>或非</strong></p>
+<p>或非就是“若A、B都为假，则A或非B为真；否则A或非B为假”，也就是“<strong>没有……也没有……</strong>”的意思。符号为 $\mathrm{nor}$ 。</p>
+<p>如果我既没“吃饭”也没“喝水”，那么我就“<strong>没有</strong>吃饭<strong>也没有</strong>喝水”；如果我“吃饭”和“喝水”这俩件事中至少干了一件事，那么我就不是“<strong>没有</strong>吃饭<strong>也没有</strong>喝水”。</p>
+<p>可以看出<br>$$A\ \mathrm{nor}\ B=\mathrm{nor}\ (A\ \mathrm{or}\ B)$$</p>
+</li>
+<li><p><strong>异或</strong></p>
+<p>异或就是“若A、B都为真或都为假，则A异或B为假；否则A异或B为真”，也就是 “<strong>……和……不同</strong>”。符号为 $\mathrm{xor}$ 。</p>
+<p>如果我“吃饭”，但不“喝水”；或者没“吃饭”，但“喝水”了，那我“吃饭<strong>和</strong>喝水<strong>不同</strong>”这件事就发生了；如果我“吃饭”又“喝水”，或者两个都没干，我就不是“吃饭<strong>和</strong>喝水<strong>不同</strong>”。</p>
+<p>可以看出</p>
+</li>
+</ul>
+<p>$$ \begin{aligned} &amp; \quad \ A \ \mathrm{xor} \ B \newline &amp;=(A\ \mathrm{nand}\ B)\ \mathrm{and}\ (A\ \mathrm{or}\ B)\newline &amp;=(\mathrm{not}\ (A\ \mathrm{and}\ B))\ \mathrm{and}\ (A\ \mathrm{or}\ B) \end{aligned} $$</p>
+<ul>
+<li><p><strong>同或</strong></p>
+<p>同或就是“若A、B都为真或都为假，则A同或B为真；否则A同或B为假”，也就是 “<strong>……像……一样</strong>”。符号为 $\mathrm{xnor}$ 。</p>
+<p>如果我“吃饭”又“喝水”，或者两个都没干，就可以说我“吃饭<strong>像</strong>喝水<strong>一样</strong>”如果我“吃饭”，但不“喝水”；或者没“吃饭”，但“喝水”了，那就并非“吃饭<strong>像</strong>喝水<strong>一样</strong>”。</p>
+<p>可以看出</p>
+</li>
+</ul>
+<p>$$\begin{aligned} &amp; \quad \ A\ \mathrm{xnor}\ B\newline &amp;=\mathrm{not}\ (A\ \mathrm{xor}\ B)\newline &amp;=(A\ \mathrm{and}\ B)\ \mathrm{or}\ (A\ \mathrm{nor}\ B)\newline &amp;=(A\ \mathrm{and}\ B)\ \mathrm{or}\ (\mathrm{not}\ (A\ \mathrm{or}\ B))\newline \end{aligned}$$</p>
+<p>由此可以看出，与、非、或、与非、或非、异或和同或这七种逻辑，最后都可以用与、非和或这三种逻辑组合得到。</p>
+<p>只要实现了与、非和或这三种逻辑，我们就能实现全部七种逻辑。</p>
+<p>那么我的世界中能不能实现与、非和或呢？</p>
+<h3 id="我的世界实现逻辑运算"><a href="#我的世界实现逻辑运算" class="headerlink" title="我的世界实现逻辑运算"></a>我的世界实现逻辑运算</h3><ul>
+<li><p><strong>与</strong></p>
+<p>命令方块中的与是最容易实现的。在第一节中我们讲条件判断的形式一般是有条件命令方块和选择器。有条件命令方块的实现很简单，只需要把两个有条件命令方块接在一起就可以了。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 当重工业玉米的背包里同时有tnt和床时，提示“重工业玉米好帅！！”</span><br><span class="line"></span><br><span class="line">[~,~,~,~] clear @a[name=重工业玉米] tnt -1 0</span><br><span class="line">[+,L,+,0] clear @a[name=重工业玉米] bed -1 0</span><br><span class="line">[+,L,+,0] say 重工业玉米好帅！！</span><br></pre></td></tr></tbody></table></figure>
+
+<p>选择器的实现就更简单了，在方括号中使用逗号把两个条件连接起来就可以。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 当有一个人叫重工业玉米且有熊孩子标签时，提示“重工业玉米好帅！！”</span><br><span class="line"></span><br><span class="line">[~,~,~,~] execute @a[name=重工业玉米,tag=熊孩子] ~~~ say 重工业玉米好帅！！</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上面是两个条件都为有条件命令方块或都为选择器时的与。</p>
+<p>那如果一个条件是有条件命令方块，另一个条件是选择器呢？貌似这两种形式的条件没法通过简单的方式组合到一起，但是他们之间可以相互转化。我们可以将其都转化为选择器：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 当重工业玉米有熊孩子标签，背包里还有tnt时，提示“重工业玉米好帅！！”</span><br><span class="line"></span><br><span class="line">[~,~,~,~] clear @a[name=重工业玉米] tnt -1 0</span><br><span class="line">[+,L,+,0] tag @a[name=重工业玉米] add tntWith //将有条件命令方块转化为标签</span><br><span class="line">[+,L,-,0] execute @a[name=重工业玉米,tag=熊孩子,tag=tntWith] ~~~ say 重工业玉米好帅！！</span><br><span class="line">[+,L,-,0] tag @a[tag=tntWith] remove tntWith</span><br></pre></td></tr></tbody></table></figure>
+
+<p>也可以都转化为有条件命令方块：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 当重工业玉米有熊孩子标签，背包里还有tnt时，提示“重工业玉米好帅！！”</span><br><span class="line"></span><br><span class="line">[~,~,~,~] clear @a[name=重工业玉米] tnt -1 0</span><br><span class="line">[+,L,+,0] testfor @a[name=重工业玉米,tag=熊孩子] //将标签转化为有条件命令方块</span><br><span class="line">[+,L,+,0] say 重工业玉米好帅！！</span><br></pre></td></tr></tbody></table></figure>
+
+<p>看起来都转化为有条件命令方块可以少用一个命令方块？别忘了我们<a href="1.md#%E9%80%89%E6%8B%A9%E5%99%A8">第1节</a>时提到，可以用<code>execute</code>代替<code>testfor</code>：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 当重工业玉米有熊孩子标签，背包里还有tnt时，提示“重工业玉米好帅！！”</span><br><span class="line"></span><br><span class="line">[~,~,~,~] clear @a[name=重工业玉米] tnt -1 0</span><br><span class="line">[+,L,+,0] execute @a[name=重工业玉米,tag=熊孩子] ~~~ say 重工业玉米好帅！！</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样子就又可以少用一个命令方块。于是我们可以说找到了两个条件类型不同时的与。</p>
+<p>至此，全部的与我们都找到了实现方法。</p>
+</li>
+<li><p><strong>非</strong></p>
+<p>命令方块中的非一般通过选择器来取反——也就是取补集——来得到。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 当有一个人叫重工业玉米且没有熊孩子标签时，提示“重工业玉米太帅了！！”</span><br><span class="line"></span><br><span class="line">[~,~,~,~] execute @a[name=重工业玉米,tag=!熊孩子] ~~~ say 重工业玉米太帅了！！</span><br></pre></td></tr></tbody></table></figure>
+
+<p>对于有条件命令方块的非，可以通过设置一个临时标签来使用选择器取反</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 当重工业玉米的背包里没有tnt时，提示“重工业玉米太帅了！！”</span><br><span class="line"></span><br><span class="line">[~,~,~,~] clear @a[name=重工业玉米] tnt -1 0</span><br><span class="line">[+,L,+,0] tag @a[name=重工业玉米] add 熊孩子</span><br><span class="line">[+,L,-,0] execute @a[name=重工业玉米,tag=!熊孩子] ~~~ say 重工业玉米太帅了！！</span><br><span class="line">[+,L,-,0] tag @a[tag=熊孩子] remove 熊孩子</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p><strong>或</strong></p>
+<p>我的世界中没有直接的或。想要实现或，一般是给两个条件分别搞个命令方块，使满足任意条件就满足第三个条件。再判断第三个条件来实现或。</p>
+<p>一般来说，有条件命令方块只能被自己的上一个命令方块满足；而选择器条件由于操作的是实体，可以被任意多个命令方块满足。因为上文“第三个条件”需要能被两个命令方块满足，所以我们的第三个条件只能使用选择器的形式。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 当重工业玉米有熊孩子标签或者背包里有tnt时，提示“重工业玉米怎么这么帅！！”</span><br><span class="line"></span><br><span class="line">[~,~,~,~] tag @a[name=重工业玉米,tag=熊孩子] add needSay</span><br><span class="line">[+,L,-,0] clear @a[name=重工业玉米] tnt -1 0</span><br><span class="line">[+,L,+,0] tag @a[name=重工业玉米] add needSay</span><br><span class="line">[+,L,-,0] execute @a[tag=needSay] ~~~ say 重工业玉米怎么这么帅！！</span><br><span class="line">[+,L,-,0] tag @a[tag=needSay] remove needSay</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上面例子中，两个条件分别是“有熊孩子标签”和“背包里有tnt”，而这两个条件满足时都会给重工业玉米增加<code>needSay</code>标签来满足第三个条件“有人带<code>needSay</code>标签”。通过检测第三个条件有没有被满足，可以实现或。</p>
+</li>
+</ul>
+<h1 id="第-9-节"><a href="#第-9-节" class="headerlink" title="第 9 节"></a>第 9 节</h1><p>本节最后修改于 <code>2023 / 07 / 25</code></p>
+<h2 id="条件的进阶逻辑运算"><a href="#条件的进阶逻辑运算" class="headerlink" title="条件的进阶逻辑运算"></a>条件的进阶逻辑运算</h2><p>上节讲了与、非和或的实现，我们还知道世界上有与非、或非、异或和同或等逻辑，那么能不能在我的世界中通过与、非和或组合出这些呢？</p>
+<h3 id="与非"><a href="#与非" class="headerlink" title="与非"></a>与非</h3><p>$$A \ \mathrm{nand} \ B=\mathrm{not}\ (A\ \mathrm{and}\ B)$$</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 如果重工业玉米并非同时有熊孩子标签和tnt，也就是“有熊孩子标签”与非“背包有tnt”为真，提示“重工业玉米简直是风流倜傥英俊潇洒，人见人爱花见花开”</span><br><span class="line"></span><br><span class="line">[~,~,~,~] clear @a[name=重工业玉米] tnt -1 0</span><br><span class="line">[+,L,+,0] tag @a[name=重工业玉米,tag=熊孩子] add T_8 //得到A与B的标签</span><br><span class="line">[+,L,-,0] execute @a[name=重工业玉米,tag=!T_8] ~~~ say 重工业玉米简直是风流倜傥英俊潇洒，人见人爱花见花开</span><br><span class="line">[+,L,-,0] tag @a[tag=T_8] remove T_8</span><br></pre></td></tr></tbody></table></figure>
+
+<p>看起来我们就轻松地实现了与非。</p>
+<h3 id="或非"><a href="#或非" class="headerlink" title="或非"></a>或非</h3><p>$$A\ \mathrm{nor}\ B=\mathrm{nor}\ (A\ \mathrm{or}\ B)$$</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 如果重工业玉米既没有熊孩子标签也没有tnt，也就是“有熊孩子标签”或非“背包有tnt”为真，提示“重工业玉米英俊的面庞在我心中挥之不去，如同静夜月光，照亮了我的心房”</span><br><span class="line"></span><br><span class="line">[~,~,~,~] clear @a[name=重工业玉米] tnt -1 0</span><br><span class="line">[+,L,+,0] tag @a[name=重工业玉米] add T_E //得到A或B的标签</span><br><span class="line">[+,L,-,0] tag @a[name=重工业玉米,tag=熊孩子] add T_E //得到A或B的标签</span><br><span class="line">[+,L,-,0] execute @a[name=重工业玉米,tag=!T_E] ~~~ say 重工业玉米英俊的面庞在我心中挥之不去，如同静夜月光，照亮了我的心房</span><br><span class="line">[+,L,-,0] tag @a[tag=T_E] remove T_E</span><br></pre></td></tr></tbody></table></figure>
+
+<p>或非的实现也比较简单。</p>
+<h3 id="异或"><a href="#异或" class="headerlink" title="异或"></a>异或</h3><p>$$<br>A \ \mathrm{xor} \ B =(\mathrm{not}\ (A\ \mathrm{and}\ B))\ \mathrm{and}\ (A\ \mathrm{or}\ B)<br>$$</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># 如果重工业玉米熊孩子标签和tnt二者只有一个，也就是“有熊孩子标签”异或“背包有tnt”为真，提示“0.5秒与他的擦肩而过，我的脑海中便深深烙下了他的身影。不知为何，即便不去确认，我也心中了然：他就是重工业玉米了”</span><br><span class="line"></span><br><span class="line">[~,~,~,~] clear @a[name=重工业玉米] tnt -1 0</span><br><span class="line">[+,L,+,0] tag @a[name=重工业玉米] add T_E //得到A或B的标签</span><br><span class="line">[+,L,-,0] tag @a[name=重工业玉米,tag=熊孩子] add T_E //得到A或B的标签</span><br><span class="line">[+,L,-,0] clear @a[name=重工业玉米] tnt -1 0</span><br><span class="line">[+,L,+,0] tag @a[name=重工业玉米,tag=熊孩子] add T_8 //得到A与B的标签</span><br><span class="line">[+,L,-,0] tag @a[name=重工业玉米,tag=!T_8] add T_7 //得到非(A与B)的标签</span><br><span class="line">[+,L,-,0] execute @a[name=重工业玉米,tag=T_E,tag=T_7] ~~~ say 0.5秒与他的擦肩而过，我的脑海中便深深烙下了他的身影。不知为何，即便不去确认，我也心中了然：他就是重工业玉米了</span><br><span class="line">[+,L,-,0] tag @a[tag=T_E] remove T_E</span><br><span class="line">[+,L,-,0] tag @a[tag=T_8] remove T_8</span><br><span class="line">[+,L,-,0] tag @a[tag=T_7] remove T_7</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这就是异或的实现。</p>
+<hr>
+<p>发现在指令编写到一定程度时，有条件命令方块基本不会再出现了，我们会一直以选择器的形式进行条件运算。选择器一般的用法是标签。那么对于着繁多的标签和运算，怎么才能防止自己犯迷糊呢？可以使用表达式作为标签的名称，来表示含义，这样可以使运算的“操作数”和“返回值”都变得非常清晰，甚至让我在计算中有一丝享受的感觉。</p>
+<p>原始的思想是：使用大写字母，例如<code>A</code>、<code>B</code>、<code>C</code>、<code>D</code>来表示条件；使用<code>and</code>、<code>or</code>和<code>not</code>来表示运算符。这样子如果有一个人带标签<code>AandB</code>，我们就能清晰的知道这个人的身份——既满足 $A$ 条件，也满足 $B$ 条件。那么既不满足 $A$ 条件，也不满足 $B$ 条件的人所应该带的标签就应该是<code>not(AorB)</code>。</p>
+<p>以此类推，(非(A与B))与(A或B)的人应该就是<code>(not(AandB))and(AorB)</code>……真的吗？我们发现这个更简单的写法是<code>AxorB</code>。对于不同的表达式，结果却相同，那我们还不如用结果来命名。</p>
+<p>我们知道对于 $A$ 和 $B$ ，他们只可能为两个值。我们可以称其 $真$ 或 $假$ ，也可以说是 $1$ 或 $0$ 。既然如此，对于 $A$ 和 $B$ 的运算的结果也一定是有限的。 $A\ \mathrm{and}\ B$ 随机搭配，可能有 $1\ \mathrm{and}\ 1$ 、 $1\ \mathrm{and}\ 0$ 、 $0\ \mathrm{and}\ 1$ 、 $0\ \mathrm{and}\ 0$ 四种可能，结果就是 $1$ 、 $0$ 、 $0$ 、 $0$ 四种可能。我们就可以说 $A=[1,1,0,0]$ ， $B=[1,0,1,0]$ ， $A\ \mathrm{and}\ B=[1,0,0,0]$ 。那么对于结果相同的标签<code>AandB</code>、<code>(AxorB)andA</code>等等就都可以改写成<code>1000</code>。</p>
+<p>这种并列计算手工算有点麻烦了，我为此搞了一个<a target="_blank" rel="noopener" href="https://simple-and-crude.github.io/setcalc/">在线并列计算器</a>。点击左下角“导入基础配置”后将列宽设置为4，在右边表达式栏里即可输入表达式。比如<code>A and B</code>或者<code>~not (A or B)</code>等。点击计算即可得到结果。</p>
+<p><code>1000</code>有点长，我们就可以用十六进制表示为<code>8</code>。于是标签就可以叫<code>T_8</code>，仅仅三个字符的标签就可表示任意一类人群。</p>
+<p>在命令方块串的最后，我们别忘了把这些临时标签都去掉。</p>
+<h2 id="逻辑运算对照表"><a href="#逻辑运算对照表" class="headerlink" title="逻辑运算对照表"></a>逻辑运算对照表</h2><p>读者可自己尝试将标签<code>T_0</code>~`T_F`都用指令实现出来，相信对上面段所介绍的逻辑运算会有更深的理解。</p>
+<p>下方表格显示了标签<code>T_0</code>~`T_F`分别包含和排除了哪些情况的实体，还有各个标签的表达式。</p>
+<table>
+<thead>
+<tr>
+<th>标签</th>
+<th>运算结果</th>
+<th>全部符合</th>
+<th>只符合 A</th>
+<th>只符合 B</th>
+<th>全都不符</th>
+<th>最简表达式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T_0</td>
+<td>0000</td>
+<td>排除</td>
+<td>排除</td>
+<td>排除</td>
+<td>排除</td>
+<td>0</td>
+</tr>
+<tr>
+<td>T_1</td>
+<td>0001</td>
+<td>排除</td>
+<td>排除</td>
+<td>排除</td>
+<td>包含</td>
+<td>非(A或B)</td>
+</tr>
+<tr>
+<td>T_2</td>
+<td>0010</td>
+<td>排除</td>
+<td>排除</td>
+<td>包含</td>
+<td>排除</td>
+<td>(非A)与B</td>
+</tr>
+<tr>
+<td>T_3</td>
+<td>0011</td>
+<td>排除</td>
+<td>排除</td>
+<td>包含</td>
+<td>包含</td>
+<td>非A</td>
+</tr>
+<tr>
+<td>T_4</td>
+<td>0100</td>
+<td>排除</td>
+<td>包含</td>
+<td>排除</td>
+<td>排除</td>
+<td>A与(非B)</td>
+</tr>
+<tr>
+<td>T_5</td>
+<td>0101</td>
+<td>排除</td>
+<td>包含</td>
+<td>排除</td>
+<td>包含</td>
+<td>非B</td>
+</tr>
+<tr>
+<td>T_6</td>
+<td>0110</td>
+<td>排除</td>
+<td>包含</td>
+<td>包含</td>
+<td>排除</td>
+<td>(A或B)与(非(A与B))</td>
+</tr>
+<tr>
+<td>T_7</td>
+<td>0111</td>
+<td>排除</td>
+<td>包含</td>
+<td>包含</td>
+<td>包含</td>
+<td>非(A与B)</td>
+</tr>
+<tr>
+<td>T_8</td>
+<td>1000</td>
+<td>包含</td>
+<td>排除</td>
+<td>排除</td>
+<td>排除</td>
+<td>A与B</td>
+</tr>
+<tr>
+<td>T_9</td>
+<td>1001</td>
+<td>包含</td>
+<td>排除</td>
+<td>排除</td>
+<td>包含</td>
+<td>(非(A或B))或(A与B)</td>
+</tr>
+<tr>
+<td>T_A</td>
+<td>1010</td>
+<td>包含</td>
+<td>排除</td>
+<td>包含</td>
+<td>排除</td>
+<td>B</td>
+</tr>
+<tr>
+<td>T_B</td>
+<td>1011</td>
+<td>包含</td>
+<td>排除</td>
+<td>包含</td>
+<td>包含</td>
+<td>(非A)或B</td>
+</tr>
+<tr>
+<td>T_C</td>
+<td>1100</td>
+<td>包含</td>
+<td>包含</td>
+<td>排除</td>
+<td>排除</td>
+<td>A</td>
+</tr>
+<tr>
+<td>T_D</td>
+<td>1101</td>
+<td>包含</td>
+<td>包含</td>
+<td>排除</td>
+<td>包含</td>
+<td>A或(非B)</td>
+</tr>
+<tr>
+<td>T_E</td>
+<td>1110</td>
+<td>包含</td>
+<td>包含</td>
+<td>包含</td>
+<td>排除</td>
+<td>A或B</td>
+</tr>
+<tr>
+<td>T_F</td>
+<td>1111</td>
+<td>包含</td>
+<td>包含</td>
+<td>包含</td>
+<td>包含</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>可以发现这个表具有上下对称性，这是因为对于任意十六进制数 $n$ ，都有</p>
+<p>$$n =\ \sim (0\mathrm{x}F - n)$$</p>
+<p>也就是说，对于任意 $n$ 来说， $15-n$ 就是对 $n$ 进行取反的得数。</p>
+<p>我们可以验证一下，比如选择 $0\mathrm{x}3$ 来验证：</p>
+<p>$$\begin{aligned} &amp; \quad \ (\sim\ (0\mathrm{x}F-0\mathrm{x}3)) \newline &amp;= (\sim 0\mathrm{x}C) \newline &amp;= (\sim 0\mathrm{b}1100) \newline &amp;=0\mathrm{b}0011 \newline &amp;=0\mathrm{x}3 \newline \end{aligned}$$</p>
+<p>可以发现是成立的。所以如果我们已实现了T_ $n$ ，那我们就不需从头实现T_ $(0xF - n)$ ，只要对前者进行非运算就能得到后者。</p>
+<p>类似的情况还有很多。实现一个标签后就可用于计算另一个标签。使用上文中提到的并列计算工具或者直接手动进行演算，找到运算最少的方法，可以让标签的实现更加简单。</p>
+<p>到现在为止我们一直在研究两个条件之间的运算。那么三个以上的条件怎么办呢？其实多个条件的运算就是多来几次两条件运算。只要弄懂了两条件运算，就能套到其他多个条件的运算中，一样解决。</p>
+<h1 id="第-10-节"><a href="#第-10-节" class="headerlink" title="第 10 节"></a>第 10 节</h1><p>本节最后修改于 <code>2023 / 04 / 02</code></p>
+<h2 id="基于设计模式的指令生成"><a href="#基于设计模式的指令生成" class="headerlink" title="基于设计模式的指令生成"></a>基于设计模式的指令生成</h2><p>我们讨论了很多指令设计模式相关。<br>与计算机领域相似的，一旦我们得到了一个较为普遍的原理，我们便可以写入程序，大规模地使用。</p>
+<p>于是，一个野心勃勃的计划被提出来了：我们可以使用更简洁的语言来描述指令，最终使用某种解析器搭配指令设计模式对其中的细节进行补全。<br>这个计划更通俗的描述，就是“指令生成”。</p>
+<p>这个计划中的“更简洁的语言”学名叫做领域限定语言（DSL），为了方便，我们可以管它叫“代指令”。<br>由于我的世界指令语法十分拉跨，没有编程语言应有的大部分特征，甚至其本身就是一种通用性较弱的 DSL，所以我们不可能利用指令写一个解析器来实现代指令，而需借助外部的力量。<br>考虑到我们最终需要搞一个解析器，这种“外部力量”与实现解析器的编程语言就有很大关系了。<br>从灵活性的角度来讲，使用 C/C++ 作为代指令是不错的选择，甚至可能还有接轨 LLVM（一种适用于各种编程语言的黑魔法“解析器”）翻译成其他语言的光明前景。<br>但是从跨平台性以及本人的代码水平方面来讲，我觉得 JavaScript 是一个更好的选择。</p>
+<h3 id="代指令"><a href="#代指令" class="headerlink" title="代指令"></a>代指令</h3><p>由于本人十分抵触复杂的编译原理，代指令可以是由各种 API 构成的 JS 的一种内部 DSL。</p>
+<p>听起来比较抽象，意思就是说代指令实际上不能算一种新的语言，而只是一种有特殊代码风格的 JS。<br>举个例子，比如我们如果想判断现在有没有实体，如果有的话就说“玉米真的好帅”，否则就“玉米实在太帅了”。</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果代指令是一种基于 JS 的新的语言</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">'@e'</span>) {</span><br><span class="line">  <span class="title function_">say</span>(<span class="string">'玉米真的好帅'</span>);</span><br><span class="line">} <span class="keyword">else</span> {</span><br><span class="line">  <span class="title function_">say</span>(<span class="string">'玉米实在太帅了'</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果代指令是一种由 API 实现的 JS 的内部 DSL</span></span><br><span class="line"><span class="title class_">If</span>(<span class="title function_">select</span>(<span class="string">'@e'</span>))</span><br><span class="line">  .<span class="title class_">Then</span>(<span class="function">() =&gt;</span> {</span><br><span class="line">    <span class="title class_">Command</span>.<span class="title function_">say</span>(<span class="string">'玉米真的好帅'</span>);</span><br><span class="line">  })</span><br><span class="line">  .<span class="title class_">Else</span>(<span class="function">() =&gt;</span> {</span><br><span class="line">    <span class="title class_">Command</span>.<span class="title function_">say</span>(<span class="string">'玉米实在太帅了'</span>);</span><br><span class="line">  });</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> *   这里 If、select、Then、Else 等都是预先声明好的函数，</span></span><br><span class="line"><span class="comment"> *   也就是所谓的 API。</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>不难发现，上面的第二个示例中——也就是我们的做法——相较于第一个示例，更加的复杂、繁琐，也没那么易懂。<br>但是第二个示例可以直接作为 JS 运行，也就是说我们可以通过直接运行这个有特殊代码风格的 JS 来对其进行解析，而不是对其进行各种繁琐的各种静态分析。</p>
+<p>于是我们就这样绕过了编译原理……实际上没有。<br>由于代指令的结构较为复杂，我们实际上还是要由代指令对 API 的调用生成抽象语法树（AST），再通过对 AST 的操作实现指令的生成。<br>相当于我们是只绕过了词法分析和语法分析。</p>
+<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>知道了代指令的形式之后，我们可以着眼于另一重点——解析器。</p>
+<p>上面已经提到，我们使用 JS 编写解析器。<br>实际上本人赶潮流，最近 TypeScript 很流行，我是用的 TS 写的解析器。<br>这些都不重要，重要的是解析器的基本架构。</p>
+<ol>
+<li><p><strong>运行代指令</strong></p>
+<p>这一部分帮助我们跳过了词法分析和文法分析，充当了对代指令进行分析的角色，所以这部分也可以叫做“分析”。</p>
+<p>代指令中包含对 API 的调用，我们需要使用一些奇技淫巧完成这一步骤。<br>就拿本文中的MP模块做示例，每个MP模块实际上都可以看作是一个函数：有输入值，有返回值。<br>这意味着为了使结构更加清晰，我们也需要让代指令在声明函数后可以直接调用。<br>例如声明一个夸赞玉米MP模块，再调用它：</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 本人猜想，仅供参考</span></span><br><span class="line"><span class="keyword">const</span> func = <span class="title class_">Fn</span>(<span class="function">() =&gt;</span> {</span><br><span class="line">  <span class="title class_">Command</span>.<span class="title function_">say</span>(<span class="string">'玉米太帅'</span>);</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line"><span class="title function_">func</span>();</span><br></pre></td></tr></tbody></table></figure>
+
+<p>一个很显而易见的事实是，我们一定要让 <code>Fn</code> 这个 API 返回一个真正的函数，要不然我们 <code>func();</code> 就会在运行时报错。</p>
+<p>对于 API 的设计，这里就不展开讲了。</p>
+<p>实际开发中，发现最终得到指令的一个 AST 更方便接下来的工作。<br>所以 API 本质上是一堆对 AST 进行增删改查等工作的函数。</p>
+</li>
+<li><p><strong>“补全指令细节”</strong></p>
+<p>在得到指令的 AST 后，树上的各种条件分支、条件运算、函数声明等节点让人心惊胆战，我们根本没法通过这么花里胡哨多彩多样的 AST 直接生成对应的指令。<br>于是我们不得不对 AST 进行转译——这个步骤的正式名称叫做转译。</p>
+<p>我们在其中插入更多“平平无奇的命令节点”来代替各种花里胡哨的其他节点，最终把整颗花里胡哨的树压成两层的数组来表示每个命令方块组中的每个指令。</p>
+<p>如何使用普通的命令节点代替这些结构性节点呢？<br>这便是本文中指令设计模式发挥作用的时候。<br>就像条件分支，本文中使用MP过程这一基于标签或计分板的封闭系统，而MP过程的特征是普遍的。<br>就如“套路”、“模板”一样，我们只需要根据对应的模式，把对应的东西套上去就可以了。</p>
+<p>除了本文所描述的各种设计模式，还可以提供些额外服务。<br>这里举个例子：</p>
+<p>有些条件分支的条件是一个命令是否成功运行，相对应的，条件也可以是一个函数是否运行成功。<br>根据我们的MP模块相关知识，这个条件实际上是一串命令方块是否全部运行成功。<br>一个简单的方法是将这串命令方块全弄成有条件命令方块，然后在这串命令方块最后插入一个给任意实体打标签的连锁命令方块。<br>检测到是否任意实体有这个标签，可以判断最后这个命令方块是否成功运行，也就是整串命令方块是否成功运行。<br>如此，我们便将一个条件分支节点转化为了一个打标签命令和一个检测标签的命令。</p>
+<p>但是，如果这串命令方块中已经有命令方块是有条件命令方块，我们又要怎么判断是否成功运行呢？<br>这种情况下，一个比较合理的解决方法是在有条件命令方块的前一个命令方块前面把命令方块串劈成两半，视作两个命令方块组，分别检测是否成功运行。<br>最终判断两个命令方块是否都成功运行，若是则整条命令方块串都成功运行。</p>
+<p>这虽然不属于本文所介绍的设计模式之一，但确实可以应用到程序中。</p>
+<p>转译便是通过上述这些“指令设计套路”来对 AST 进行处理。</p>
+</li>
+<li><p><strong>输出指令</strong></p>
+<p>当我们有了一个结构简单的转译过的 AST 后，实际上我们就得到了我们生成的指令。<br>我们唯一需要做的是把这个 AST 弄为人类理解的样式。</p>
+<p>虽然这个步骤不是最困难的，但这个步骤是最困难的。<br>让人理解命令方块是一个比较困难的东西，现在貌似也没有普遍的描述命令方块的标准。<br>图片等可视化的也是一种选择，但是太麻烦了。<br>实际上本人还有一个项目是命令方块图片生成器，如果能直接套用这个项目就很好，但是目前这个项目进度缓慢，估计是指望不了了。</p>
+<p>当然，还有一种方法是直接生成 OOC，但是目前基岩版还不能这么搞。</p>
+</li>
+</ol>
+<h3 id="宣传"><a href="#宣传" class="headerlink" title="宣传"></a>宣传</h3><p>作为一个惊天地泣鬼神前无古人后无来者的看起来挺有用的玩意，却没有人关注，无疑是十分蛋疼的。<br>于是宣传便成为了比较重要的一个环节。</p>
+<p>其实可以说我现在就是用一个章节对这个东西进行宣传——当然还是希望本章节确实对诸读者有一定启发性——所以大概意思就是这玩意我确实搞起来了。</p>
+<p>项目是 GPL-3.0 协议开源的，大家可以访问<a target="_blank" rel="noopener" href="https://github.com/n9gc/mcdjs">代码仓库</a>，一起来搞这个项目。</p>
+<p>相对于手动使用设计模式进行重复性劳动，将设计模式套入程序中生成指令无疑是生产力的大进步。<br>在这个项目完成后，我希望可以借助这个项目代替我编写指令，我的注意力便可从“使用设计模式”移到“发现更多设计模式并应用到这个项目”。<br>我也希望诸读者可以试着采取我的这种方法。<br>如果大家都把使用设计模式的精力放到发现设计模式上，就像共产主义摆脱了低级劳动，那一定是《MC设计模式》的新世纪。</p>
+<div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">
+  <script type="text/javascript">
+    (function(d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+</div>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://ts1.cn.mm.bing.net/th/id/R-C.9a6de07448a467a377b44596d9ae5da0?rik=8WbMsGmKuRB5XA&amp;riu=http%3a%2f%2fpic.2265.com%2fupload%2f2021-8%2f2021810928385817.png&amp;ehk=Xi9L%2fFaaTMGPUxE7TnAHh3CKp6VDRo44YeVHbgK3Auk%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://ts1.cn.mm.bing.net/th/id/R-C.9a6de07448a467a377b44596d9ae5da0?rik=8WbMsGmKuRB5XA&amp;riu=http%3a%2f%2fpic.2265.com%2fupload%2f2021-8%2f2021810928385817.png&amp;ehk=Xi9L%2fFaaTMGPUxE7TnAHh3CKp6VDRo44YeVHbgK3Auk%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" title="头像" alt="头像"></a><div class="post-copyright__author_name">Mybbs —— 开源MC社区</div><div class="post-copyright__author_desc"></div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://bianb-hehe.github.io/2024/06/28/29569/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://bianb-hehe.github.io/2024/06/28/29569/')">我的世界命令设计</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://bianb-hehe.github.io/2024/06/28/29569/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=我的世界命令设计&amp;url=https://bianb-hehe.github.io/2024/06/28/29569/&amp;pic=" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://bianb-hehe.github.io" target="_blank">Mybbs</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E6%95%99%E7%A8%8B/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>教程<span class="tagsPageCount">18</span></a><a class="post-meta__box__tags" href="/tags/MC/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>MC<span class="tagsPageCount">19</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://ts1.cn.mm.bing.net/th/id/R-C.9a6de07448a467a377b44596d9ae5da0?rik=8WbMsGmKuRB5XA&amp;riu=http%3a%2f%2fpic.2265.com%2fupload%2f2021-8%2f2021810928385817.png&amp;ehk=Xi9L%2fFaaTMGPUxE7TnAHh3CKp6VDRo44YeVHbgK3Auk%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/06/09/35898/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" onerror="onerror=null;src='https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&amp;riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&amp;ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">[1.8x+][插件]CSS</div></div></a></div><div class="next-post pull-right"><a href="/2025/02/25/57892389/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" onerror="onerror=null;src='https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&amp;riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&amp;ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">「教程」在Deepin（Linux）下如何优雅地查词典？—— sdcv ⚡📚</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2024/05/31/105138570/" title="Minecraft-纯净服务器搭建全流程"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-05-31</div><div class="title">Minecraft-纯净服务器搭建全流程</div></div></a></div><div><a href="/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5BWiki%5D%5BPCD%5DMythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/" title="[转载] [联机教程] [Wiki][PCD]MythicMobs 帮助手册翻译 又更新了"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-05-31</div><div class="title">[转载] [联机教程] [Wiki][PCD]MythicMobs 帮助手册翻译 又更新了</div></div></a></div><div><a href="/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5B%E8%81%94%E6%9C%BA%5D%5B2021.1.1%5D%5BCPS%5D.schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/" title="[转载] [联机教程] [联机][2021.1.1][CPS].schematic文件格式详解"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-05-31</div><div class="title">[转载] [联机教程] [联机][2021.1.1][CPS].schematic文件格式详解</div></div></a></div><div><a href="/2024/06/07/opl_mc/" title="使用新版opl联机mc教程 | Mybbs"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-06-07</div><div class="title">使用新版opl联机mc教程 | Mybbs</div></div></a></div><div><a href="/2024/06/09/t-3385-1-1/" title="服务器配置文件优化 —— 让测试数据来说话吧！TPS最高提..."><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-06-09</div><div class="title">服务器配置文件优化 —— 让测试数据来说话吧！TPS最高提...</div></div></a></div><div><a href="/2024/06/06/130442795/" title="【原创】搭建一个Chat-GPT Proxy"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-06-06</div><div class="title">【原创】搭建一个Chat-GPT Proxy</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://ts1.cn.mm.bing.net/th/id/R-C.9a6de07448a467a377b44596d9ae5da0?rik=8WbMsGmKuRB5XA&amp;riu=http%3a%2f%2fpic.2265.com%2fupload%2f2021-8%2f2021810928385817.png&amp;ehk=Xi9L%2fFaaTMGPUxE7TnAHh3CKp6VDRo44YeVHbgK3Auk%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-1-%E8%8A%82"><span class="toc-number">1.</span> <span class="toc-text">第 1 节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD"><span class="toc-number">1.1.</span> <span class="toc-text">条件判断</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E6%9D%A1%E4%BB%B6%E5%91%BD%E4%BB%A4%E6%96%B9%E5%9D%97"><span class="toc-number">1.1.1.</span> <span class="toc-text">有条件命令方块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.1.2.</span> <span class="toc-text">选择器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MP%E8%BF%87%E7%A8%8B"><span class="toc-number">1.2.</span> <span class="toc-text">MP过程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-2-%E8%8A%82"><span class="toc-number">2.</span> <span class="toc-text">第 2 节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MP%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.1.</span> <span class="toc-text">MP事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MP%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.2.</span> <span class="toc-text">MP事件的实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MP%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%AE%80%E5%8D%95%E7%94%A8%E9%80%94"><span class="toc-number">2.3.</span> <span class="toc-text">MP事件的简单用途</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-3-%E8%8A%82"><span class="toc-number">3.</span> <span class="toc-text">第 3 节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MP%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%B8%BB%E5%8A%A8%E8%A7%A6%E5%8F%91"><span class="toc-number">3.1.</span> <span class="toc-text">MP事件的主动触发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MP%E4%BA%8B%E4%BB%B6%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%BC%82%E6%AD%A5"><span class="toc-number">3.2.</span> <span class="toc-text">MP事件实现的异步</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-4-%E8%8A%82"><span class="toc-number">4.</span> <span class="toc-text">第 4 节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MP%E6%A8%A1%E5%9D%97"><span class="toc-number">4.1.</span> <span class="toc-text">MP模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%A6%E5%8F%82%E6%95%B0%E8%B0%83%E7%94%A8MP%E6%A8%A1%E5%9D%97"><span class="toc-number">4.2.</span> <span class="toc-text">带参数调用MP模块</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-5-%E8%8A%82"><span class="toc-number">5.</span> <span class="toc-text">第 5 节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MP%E6%A8%A1%E5%9D%97%E7%9A%84%E9%80%92%E5%BD%92"><span class="toc-number">5.1.</span> <span class="toc-text">MP模块的递归</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E9%87%8F%E7%BB%99%E4%B8%9C%E8%A5%BF"><span class="toc-number">5.2.</span> <span class="toc-text">定量给东西</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AD%89%E5%B7%AE%E6%95%B0%E5%88%97"><span class="toc-number">5.3.</span> <span class="toc-text">等差数列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97"><span class="toc-number">5.4.</span> <span class="toc-text">斐波那契数列</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-6-%E8%8A%82"><span class="toc-number">6.</span> <span class="toc-text">第 6 节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MP%E6%A8%A1%E5%9D%97%E7%9A%84%E6%97%A0%E9%99%90%E5%88%B6%E9%80%92%E5%BD%92%E7%8C%9C%E6%83%B3"><span class="toc-number">6.1.</span> <span class="toc-text">MP模块的无限制递归猜想</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-7-%E8%8A%82"><span class="toc-number">7.</span> <span class="toc-text">第 7 节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9E%E4%B8%AA%E9%9B%AA%E7%90%83%E8%8F%9C%E5%8D%95"><span class="toc-number">7.1.</span> <span class="toc-text">搞个雪球菜单</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%B6%E6%9E%84"><span class="toc-number">7.1.1.</span> <span class="toc-text">架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D"><span class="toc-number">7.1.2.</span> <span class="toc-text">变量命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E5%88%86%E6%9D%BF"><span class="toc-number">7.1.3.</span> <span class="toc-text">计分板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E5%8A%9F%E8%83%BDMP%E6%A8%A1%E5%9D%97"><span class="toc-number">7.1.4.</span> <span class="toc-text">各种功能MP模块</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-7-5-%E8%8A%82"><span class="toc-number">8.</span> <span class="toc-text">第 7.5 节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9E%E4%B8%AA%E9%9B%AA%E7%90%83%E8%8F%9C%E5%8D%95%C2%B7%E7%BB%AD"><span class="toc-number">8.1.</span> <span class="toc-text">搞个雪球菜单·续</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7MP%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-number">8.1.1.</span> <span class="toc-text">用户MP事件监听器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E7%A4%BAMP%E6%A8%A1%E5%9D%97"><span class="toc-number">8.1.2.</span> <span class="toc-text">提示MP模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%95%8C%E9%9D%A2MP%E6%A8%A1%E5%9D%97"><span class="toc-number">8.1.3.</span> <span class="toc-text">界面MP模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E9%83%A8%E6%8C%87%E4%BB%A4"><span class="toc-number">8.1.4.</span> <span class="toc-text">全部指令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-8-%E8%8A%82"><span class="toc-number">9.</span> <span class="toc-text">第 8 节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E7%9A%84%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="toc-number">9.1.</span> <span class="toc-text">条件的逻辑运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="toc-number">9.1.1.</span> <span class="toc-text">逻辑运算的种类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E5%AE%9E%E7%8E%B0%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="toc-number">9.1.2.</span> <span class="toc-text">我的世界实现逻辑运算</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-9-%E8%8A%82"><span class="toc-number">10.</span> <span class="toc-text">第 9 节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E7%9A%84%E8%BF%9B%E9%98%B6%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="toc-number">10.1.</span> <span class="toc-text">条件的进阶逻辑运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E9%9D%9E"><span class="toc-number">10.1.1.</span> <span class="toc-text">与非</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%96%E9%9D%9E"><span class="toc-number">10.1.2.</span> <span class="toc-text">或非</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E6%88%96"><span class="toc-number">10.1.3.</span> <span class="toc-text">异或</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E5%AF%B9%E7%85%A7%E8%A1%A8"><span class="toc-number">10.2.</span> <span class="toc-text">逻辑运算对照表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC-10-%E8%8A%82"><span class="toc-number">11.</span> <span class="toc-text">第 10 节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%8C%87%E4%BB%A4%E7%94%9F%E6%88%90"><span class="toc-number">11.1.</span> <span class="toc-text">基于设计模式的指令生成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E6%8C%87%E4%BB%A4"><span class="toc-number">11.1.1.</span> <span class="toc-text">代指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90%E5%99%A8"><span class="toc-number">11.1.2.</span> <span class="toc-text">解析器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A3%E4%BC%A0"><span class="toc-number">11.1.3.</span> <span class="toc-text">宣传</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/26/8684/" title="[Github] MCBBS-Client">[Github] MCBBS-Client</a><time datetime="2026-05-26T05:03:32.000Z" title="发表于 2026-05-26 13:03:32">2026-05-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/24/2589378/" title="「Disqus」为 hexo 博客添加文章推荐功能">「Disqus」为 hexo 博客添加文章推荐功能</a><time datetime="2025-09-23T20:17:35.000Z" title="发表于 2025-09-24 04:17:35">2025-09-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/24/28523795/" title="「视频」MC绷带指令">「视频」MC绷带指令</a><time datetime="2025-09-23T20:17:35.000Z" title="发表于 2025-09-24 04:17:35">2025-09-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/04/07/GriefDefender/" title="GriefDefender | 支持混合端且功能丰富强大的领地插件">GriefDefender | 支持混合端且功能丰富强大的领地插件</a><time datetime="2025-04-07T04:12:13.000Z" title="发表于 2025-04-07 12:12:13">2025-04-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/25/57892389/" title="「教程」在Deepin（Linux）下如何优雅地查词典？—— sdcv ⚡📚">「教程」在Deepin（Linux）下如何优雅地查词典？—— sdcv ⚡📚</a><time datetime="2025-02-25T06:04:55.000Z" title="发表于 2025-02-25 14:04:55">2025-02-25</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2024 By <a class="footer-bar-link" href="/" title="Mybbs —— 开源MC社区" target="_blank">Mybbs —— 开源MC社区</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">53</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">8</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">推荐网站</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com" title="Github"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://tse1-mm.cn.bing.net/th/id/OIP-C.NGIDdVP6vw9ue_D-mrEVFQHaHa?rs=1&amp;pid=ImgDetMainhttps://tse1-mm.cn.bing.net/th/id/OIP-C.NGIDdVP6vw9ue_D-mrEVFQHaHa?rs=1&amp;pid=ImgDetMain" alt="Github"/><span class="back-menu-item-text">Github</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">暂无</div><div class="back-menu-list"><a class="back-menu-item" href="/%E9%83%BD%E8%AF%B4%E4%BA%86%E6%9A%82%E6%97%A0%E4%BA%86%EF%BC%81" title="暂无"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&risl=&pid=ImgRaw&r=0&quot;" data-lazy-src="https://ts1.cn.mm.bing.net/th/id/R-C.7b1a08b9cad671ec7cd3f40a937cf90c?rik=bscFCAJCax1ZJg&amp;riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f03%2f29%2f32fd5b5d10ca51980988fedeb9ecd694.jpg&amp;ehk=EBfBi6AGEGxpmzZ4S6BvITM75dU67ZEekiA%2bh0bxbtc%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" alt="暂无"/><span class="back-menu-item-text">暂无</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 本站</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 首页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/4238948.html"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 帮助</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&amp;k=AVD1Y5VnrY8z603_1dFsQrHfY1Uodp1O&amp;authKey=bX2RSjVq%2BYvjD2fsZ3PpEz4r2UAeV0e4lMLr4gTi7agxGPNsEfOP2M%2F%2Bw7i1mryp&amp;noverify=0&amp;group_code=565126072"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 交流群</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 帖子</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 帖子</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 板块</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/index1.html"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 发帖子</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 更多</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/HTML/tc.html"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 图床</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://www.pixelbbs.cn/source/plugin/bphp_clouds/upload/4438/20240601/417cb596663d3d5bf57708af2fa16eba.zip"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 源码</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/30588.html"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 导航站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/HTML/index2.html"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 服务器</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/gl.html"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 个人中心</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 小游戏</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/HTML/tcs.html"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 2048</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/HTML/tcc.html"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 贪吃蛇</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CSDN/" style="font-size: 0.88rem;">CSDN<sup>1</sup></a><a href="/tags/MC/" style="font-size: 0.88rem;">MC<sup>19</sup></a><a href="/tags/Mod/" style="font-size: 0.88rem;">Mod<sup>1</sup></a><a href="/tags/blog/" style="font-size: 0.88rem;">blog<sup>1</sup></a><a href="/tags/github/" style="font-size: 0.88rem;">github<sup>29</sup></a><a href="/tags/hexo/" style="font-size: 0.88rem;">hexo<sup>4</sup></a><a href="/tags/hexo%E4%B8%BB%E9%A2%98/" style="font-size: 0.88rem;">hexo主题<sup>9</sup></a><a href="/tags/java/" style="font-size: 0.88rem;">java<sup>1</sup></a><a href="/tags/paper/" style="font-size: 0.88rem;">paper<sup>1</sup></a><a href="/tags/%E4%BC%91%E9%97%B2/" style="font-size: 0.88rem;">休闲<sup>1</sup></a><a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 0.88rem;">分享<sup>5</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">工具<sup>4</sup></a><a href="/tags/%E6%89%98%E7%AE%A1/" style="font-size: 0.88rem;">托管<sup>1</sup></a><a href="/tags/%E6%8E%A8%E8%8D%90/" style="font-size: 0.88rem;">推荐<sup>1</sup></a><a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 0.88rem;">插件<sup>5</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 0.88rem;">教程<sup>18</sup></a><a href="/tags/%E6%95%B4%E5%90%88%E5%8C%85/" style="font-size: 0.88rem;">整合包<sup>3</sup></a><a href="/tags/%E6%96%B0%E9%97%BB/" style="font-size: 0.88rem;">新闻<sup>2</sup></a><a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 0.88rem;">服务器<sup>2</sup></a><a href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" style="font-size: 0.88rem;">服务端<sup>1</sup></a><a href="/tags/%E7%B2%BE%E5%93%81/" style="font-size: 0.88rem;">精品<sup>3</sup></a><a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 0.88rem;">视频<sup>1</sup></a><a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 0.88rem;">转载<sup>9</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="switch-commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Mybbs —— 开源MC社区 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "2898734480@qq.com";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
