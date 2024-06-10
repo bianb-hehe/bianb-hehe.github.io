@@ -105,8 +105,12 @@
             left: 50px;
         }
 
-        .icon-container .desktop-icon + .desktop-icon {
+        .icon-container .desktop-icon:nth-child(2) {
             left: 200px; /* 第二个图标距离左边200px */
+        }
+
+        .icon-container .desktop-icon:nth-child(3) {
+            left: 400px; /* 第三个图标距离左边400px */
         }
     </style>
 </head>
@@ -136,6 +140,13 @@
         <div class="tooltip">
             <strong>Mybbs</strong><br>
             Mybbs —— 本站
+        </div>
+    </a>
+    <a href="https://www.spigotmc.org/" target="_blank" class="desktop-icon">
+        <img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.V6-p4NjpleUvsgMrjrwD1wAAAA?rs=1&pid=ImgDetMain" alt="Spigot图标">
+        <div class="tooltip">
+            <strong>Spigot</strong><br>
+            国外知名mc论坛，有许多优质插件。
         </div>
     </a>
 </div>

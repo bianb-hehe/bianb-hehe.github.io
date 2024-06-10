@@ -951,14 +951,14 @@
   </url>
   
   <url>
-    <loc>https://bianb-hehe.github.io/tags/hexo%E4%B8%BB%E9%A2%98/</loc>
+    <loc>https://bianb-hehe.github.io/tags/java/</loc>
     <lastmod>2024-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://bianb-hehe.github.io/tags/java/</loc>
+    <loc>https://bianb-hehe.github.io/tags/hexo%E4%B8%BB%E9%A2%98/</loc>
     <lastmod>2024-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1007,13 +1007,6 @@
   </url>
   
   <url>
-    <loc>https://bianb-hehe.github.io/tags/CSDN/</loc>
-    <lastmod>2024-06-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://bianb-hehe.github.io/tags/paper/</loc>
     <lastmod>2024-06-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -1022,6 +1015,13 @@
   
   <url>
     <loc>https://bianb-hehe.github.io/tags/%E4%BC%91%E9%97%B2/</loc>
+    <lastmod>2024-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bianb-hehe.github.io/tags/CSDN/</loc>
     <lastmod>2024-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
