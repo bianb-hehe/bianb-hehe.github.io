@@ -73,7 +73,9 @@
 
         .desktop-icon img {
             width: 100px;
-            height: auto;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 15px; /* 圆角边框 */
         }
 
         .desktop-icon:hover {
@@ -120,6 +122,10 @@
         .icon-container .desktop-icon:nth-child(5) {
             left: 800px; /* 第五个图标距离左边800px */
         }
+
+        .icon-container .desktop-icon:nth-child(6) {
+            left: 1000px; /* 第六个图标距离左边1000px */
+        }
     </style>
 </head>
 <body>
@@ -161,8 +167,8 @@
         </div>
     </a>
     <!-- 第四个图标 -->
-    <a href="https://www.creepermc.org/" target="_blank" class="desktop-icon" style="left: 600px;">
-        <img src="https://c-ssl.duitang.com/uploads/blog/202011/17/20201117115210_d0856.png" alt="苦力怕论坛图标">
+    <a href="https://www.klpbbs.com/" target="_blank" class="desktop-icon" style="left: 600px;">
+        <img src="https://ts1.cn.mm.bing.net/th/id/R-C.f4352890d349df581802fea084daa45c?rik=%2b3HvSTbiLWsLKg&riu=http%3a%2f%2fpic.pdowncc.com%2fupload%2f2022-1%2f20221181034321929.png&ehk=9iiR31sfHXUnzbBdpRYuszd9qfOTjEjazN2OM2bPRcs%3d&risl=&pid=ImgRaw&r=0" alt="苦力怕论坛图标">
         <div class="tooltip">
             <strong>苦力怕论坛</strong><br>
             我的世界苦力怕论坛，一个MC玩家社区，拥有大量基岩版搬运、汉化资源。
@@ -176,8 +182,15 @@
             我的世界中文论坛
         </div>
     </a>
+    <!-- 第六个图标 -->
+    <a href="https://www.zuimc.com/" target="_blank" class="desktop-icon" style="left: 1000px;">
+        <img src="https://opmanage.233leyuan.com/image/F81SJ7MxrpkPV1DKwIHIhBQ5H2MXFq7E.jpg" alt="Zmc图标">
+        <div class="tooltip">
+            <strong>Zmc</strong><br>
+            最MC论坛 - 我的世界_Minecraft_联机_服主_资源
+        </div>
+    </a>
 </div>
-
 <script>
     const timeElement = document.getElementById('time');
     const weatherElement = document.getElementById('weather');
