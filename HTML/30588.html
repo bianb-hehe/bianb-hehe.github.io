@@ -66,8 +66,6 @@
 
         .desktop-icon {
             position: absolute;
-            left: 50px;
-            top: 120px;
             text-align: center;
             cursor: pointer;
             transition: transform 0.3s ease;
@@ -100,6 +98,16 @@
         .desktop-icon:hover .tooltip {
             display: block;
         }
+
+        .icon-container {
+            position: relative;
+            top: 120px;
+            left: 50px;
+        }
+
+        .icon-container .desktop-icon + .desktop-icon {
+            left: 200px; /* 第二个图标距离左边200px */
+        }
     </style>
 </head>
 <body>
@@ -115,13 +123,22 @@
     <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Windows_11_Logo.svg/1200px-Windows_11_Logo.svg.png" alt="Windows 11 Logo"></button>
 </div>
 
-<a href="https://www.mcbbs.net" target="_blank" class="desktop-icon">
-    <img src="https://ts1.cn.mm.bing.net/th/id/R-C.9a6de07448a467a377b44596d9ae5da0?rik=8WbMsGmKuRB5XA&riu=http%3a%2f%2fpic.2265.com%2fupload%2f2021-8%2f2021810928385817.png&ehk=Xi9L%2fFaaTMGPUxE7TnAHh3CKp6VDRo44YeVHbgK3Auk%3d&risl=&pid=ImgRaw&r=0" alt="Mcbbs图标">
-    <div class="tooltip">
-        <strong>Mcbbs</strong><br>
-        Minecraft中文论坛，国内最大的MC社区，拥有国内最大的国际版玩家群体及最多的社区资源。
-    </div>
-</a>
+<div class="icon-container">
+    <a href="https://www.mcbbs.net" target="_blank" class="desktop-icon">
+        <img src="https://ts1.cn.mm.bing.net/th/id/R-C.9a6de07448a467a377b44596d9ae5da0?rik=8WbMsGmKuRB5XA&riu=http%3a%2f%2fpic.2265.com%2fupload%2f2021-8%2f2021810928385817.png&ehk=Xi9L%2fFaaTMGPUxE7TnAHh3CKp6VDRo44YeVHbgK3Auk%3d&risl=&pid=ImgRaw&r=0" alt="Mcbbs图标">
+        <div class="tooltip">
+            <strong>Mcbbs</strong><br>
+            Minecraft中文论坛，国内最大的MC社区，拥有国内最大的国际版玩家群体及最多的社区资源。
+        </div>
+    </a>
+    <a href="/" target="_blank" class="desktop-icon">
+        <img src="https://img.picui.cn/free/2024/06/10/66669544c9c97.ico" alt="Mybbs图标">
+        <div class="tooltip">
+            <strong>Mybbs</strong><br>
+            Mybbs —— 本站
+        </div>
+    </a>
+</div>
 
 <script>
     const timeElement = document.getElementById('time');
@@ -129,4 +146,21 @@
 
     function updateTime() {
         const now = new Date();
-        const hours = now
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+
+    function updateWeather() {
+        // This function can be expanded to fetch real weather data
+        weatherElement.textContent = 'Sunny 25°C';
+    }
+
+    updateWeather();
+</script>
+</body>
+</html>
