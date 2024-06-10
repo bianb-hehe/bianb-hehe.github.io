@@ -58,9 +58,9 @@
     <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
-    
     <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
   </entry>
   
@@ -123,6 +123,60 @@
   </entry>
   
   <entry>
+    <title>[1.12x][catserver]星尘斗罗 —— 魂环/任务/美丽ui</title>
+    <link href="https://bianb-hehe.github.io/2025/04/07/6790g/"/>
+    <id>https://bianb-hehe.github.io/2025/04/07/6790g/</id>
+    <published>2025-04-07T04:12:13.000Z</published>
+    <updated>2024-06-10T03:31:41.682Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;星尘斗罗服务端文档&quot;&gt;&lt;a href=&quot;#星尘斗罗服务端文档&quot; class=&quot;headerlink&quot; title=&quot;星尘斗罗服务端文档&quot;&gt;&lt;/a&gt;星尘斗罗服务端文档&lt;/h3&gt;&lt;h4 id=&quot;插件信息&quot;&gt;&lt;a href=&quot;#插件信息&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="分享" scheme="https://bianb-hehe.github.io/categories/%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
+    
+    <category term="整合包" scheme="https://bianb-hehe.github.io/tags/%E6%95%B4%E5%90%88%E5%8C%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[1.12.2][Spigot]宝石世界——模型丨龙核丨剧情丨宠物丨任务丨钓鱼丨独立副本丨锻造</title>
+    <link href="https://bianb-hehe.github.io/2025/04/07/9hth/"/>
+    <id>https://bianb-hehe.github.io/2025/04/07/9hth/</id>
+    <published>2025-04-07T04:12:13.000Z</published>
+    <updated>2024-06-10T03:31:31.315Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;宝石世界-RPG-服务器&quot;&gt;&lt;a href=&quot;#宝石世界-RPG-服务器&quot; class=&quot;headerlink&quot; title=&quot;宝石世界 RPG 服务器&quot;&gt;&lt;/a&gt;宝石世界 RPG 服务器&lt;/h1&gt;&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="分享" scheme="https://bianb-hehe.github.io/categories/%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
+    
+    <category term="整合包" scheme="https://bianb-hehe.github.io/tags/%E6%95%B4%E5%90%88%E5%8C%85/"/>
+    
+  </entry>
+  
+  <entry>
     <title>GriefDefender | 支持混合端且功能丰富强大的领地插件</title>
     <link href="https://bianb-hehe.github.io/2025/04/07/GriefDefender/"/>
     <id>https://bianb-hehe.github.io/2025/04/07/GriefDefender/</id>
@@ -164,9 +218,9 @@
     <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
-    
     <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
   </entry>
   
@@ -281,33 +335,6 @@
   </entry>
   
   <entry>
-    <title>[1.8x+]LifeStealZ </title>
-    <link href="https://bianb-hehe.github.io/2024/08/08/483593/"/>
-    <id>https://bianb-hehe.github.io/2024/08/08/483593/</id>
-    <published>2024-08-08T05:53:56.000Z</published>
-    <updated>2024-06-09T11:37:52.979Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;LifeStealZ-插件简介&quot;&gt;&lt;a href=&quot;#LifeStealZ-插件简介&quot; class=&quot;headerlink&quot; title=&quot;LifeStealZ 插件简介&quot;&gt;&lt;/a&gt;LifeStealZ 插件简介&lt;/h2&gt;&lt;p&gt;LifeStealZ</summary>
-        
-      
-    
-    
-    
-    <category term="分享" scheme="https://bianb-hehe.github.io/categories/%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
-    
-    <category term="插件" scheme="https://bianb-hehe.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
     <title>[MC整合包]DIMpaperspigot</title>
     <link href="https://bianb-hehe.github.io/2024/08/08/46996/"/>
     <id>https://bianb-hehe.github.io/2024/08/08/46996/</id>
@@ -331,6 +358,33 @@
     <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
     
     <category term="整合包" scheme="https://bianb-hehe.github.io/tags/%E6%95%B4%E5%90%88%E5%8C%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[1.8x+]LifeStealZ </title>
+    <link href="https://bianb-hehe.github.io/2024/08/08/483593/"/>
+    <id>https://bianb-hehe.github.io/2024/08/08/483593/</id>
+    <published>2024-08-08T05:53:56.000Z</published>
+    <updated>2024-06-09T11:37:52.979Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;LifeStealZ-插件简介&quot;&gt;&lt;a href=&quot;#LifeStealZ-插件简介&quot; class=&quot;headerlink&quot; title=&quot;LifeStealZ 插件简介&quot;&gt;&lt;/a&gt;LifeStealZ 插件简介&lt;/h2&gt;&lt;p&gt;LifeStealZ</summary>
+        
+      
+    
+    
+    
+    <category term="分享" scheme="https://bianb-hehe.github.io/categories/%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
+    
+    <category term="插件" scheme="https://bianb-hehe.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
@@ -493,71 +547,6 @@
         
         
     <summary type="html">&lt;p&gt;如果你在寻找一个类似于RoseLoot并且支持数据包群系和结构检测的插件，推荐你试试 &lt;strong&gt;Custom Structures&lt;/strong&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="茶馆" scheme="https://bianb-hehe.github.io/categories/%E8%8C%B6%E9%A6%86/"/>
-    
-    <category term="问答" scheme="https://bianb-hehe.github.io/categories/%E8%8C%B6%E9%A6%86/%E9%97%AE%E7%AD%94/"/>
-    
-    
-    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
-    
-    <category term="茶馆" scheme="https://bianb-hehe.github.io/tags/%E8%8C%B6%E9%A6%86/"/>
-    
-    <category term="问答" scheme="https://bianb-hehe.github.io/tags/%E9%97%AE%E7%AD%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问答]阿里云的云服务器的公网，客户端为什么连接不到 </title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/43584/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/43584/</id>
-    <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-10T02:48:36.685Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在使用阿里云服务器时，如果客户端无法连接到你的云服务器的公网IP，可能是由于以下几个常见原因导致的：&lt;/p&gt;
-&lt;h3 id=&quot;1-安全组配置问题&quot;&gt;&lt;a href=&quot;#1-安全组配置问题&quot; class=&quot;headerlink&quot; title=&quot;1.</summary>
-        
-      
-    
-    
-    
-    <category term="茶馆" scheme="https://bianb-hehe.github.io/categories/%E8%8C%B6%E9%A6%86/"/>
-    
-    <category term="问答" scheme="https://bianb-hehe.github.io/categories/%E8%8C%B6%E9%A6%86/%E9%97%AE%E7%AD%94/"/>
-    
-    
-    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
-    
-    <category term="茶馆" scheme="https://bianb-hehe.github.io/tags/%E8%8C%B6%E9%A6%86/"/>
-    
-    <category term="问答" scheme="https://bianb-hehe.github.io/tags/%E9%97%AE%E7%AD%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Wiki][CY/SCT] CMI – 插件文档帮助 –</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/3858/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/3858/</id>
-    <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T10:19:15.533Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;游戏时间奖励 | PlayTime Rewards&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;游戏时间奖励系统可以在玩家积累到了一定时长的游戏时间后执行一段命令.&lt;/p&gt;
-&lt;p&gt;你可以设置每过 X 秒或游戏时长共 X</summary>
         
       
     
