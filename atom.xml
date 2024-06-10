@@ -44,27 +44,6 @@
   </entry>
   
   <entry>
-    <title>「Disqus」为 hexo 博客添加文章推荐功能</title>
-    <link href="https://bianb-hehe.github.io/2025/09/24/2589378/"/>
-    <id>https://bianb-hehe.github.io/2025/09/24/2589378/</id>
-    <published>2025-09-23T20:17:35.000Z</published>
-    <updated>2024-06-08T05:53:48.060Z</updated>
-    
-    
-    <summary type="html">这是 Disqus 最近更新的一项功能。 如果您已经为自己的博客启用 Disqus 评论系统，直接打开 https://disqus.com/admin/settings/recommendations/ 选择站点，找到Enable Recommendations on your site，选定布局样式，暂时支持更改的项目有：   显示文章发表日期  显示评论数  推荐栏目的布局  推荐文章的日期</summary>
-    
-    
-    
-    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
-    
-    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>「视频」MC绷带指令</title>
     <link href="https://bianb-hehe.github.io/2025/09/24/28523795/"/>
     <id>https://bianb-hehe.github.io/2025/09/24/28523795/</id>
@@ -90,6 +69,27 @@
     <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="视频" scheme="https://bianb-hehe.github.io/tags/%E8%A7%86%E9%A2%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>「Disqus」为 hexo 博客添加文章推荐功能</title>
+    <link href="https://bianb-hehe.github.io/2025/09/24/2589378/"/>
+    <id>https://bianb-hehe.github.io/2025/09/24/2589378/</id>
+    <published>2025-09-23T20:17:35.000Z</published>
+    <updated>2024-06-08T05:53:48.060Z</updated>
+    
+    
+    <summary type="html">这是 Disqus 最近更新的一项功能。 如果您已经为自己的博客启用 Disqus 评论系统，直接打开 https://disqus.com/admin/settings/recommendations/ 选择站点，找到Enable Recommendations on your site，选定布局样式，暂时支持更改的项目有：   显示文章发表日期  显示评论数  推荐栏目的布局  推荐文章的日期</summary>
+    
+    
+    
+    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
   </entry>
   
@@ -164,9 +164,9 @@
     <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
-    
     <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
   </entry>
   
@@ -226,6 +226,33 @@
   </entry>
   
   <entry>
+    <title>[1.8x+]Bedwarsrel 经典起床插件</title>
+    <link href="https://bianb-hehe.github.io/2024/08/08/397/"/>
+    <id>https://bianb-hehe.github.io/2024/08/08/397/</id>
+    <published>2024-08-08T05:53:56.000Z</published>
+    <updated>2024-06-09T10:42:22.461Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;BedwarsRel-插件文档&quot;&gt;&lt;a href=&quot;#BedwarsRel-插件文档&quot; class=&quot;headerlink&quot; title=&quot;BedwarsRel 插件文档&quot;&gt;&lt;/a&gt;BedwarsRel 插件文档&lt;/h1&gt;&lt;h2 id=&quot;介绍&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="分享" scheme="https://bianb-hehe.github.io/categories/%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
+    
+    <category term="插件" scheme="https://bianb-hehe.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[MCBE][指令]防秒退狗系统</title>
     <link href="https://bianb-hehe.github.io/2024/08/08/359/"/>
     <id>https://bianb-hehe.github.io/2024/08/08/359/</id>
@@ -254,18 +281,18 @@
   </entry>
   
   <entry>
-    <title>[1.8x+]Bedwarsrel 经典起床插件</title>
-    <link href="https://bianb-hehe.github.io/2024/08/08/397/"/>
-    <id>https://bianb-hehe.github.io/2024/08/08/397/</id>
+    <title>[1.8x+]LifeStealZ </title>
+    <link href="https://bianb-hehe.github.io/2024/08/08/483593/"/>
+    <id>https://bianb-hehe.github.io/2024/08/08/483593/</id>
     <published>2024-08-08T05:53:56.000Z</published>
-    <updated>2024-06-09T10:42:22.461Z</updated>
+    <updated>2024-06-09T11:37:52.979Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;BedwarsRel-插件文档&quot;&gt;&lt;a href=&quot;#BedwarsRel-插件文档&quot; class=&quot;headerlink&quot; title=&quot;BedwarsRel 插件文档&quot;&gt;&lt;/a&gt;BedwarsRel 插件文档&lt;/h1&gt;&lt;h2 id=&quot;介绍&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;LifeStealZ-插件简介&quot;&gt;&lt;a href=&quot;#LifeStealZ-插件简介&quot; class=&quot;headerlink&quot; title=&quot;LifeStealZ 插件简介&quot;&gt;&lt;/a&gt;LifeStealZ 插件简介&lt;/h2&gt;&lt;p&gt;LifeStealZ</summary>
         
       
     
@@ -304,33 +331,6 @@
     <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
     
     <category term="整合包" scheme="https://bianb-hehe.github.io/tags/%E6%95%B4%E5%90%88%E5%8C%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[1.8x+]LifeStealZ </title>
-    <link href="https://bianb-hehe.github.io/2024/08/08/483593/"/>
-    <id>https://bianb-hehe.github.io/2024/08/08/483593/</id>
-    <published>2024-08-08T05:53:56.000Z</published>
-    <updated>2024-06-09T11:37:52.979Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;LifeStealZ-插件简介&quot;&gt;&lt;a href=&quot;#LifeStealZ-插件简介&quot; class=&quot;headerlink&quot; title=&quot;LifeStealZ 插件简介&quot;&gt;&lt;/a&gt;LifeStealZ 插件简介&lt;/h2&gt;&lt;p&gt;LifeStealZ</summary>
-        
-      
-    
-    
-    
-    <category term="分享" scheme="https://bianb-hehe.github.io/categories/%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="MC" scheme="https://bianb-hehe.github.io/tags/MC/"/>
-    
-    <category term="插件" scheme="https://bianb-hehe.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
@@ -512,20 +512,20 @@
   </entry>
   
   <entry>
-    <title>[Wiki][CY/SCT] CMI – 插件文档帮助 –</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/3858/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/3858/</id>
+    <title>Cmi的聊天功能怎么关闭</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/396/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/396/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T10:19:15.533Z</updated>
+    <updated>2024-06-09T09:48:14.140Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;strong&gt;游戏时间奖励 | PlayTime Rewards&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;游戏时间奖励系统可以在玩家积累到了一定时长的游戏时间后执行一段命令.&lt;/p&gt;
-&lt;p&gt;你可以设置每过 X 秒或游戏时长共 X</summary>
+    <summary type="html">&lt;p&gt; CMI 插件的聊天功能，你可以通过修改 CMI 的配置文件来实现。以下是步骤：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.找到配置文件：在你的服务器目录中找到 CMI 的配置文件，通常位于</summary>
         
       
     
