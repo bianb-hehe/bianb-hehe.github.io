@@ -395,20 +395,18 @@
   </entry>
   
   <entry>
-    <title>Cmi的聊天功能怎么关闭</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/396/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/396/</id>
+    <title>TAB插件如何将头上的id改成cmi的nick设置的假名字</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/39658/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/39658/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T09:48:14.140Z</updated>
+    <updated>2024-06-09T10:01:43.384Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt; CMI 插件的聊天功能，你可以通过修改 CMI 的配置文件来实现。以下是步骤：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1.找到配置文件：在你的服务器目录中找到 CMI 的配置文件，通常位于</summary>
+    <summary type="html">&lt;p&gt;要将玩家在 TAB 插件中的头上显示的 ID 改为 CMI 插件中的 &lt;code&gt;nick&lt;/code&gt; 设置的假名字，你需要确保两个插件能够互相兼容，并且 TAB 插件能够读取到 CMI 设置的昵称。这通常涉及到对 TAB 插件的配置进行调整，使其使用 CMI</summary>
         
       
     
@@ -428,18 +426,20 @@
   </entry>
   
   <entry>
-    <title>TAB插件如何将头上的id改成cmi的nick设置的假名字</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/39658/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/39658/</id>
+    <title>Cmi的聊天功能怎么关闭</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/396/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/396/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T10:01:43.384Z</updated>
+    <updated>2024-06-09T09:48:14.140Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;要将玩家在 TAB 插件中的头上显示的 ID 改为 CMI 插件中的 &lt;code&gt;nick&lt;/code&gt; 设置的假名字，你需要确保两个插件能够互相兼容，并且 TAB 插件能够读取到 CMI 设置的昵称。这通常涉及到对 TAB 插件的配置进行调整，使其使用 CMI</summary>
+    <summary type="html">&lt;p&gt; CMI 插件的聊天功能，你可以通过修改 CMI 的配置文件来实现。以下是步骤：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.找到配置文件：在你的服务器目录中找到 CMI 的配置文件，通常位于</summary>
         
       
     
@@ -552,18 +552,18 @@
   </entry>
   
   <entry>
-    <title>Harbinger - 面向中文社区的 1.12.2 Forge Mod 开发指南</title>
-    <link href="https://bianb-hehe.github.io/2024/06/09/2956/"/>
-    <id>https://bianb-hehe.github.io/2024/06/09/2956/</id>
-    <published>2024-06-09T14:01:55.724Z</published>
-    <updated>2024-06-09T14:02:49.233Z</updated>
+    <title>[转载] [联机教程] [联机]MM帮助文档</title>
+    <link href="https://bianb-hehe.github.io/2024/06/10/25886/"/>
+    <id>https://bianb-hehe.github.io/2024/06/10/25886/</id>
+    <published>2024-06-10T01:40:17.566Z</published>
+    <updated>2024-06-10T01:41:04.147Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Harbinger-面向中文社区的-1-12-2-Forge-Mod-开发指南&quot;&gt;&lt;a href=&quot;#Harbinger-面向中文社区的-1-12-2-Forge-Mod-开发指南&quot; class=&quot;headerlink&quot; title=&quot;Harbinger -</summary>
+    <summary type="html">&lt;h2 id=&quot;MythicMobs-帮助手册&quot;&gt;&lt;a href=&quot;#MythicMobs-帮助手册&quot; class=&quot;headerlink&quot; title=&quot;MythicMobs 帮助手册&quot;&gt;&lt;/a&gt;MythicMobs 帮助手册&lt;/h2&gt;&lt;h3 id=&quot;目录&quot;&gt;&lt;a</summary>
         
       
     
