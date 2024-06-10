@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mcid ———— Mybbs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mcid</h1>
+    <input type="text" id="search" placeholder="搜索物品..." onkeyup="searchItems()">
+    <table id="itemsTable">
+        <thead>
+            <tr>
+                <th>物品 ID</th>
+                <th>英文名</th>
+                <th>中文名</th>
+            </tr>
+        </thead>
+        <tbody id="itemsBody">
+            <!-- JavaScript will populate the table -->
+        </tbody>
+    </table>
+
+    <script>
+        const items = [
+            { id: 'minecraft:stone', en: 'Stone', cn: '石头' },
+            { id: 'minecraft:grass', en: 'Grass Block', cn: '草方块' },
+            { id: 'minecraft:dirt', en: 'Dirt', cn: '泥土' },
+            { id: 'minecraft:cobblestone', en: 'Cobblestone', cn: '圆石' },
+            { id: 'minecraft:planks', en: 'Wooden Planks', cn: '木板' },
+            { id: 'minecraft:sapling', en: 'Sapling', cn: '树苗' },
+            { id: 'minecraft:bedrock', en: 'Bedrock', cn: '基岩' },
+            { id: 'minecraft:water', en: 'Water', cn: '水' },
+            { id: 'minecraft:lava', en: 'Lava', cn: '岩浆' },
+            { id: 'minecraft:sand', en: 'Sand', cn: '沙子' },
+            { id: 'minecraft:gravel', en: 'Gravel', cn: '沙砾' },
+            { id: 'minecraft:gold_ore', en: 'Gold Ore', cn: '金矿石' },
+            { id: 'minecraft:iron_ore', en: 'Iron Ore', cn: '铁矿石' },
+            { id: 'minecraft:coal_ore', en: 'Coal Ore', cn: '煤矿石' },
+            { id: 'minecraft:log', en: 'Log', cn: '原木' },
+            { id: 'minecraft:leaves', en: 'Leaves', cn: '树叶' },
+            { id: 'minecraft:sponge', en: 'Sponge', cn: '海绵' },
+            { id: 'minecraft:glass', en: 'Glass', cn: '玻璃' },
+            { id: 'minecraft:lapis_ore', en: 'Lapis Lazuli Ore', cn: '青金石矿石' },
+			{ id: 'minecraft:oak_sapling', en: 'oak_sapling', cn: '橡树树苗' },
+			{ id: 'minecraft:bedrock', en: 'bedrock', cn: '基岩' },
+			{ id: 'minecraft:flowing_water', en: 'flowing_water', cn: '流动水' },
+			{ id: 'minecraft:water', en: 'water', cn: '水' },
+			{ id: 'minecraft:Flowing_Lava', en: 'Flowing Lava', cn: '流动熔岩' },
+			{ id: 'minecarft:sand', en: 'sand', cn: '沙子' },
+			{ id: 'minecarft:red_sand', en: 'red sand', cn: '红沙' },
+			{ id: 'minecraft:redstone_ore', en: 'Redstone Ore', cn: '红石矿石' },
+            { id: 'minecraft:lapis_ore', en: 'Lapis Lazuli Ore', cn: '青金石矿石' },
+            { id: 'minecraft:emerald_ore', en: 'Emerald Ore', cn: '绿宝石矿石' },
+            { id: 'minecraft:nether_quartz_ore', en: 'Nether Quartz Ore', cn: '下界石英矿石' },
+            { id: 'minecraft:nether_gold_ore', en: 'Nether Gold Ore', cn: '下界金矿石' },
+            { id: 'minecraft:deepslate_coal_ore', en: 'Deepslate Coal Ore', cn: '深板岩煤矿石' },
+            { id: 'minecraft:deepslate_iron_ore', en: 'Deepslate Iron Ore', cn: '深板岩铁矿石' },
+            { id: 'minecraft:deepslate_diamond_ore', en: 'Deepslate Diamond Ore', cn: '深板岩钻石矿石' },
+            { id: 'minecraft:deepslate_gold_ore', en: 'Deepslate Gold Ore', cn: '深板岩金矿石' },
+            { id: 'minecraft:deepslate_redstone_ore', en: 'Deepslate Redstone Ore', cn: '深板岩红石矿石' },
+			{"id": "minecraft:spruce_log", "en": "Spruce Log", "cn": "云杉原木"},
+		    {"id": "minecraft:birch_log", "en": "Birch Log", "cn": "白桦原木"},
+		    {"id": "minecraft:jungle_log", "en": "Jungle Log", "cn": "丛林原木"},
+		    {"id": "minecraft:acacia_log", "en": "Acacia Log", "cn": "金合欢原木"},
+		    {"id": "minecraft:dark_oak_log", "en": "Dark Oak Log", "cn": "深色橡木原木"},
+			{"id": "minecraft:glowstone_dust", "en": "Glowstone Dust", "cn": "荧石粉"},
+			{"id": "minecraft:clock", "en": "Clock", "cn": "钟"},
+		    {"id": "minecraft:pufferfish", "en": "Pufferfish", "cn": "河豚"},
+		    {"id": "minecraft:fermented_spider_eye", "en": "Fermented Spider Eye", "cn": "发酵蛛眼"},
+		    {"id": "minecraft:blaze_powder", "en": "Blaze Powder", "cn": "烈焰粉"},
+		    {"id": "minecraft:magma_cream", "en": "Magma Cream", "cn": "岩浆膏"},
+			{"id": "minecraft:brewing_stand", "en": "Brewing Stand", "cn": "酿造台"},
+		    {"id": "minecraft:cauldron", "en": "Cauldron", "cn": "炼药锅"},
+		    {"id": "minecraft:speckled_melon", "en": "Glistering Melon", "cn": "闪烁的西瓜"},
+		    {"id": "minecraft:spawn_egg", "en": "Spawn Egg", "cn": "生成蛋"},
+			{"id": "minecraft:stripped_oak_log", "en": "Stripped Oak Log", "cn": "去皮橡木原木"},
+			{"id": "minecraft:stripped_spruce_log", "en": "Stripped Spruce Log", "cn": "去皮云杉原木"},
+			{"id": "minecraft:stripped_birch_log", "en": "Stripped Birch Log", "cn": "去皮白桦原木"},
+		    {"id": "minecraft:stripped_jungle_log", "en": "Stripped Jungle Log", "cn": "去皮丛林原木"},
+		    {"id": "minecraft:stripped_acacia_log", "en": "Stripped Acacia Log", "cn": "去皮金合欢原木"},
+		    {"id": "minecraft:stripped_dark_oak_log", "en": "Stripped Dark Oak Log", "cn": "去皮深色橡木原木"},
+	    	  {"id": "minecraft:stripped_oak_wood", "en": "Stripped Oak Wood", "cn": "去皮橡木"},
+			  {"id": "minecraft:stripped_spruce_wood", "en": "Stripped Spruce Wood", "cn": "去皮云杉木"},
+			  {"id": "minecraft:stripped_birch_wood", "en": "Stripped Birch Wood", "cn": "去皮白桦木"},
+			  {"id": "minecraft:stripped_jungle_wood", "en": "Stripped Jungle Wood", "cn": "去皮丛林木"},
+			  {"id": "minecraft:stripped_acacia_wood", "en": "Stripped Acacia Wood", "cn": "去皮金合欢木"},
+			  {"id": "minecraft:stripped_dark_oak_wood", "en": "Stripped Dark Oak Wood", "cn": "去皮深色橡木"},
+			  {"id": "minecraft:fish", "en": "Raw Fish", "cn": "生鱼"},
+			  {"id": "minecraft:cooked_fish", "en": "Cooked Fish", "cn": "熟鱼"},
+			  {"id": "minecraft:fermented_spider_eye", "en": "Fermented Spider Eye", "cn": "发酵蜘蛛眼"},
+			  {"id": "minecraft:glistering_melon_slice", "en": "Glistering Melon Slice", "cn": "闪烁的西瓜片"},
+			      {"id": "minecraft:phantom_membrane", "en": "Phantom Membrane", "cn": "幻翼膜"},
+			      {"id": "minecraft:nautilus_shell", "en": "Nautilus Shell", "cn": "鹦鹉螺壳"},
+			      {"id": "minecraft:heart_of_the_sea", "en": "Heart of the Sea", "cn": "海洋之心"},
+			      {"id": "minecraft:turtle_egg", "en": "Turtle Egg", "cn": "海龟蛋"},
+			      {"id": "minecraft:scute", "en": "Scute", "cn": "鳞片"},
+			      {"id": "minecraft:conduit", "en": "Conduit", "cn": "潮涌核心"},
+			      {"id": "minecraft:totem_of_undying", "en": "Totem of Undying", "cn": "不死图腾"},
+			      {"id": "minecraft:honey_bottle", "en": "Honey Bottle", "cn": "蜂蜜瓶"},
+			      {"id": "minecraft:honeycomb", "en": "Honeycomb", "cn": "蜂蜜脾"},
+			      {"id": "minecraft:nether_star", "en": "Nether Star", "cn": "下界之星"},
+			      {"id": "minecraft:shulker_shell", "en": "Shulker Shell", "cn": "潜影壳"},
+			      {"id": "minecraft:chorus_fruit", "en": "Chorus Fruit", "cn": "紫颂果"},
+			      {"id": "minecraft:popped_chorus_fruit", "en": "Popped Chorus Fruit", "cn": "爆裂紫颂果"},
+			      {"id": "minecraft:dragon_breath", "en": "Dragon's Breath", "cn": "龙息"},
+			      {"id": "minecraft:elytra", "en": "Elytra", "cn": "鞘翅"},
+			      {"id": "minecraft:beacon", "en": "Beacon", "cn": "信标"},
+			      {"id": "minecraft:bell", "en": "Bell", "cn": "钟"},
+			      {"id": "minecraft:lantern", "en": "Lantern", "cn": "灯笼"},
+			      {"id": "minecraft:blue_ice", "en": "Blue Ice", "cn": "蓝冰"},
+			      {"id": "minecraft:sea_pickle", "en": "Sea Pickle", "cn": "海泡菜"},
+			      {"id": "minecraft:bamboo", "en": "Bamboo", "cn": "竹子"},
+			      {"id": "minecraft:sweet_berries", "en": "Sweet Berries", "cn": "甜浆果"},
+			      {"id": "minecraft:campfire", "en": "Campfire", "cn": "营火"},
+			      {"id": "minecraft:barrel", "en": "Barrel", "cn": "桶"},
+			      {"id": "minecraft:smoker", "en": "Smoker", "cn": "烟熏炉"},
+			      {"id": "minecraft:blast_furnace", "en": "Blast Furnace", "cn": "高炉"},
+			      {"id": "minecraft:grindstone", "en": "Grindstone", "cn": "磨石"},
+			      {"id": "minecraft:smithing_table", "en": "Smithing Table", "cn": "锻造台"},
+			      {"id": "minecraft:fletching_table", "en": "Fletching Table", "cn": "制箭台"},
+				
+				      {"id": "minecraft:egg", "en": "Egg", "cn": "蛋"},
+				      {"id": "minecraft:compass", "en": "Compass", "cn": "指南针"},
+				      {"id": "minecraft:fishing_rod", "en": "Fishing Rod", "cn": "钓鱼竿"},
+				      {"id": "minecraft:clock", "en": "Clock", "cn": "时钟"},
+				      {"id": "minecraft:obsidian", "en": "Obsidian", "cn": "黑曜石"},
+				          {"id": "minecraft:torch", "en": "Torch", "cn": "火把"},
+				          {"id": "minecraft:bookshelf", "en": "Bookshelf", "cn": "书架"},
+				          {"id": "minecraft:mossy_cobblestone", "en": "Moss Stone", "cn": "苔石"},
+				          {"id": "minecraft:netherrack", "en": "Netherrack", "cn": "地狱岩"},
+				          {"id": "minecraft:soul_sand", "en": "Soul Sand", "cn": "灵魂沙"},
+				          {"id": "minecraft:glowstone", "en": "Glowstone", "cn": "萤石"},
+				          {"id": "minecraft:cake", "en": "Cake", "cn": "蛋糕"},
+				          {"id": "minecraft:crafting_table", "en": "Crafting Table", "cn": "工作台"},
+				          {"id": "minecraft:furnace", "en": "Furnace", "cn": "熔炉"},
+				          {"id": "minecraft:ladder", "en": "Ladder", "cn": "梯子"},
+				          {"id": "minecraft:lever", "en": "Lever", "cn": "拉杆"},
+				          {"id": "minecraft:stone_pressure_plate", "en": "Stone Pressure Plate", "cn": "石质压力板"},
+				          {"id": "minecraft:iron_door", "en": "Iron Door", "cn": "铁门"},
+				          {"id": "minecraft:wooden_pressure_plate", "en": "Wooden Pressure Plate", "cn": "木质压力板"},
+				          {"id": "minecraft:redstone_ore", "en": "Redstone Ore", "cn": "红石矿石"},
+				          {"id": "minecraft:ice", "en": "Ice", "cn": "冰"},
+				          {"id": "minecraft:snow", "en": "Snow Block", "cn": "雪块"},
+				          {"id": "minecraft:cactus", "en": "Cactus", "cn": "仙人掌"},
+				          {"id": "minecraft:clay", "en": "Clay", "cn": "粘土"},
+				          {"id": "minecraft:jukebox", "en": "Jukebox", "cn": "唱片机"},
+				          {"id": "minecraft:fence", "en": "Oak Fence", "cn": "橡木栅栏"},
+				          {"id": "minecraft:pumpkin", "en": "Pumpkin", "cn": "南瓜"},
+				          {"id": "minecraft:shears", "en": "Shears", "cn": "剪刀"},
+				          {"id": "minecraft:ender_pearl", "en": "Ender Pearl", "cn": "末影珍珠"},
+				          {"id": "minecraft:blaze_rod", "en": "Blaze Rod", "cn": "烈焰棒"},
+				          {"id": "minecraft:ghast_tear", "en": "Ghast Tear", "cn": "恶魂之泪"},
+				          {"id": "minecraft:gold_nugget", "en": "Gold Nugget", "cn": "金粒"},
+				          {"id": "minecraft:nether_wart", "en": "Nether Wart", "cn": "地狱疣"},
+						  {"id": "minecraft:polished_blackstone", "en": "Polished Blackstone", "cn": "磨制黑石"},
+						      {"id": "minecraft:polished_blackstone_bricks", "en": "Polished Blackstone Bricks", "cn": "磨制黑石砖"},
+						      {"id": "minecraft:cracked_polished_blackstone_bricks", "en": "Cracked Polished Blackstone Bricks", "cn": "裂纹磨制黑石砖"},
+						      {"id": "minecraft:chiseled_polished_blackstone", "en": "Chiseled Polished Blackstone", "cn": "錾制磨制黑石"},
+						      {"id": "minecraft:polished_blackstone_brick_slab", "en": "Polished Blackstone Brick Slab", "cn": "磨制黑石砖台阶"},
+						      {"id": "minecraft:polished_blackstone_brick_stairs", "en": "Polished Blackstone Brick Stairs", "cn": "磨制黑石砖楼梯"},
+						      {"id": "minecraft:polished_blackstone_brick_wall", "en": "Polished Blackstone Brick Wall", "cn": "磨制黑石砖墙"},
+						      {"id": "minecraft:polished_blackstone_stairs", "en": "Polished Blackstone Stairs", "cn": "磨制黑石楼梯"},
+						      {"id": "minecraft:polished_blackstone_slab", "en": "Polished Blackstone Slab", "cn": "磨制黑石台阶"},
+						      {"id": "minecraft:polished_blackstone_wall", "en": "Polished Blackstone Wall", "cn": "磨制黑石墙"},
+						      {"id": "minecraft:coal_ore", "en": "Coal Ore", "cn": "煤矿石"},
+						      {"id": "minecraft:iron_ore", "en": "Iron Ore", "cn": "铁矿石"},
+						      {"id": "minecraft:redstone_ore", "en": "Redstone Ore", "cn": "红石矿石"},
+						      {"id": "minecraft:gold_ore", "en": "Gold Ore", "cn": "金矿石"},
+						      {"id": "minecraft:lapis_ore", "en": "Lapis Lazuli Ore", "cn": "青金石矿石"},
+						      {"id": "minecraft:diamond_ore", "en": "Diamond Ore", "cn": "钻石矿石"},
+						      {"id": "minecraft:emerald_ore", "en": "Emerald Ore", "cn": "绿宝石矿石"},
+						      {"id": "minecraft:copper_ore", "en": "Copper Ore", "cn": "铜矿石"},
+						      {"id": "minecraft:deepslate_coal_ore", "en": "Deepslate Coal Ore", "cn": "深板岩煤矿石"},
+						      {"id": "minecraft:deepslate_iron_ore", "en": "Deepslate Iron Ore", "cn": "深板岩铁矿石"},
+						      {"id": "minecraft:deepslate_redstone_ore", "en": "Deepslate Redstone Ore", "cn": "深板岩红石矿石"},
+						      {"id": "minecraft:deepslate_gold_ore", "en": "Deepslate Gold Ore", "cn": "深板岩金矿石"},
+						      {"id": "minecraft:deepslate_lapis_ore", "en": "Deepslate Lapis Lazuli Ore", "cn": "深板岩青金石矿石"},
+						      {"id": "minecraft:deepslate_diamond_ore", "en": "Deepslate Diamond Ore", "cn": "深板岩钻石矿石"},
+						      {"id": "minecraft:deepslate_emerald_ore", "en": "Deepslate Emerald Ore", "cn": "深板岩绿宝石矿石"},
+						      {"id": "minecraft:nether_quartz_ore", "en": "Nether Quartz Ore", "cn": "下界石英矿石"},
+						      {"id": "minecraft:nether_gold_ore", "en": "Nether Gold Ore", "cn": "下界金矿石"},
+						      {"id": "minecraft:gilded_blackstone", "en": "Gilded Blackstone", "cn": "镶金黑石"},
+						      {"id": "minecraft:raw_iron_block", "en": "Block of Raw Iron", "cn": "原铁块"},
+						      {"id": "minecraft:raw_gold_block", "en": "Block of Raw Gold", "cn": "原金块"},
+						      {"id": "minecraft:raw_copper_block", "en": "Block of Raw Copper", "cn": "原铜块"},
+				      
+				      
+				      {"id": "minecraft:dye", "en": "Ink Sack", "cn": "墨囊"},
+				      {"id": "minecraft:bone", "en": "Bone", "cn": "骨头"},
+				      {"id": "minecraft:sugar", "en": "Sugar", "cn": "糖"},
+				      {"id": "minecraft:cake", "en": "Cake", "cn": "蛋糕"},
+				      {"id": "minecraft:bed", "en": "Bed", "cn": "床"},
+				      {"id": "minecraft:repeater", "en": "Redstone Repeater", "cn": "红石中继器"},
+				      {"id": "minecraft:cookie", "en": "Cookie", "cn": "曲奇"},
+				      {"id": "minecraft:filled_map", "en": "Map", "cn": "地图"},
+				      {"id": "minecraft:shears", "en": "Shears", "cn": "剪刀"},
+				      {"id": "minecraft:melon", "en": "Melon", "cn": "西瓜"},
+				      {"id": "minecraft:pumpkin_seeds", "en": "Pumpkin Seeds", "cn": "南瓜种子"},
+				      {"id": "minecraft:melon_seeds", "en": "Melon Seeds", "cn": "西瓜种子"},
+				      {"id": "minecraft:beef", "en": "Raw Beef", "cn": "生牛肉"},
+				      {"id": "minecraft:cooked_beef", "en": "Steak", "cn": "牛排"},
+				      {"id": "minecraft:chicken", "en": "Raw Chicken", "cn": "生鸡肉"},
+				      {"id": "minecraft:cooked_chicken", "en": "Cooked Chicken", "cn": "熟鸡肉"},
+				      {"id": "minecraft:rotten_flesh", "en": "Rotten Flesh", "cn": "腐肉"},
+				      {"id": "minecraft:ender_pearl", "en": "Ender Pearl", "cn": "末影珍珠"},
+				      {"id": "minecraft:blaze_rod", "en": "Blaze Rod", "cn": "烈焰棒"},
+				      {"id": "minecraft:ghast_tear", "en": "Ghast Tear", "cn": "恶魂之泪"},
+				      {"id": "minecraft:gold_nugget", "en": "Gold Nugget", "cn": "金粒"},
+				      {"id": "minecraft:nether_wart", "en": "Nether Wart", "cn": "地狱疣"},
+				  
+
+            { id: 'minecraft:lapis_block', en: 'Lapis Lazuli Block', cn: '青金石块' },
+			
+			
+        ];
+
+        function populateTable() {
+            const tableBody = document.getElementById('itemsBody');
+            tableBody.innerHTML = '';
+            items.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${item.id}</td><td>${item.en}</td><td>${item.cn}</td>`;
+                tableBody.appendChild(row);
+            });
+        }
+
+        function searchItems() {
+            const input = document.getElementById('search');
+            const filter = input.value.toLowerCase();
+            const tableBody = document.getElementById('itemsBody');
+            tableBody.innerHTML = '';
+            items
+                .filter(item => item.id.toLowerCase().includes(filter) || item.en.toLowerCase().includes(filter) || item.cn.toLowerCase().includes(filter))
+                .forEach(item => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td>${item.id}</td><td>${item.en}</td><td>${item.cn}</td>`;
+                    tableBody.appendChild(row);
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            populateTable();
+        });
+    </script>
+</body>
+</html>
