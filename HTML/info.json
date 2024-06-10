@@ -1,0 +1,450 @@
+{
+    "header": [
+        " *   ",
+        " *   如非需要调试，本文件可删除",
+        " *   非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.wang/faq#INFO-JSON",
+        " *   "
+    ],
+    "resources": [
+        {
+            "url": "https://www.mcyyy.com/",
+            "path": "index.html",
+            "saved": true,
+            "size": 8847,
+            "children": [
+                {
+                    "url": "https://www.mcyyy.com/assets/images/rocket.png",
+                    "path": "img/rocket.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/images/Globe.png",
+                    "path": "img/Globe.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/images/Star.png",
+                    "path": "img/Star.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/images/c.jpg",
+                    "path": "img/c.jpeg",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/images/bd.jpg",
+                    "path": "img/bd.jpeg",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/images/mcbbs.png",
+                    "path": "img/mcbbs.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/images/mcmp.jpg",
+                    "path": "img/mcmp.jpeg",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/js/live2d.js",
+                    "path": "js/live2d.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js",
+                    "saved": false
+                },
+                {
+                    "url": "https://www.mcyyy.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+                    "path": "js/email-decode.min.js",
+                    "saved": true,
+                    "size": 1239,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/js/1.js",
+                    "path": "js/1.js",
+                    "saved": true,
+                    "size": 86653,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/js/2.js",
+                    "path": "js/2.js",
+                    "saved": true,
+                    "size": 18857,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/js/3.js",
+                    "path": "js/3.js",
+                    "saved": true,
+                    "size": 51138,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/js/slick.min.js",
+                    "path": "js/slick.min.js",
+                    "saved": true,
+                    "size": 41953,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/js/4.js",
+                    "path": "js/4.js",
+                    "saved": true,
+                    "size": 3606,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/js/jquery.filterizr.min.js",
+                    "path": "js/jquery.filterizr.min.js",
+                    "saved": true,
+                    "size": 12034,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/js/jquery.magnific-popup.min.js",
+                    "path": "js/jquery.magnific-popup.min.js",
+                    "saved": true,
+                    "size": 20216,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/js/counter.js",
+                    "path": "js/counter.js",
+                    "saved": true,
+                    "size": 426,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/js/app.js",
+                    "path": "js/app.js",
+                    "saved": true,
+                    "size": 693,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/js/custom.js",
+                    "path": "js/custom.js",
+                    "saved": true,
+                    "size": 4147,
+                    "children": []
+                },
+                {
+                    "url": "https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css",
+                    "saved": false
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/css/1.css",
+                    "path": "css/1.css",
+                    "saved": true,
+                    "size": 28988,
+                    "children": [
+                        {
+                            "url": "https://www.mcyyy.com/assets/fonts/fontawesome-webfont.eot?v=4.6.3",
+                            "path": "fonts/fontawesome-webfont_1.eot",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://www.mcyyy.com/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3",
+                            "path": "fonts/fontawesome-webfont.eot",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://www.mcyyy.com/assets/fonts/fontawesome-webfont.woff2?v=4.6.3",
+                            "path": "fonts/fontawesome-webfont.woff2",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://www.mcyyy.com/assets/fonts/fontawesome-webfont.woff?v=4.6.3",
+                            "path": "fonts/fontawesome-webfont.woff",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://www.mcyyy.com/assets/fonts/fontawesome-webfont.ttf?v=4.6.3",
+                            "path": "fonts/fontawesome-webfont.ttf",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://www.mcyyy.com/assets/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular",
+                            "path": "img/fontawesome-webfont.svg",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/css/2.css",
+                    "path": "css/2.css",
+                    "saved": true,
+                    "size": 125151,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/main.css",
+                    "path": "css/main.css",
+                    "saved": true,
+                    "size": 4863,
+                    "children": [
+                        {
+                            "url": "https://www.mcyyy.com/assets/images/2.png",
+                            "path": "img/2.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://www.mcyyy.com/assets/images/3.jpg",
+                            "path": "img/3.jpg",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/css/slick.css",
+                    "path": "css/slick.css",
+                    "saved": true,
+                    "size": 3459,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/css/magnific-popup.css",
+                    "path": "css/magnific-popup.css",
+                    "saved": true,
+                    "size": 5110,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/css/circle.css",
+                    "path": "css/circle.css",
+                    "saved": true,
+                    "size": 1310,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/css/normalize.css",
+                    "path": "css/normalize.css",
+                    "saved": true,
+                    "size": 1889,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/css/CandyUI.css",
+                    "path": "css/CandyUI.css",
+                    "saved": true,
+                    "size": 31440,
+                    "children": []
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/css/mine-strapUI.css",
+                    "path": "css/mine-strapUI.css",
+                    "saved": true,
+                    "size": 6151,
+                    "children": [
+                        {
+                            "url": "https://www.mcyyy.com/assets/images/bg.png",
+                            "path": "img/bg.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "url": "https://www.mcyyy.com/style.css",
+                    "path": "css/style.css",
+                    "saved": true,
+                    "size": 43887,
+                    "children": [
+                        {
+                            "url": "https://www.mcyyy.com/assets/images/call-to-action-bg.jpg",
+                            "path": "img/call-to-action-bg.jpg",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://www.mcyyy.com/assets/images/video-img.jpg",
+                            "path": "img/video-img.jpg",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://www.mcyyy.com/assets/images/counter-bg.jpg",
+                            "path": "img/counter-bg.jpg",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://www.mcyyy.com/assets/images/testimonial-bg.jpg",
+                            "path": "img/testimonial-bg.jpg",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://www.mcyyy.com/assets/images/newsletter-bg.jpg",
+                            "path": "img/newsletter-bg.jpg",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://www.mcyyy.com/assets/images/page-header-bg.jpg",
+                            "path": "img/page-header-bg.jpg",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://www.mcyyy.com/assets/images/skill-bg.jpg",
+                            "path": "img/skill-bg.jpg",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://www.mcyyy.com/assets/images/error-bg.jpg",
+                            "path": "img/error-bg.jpg",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "url": "https://www.mcyyy.com/assets/images/icon.png",
+                    "path": "img/icon.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://player.bilibili.com/player.html?aid=88414184&cid=151036721&page=1",
+                    "path": "player.html",
+                    "saved": true,
+                    "size": 1841,
+                    "children": [
+                        {
+                            "url": "https://player.bilibili.com/main/libs/jquery-1.7.2.min.js",
+                            "path": "js/jquery-1.7.2.min.js",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://player.bilibili.com/main/libs/jquery.mCustomScrollbar.concat.min.js",
+                            "path": "js/jquery.mCustomScrollbar.concat.min.js",
+                            "saved": true,
+                            "size": 44046,
+                            "children": []
+                        },
+                        {
+                            "url": "https://player.bilibili.com/tools/player-selector/player-selector.min.js?ver=2021062902",
+                            "path": "js/player-selector.min.js",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://player.bilibili.com/main/libs/jquery.mCustomScrollbar.min.css",
+                            "path": "css/jquery.mCustomScrollbar.min.css",
+                            "saved": true,
+                            "size": 43660,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "alias": "www-mcyyy-com-npe56m9",
+    "info": {
+        "remark": [],
+        "title": "我的世界服务器|Minecraft服务器 - 永恒",
+        "domain": "www.mcyyy.com",
+        "origin": "https://www.mcyyy.com",
+        "ip": "172.67.194.112",
+        "main": "index.html",
+        "url": "https://www.mcyyy.com/",
+        "totalSize": "592 kB",
+        "request": {
+            "headers": {
+                "accept": "text/html,*/*",
+                "accept-language": "zh-CN,zh;q=0.9",
+                "cache-control": "no-cache",
+                "cookie": "",
+                "referer": "https://www.mcyyy.com/",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+                "x-scraper-website": "https://bazhan.wang/"
+            }
+        },
+        "response": {
+            "responseUrl": "https://www.mcyyy.com/",
+            "redirects": [],
+            "statusCode": 200,
+            "headers": {
+                "date": "Thu, 01 Dec 2022 14:56:17 GMT",
+                "content-type": "text/html",
+                "transfer-encoding": "chunked",
+                "connection": "close",
+                "last-modified": "Thu, 16 Dec 2021 05:40:25 GMT",
+                "vary": "Accept-Encoding",
+                "strict-transport-security": "max-age=31536000",
+                "cf-cache-status": "DYNAMIC",
+                "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=LutBc7T%2FrkybxdrA%2FHfKJS8q2CTBqPNfwHlQsJytmtKVNEs1doYraQsfVWHrbLc4KeqU1a0yGGo5QF7JVuWzs7O2h5vO5q3Uy6idsBaA0qOpjgafZEXOV2WBtlyb9KmZ\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+                "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+                "server": "cloudflare",
+                "cf-ray": "772cab2aeb02e062-NRT",
+                "alt-svc": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+            }
+        },
+        "time": {
+            "start": "2022-12-01T14:56:16.953Z",
+            "end": "2022-12-01T14:56:33.309Z"
+        }
+    },
+    "options": {
+        "url": "https://www.mcyyy.com/",
+        "referer": "",
+        "cookies": "",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "formatter": [],
+        "filenameGenerator": "byType"
+    }
+}

@@ -1,61 +1,251 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>帖子上传</title>
+<!DOCTYPE html><!-- This web page is copied by "https://bazhan.wang" --><html lang="en"><head><meta charset="utf-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta itemprop="image" content="https://www.mcyyy.com/assets/images/icon.png">
+<meta name="description" content="《永恒服务器》是一个追求温馨和谐、纯净玩法的服务器，旨在为玩家打造一个舒适的游戏环境，欢迎您的加入！">
+<meta name="keywords" content="永恒服务器,永恒服务器官网,永恒,我的世界永恒,我的世界服务器">
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<title>QuickMarco|Minecraft服务器 </title>
+<style type="text/css">
+.div_jzsl{ width:100%; height:100px; text-align:center; margin-bottom: 350px; margin-top: 150px;}
+
+</style>
+
+<link rel="shortcut icon" type="image/icon" href="img/icon.png">
+
+<link href="css/1.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/2.css">
+<link rel="stylesheet" href="css/main.css">
+
+<link href="css/slick.css" rel="stylesheet">
+
+<link href="css/magnific-popup.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/circle.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/CandyUI.css">
+<link rel="stylesheet" type="text/css" href="css/mine-strapUI.css">
+
+<link href="css/style.css" rel="stylesheet">
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?bdc59621a7eb6f58517b67b61f34c3f5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </head>
 <body>
-    <h1>上传帖子</h1>
-    <h2> 不会写看站点内教程 </h2>
-     <h3> 请在编辑点编辑文档 </h3>
-      <h4> 编辑完后上传到此处 </h4>
-    <form id="uploadForm" enctype="multipart/form-data">
-        <input type="file" name="fileInput" id="fileInput">
-        <button type="submit">提交</button>
-    </form>
 
-    <div id="progressContainer" style="display: none;">
-        <div id="progressBar" style="width: 0%; height: 20px; background-color: #4CAF50;"></div>
-        <div id="progressText">0%</div>
-    </div>
+<a class="scrollToTop" href="#">
+<i class="fa fa-angle-up"></i>
+</a>
 
-    <script>
-        const uploadForm = document.getElementById('uploadForm');
-        const progressContainer = document.getElementById('progressContainer');
-        const progressBar = document.getElementById('progressBar');
-        const progressText = document.getElementById('progressText');
 
-        uploadForm.addEventListener('submit', function(event) {
-            event.preventDefault();
+<header id="mu-hero">
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light mu-navbar">
 
-            const fileInput = document.getElementById('fileInput');
-            const file = fileInput.files[0];
-            const formData = new FormData();
-            formData.append('file', file);
+<a class="navbar-brand mu-logo" href="index.html"><span>QuickMarco</span></a>
 
-            fetch('http://localhost:40001/upload', {
-                method: 'POST',
-                body: formData,
-                onUploadProgress: function(progressEvent) {
-                    const percentage = Math.round((progressEvent.loaded / progressEvent.total) * 100);
-                    progressBar.style.width = percentage + "%";
-                    progressText.innerHTML = percentage + "%";
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('文件上传成功');
-                progressContainer.style.display = 'none';
-            })
-            .catch(error => {
-                console.error('文件上传失败', error);
-                progressContainer.style.display = 'none';
-            });
-            
-            progressContainer.style.display = 'block';
-        });
-    </script>
-</body>
-</html>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="fa fa-bars"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto mu-navbar-nav">
+<li class="nav-item active">
+<a href="index.html">主页</a>
+</li>
+<li class="nav-item"><a href="./mcmmo">暂无</a></li>
+<li class="nav-item"><a href="./ban">暂无</a></li>
+</ul>
+</div>
+</nav>
+</div>
+</header>
+
+
+<div class="w-section image-section">
+<div class="w-container image-section-container">
+<p style=" padding:10px 5px 5px 20px;  height:250px; width:300px;"></p><center><a class="mu-primary-btn" href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=XnMwy_FseufOEhPQMNmq_FK4qYSkVgG9&authKey=fRZcNkr0IWep6%2B66OzmXjgZDBSJpIANjXr5B%2B3hOwlyW%2BevyQJFCvvpoCMqG72h9&noverify=0&group_code=461013348" target="_blank">加入我们 <span class="fa fa-long-arrow-right"></span></a></center><p></p>
+</div>
+</div>
+<div class="w-section about-section">
+<div class="w-container about-section-container">
+<a href="#" id="Features" class="w-inline-block link-features"></a>
+<h1 class="heading prism">服务器特色</h1>
+<div class="w-row about-row">
+<div class="w-col w-col-4 w-hidden-small w-hidden-tiny"><img src="img/rocket.png" class="about-image">
+<h1 class="about-heading">mcMMO</h1>
+<p class="about-para">虽然是纯净服，但也有技能系统,让你不会感到枯燥, 更有组队系统让你和基友一起打怪，共同升级.&nbsp;</p>
+</div>
+<div class="w-col w-col-4"><img src="img/Globe.png" class="about-image">
+<h1 class="about-heading">加入我们</h1>
+<p class="about-para">IP:mc.iicraft.top 官方Q群:461013348&nbsp;</p>
+</div>
+<div class="w-col w-col-4"><img src="img/Star.png" class="about-image">
+<h1 class="about-heading">服务器规定</h1>
+<p class="about-para">不得在聊天中辱骂其他玩家, 不得恶意破坏他人建筑或偷盗他人财产. 禁止在游戏中出现任何欺诈行为.</p>
+</div>
+</div>
+<div class="w-hidden-main w-hidden-medium mobile-join-us"></div>
+</div>
+</div>
+<section id="banner3" class="parallax">
+<h1>你还在等什么呢?</h1>
+<h2>在客户端输入IP地址 <i>mc.iicraft.top</i></h2>
+</section>
+
+<div class="div_jzsl">
+<iframe src="player.html" scrolling="no" border="0" frameborder="no" width="640" height="430" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+<section id="gamemodes">
+<h1 class="about-para">简介</h1>
+<p class="about-para">介绍</p>
+<hr>
+
+<div class="row fixed-width">
+<div class="col-md mode">
+<h2 class="about-para">介绍</h2>
+<br>
+<p class="about-para">介绍</p>
+<p class="about-para">介绍</p>
+<p class="about-para">介绍</p>
+<p class="about-para">介绍</p>
+<p class="about-para" hidden="hidden">我的世界</p>
+<p class="about-para" hidden="hidden">我的世界</p>
+<p class="about-para" hidden="hidden">我的世界</p>
+<p class="about-para" hidden="hidden">我的世界</p>
+<p class="about-para" hidden="hidden">我的世界服务器</p>
+<p class="about-para" hidden="hidden">我的世界服务器</p>
+<p class="about-para" hidden="hidden">我的世界服务器</p>
+<p class="about-para" hidden="hidden">我的世界服务器</p>
+<p class="about-para" hidden="hidden">我的世界服务器</p>
+<p class="about-para" hidden="hidden">我的世界服务器</p>
+<p class="about-para" hidden="hidden">我的世界服务器</p>
+<p class="about-para" hidden="hidden">我的世界服务器</p>
+<p class="about-para" hidden="hidden">我的世界服务器</p>
+<p class="about-para" hidden="hidden">我的世界服务器</p>
+<p class="about-para" hidden="hidden">我的世界服务器</p>
+<p class="about-para" hidden="hidden">我的世界生存服</p>
+<p class="about-para" hidden="hidden">我的世界生存服</p>
+<p class="about-para" hidden="hidden">我的世界生存服</p>
+<p class="about-para" hidden="hidden">我的世界生存服</p>
+<p class="about-para" hidden="hidden">我的世界永恒</p>
+<p class="about-para" hidden="hidden">我的世界永恒</p>
+<p class="about-para" hidden="hidden">我的世界永恒</p>
+<p class="about-para" hidden="hidden">我的世界永恒</p>
+<p class="about-para" hidden="hidden">我的世界永恒</p>
+</div>
+
+<div class="col-md img">
+<img class="res-img" src="img/c.jpeg">
+</div>
+
+</div>
+</section>
+<section id="banner" class="parallax">
+<h1>对服务器有任何建议?</h1>
+<h2>您可以联系 <i><a href="/cdn-cgi/l/email-protection#9afbfef7f3f4daf7f9e3e3e3e3b4f9f5f7"><span class="__cf_email__" data-cfemail="7213161f1b1c321f110b0b0b0b5c111d1f">[email&nbsp;protected]</span></a></i></h2>
+</section>
+<section id="vote">
+<h1 class="about-para">为服务器顶帖宣传</h1>
+<p class="about-para">为本服务器顶帖将带来更多新玩家</p>
+<hr>
+<div class="row votelist">
+
+<div class="col-md voteblock">
+<img class="res-img-sm" src="img/bd.jpeg">
+<h2 class="about-para"><a href="https://tieba.baidu.com/p/5510213492?red_tag=2919413046" target="_blank">百度贴吧</a></h2>
+</div>
+
+
+<div class="col-md voteblock">
+<img class="res-img-sm" src="img/mcbbs.png">
+<h2 class="about-para"><a href="https://www.mcbbs.net/thread-1193718-1-5.html" target="_blank">MCBBS</a></h2>
+</div>
+
+
+<div class="col-md voteblock">
+<img class="res-img-sm" src="img/mcmp.jpeg">
+<h2 class="about-para"><a href="https://minecraft-mp.com/server-s270400" target="_blank">Minecraft MP</a></h2>
+</div>
+
+</div>
+
+</section>
+
+
+
+<footer id="mu-footer">
+<div class="mu-footer-bottom">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="mu-footer-bottom-area">
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+
+
+<script data-cfasync="false" src="js/email-decode.min.js"></script><script src="js/1.js"></script>
+<script src="js/2.js"></script>
+<script src="js/3.js"></script>
+
+<script type="text/javascript" src="js/slick.min.js"></script>
+
+<script src="js/4.js"></script>
+
+<script type="text/javascript" src="js/jquery.filterizr.min.js"></script>
+
+<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+
+<script type="text/javascript" src="js/counter.js"></script>
+
+<script type="text/javascript" src="js/app.js"></script>
+
+<script type="text/javascript" src="js/custom.js"></script>
+
+<script>
+		// First circle
+	    new Circlebar({
+        element : "#circle-1",
+        type : "progress",
+	      maxValue:  "90"
+	    });
+		
+		// Second circle
+	    new Circlebar({
+        element : "#circle-2",
+        type : "progress",
+	      maxValue:  "84"
+	    });
+
+	    // Third circle
+	    new Circlebar({
+        element : "#circle-3",
+        type : "progress",
+	      maxValue:  "60"
+	    });
+
+	    // Fourth circle
+	    new Circlebar({
+        element : "#circle-4",
+        type : "progress",
+	      maxValue:  "74"
+	    });
+
+	</script>
+
+</body></html>
