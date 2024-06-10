@@ -44,27 +44,6 @@
   </entry>
   
   <entry>
-    <title>「Disqus」为 hexo 博客添加文章推荐功能</title>
-    <link href="https://bianb-hehe.github.io/2025/09/24/2589378/"/>
-    <id>https://bianb-hehe.github.io/2025/09/24/2589378/</id>
-    <published>2025-09-23T20:17:35.000Z</published>
-    <updated>2024-06-08T05:53:48.060Z</updated>
-    
-    
-    <summary type="html">这是 Disqus 最近更新的一项功能。 如果您已经为自己的博客启用 Disqus 评论系统，直接打开 https://disqus.com/admin/settings/recommendations/ 选择站点，找到Enable Recommendations on your site，选定布局样式，暂时支持更改的项目有：   显示文章发表日期  显示评论数  推荐栏目的布局  推荐文章的日期</summary>
-    
-    
-    
-    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
-    
-    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>「视频」MC绷带指令</title>
     <link href="https://bianb-hehe.github.io/2025/09/24/28523795/"/>
     <id>https://bianb-hehe.github.io/2025/09/24/28523795/</id>
@@ -90,6 +69,27 @@
     <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="视频" scheme="https://bianb-hehe.github.io/tags/%E8%A7%86%E9%A2%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>「Disqus」为 hexo 博客添加文章推荐功能</title>
+    <link href="https://bianb-hehe.github.io/2025/09/24/2589378/"/>
+    <id>https://bianb-hehe.github.io/2025/09/24/2589378/</id>
+    <published>2025-09-23T20:17:35.000Z</published>
+    <updated>2024-06-08T05:53:48.060Z</updated>
+    
+    
+    <summary type="html">这是 Disqus 最近更新的一项功能。 如果您已经为自己的博客启用 Disqus 评论系统，直接打开 https://disqus.com/admin/settings/recommendations/ 选择站点，找到Enable Recommendations on your site，选定布局样式，暂时支持更改的项目有：   显示文章发表日期  显示评论数  推荐栏目的布局  推荐文章的日期</summary>
+    
+    
+    
+    <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
   </entry>
   
@@ -164,9 +164,9 @@
     <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
-    
     <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
     
   </entry>
   
@@ -449,20 +449,19 @@
   </entry>
   
   <entry>
-    <title>Cmi的聊天功能怎么关闭</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/396/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/396/</id>
+    <title>[MC]SX转AP</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/2396/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/2396/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T09:48:14.140Z</updated>
+    <updated>2024-06-10T02:34:02.452Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt; CMI 插件的聊天功能，你可以通过修改 CMI 的配置文件来实现。以下是步骤：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1.找到配置文件：在你的服务器目录中找到 CMI 的配置文件，通常位于</summary>
+    <summary type="html">&lt;p&gt;将 Minecraft 插件 SX (SX-Attribute) 转换为 AttributePlus (AP) 插件的配置，涉及到调整各插件的配置文件和插件所使用的具体属性。以下是一个示例步骤指南：&lt;/p&gt;
+&lt;h3 id=&quot;1-准备工作&quot;&gt;&lt;a</summary>
         
       
     
@@ -482,20 +481,20 @@
   </entry>
   
   <entry>
-    <title>[Wiki][CY/SCT] CMI – 插件文档帮助 –</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/3858/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/3858/</id>
+    <title>Cmi的聊天功能怎么关闭</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/396/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/396/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T10:19:15.533Z</updated>
+    <updated>2024-06-09T09:48:14.140Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;strong&gt;游戏时间奖励 | PlayTime Rewards&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;游戏时间奖励系统可以在玩家积累到了一定时长的游戏时间后执行一段命令.&lt;/p&gt;
-&lt;p&gt;你可以设置每过 X 秒或游戏时长共 X</summary>
+    <summary type="html">&lt;p&gt; CMI 插件的聊天功能，你可以通过修改 CMI 的配置文件来实现。以下是步骤：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.找到配置文件：在你的服务器目录中找到 CMI 的配置文件，通常位于</summary>
         
       
     
@@ -546,19 +545,20 @@
   </entry>
   
   <entry>
-    <title>Cmi的nick变量是什么</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/690/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/690/</id>
+    <title>[Wiki][CY/SCT] CMI – 插件文档帮助 –</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/3858/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/3858/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T09:58:14.089Z</updated>
+    <updated>2024-06-09T10:19:15.533Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;在 CMI（Content Management Interface）插件中，&lt;code&gt;nick&lt;/code&gt; 变量用于表示玩家的昵称。这个变量可以在多种场景下使用，包括显示在聊天消息、公告、以及其他玩家相关信息中。以下是一些常见的使用场景和示例：&lt;/p&gt;
-&lt;h2</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;游戏时间奖励 | PlayTime Rewards&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;游戏时间奖励系统可以在玩家积累到了一定时长的游戏时间后执行一段命令.&lt;/p&gt;
+&lt;p&gt;你可以设置每过 X 秒或游戏时长共 X</summary>
         
       
     
