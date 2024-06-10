@@ -58,9 +58,9 @@
     <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
     <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
+    
+    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -164,9 +164,9 @@
     <category term="教程" scheme="https://bianb-hehe.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
     <category term="github" scheme="https://bianb-hehe.github.io/tags/github/"/>
+    
+    <category term="教程" scheme="https://bianb-hehe.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -512,18 +512,20 @@
   </entry>
   
   <entry>
-    <title>TAB插件如何将头上的id改成cmi的nick设置的假名字</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/39658/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/39658/</id>
+    <title>[Wiki][CY/SCT] CMI – 插件文档帮助 –</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/3858/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/3858/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T10:01:43.384Z</updated>
+    <updated>2024-06-09T10:19:15.533Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;要将玩家在 TAB 插件中的头上显示的 ID 改为 CMI 插件中的 &lt;code&gt;nick&lt;/code&gt; 设置的假名字，你需要确保两个插件能够互相兼容，并且 TAB 插件能够读取到 CMI 设置的昵称。这通常涉及到对 TAB 插件的配置进行调整，使其使用 CMI</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;游戏时间奖励 | PlayTime Rewards&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;游戏时间奖励系统可以在玩家积累到了一定时长的游戏时间后执行一段命令.&lt;/p&gt;
+&lt;p&gt;你可以设置每过 X 秒或游戏时长共 X</summary>
         
       
     
@@ -543,20 +545,18 @@
   </entry>
   
   <entry>
-    <title>[Wiki][CY/SCT] CMI – 插件文档帮助 –</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/3858/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/3858/</id>
+    <title>TAB插件如何将头上的id改成cmi的nick设置的假名字</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/39658/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/39658/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T10:19:15.533Z</updated>
+    <updated>2024-06-09T10:01:43.384Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;strong&gt;游戏时间奖励 | PlayTime Rewards&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;游戏时间奖励系统可以在玩家积累到了一定时长的游戏时间后执行一段命令.&lt;/p&gt;
-&lt;p&gt;你可以设置每过 X 秒或游戏时长共 X</summary>
+    <summary type="html">&lt;p&gt;要将玩家在 TAB 插件中的头上显示的 ID 改为 CMI 插件中的 &lt;code&gt;nick&lt;/code&gt; 设置的假名字，你需要确保两个插件能够互相兼容，并且 TAB 插件能够读取到 CMI 设置的昵称。这通常涉及到对 TAB 插件的配置进行调整，使其使用 CMI</summary>
         
       
     
