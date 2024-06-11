@@ -47,9 +47,9 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> github </tag>
+            
+            <tag> 教程 </tag>
             
         </tags>
       
@@ -209,9 +209,9 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> github </tag>
+            
+            <tag> 教程 </tag>
             
         </tags>
       
@@ -556,6 +556,37 @@
     
     
     <entry>
+      <title>TAB插件如何将头上的id改成cmi的nick设置的假名字</title>
+      <link href="/2024/07/07/39658/"/>
+      <url>/2024/07/07/39658/</url>
+      
+        <content type="html"><![CDATA[<p>要将玩家在 TAB 插件中的头上显示的 ID 改为 CMI 插件中的 <code>nick</code> 设置的假名字，你需要确保两个插件能够互相兼容，并且 TAB 插件能够读取到 CMI 设置的昵称。这通常涉及到对 TAB 插件的配置进行调整，使其使用 CMI 的变量。</p><p>以下是一个实现方法的示例：</p><h3 id="1-确保-PlaceholderAPI-已安装"><a href="#1-确保-PlaceholderAPI-已安装" class="headerlink" title="1. 确保 PlaceholderAPI 已安装"></a>1. 确保 PlaceholderAPI 已安装</h3><p>为了让 TAB 插件能够使用 CMI 的变量，需要确保安装了 PlaceholderAPI 插件，因为它能够在插件之间共享变量。</p><ol><li>下载并安装 <a href="https://www.spigotmc.org/resources/placeholderapi.6245/">PlaceholderAPI</a> 插件。</li><li>启动服务器，以生成 PlaceholderAPI 的配置文件和所需文件夹。</li><li>确保 CMI 和 PlaceholderAPI 插件都正常工作，并且 PlaceholderAPI 能够正确读取 CMI 提供的变量。</li></ol><h3 id="2-配置-PlaceholderAPI-变量"><a href="#2-配置-PlaceholderAPI-变量" class="headerlink" title="2. 配置 PlaceholderAPI 变量"></a>2. 配置 PlaceholderAPI 变量</h3><p>PlaceholderAPI 插件需要设置，以便它能够读取和使用 CMI 的变量。通常，CMI 插件默认支持 PlaceholderAPI，所以你需要确保 CMI 的 Placeholder 支持已启用。</p><p>如果需要，使用以下命令下载 CMI 的 PlaceholderAPI 扩展：</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/papi ecloud download CMI</span><br><span class="line">/papi reload</span><br></pre></td></tr></tbody></table></figure><h3 id="3-配置-TAB-插件"><a href="#3-配置-TAB-插件" class="headerlink" title="3. 配置 TAB 插件"></a>3. 配置 TAB 插件</h3><p>编辑 TAB 插件的配置文件，以使用 CMI 提供的 <code>nick</code> 变量。以下是一个可能的配置示例：</p><h4 id="编辑-TAB-插件的配置文件-config-yml-或-tablist-yml（具体文件名取决于你的-TAB-插件版本和配置结构）："><a href="#编辑-TAB-插件的配置文件-config-yml-或-tablist-yml（具体文件名取决于你的-TAB-插件版本和配置结构）：" class="headerlink" title="编辑 TAB 插件的配置文件 config.yml 或 tablist.yml（具体文件名取决于你的 TAB 插件版本和配置结构）："></a>编辑 <code>TAB</code> 插件的配置文件 <code>config.yml</code> 或 <code>tablist.yml</code>（具体文件名取决于你的 TAB 插件版本和配置结构）：</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 示例文件路径：plugins/TAB/config.yml 或 plugins/TAB/tablist.yml</span><br><span class="line"></span><br><span class="line"># 配置玩家头上显示的标签格式</span><br><span class="line">name-tag:</span><br><span class="line">  enabled: true</span><br><span class="line">  format: "%cmi_user_displayname%"</span><br></pre></td></tr></tbody></table></figure><p>在这个示例中，<code>%cmi_user_displayname%</code> 是 PlaceholderAPI 提供的变量，它将被替换为 CMI 插件中设置的玩家昵称（假名字）。</p><h3 id="4-重启服务器"><a href="#4-重启服务器" class="headerlink" title="4. 重启服务器"></a>4. 重启服务器</h3><p>为了使更改生效，重启你的 Minecraft 服务器。</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/stop</span><br><span class="line"># 然后启动你的服务器</span><br></pre></td></tr></tbody></table></figure><h3 id="5-验证配置"><a href="#5-验证配置" class="headerlink" title="5. 验证配置"></a>5. 验证配置</h3><p>登录到服务器，查看玩家头上显示的标签是否已经变为 CMI 中设置的假名字。如果没有正确显示，请检查以下内容：</p><ol><li>PlaceholderAPI 是否正确加载了 CMI 的扩展。</li><li>CMI 中是否正确设置了玩家的昵称。</li><li>TAB 插件的配置文件中是否正确使用了 PlaceholderAPI 的变量。</li></ol><h3 id="6-调试和调整"><a href="#6-调试和调整" class="headerlink" title="6. 调试和调整"></a>6. 调试和调整</h3><p>如果遇到问题，请检查服务器日志文件以获取错误信息，并确保所有插件版本都是兼容的。可以根据错误提示进行相应的调整和调试。</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过确保 PlaceholderAPI 插件和相关扩展的正确安装和配置，你可以让 TAB 插件使用 CMI 提供的 <code>nick</code> 变量来显示玩家的假名字。希望这个指南能够帮助你实现所需的功能。</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 茶馆 </category>
+          
+          <category> 问答 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MC </tag>
+            
+            <tag> 茶馆 </tag>
+            
+            <tag> 问答 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Cmi的聊天功能怎么关闭</title>
       <link href="/2024/07/07/396/"/>
       <url>/2024/07/07/396/</url>
@@ -592,37 +623,6 @@
       <url>/2024/07/07/43584/</url>
       
         <content type="html"><![CDATA[<p>在使用阿里云服务器时，如果客户端无法连接到你的云服务器的公网IP，可能是由于以下几个常见原因导致的：</p><h3 id="1-安全组配置问题"><a href="#1-安全组配置问题" class="headerlink" title="1. 安全组配置问题"></a>1. <strong>安全组配置问题</strong></h3><p>阿里云服务器有一个安全组设置，用于管理入站和出站流量。确保你的安全组规则允许相关端口的入站流量。</p><p><strong>检查和配置安全组：</strong></p><ol><li>登录阿里云控制台。</li><li>进入“云服务器 ECS”页面。</li><li>找到你的实例，点击实例ID进入详情页面。</li><li>在“网络和安全”部分，点击“安全组”。</li><li>检查并添加适当的入站规则。例如，如果你的服务器需要开放Minecraft的默认端口25565，请确保有一条入站规则允许TCP协议的25565端口的流量。</li></ol><h3 id="2-防火墙配置问题"><a href="#2-防火墙配置问题" class="headerlink" title="2. 防火墙配置问题"></a>2. <strong>防火墙配置问题</strong></h3><p>你的服务器可能有内部防火墙（如 <code>iptables</code> 或 <code>firewalld</code>）限制了端口访问。</p><p><strong>检查和配置防火墙：</strong></p><ul><li><p>对于 <code>iptables</code>：</p><pre class="code-block-wrapper"><div class="code-block-header"><br class="Apple-interchange-newline"></div></pre></li></ul><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables -A INPUT -p tcp --dport 25565 -j ACCEPT</span><br><span class="line">sudo service iptables save</span><br><span class="line">sudo service iptables restart</span><br></pre></td></tr></tbody></table></figure><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">对于 firewalld：</span><br><span class="line">sh</span><br><span class="line">sudo firewall-cmd --zone=public --add-port=25565/tcp --permanent</span><br><span class="line">sudo firewall-cmd --reload</span><br></pre></td></tr></tbody></table></figure><h3 id="3-服务绑定问题"><a href="#3-服务绑定问题" class="headerlink" title="3. 服务绑定问题"></a>3. <strong>服务绑定问题</strong></h3><p>确保你的Minecraft服务器绑定到了正确的IP地址。如果配置错误，服务器可能只监听本地地址而不是公网IP。</p><p><strong>检查Minecraft服务器配置：</strong></p><ol><li><p>打开 <code>server.properties</code> 文件。</p></li><li><p>确保 <code>server-ip</code> 为空或设置为你的公网IP。</p><pre class="code-block-wrapper"><div class="code-block-header"><span class="code-block-header__lang">properties</span><span class="code-block-header__copy">复制代码</span></div><code class="hljs code-block-body properties">server-ip=</code></pre><p>或</p><pre class="code-block-wrapper"><div class="code-block-header"><span class="code-block-header__lang">properties</span><span class="code-block-header__copy">复制代码</span></div><code class="hljs code-block-body properties">server-ip=你的公网IP</code></pre></li></ol><h3 id="4-服务端口问题"><a href="#4-服务端口问题" class="headerlink" title="4. 服务端口问题"></a>4. <strong>服务端口问题</strong></h3><p>确认Minecraft服务器在正确的端口上运行，并且服务已启动。</p><p><strong>检查服务是否运行：</strong></p><ol><li><p>使用 <code>netstat</code> 或 <code>ss</code> 检查端口是否在监听。</p><pre class="code-block-wrapper"><div class="code-block-header"><span class="code-block-header__lang">sh</span><span class="code-block-header__copy">复制代码</span></div><code class="hljs code-block-body sh">netstat -tuln | grep 25565</code></pre><p>或</p><pre class="code-block-wrapper"><div class="code-block-header"><span class="code-block-header__lang">sh</span><span class="code-block-header__copy">复制代码</span></div><code class="hljs code-block-body sh">ss -tuln | grep 25565</code></pre></li><li><p>确保Minecraft服务器正确启动，并且没有错误日志。</p></li></ol><h3 id="5-网络配置问题"><a href="#5-网络配置问题" class="headerlink" title="5. 网络配置问题"></a>5. <strong>网络配置问题</strong></h3><p>确保你的云服务器网络配置正确，并且没有配置错误导致连接问题。</p><p><strong>检查网络配置：</strong></p><ol><li>使用 <code>ifconfig</code> 或 <code>ip a</code> 检查网络接口配置。</li><li>使用 <code>ping</code> 测试服务器与外部的连接性。<pre class="code-block-wrapper"><div class="code-block-header"><span class="code-block-header__lang">sh</span><span class="code-block-header__copy">复制代码</span></div><code class="hljs code-block-body sh">ping 8.8.8.8</code></pre></li></ol><h3 id="6-客户端连接问题"><a href="#6-客户端连接问题" class="headerlink" title="6. 客户端连接问题"></a>6. <strong>客户端连接问题</strong></h3><p>确保客户端正确使用了服务器的公网IP和端口。</p><p><strong>检查客户端配置：</strong></p><ol><li>确保你输入的IP地址和端口号正确。</li><li>尝试使用其他网络环境连接，以排除客户端网络问题。</li></ol><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过以上步骤逐一排查，可以帮助你解决阿里云服务器无法被公网客户端连接的问题。如果问题仍然存在，建议查看阿里云官方文档和支持论坛，或者联系阿里云技术支持寻求进一步帮助。</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 茶馆 </category>
-          
-          <category> 问答 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MC </tag>
-            
-            <tag> 茶馆 </tag>
-            
-            <tag> 问答 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>TAB插件如何将头上的id改成cmi的nick设置的假名字</title>
-      <link href="/2024/07/07/39658/"/>
-      <url>/2024/07/07/39658/</url>
-      
-        <content type="html"><![CDATA[<p>要将玩家在 TAB 插件中的头上显示的 ID 改为 CMI 插件中的 <code>nick</code> 设置的假名字，你需要确保两个插件能够互相兼容，并且 TAB 插件能够读取到 CMI 设置的昵称。这通常涉及到对 TAB 插件的配置进行调整，使其使用 CMI 的变量。</p><p>以下是一个实现方法的示例：</p><h3 id="1-确保-PlaceholderAPI-已安装"><a href="#1-确保-PlaceholderAPI-已安装" class="headerlink" title="1. 确保 PlaceholderAPI 已安装"></a>1. 确保 PlaceholderAPI 已安装</h3><p>为了让 TAB 插件能够使用 CMI 的变量，需要确保安装了 PlaceholderAPI 插件，因为它能够在插件之间共享变量。</p><ol><li>下载并安装 <a href="https://www.spigotmc.org/resources/placeholderapi.6245/">PlaceholderAPI</a> 插件。</li><li>启动服务器，以生成 PlaceholderAPI 的配置文件和所需文件夹。</li><li>确保 CMI 和 PlaceholderAPI 插件都正常工作，并且 PlaceholderAPI 能够正确读取 CMI 提供的变量。</li></ol><h3 id="2-配置-PlaceholderAPI-变量"><a href="#2-配置-PlaceholderAPI-变量" class="headerlink" title="2. 配置 PlaceholderAPI 变量"></a>2. 配置 PlaceholderAPI 变量</h3><p>PlaceholderAPI 插件需要设置，以便它能够读取和使用 CMI 的变量。通常，CMI 插件默认支持 PlaceholderAPI，所以你需要确保 CMI 的 Placeholder 支持已启用。</p><p>如果需要，使用以下命令下载 CMI 的 PlaceholderAPI 扩展：</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/papi ecloud download CMI</span><br><span class="line">/papi reload</span><br></pre></td></tr></tbody></table></figure><h3 id="3-配置-TAB-插件"><a href="#3-配置-TAB-插件" class="headerlink" title="3. 配置 TAB 插件"></a>3. 配置 TAB 插件</h3><p>编辑 TAB 插件的配置文件，以使用 CMI 提供的 <code>nick</code> 变量。以下是一个可能的配置示例：</p><h4 id="编辑-TAB-插件的配置文件-config-yml-或-tablist-yml（具体文件名取决于你的-TAB-插件版本和配置结构）："><a href="#编辑-TAB-插件的配置文件-config-yml-或-tablist-yml（具体文件名取决于你的-TAB-插件版本和配置结构）：" class="headerlink" title="编辑 TAB 插件的配置文件 config.yml 或 tablist.yml（具体文件名取决于你的 TAB 插件版本和配置结构）："></a>编辑 <code>TAB</code> 插件的配置文件 <code>config.yml</code> 或 <code>tablist.yml</code>（具体文件名取决于你的 TAB 插件版本和配置结构）：</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 示例文件路径：plugins/TAB/config.yml 或 plugins/TAB/tablist.yml</span><br><span class="line"></span><br><span class="line"># 配置玩家头上显示的标签格式</span><br><span class="line">name-tag:</span><br><span class="line">  enabled: true</span><br><span class="line">  format: "%cmi_user_displayname%"</span><br></pre></td></tr></tbody></table></figure><p>在这个示例中，<code>%cmi_user_displayname%</code> 是 PlaceholderAPI 提供的变量，它将被替换为 CMI 插件中设置的玩家昵称（假名字）。</p><h3 id="4-重启服务器"><a href="#4-重启服务器" class="headerlink" title="4. 重启服务器"></a>4. 重启服务器</h3><p>为了使更改生效，重启你的 Minecraft 服务器。</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/stop</span><br><span class="line"># 然后启动你的服务器</span><br></pre></td></tr></tbody></table></figure><h3 id="5-验证配置"><a href="#5-验证配置" class="headerlink" title="5. 验证配置"></a>5. 验证配置</h3><p>登录到服务器，查看玩家头上显示的标签是否已经变为 CMI 中设置的假名字。如果没有正确显示，请检查以下内容：</p><ol><li>PlaceholderAPI 是否正确加载了 CMI 的扩展。</li><li>CMI 中是否正确设置了玩家的昵称。</li><li>TAB 插件的配置文件中是否正确使用了 PlaceholderAPI 的变量。</li></ol><h3 id="6-调试和调整"><a href="#6-调试和调整" class="headerlink" title="6. 调试和调整"></a>6. 调试和调整</h3><p>如果遇到问题，请检查服务器日志文件以获取错误信息，并确保所有插件版本都是兼容的。可以根据错误提示进行相应的调整和调试。</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过确保 PlaceholderAPI 插件和相关扩展的正确安装和配置，你可以让 TAB 插件使用 CMI 提供的 <code>nick</code> 变量来显示玩家的假名字。希望这个指南能够帮助你实现所需的功能。</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
       
       
       <categories>
@@ -785,9 +785,9 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> 转载 </tag>
+            
+            <tag> 教程 </tag>
             
             <tag> Wiki </tag>
             
@@ -814,11 +814,11 @@
       
         <tags>
             
+            <tag> 转载 </tag>
+            
             <tag> 教程 </tag>
             
             <tag> MC </tag>
-            
-            <tag> 转载 </tag>
             
         </tags>
       
@@ -843,11 +843,11 @@
       
         <tags>
             
+            <tag> 转载 </tag>
+            
             <tag> 教程 </tag>
             
             <tag> MC </tag>
-            
-            <tag> 转载 </tag>
             
         </tags>
       
@@ -969,6 +969,33 @@
             <tag> 教程 </tag>
             
             <tag> MC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[mc插件]MyAwesomePlugin</title>
+      <link href="/2024/06/08/539549/"/>
+      <url>/2024/06/08/539549/</url>
+      
+        <content type="html"><![CDATA[<h1>插件名称：MyAwesomePlugin</h1><h2>简介</h2><p>MyAwesomePlugin 是一个功能强大的 Minecraft 服务器插件，为服务器管理员提供了丰富的管理工具和玩家体验优化功能。</p><h2>功能特点</h2><ul><li><strong>自定义指令</strong>：提供多种自定义指令，方便服务器管理员进行管理操作。</li><li><strong>经济系统</strong>：内置经济系统，支持虚拟货币和商店交易功能。</li><li><strong>世界保护</strong>：提供世界保护功能，防止玩家破坏和盗窃。</li><li><strong>任务系统</strong>：支持任务系统，玩家完成任务可以获得奖励和成就。</li></ul><h2>下载链接</h2><p>你可以从 SpigotMC 官网下载最新版本的 MyAwesomePlugin 插件：</p><p><a href="https://www.spigotmc.org/resources/myawesomeplugin.12345/">点击这里下载 MyAwesomePlugin</a></p><h2>安装步骤</h2><ol><li>下载插件 JAR 文件并将其放入服务器的 <code>plugins</code> 文件夹中。</li><li>重启服务器以加载插件。</li><li>配置插件以启用所需功能。</li></ol><h2>使用指南</h2><h3>添加自定义指令</h3><p>要添加自定义指令，请编辑插件配置文件，并重新加载插件以使更改生效。</p><pre class=" language-language-yaml"><code class="language-language-yaml">custom_commands:  welcome:    description: "欢迎玩家加入服务器"    command: "/welcome"    permission: "myawesomeplugin.welcome"设置经济系统要启用经济系统，请在插件配置文件中进行相应设置，并确保安装了 Vault 插件以支持经济功能。economy:  enable: true  currency: "金币"  starting_balance: 100</code></pre><p>配置文件示例以下是 MyAwesomePlugin 的配置文件示例：</p><pre><code class="language-settings:">  enable_custom_commands: true  enable_economy: true  enable_world_protection: true  enable_tasks: true<p>economy:<br>  currency: "金币"<br>  starting_balance: 1000</p></code><p><code class="language-settings:">world_protection:<br>  enable_claiming: true<br>  max_claimable_chunks: 10<br>tasks:<br>  daily_tasks:<br>    - name: "每日签到"<br>      description: "每日登录游戏一次"<br>      reward: "金币 x100"<br>      requirement: "登录游戏一次"<br></code></p></pre><p></p><p>版权信息MyAwesomePlugin 遵循 MIT 许可证，详细信息请参阅插件 JAR 文件中的 LICENSE 文件。</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MC </tag>
+            
+            <tag> 插件 </tag>
             
         </tags>
       
@@ -1157,9 +1184,9 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> github </tag>
+            
+            <tag> 教程 </tag>
             
         </tags>
       
@@ -1280,35 +1307,6 @@
     
     
     <entry>
-      <title>[转载] [联机教程] [联机][2021.1.1][CPS].schematic文件格式详解</title>
-      <link href="/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5B%E8%81%94%E6%9C%BA%5D%5B2021.1.1%5D%5BCPS%5D.schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/"/>
-      <url>/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5B%E8%81%94%E6%9C%BA%5D%5B2021.1.1%5D%5BCPS%5D.schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<p>联机教程</p><span id="more"></span><p>前言<br>大多数服主应该对于Schematic文件格式又熟悉又陌生，通常在导入地图时，一般使用替换地图文件的方式，而使用Schematic格式文件的方法使用较少，因此可能对Schematic文件格式较为陌生，加之近期有较多人询问我Schematic格式文件如何导入等问题，因此便写出此教程供服主们学习，教程将会用通俗易懂的语言对Schematic文件格式进行详细的讲解</p><p>字数统计<br>字数1707，字符数（不计空格）3137，字符数（计空格）3197，非中文单词208，中文字符1499（来自WPS字数统计）</p><p>什么是schematic文件格式？<br>Schematic文件格式为一种由玩家社区所创建的用于存储Minecraft世界信息，进而可以通过第三方应用程序（如MCEdit、Minecraft Note Block Studio、红石模拟器、WorldEdit以及Schematica等）进行编辑。地形以NBT格式储存并松散地基于Indev世界格式。方块和数据的目录以YZX的排序存储，也就是说X坐标的变化最频繁。这与Classic，Indev以及Anvil文件格式中的方块排序相似。这种格式不能将应该覆盖已有方块的空气方块和不应覆盖已有方块的空气方块区分开。（摘自Minecraft Wiki）<br>总而言之，schematic文件格式是用来储存Minecraft世界信息的工具，可以导出保存，也可以导入使用，也可以通过第三方工具对此格式文件内容进行编辑</p><p>NBT格式详解<br>Schematic:<br>Width: 沿X轴方向的大小<br>Height: 沿Y轴方向的大小<br>Length: 沿Z轴方向的大小<br>Materials: 版本世界类型<br>Blocks: 地图中所用到的物品ID<br>AddBlocks: 可用于编辑的空余地图区域<br>Add: 已启用<br>Data: 在地图中用到的其它方块<br>Entities: 在地图中的每个实体<br>TileEntities: 在地图中的每个实体<br>Icon: 用于地图图标的物品<br>SchematicaMapping: 此地图中所保存版本的ID<br>ExtendedMetadata: Schematica为扩展提供的任意附加数据<br>WEOriginX: 沿X的中心坐标（WorldEdit）<br>WEOriginY: 沿Y的中心坐标（WorldEdit）<br>WEOriginZ: 沿Z的中心坐标（WorldEdit）<br>WEOffsetX: 沿X的偏移坐标（WorldEdit）<br>WEOffsetY: 沿Y的偏移坐标（WorldEdit）<br>WEOffsetZ: 沿Z的偏移坐标（WorldEdit）<br>itemStackVersion: 仅用于MCEdit2，游戏版本<br>BlockIDs: 地图中的方块ID（MCEdit2）<br>ItemIDs: 地图中的物品ID（MCEdit2）<br>TileTicks: 地图中方块更新的列表（MCEdit-Unified）<br>i：方块的ID<br>t：处理时所需的时刻（tick）<br>p：同一时刻处理的优先值<br>x：地图中X坐标<br>y：地图中Y坐标<br>z：地图中Z坐标<br>Biomes: 地图中所有生物群系（MCEdit-Unified）</p><p>什么是schematic数据库？<br>Schematic数据库是一种免费的用于上传、下载、浏览、收藏schematic格式文件的网站<br>网站地址：<br>minecraft-schematics.com<br>minecraft-schematics.net</p><p>如何创建schematics文件夹？<br>单人游戏1.下载安装worldeditMOD<br>1.打开Minecraft.minecraft\config\worldedit目录<br>2.在worldedit目录下创建一个名为schematics的文件夹</p><p>多人联机<br>1.下载安装worldedit插件<br>2.打开Minecraft Sever\plugins\WorldEdit目录<br>3.在WorldEdit目录下创建一个名为schematics的文件夹</p><p>如何导入schematic格式文件?<br>单人游戏<br>1.下载安装worldedit游戏MOD<br>2.将你要使用的.schematic格式文件放到Minecraft.minecraft\config\worldedit\schematics目录下3.进入游戏，输入指令//schem load 文件名（如：//schem load skyworld），将此文件中的建筑会导入到worldedit的剪贴板中<br>提示：若出现skyblock.schematic loaded. Paste it with //paste则证明剪贴成功<br>4.输入指令//paste，将此文件的建筑添加到你所在的位置</p><p>多人联机<br>1.下载安装WorldEdit插件<br>2.将你要使用的.schematic格式文件放到Minecraft Sever\plugins\WorldEdit目录下<br>3.进入游戏，输入指令//schem load 文件名（如：//schem load skyworld），将此文件中的建筑会导入到worldedit的剪贴板中<br>提示：若出现skyblock.schematic loaded. Paste it with //paste则证明剪贴成功<br>4.输入指令//paste，将此文件的建筑添加到你所在的位置</p><p>如何导出schematic格式文件？<br>单人游戏<br>1.下载安装worldedit游戏MOD<br>2.进入游戏，用木斧选择你要导出的地图区域<br>3.输入//copy对选择区域进行复制<br>4.输入//schem save 文件名 将选择区域以 文件名.schematic 导出<br>5.导出后文件将会生存在Minecraft.minecraft\config\worldedit\schematics目录下</p><p>多人联机<br>1.下载安装WorldEdit插件<br>2.进入游戏，用木斧选择你要导出的地图区域<br>3.输入//copy对选择区域进行复制<br>4.输入//schem save 文件名 将选择区域以 文件名.schematic 导出<br>5.导出后文件将会生存在Minecraft Server.minecraft\config\worldedit\schematics目录下</p><p>如何导出/导入规模较大的建筑？<br>对于规模较为大的建筑来说，使用worldedit导入或导出，会导致后台报错、服务器卡顿甚至崩溃<br>部分服主会通过使用MCedit导出/导入大地图来解决，但是大部分服主对于MCedit的操作较为生疏，此部分将会提供其他较为不错的方法来解决此问题<br>在编写教程的时候，为了让教程内容丰富，本人对相关知识进行了大量的搜索和学习。在此期间，发现了一款名为FastAsyncWorldEdit的插件，此插件为WorldEdit的优化插件，插件主要用于减少WorldEdit插件在操作过程中的卡顿，安装此插件后可以导出/导入较大规模的建筑，且几乎无卡顿，使用方便操作简单<br>提示：在1.12.2之前此插件需要WorldEdit插件作为前置，而1.12.2版本后FastAsyncWorldEdit便成为一个独立的插件，无需WorldEdit插件作为前置<br>FastAsyncWorldEdit插件的使用方法和WorldEdit插件的使用方法一样，格式为//指令<br>站内搬运：<a href="https://www.mcbbs.net/thread-781901-1-1.html">https://www.mcbbs.net/thread-781901-1-1.html</a><br>原贴：<a href="https://github.com/boy0001/FastAsyncWorldedit/releases">https://github.com/boy0001/FastAsyncWorldedit/releases</a></p><p>注意事项<br>1.按照上述过程使用时必须安装worldedit插件或MOD<br>2.使用worldedit粘贴建筑时，需要一段的等待时间，若出现报错或者内存溢出等非正常情况，可能是文件过大导致的，此情况请仔细阅读如何导出规模较大的建筑？部分<br>3.在WorldEdit 7.0.0（Minecraft1.13之后的版本），无法再使用.schematic的格式导出地图文件，只允许使用.schem的格式导出，但仍可以使用旧版本的.schematic文件导入地图</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 教程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 教程 </tag>
-            
-            <tag> MC </tag>
-            
-            <tag> 转载 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>[转载] [联机教程] [Wiki][PCD]MythicMobs 帮助手册翻译 又更新了</title>
       <link href="/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5BWiki%5D%5BPCD%5DMythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/"/>
       <url>/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5BWiki%5D%5BPCD%5DMythicMobs%20%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%E7%BF%BB%E8%AF%91%20%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86/</url>
@@ -1325,11 +1323,71 @@
       
         <tags>
             
+            <tag> 转载 </tag>
+            
             <tag> 教程 </tag>
             
             <tag> MC </tag>
             
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[转载] [联机教程] [联机][2021.1.1][CPS].schematic文件格式详解</title>
+      <link href="/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5B%E8%81%94%E6%9C%BA%5D%5B2021.1.1%5D%5BCPS%5D.schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/"/>
+      <url>/2024/05/31/%5B%E8%BD%AC%E8%BD%BD%5D%20%5B%E8%81%94%E6%9C%BA%E6%95%99%E7%A8%8B%5D%20%5B%E8%81%94%E6%9C%BA%5D%5B2021.1.1%5D%5BCPS%5D.schematic%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<p>联机教程</p><span id="more"></span><p>前言<br>大多数服主应该对于Schematic文件格式又熟悉又陌生，通常在导入地图时，一般使用替换地图文件的方式，而使用Schematic格式文件的方法使用较少，因此可能对Schematic文件格式较为陌生，加之近期有较多人询问我Schematic格式文件如何导入等问题，因此便写出此教程供服主们学习，教程将会用通俗易懂的语言对Schematic文件格式进行详细的讲解</p><p>字数统计<br>字数1707，字符数（不计空格）3137，字符数（计空格）3197，非中文单词208，中文字符1499（来自WPS字数统计）</p><p>什么是schematic文件格式？<br>Schematic文件格式为一种由玩家社区所创建的用于存储Minecraft世界信息，进而可以通过第三方应用程序（如MCEdit、Minecraft Note Block Studio、红石模拟器、WorldEdit以及Schematica等）进行编辑。地形以NBT格式储存并松散地基于Indev世界格式。方块和数据的目录以YZX的排序存储，也就是说X坐标的变化最频繁。这与Classic，Indev以及Anvil文件格式中的方块排序相似。这种格式不能将应该覆盖已有方块的空气方块和不应覆盖已有方块的空气方块区分开。（摘自Minecraft Wiki）<br>总而言之，schematic文件格式是用来储存Minecraft世界信息的工具，可以导出保存，也可以导入使用，也可以通过第三方工具对此格式文件内容进行编辑</p><p>NBT格式详解<br>Schematic:<br>Width: 沿X轴方向的大小<br>Height: 沿Y轴方向的大小<br>Length: 沿Z轴方向的大小<br>Materials: 版本世界类型<br>Blocks: 地图中所用到的物品ID<br>AddBlocks: 可用于编辑的空余地图区域<br>Add: 已启用<br>Data: 在地图中用到的其它方块<br>Entities: 在地图中的每个实体<br>TileEntities: 在地图中的每个实体<br>Icon: 用于地图图标的物品<br>SchematicaMapping: 此地图中所保存版本的ID<br>ExtendedMetadata: Schematica为扩展提供的任意附加数据<br>WEOriginX: 沿X的中心坐标（WorldEdit）<br>WEOriginY: 沿Y的中心坐标（WorldEdit）<br>WEOriginZ: 沿Z的中心坐标（WorldEdit）<br>WEOffsetX: 沿X的偏移坐标（WorldEdit）<br>WEOffsetY: 沿Y的偏移坐标（WorldEdit）<br>WEOffsetZ: 沿Z的偏移坐标（WorldEdit）<br>itemStackVersion: 仅用于MCEdit2，游戏版本<br>BlockIDs: 地图中的方块ID（MCEdit2）<br>ItemIDs: 地图中的物品ID（MCEdit2）<br>TileTicks: 地图中方块更新的列表（MCEdit-Unified）<br>i：方块的ID<br>t：处理时所需的时刻（tick）<br>p：同一时刻处理的优先值<br>x：地图中X坐标<br>y：地图中Y坐标<br>z：地图中Z坐标<br>Biomes: 地图中所有生物群系（MCEdit-Unified）</p><p>什么是schematic数据库？<br>Schematic数据库是一种免费的用于上传、下载、浏览、收藏schematic格式文件的网站<br>网站地址：<br>minecraft-schematics.com<br>minecraft-schematics.net</p><p>如何创建schematics文件夹？<br>单人游戏1.下载安装worldeditMOD<br>1.打开Minecraft.minecraft\config\worldedit目录<br>2.在worldedit目录下创建一个名为schematics的文件夹</p><p>多人联机<br>1.下载安装worldedit插件<br>2.打开Minecraft Sever\plugins\WorldEdit目录<br>3.在WorldEdit目录下创建一个名为schematics的文件夹</p><p>如何导入schematic格式文件?<br>单人游戏<br>1.下载安装worldedit游戏MOD<br>2.将你要使用的.schematic格式文件放到Minecraft.minecraft\config\worldedit\schematics目录下3.进入游戏，输入指令//schem load 文件名（如：//schem load skyworld），将此文件中的建筑会导入到worldedit的剪贴板中<br>提示：若出现skyblock.schematic loaded. Paste it with //paste则证明剪贴成功<br>4.输入指令//paste，将此文件的建筑添加到你所在的位置</p><p>多人联机<br>1.下载安装WorldEdit插件<br>2.将你要使用的.schematic格式文件放到Minecraft Sever\plugins\WorldEdit目录下<br>3.进入游戏，输入指令//schem load 文件名（如：//schem load skyworld），将此文件中的建筑会导入到worldedit的剪贴板中<br>提示：若出现skyblock.schematic loaded. Paste it with //paste则证明剪贴成功<br>4.输入指令//paste，将此文件的建筑添加到你所在的位置</p><p>如何导出schematic格式文件？<br>单人游戏<br>1.下载安装worldedit游戏MOD<br>2.进入游戏，用木斧选择你要导出的地图区域<br>3.输入//copy对选择区域进行复制<br>4.输入//schem save 文件名 将选择区域以 文件名.schematic 导出<br>5.导出后文件将会生存在Minecraft.minecraft\config\worldedit\schematics目录下</p><p>多人联机<br>1.下载安装WorldEdit插件<br>2.进入游戏，用木斧选择你要导出的地图区域<br>3.输入//copy对选择区域进行复制<br>4.输入//schem save 文件名 将选择区域以 文件名.schematic 导出<br>5.导出后文件将会生存在Minecraft Server.minecraft\config\worldedit\schematics目录下</p><p>如何导出/导入规模较大的建筑？<br>对于规模较为大的建筑来说，使用worldedit导入或导出，会导致后台报错、服务器卡顿甚至崩溃<br>部分服主会通过使用MCedit导出/导入大地图来解决，但是大部分服主对于MCedit的操作较为生疏，此部分将会提供其他较为不错的方法来解决此问题<br>在编写教程的时候，为了让教程内容丰富，本人对相关知识进行了大量的搜索和学习。在此期间，发现了一款名为FastAsyncWorldEdit的插件，此插件为WorldEdit的优化插件，插件主要用于减少WorldEdit插件在操作过程中的卡顿，安装此插件后可以导出/导入较大规模的建筑，且几乎无卡顿，使用方便操作简单<br>提示：在1.12.2之前此插件需要WorldEdit插件作为前置，而1.12.2版本后FastAsyncWorldEdit便成为一个独立的插件，无需WorldEdit插件作为前置<br>FastAsyncWorldEdit插件的使用方法和WorldEdit插件的使用方法一样，格式为//指令<br>站内搬运：<a href="https://www.mcbbs.net/thread-781901-1-1.html">https://www.mcbbs.net/thread-781901-1-1.html</a><br>原贴：<a href="https://github.com/boy0001/FastAsyncWorldedit/releases">https://github.com/boy0001/FastAsyncWorldedit/releases</a></p><p>注意事项<br>1.按照上述过程使用时必须安装worldedit插件或MOD<br>2.使用worldedit粘贴建筑时，需要一段的等待时间，若出现报错或者内存溢出等非正常情况，可能是文件过大导致的，此情况请仔细阅读如何导出规模较大的建筑？部分<br>3.在WorldEdit 7.0.0（Minecraft1.13之后的版本），无法再使用.schematic的格式导出地图文件，只允许使用.schem的格式导出，但仍可以使用旧版本的.schematic文件导入地图</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
             <tag> 转载 </tag>
+            
+            <tag> 教程 </tag>
+            
+            <tag> MC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[休闲] [整合包发布] [1.20.6-1.7.10]XPlus 2.0 原版整合 - 高效/稳定/便捷[Fabric/Forge]</title>
+      <link href="/2024/05/31/%E6%95%B4%E5%90%88%E5%8C%851/"/>
+      <url>/2024/05/31/%E6%95%B4%E5%90%88%E5%8C%851/</url>
+      
+        <content type="html"><![CDATA[<p>下载，使用本整合包即代表你已同意《用户协议与免责声明》</p><span id="more"></span><p><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020634xmfk771qfz7iewie.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020635hg6guemewetotdqe.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020636k73bcdn3gnb207r2.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020637lrbvovryv227or5t.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020638vp2fopcfyzrifbxy.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020639j0yffzxrddd9999r.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020640wpd32zusvcityhvd.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020641kpffxkwgso1ofo47.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020643y9pt1a9zpzaz5hq3.jpg"></p><p>下载:</p><p><a href="https://www.mcmod.cn/modpack/467.html">https://www.mcmod.cn/modpack/467.html</a></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 转载 </tag>
+            
+            <tag> MC </tag>
+            
+            <tag> 整合包 </tag>
+            
+            <tag> 休闲 </tag>
             
         </tags>
       
@@ -1363,37 +1421,6 @@
     
     
     <entry>
-      <title>[休闲] [整合包发布] [1.20.6-1.7.10]XPlus 2.0 原版整合 - 高效/稳定/便捷[Fabric/Forge]</title>
-      <link href="/2024/05/31/%E6%95%B4%E5%90%88%E5%8C%851/"/>
-      <url>/2024/05/31/%E6%95%B4%E5%90%88%E5%8C%851/</url>
-      
-        <content type="html"><![CDATA[<p>下载，使用本整合包即代表你已同意《用户协议与免责声明》</p><span id="more"></span><p><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020634xmfk771qfz7iewie.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020635hg6guemewetotdqe.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020636k73bcdn3gnb207r2.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020637lrbvovryv227or5t.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020638vp2fopcfyzrifbxy.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020639j0yffzxrddd9999r.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020640wpd32zusvcityhvd.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020641kpffxkwgso1ofo47.jpg"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/17/020643y9pt1a9zpzaz5hq3.jpg"></p><p>下载:</p><p><a href="https://www.mcmod.cn/modpack/467.html">https://www.mcmod.cn/modpack/467.html</a></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 分享 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MC </tag>
-            
-            <tag> 转载 </tag>
-            
-            <tag> 整合包 </tag>
-            
-            <tag> 休闲 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Mybbs友链</title>
       <link href="/2024/05/31/%E5%8F%8B%E9%93%BE/"/>
       <url>/2024/05/31/%E5%8F%8B%E9%93%BE/</url>
@@ -1407,33 +1434,6 @@
           
       </categories>
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>[Github]hexo-theme-3-hexo</title>
-      <link href="/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5D3-hexo/"/>
-      <url>/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5D3-hexo/</url>
-      
-        <content type="html"><![CDATA[<p><a href="/download/[主题]3-hexo/hexo-theme-3-hexo-master.zip" download="">打包下载本主题zip</a><br>3-hexo 是为 <a href="https://github.com/tommy351/hexo">hexo</a> 制作的主题。三段式设计、方便。你可以点击: <a href="https://yelog.org/">我的博客</a> 查看效果</p><p>如果想要体验手机浏览效果，可以扫以下二维码：</p><p><img src="https://i.loli.net/2020/01/28/OqXkYuf8ipED6QM.png" alt="二维码图片_1月28日11时25分02秒.png"></p><p>配置及说明： <a href="http://yelog.org/2017/03/23/3-hexo-instruction/">3-hexo使用说明</a><br>功能更新日志：<a href="http://yelog.org/2017/03/13/3-hexo-logs/">3-hexo开发日志-持续更新</a><br>—————————————— &nbsp;<br><strong>关于主题：</strong></p><ol><li>极简体验</li><li>三段式设计</li><li>通过文章分类、标签或标题关键字检索</li><li>移动端适配</li><li>评论</li><li>多作者模式</li><li>全文快捷键</li></ol><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yelog/hexo-theme-3-hexo.git themes/3-hexo</span><br></pre></td></tr></tbody></table></figure><p>修改hexo根目录的<code>_config.yml</code>，如下</p><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="number">3</span><span class="string">-hexo</span></span><br></pre></td></tr></tbody></table></figure><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes/3-hexo</span><br><span class="line">git pull</span><br></pre></td></tr></tbody></table></figure><h2 id="外观"><a href="#外观" class="headerlink" title="外观"></a>外观</h2><h3 id="整体设计"><a href="#整体设计" class="headerlink" title="整体设计"></a>整体设计</h3><p><strong>三段式设计:</strong><br><img src="http://img.saodiyang.com/Fl2tl1Is5zx-D0DAt03bg0WkWXhO.png" alt="三段式设计"></p><h3 id="通过分类过滤"><a href="#通过分类过滤" class="headerlink" title="通过分类过滤"></a>通过分类过滤</h3><p><img src="http://img.saodiyang.com/FmooXnOPeRPGBts5V5W7CV0AHuIo.gif" alt="分类过滤文章"></p><h3 id="通过标题关键字搜索"><a href="#通过标题关键字搜索" class="headerlink" title="通过标题关键字搜索"></a>通过标题关键字搜索</h3><p><img src="http://img.saodiyang.com/FkF9lgTJoLdmNlYbTVokSNB3zdS4.gif" alt="文章标题关键字搜索"></p><h3 id="通过作者搜索"><a href="#通过作者搜索" class="headerlink" title="通过作者搜索"></a>通过作者搜索</h3><p><strong>若开启了多作者模式，则可以通过输入@，进行作者搜索，如下所示</strong><br><img src="http://img.saodiyang.com/FhbFRRPIDuz1pEKH-dr-RWDHVvXn.gif" alt="通过作者搜索"></p><h3 id="通过标签搜索"><a href="#通过标签搜索" class="headerlink" title="通过标签搜索"></a>通过标签搜索</h3><p><strong>输入#，就会出现标签提示</strong><br><img src="http://img.saodiyang.com/FoJsDnsoLWKo7ECSzcLmzUX_uWgw.gif" alt="通过标签搜索"></p><h3 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h3><p><img src="http://img.saodiyang.com/FtDD77YX_xenS-AZQW56qrwrQc4D.gif" alt="测试一下评论"></p><h3 id="打赏功能"><a href="#打赏功能" class="headerlink" title="打赏功能"></a>打赏功能</h3><p><img src="http://img.saodiyang.com/FhlNgOF7ipEIVrrztFdRam3WRikw.gif" alt="打赏功能"></p><h3 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h3><p><img src="http://img.saodiyang.com/FhQLLqrRCr4yFGl9nDb_9oc4yME-.png" alt="文章置顶"></p><h3 id="返回头部"><a href="#返回头部" class="headerlink" title="返回头部"></a>返回头部</h3><p><img src="http://img.saodiyang.com/FjpVByJViwYEWHHMTeayiQ-FD_qG.gif" alt="返回头部"></p><h2 id="效果博客"><a href="#效果博客" class="headerlink" title="效果博客"></a>效果博客</h2><ul><li><a href="https://www.chenuon.cn/">程忧点滴</a></li><li><a href="https://coco56.gitee.io/blog/">COCO56个人博客</a></li><li><a href="https://wallleap.cn/">wallleap</a></li><li><a href="https://dingguanyu.com/">黑刀的个人博客</a></li></ul><h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p> 作者Peiwen Lu的jekyll主题：<a href="https://github.com/P233/3-Jekyll">3-jekyll</a>主题<br> 作者Yansu的<a href="http://yansu.org/">blog</a><br> 作者litten的<a href="https://github.com/litten/hexo-theme-yilia">hexo-theme-yilia</a>主题</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> github </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> github </tag>
-            
-            <tag> hexo主题 </tag>
-            
-        </tags>
       
     </entry>
     
@@ -1525,6 +1525,33 @@
     
     
     <entry>
+      <title>[Github]hexo-theme-3-hexo</title>
+      <link href="/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5D3-hexo/"/>
+      <url>/2024/05/31/%5B%E4%B8%BB%E9%A2%98%5D3-hexo/</url>
+      
+        <content type="html"><![CDATA[<p><a href="/download/[主题]3-hexo/hexo-theme-3-hexo-master.zip" download="">打包下载本主题zip</a><br>3-hexo 是为 <a href="https://github.com/tommy351/hexo">hexo</a> 制作的主题。三段式设计、方便。你可以点击: <a href="https://yelog.org/">我的博客</a> 查看效果</p><p>如果想要体验手机浏览效果，可以扫以下二维码：</p><p><img src="https://i.loli.net/2020/01/28/OqXkYuf8ipED6QM.png" alt="二维码图片_1月28日11时25分02秒.png"></p><p>配置及说明： <a href="http://yelog.org/2017/03/23/3-hexo-instruction/">3-hexo使用说明</a><br>功能更新日志：<a href="http://yelog.org/2017/03/13/3-hexo-logs/">3-hexo开发日志-持续更新</a><br>—————————————— &nbsp;<br><strong>关于主题：</strong></p><ol><li>极简体验</li><li>三段式设计</li><li>通过文章分类、标签或标题关键字检索</li><li>移动端适配</li><li>评论</li><li>多作者模式</li><li>全文快捷键</li></ol><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yelog/hexo-theme-3-hexo.git themes/3-hexo</span><br></pre></td></tr></tbody></table></figure><p>修改hexo根目录的<code>_config.yml</code>，如下</p><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="number">3</span><span class="string">-hexo</span></span><br></pre></td></tr></tbody></table></figure><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes/3-hexo</span><br><span class="line">git pull</span><br></pre></td></tr></tbody></table></figure><h2 id="外观"><a href="#外观" class="headerlink" title="外观"></a>外观</h2><h3 id="整体设计"><a href="#整体设计" class="headerlink" title="整体设计"></a>整体设计</h3><p><strong>三段式设计:</strong><br><img src="http://img.saodiyang.com/Fl2tl1Is5zx-D0DAt03bg0WkWXhO.png" alt="三段式设计"></p><h3 id="通过分类过滤"><a href="#通过分类过滤" class="headerlink" title="通过分类过滤"></a>通过分类过滤</h3><p><img src="http://img.saodiyang.com/FmooXnOPeRPGBts5V5W7CV0AHuIo.gif" alt="分类过滤文章"></p><h3 id="通过标题关键字搜索"><a href="#通过标题关键字搜索" class="headerlink" title="通过标题关键字搜索"></a>通过标题关键字搜索</h3><p><img src="http://img.saodiyang.com/FkF9lgTJoLdmNlYbTVokSNB3zdS4.gif" alt="文章标题关键字搜索"></p><h3 id="通过作者搜索"><a href="#通过作者搜索" class="headerlink" title="通过作者搜索"></a>通过作者搜索</h3><p><strong>若开启了多作者模式，则可以通过输入@，进行作者搜索，如下所示</strong><br><img src="http://img.saodiyang.com/FhbFRRPIDuz1pEKH-dr-RWDHVvXn.gif" alt="通过作者搜索"></p><h3 id="通过标签搜索"><a href="#通过标签搜索" class="headerlink" title="通过标签搜索"></a>通过标签搜索</h3><p><strong>输入#，就会出现标签提示</strong><br><img src="http://img.saodiyang.com/FoJsDnsoLWKo7ECSzcLmzUX_uWgw.gif" alt="通过标签搜索"></p><h3 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h3><p><img src="http://img.saodiyang.com/FtDD77YX_xenS-AZQW56qrwrQc4D.gif" alt="测试一下评论"></p><h3 id="打赏功能"><a href="#打赏功能" class="headerlink" title="打赏功能"></a>打赏功能</h3><p><img src="http://img.saodiyang.com/FhlNgOF7ipEIVrrztFdRam3WRikw.gif" alt="打赏功能"></p><h3 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h3><p><img src="http://img.saodiyang.com/FhQLLqrRCr4yFGl9nDb_9oc4yME-.png" alt="文章置顶"></p><h3 id="返回头部"><a href="#返回头部" class="headerlink" title="返回头部"></a>返回头部</h3><p><img src="http://img.saodiyang.com/FjpVByJViwYEWHHMTeayiQ-FD_qG.gif" alt="返回头部"></p><h2 id="效果博客"><a href="#效果博客" class="headerlink" title="效果博客"></a>效果博客</h2><ul><li><a href="https://www.chenuon.cn/">程忧点滴</a></li><li><a href="https://coco56.gitee.io/blog/">COCO56个人博客</a></li><li><a href="https://wallleap.cn/">wallleap</a></li><li><a href="https://dingguanyu.com/">黑刀的个人博客</a></li></ul><h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p> 作者Peiwen Lu的jekyll主题：<a href="https://github.com/P233/3-Jekyll">3-jekyll</a>主题<br> 作者Yansu的<a href="http://yansu.org/">blog</a><br> 作者litten的<a href="https://github.com/litten/hexo-theme-yilia">hexo-theme-yilia</a>主题</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+            <tag> hexo主题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[卡通]ExPixel 精致像素纹理包 - 一款精心打造的卡通材质</title>
       <link href="/2024/05/31/%5B%E5%8D%A1%E9%80%9A%5DExPixel%20%E7%B2%BE%E8%87%B4%E5%83%8F%E7%B4%A0%E7%BA%B9%E7%90%86%E5%8C%85%20-%20%E4%B8%80%E6%AC%BE%E7%B2%BE%E5%BF%83%E6%89%93%E9%80%A0%E7%9A%84%E5%8D%A1%E9%80%9A%E6%9D%90%E8%B4%A8/"/>
       <url>/2024/05/31/%5B%E5%8D%A1%E9%80%9A%5DExPixel%20%E7%B2%BE%E8%87%B4%E5%83%8F%E7%B4%A0%E7%BA%B9%E7%90%86%E5%8C%85%20-%20%E4%B8%80%E6%AC%BE%E7%B2%BE%E5%BF%83%E6%89%93%E9%80%A0%E7%9A%84%E5%8D%A1%E9%80%9A%E6%9D%90%E8%B4%A8/</url>
@@ -1541,9 +1568,9 @@
       
         <tags>
             
-            <tag> MC </tag>
-            
             <tag> 转载 </tag>
+            
+            <tag> MC </tag>
             
             <tag> 分享 </tag>
             
@@ -1604,35 +1631,6 @@
     
     
     <entry>
-      <title>Minecraft 1.21：快照24w05a发布！解锁宝库，大量稀有战利品！</title>
-      <link href="/2024/05/31/Minecraft%201.21%EF%BC%9A%E5%BF%AB%E7%85%A724w05a%E5%8F%91%E5%B8%83%EF%BC%81%E8%A7%A3%E9%94%81%E5%AE%9D%E5%BA%93%EF%BC%8C%E5%A4%A7%E9%87%8F%E7%A8%80%E6%9C%89%E6%88%98%E5%88%A9%E5%93%81%EF%BC%81/"/>
-      <url>/2024/05/31/Minecraft%201.21%EF%BC%9A%E5%BF%AB%E7%85%A724w05a%E5%8F%91%E5%B8%83%EF%BC%81%E8%A7%A3%E9%94%81%E5%AE%9D%E5%BA%93%EF%BC%8C%E5%A4%A7%E9%87%8F%E7%A8%80%E6%9C%89%E6%88%98%E5%88%A9%E5%93%81%EF%BC%81/</url>
-      
-        <content type="html"><![CDATA[<p><img src="https://www.pixelbbs.cn/data/attachment/forum/202402/06/234206sgnp31hgnnrv4p5r.jpg"></p><span id="more"></span><p>提前预热了一周的Minecraft JAVA版快照24w05a，本周终于如约发布，并迎来了最新的特性“宝库”！一种可以给玩家带来大量战利品收入的东西。<br>###1.什么是宝库（Vault）？<br><img src="https://www.pixelbbs.cn/data/attachment/forum/202402/06/234207iibcixue4w11xs41.jpg"><br>宝库（Vault）在《我的世界》试炼大厅中既不是一个房间，也不是一个箱子。而是一种方块，可以用试炼钥匙打开并喷出大量战利品的方块。</p><p>特性一：生成；宝库目前只可以自然的生成在1.21试炼大厅的结构当中。只是将原本部分战利品箱直接替换成了宝库（真懒）。生存模式下玩家暂无法以物品的模式存在于玩家的背包和物品栏当中。</p><p>特性二：激活提示；当一个宝库可以被玩家激活时，玩家只要在接近宝库4格范围内，宝库会开始活动并开始喷出火焰粒子。同时宝库的亮度会增加，部分纹理变成橙色等等。玩家可以在激活的宝库中，看到其中旋转的战利品实体，并战利品是在不断变化的。<br><img src="https://www.pixelbbs.cn/data/attachment/forum/202402/06/234208gqdkhfjbdyb2wyhh.jpg"><br>特性三：解锁宝库；宝库能且只能被玩家手持试炼钥匙来解锁，并且只能对已经激活的宝库使用钥匙。每次解锁宝库，都会消耗掉一把钥匙。</p><p>特性四：已经被解锁的宝库，无法再次被解锁。但不同玩家可以每人都解锁一次同一个宝库。<br><img src="https://www.pixelbbs.cn/data/attachment/forum/202402/06/234209m9rxkl454s23472x.jpg"><br>特性五：同一个宝库记录解锁宝库的玩家数量是有上限的，目前上限为128未。也就是说，如果你在第一个顺位解锁了宝库，那么当第129位玩家解锁玩宝库后，你的名字会被放出来，可以再次解锁一次宝库。</p><p>特性六：宝库可以被挖掘，但目前还没有适用工具可以将宝库挖出成为一件物品。</p><p>##2.宝库的战利品有哪些？<br><img src="https://www.pixelbbs.cn/data/attachment/forum/202402/06/234209btn8tbfcw8zcnnng.jpg"><br>在目前快照24w05a中，宝库的战利品包括了：钻石、绿宝石、鞍、附魔书、钻石马铠、附魔钻石装备，附魔铁质装备等等。其中最稀有的应该还要数“附魔金苹果”，开出附魔金苹果的概率能达到10%。</p><p>就目前而言，宝库还没有专属的独立战利品。和普通的战利品箱子也没有什么特别的地方。但宝库出产稀有的战利品爆率还是非常高的！</p><p>多跑一些试炼大厅，或者是用切换本地用户等特殊方式来刷宝库，一组附魔金苹果指日可待啊！</p><p>##3.狼铠与马铠的未来更新？</p><p><img src="https://www.pixelbbs.cn/data/attachment/forum/202402/06/234210q98g2q2v77skt8e4.jpg"><br>在快照24w05a中，马铠和狼铠都添加了护甲值和盔甲韧性的提示信息。譬如说以钻石马铠为例，在物品界面中就可以看到马铠的护甲值为11，盔甲韧性为2。</p><p>这对于Minecraft来说，算是对宠物盔甲体系进行了一次实用性的升级，在更多盔甲体系的纵向发展中迈出了一大步！</p><h2 id="有没有一种可能，在未来的1-2-1版本中，玩家可以对马铠和狼铠进行更进一步的附魔升级，比如说给狼铠增加火焰抗性、水下呼吸等等？"><a href="#有没有一种可能，在未来的1-2-1版本中，玩家可以对马铠和狼铠进行更进一步的附魔升级，比如说给狼铠增加火焰抗性、水下呼吸等等？" class="headerlink" title="有没有一种可能，在未来的1. 2 1版本中，玩家可以对马铠和狼铠进行更进一步的附魔升级，比如说给狼铠增加火焰抗性、水下呼吸等等？"></a>有没有一种可能，在未来的1. 2 1版本中，玩家可以对马铠和狼铠进行更进一步的附魔升级，比如说给狼铠增加火焰抗性、水下呼吸等等？</h2><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 新闻 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MC </tag>
-            
-            <tag> 转载 </tag>
-            
-            <tag> 新闻 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>[Github]hexo-theme-Snippet——简洁而不简单</title>
       <link href="/2024/05/31/Snippet%20%E7%AE%80%E6%B4%81%E8%80%8C%E4%B8%8D%E7%AE%80%E5%8D%95/"/>
       <url>/2024/05/31/Snippet%20%E7%AE%80%E6%B4%81%E8%80%8C%E4%B8%8D%E7%AE%80%E5%8D%95/</url>
@@ -1652,6 +1650,35 @@
             <tag> github </tag>
             
             <tag> hexo主题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Minecraft 1.21：快照24w05a发布！解锁宝库，大量稀有战利品！</title>
+      <link href="/2024/05/31/Minecraft%201.21%EF%BC%9A%E5%BF%AB%E7%85%A724w05a%E5%8F%91%E5%B8%83%EF%BC%81%E8%A7%A3%E9%94%81%E5%AE%9D%E5%BA%93%EF%BC%8C%E5%A4%A7%E9%87%8F%E7%A8%80%E6%9C%89%E6%88%98%E5%88%A9%E5%93%81%EF%BC%81/"/>
+      <url>/2024/05/31/Minecraft%201.21%EF%BC%9A%E5%BF%AB%E7%85%A724w05a%E5%8F%91%E5%B8%83%EF%BC%81%E8%A7%A3%E9%94%81%E5%AE%9D%E5%BA%93%EF%BC%8C%E5%A4%A7%E9%87%8F%E7%A8%80%E6%9C%89%E6%88%98%E5%88%A9%E5%93%81%EF%BC%81/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://www.pixelbbs.cn/data/attachment/forum/202402/06/234206sgnp31hgnnrv4p5r.jpg"></p><span id="more"></span><p>提前预热了一周的Minecraft JAVA版快照24w05a，本周终于如约发布，并迎来了最新的特性“宝库”！一种可以给玩家带来大量战利品收入的东西。<br>###1.什么是宝库（Vault）？<br><img src="https://www.pixelbbs.cn/data/attachment/forum/202402/06/234207iibcixue4w11xs41.jpg"><br>宝库（Vault）在《我的世界》试炼大厅中既不是一个房间，也不是一个箱子。而是一种方块，可以用试炼钥匙打开并喷出大量战利品的方块。</p><p>特性一：生成；宝库目前只可以自然的生成在1.21试炼大厅的结构当中。只是将原本部分战利品箱直接替换成了宝库（真懒）。生存模式下玩家暂无法以物品的模式存在于玩家的背包和物品栏当中。</p><p>特性二：激活提示；当一个宝库可以被玩家激活时，玩家只要在接近宝库4格范围内，宝库会开始活动并开始喷出火焰粒子。同时宝库的亮度会增加，部分纹理变成橙色等等。玩家可以在激活的宝库中，看到其中旋转的战利品实体，并战利品是在不断变化的。<br><img src="https://www.pixelbbs.cn/data/attachment/forum/202402/06/234208gqdkhfjbdyb2wyhh.jpg"><br>特性三：解锁宝库；宝库能且只能被玩家手持试炼钥匙来解锁，并且只能对已经激活的宝库使用钥匙。每次解锁宝库，都会消耗掉一把钥匙。</p><p>特性四：已经被解锁的宝库，无法再次被解锁。但不同玩家可以每人都解锁一次同一个宝库。<br><img src="https://www.pixelbbs.cn/data/attachment/forum/202402/06/234209m9rxkl454s23472x.jpg"><br>特性五：同一个宝库记录解锁宝库的玩家数量是有上限的，目前上限为128未。也就是说，如果你在第一个顺位解锁了宝库，那么当第129位玩家解锁玩宝库后，你的名字会被放出来，可以再次解锁一次宝库。</p><p>特性六：宝库可以被挖掘，但目前还没有适用工具可以将宝库挖出成为一件物品。</p><p>##2.宝库的战利品有哪些？<br><img src="https://www.pixelbbs.cn/data/attachment/forum/202402/06/234209btn8tbfcw8zcnnng.jpg"><br>在目前快照24w05a中，宝库的战利品包括了：钻石、绿宝石、鞍、附魔书、钻石马铠、附魔钻石装备，附魔铁质装备等等。其中最稀有的应该还要数“附魔金苹果”，开出附魔金苹果的概率能达到10%。</p><p>就目前而言，宝库还没有专属的独立战利品。和普通的战利品箱子也没有什么特别的地方。但宝库出产稀有的战利品爆率还是非常高的！</p><p>多跑一些试炼大厅，或者是用切换本地用户等特殊方式来刷宝库，一组附魔金苹果指日可待啊！</p><p>##3.狼铠与马铠的未来更新？</p><p><img src="https://www.pixelbbs.cn/data/attachment/forum/202402/06/234210q98g2q2v77skt8e4.jpg"><br>在快照24w05a中，马铠和狼铠都添加了护甲值和盔甲韧性的提示信息。譬如说以钻石马铠为例，在物品界面中就可以看到马铠的护甲值为11，盔甲韧性为2。</p><p>这对于Minecraft来说，算是对宠物盔甲体系进行了一次实用性的升级，在更多盔甲体系的纵向发展中迈出了一大步！</p><h2 id="有没有一种可能，在未来的1-2-1版本中，玩家可以对马铠和狼铠进行更进一步的附魔升级，比如说给狼铠增加火焰抗性、水下呼吸等等？"><a href="#有没有一种可能，在未来的1-2-1版本中，玩家可以对马铠和狼铠进行更进一步的附魔升级，比如说给狼铠增加火焰抗性、水下呼吸等等？" class="headerlink" title="有没有一种可能，在未来的1. 2 1版本中，玩家可以对马铠和狼铠进行更进一步的附魔升级，比如说给狼铠增加火焰抗性、水下呼吸等等？"></a>有没有一种可能，在未来的1. 2 1版本中，玩家可以对马铠和狼铠进行更进一步的附魔升级，比如说给狼铠增加火焰抗性、水下呼吸等等？</h2><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 新闻 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 转载 </tag>
+            
+            <tag> MC </tag>
+            
+            <tag> 新闻 </tag>
             
         </tags>
       
@@ -1732,11 +1759,11 @@
       
         <tags>
             
-            <tag> MC </tag>
-            
             <tag> github </tag>
             
             <tag> 转载 </tag>
+            
+            <tag> MC </tag>
             
             <tag> 插件 </tag>
             
@@ -1809,9 +1836,9 @@
       
         <tags>
             
-            <tag> MC </tag>
-            
             <tag> 转载 </tag>
+            
+            <tag> MC </tag>
             
             <tag> 分享 </tag>
             
@@ -1838,9 +1865,9 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> github </tag>
+            
+            <tag> 教程 </tag>
             
         </tags>
       
@@ -1865,9 +1892,9 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> github </tag>
+            
+            <tag> 教程 </tag>
             
         </tags>
       
@@ -1892,9 +1919,9 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> github </tag>
+            
+            <tag> 教程 </tag>
             
             <tag> hexo </tag>
             
@@ -1921,11 +1948,11 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> github </tag>
             
             <tag> 转载 </tag>
+            
+            <tag> 教程 </tag>
             
             <tag> hexo </tag>
             
@@ -1981,9 +2008,9 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> github </tag>
+            
+            <tag> 教程 </tag>
             
             <tag> java </tag>
             
@@ -2010,9 +2037,9 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> github </tag>
+            
+            <tag> 教程 </tag>
             
         </tags>
       
@@ -2176,9 +2203,9 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> github </tag>
+            
+            <tag> 教程 </tag>
             
         </tags>
       
