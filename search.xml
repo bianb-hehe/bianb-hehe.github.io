@@ -47,9 +47,9 @@
       
         <tags>
             
-            <tag> github </tag>
-            
             <tag> 教程 </tag>
+            
+            <tag> github </tag>
             
         </tags>
       
@@ -182,9 +182,9 @@
       
         <tags>
             
-            <tag> github </tag>
-            
             <tag> 教程 </tag>
+            
+            <tag> github </tag>
             
         </tags>
       
@@ -328,11 +328,11 @@
     
     
     <entry>
-      <title>[1.8x+]Bedwars1058 经典起床插件</title>
-      <link href="/2024/08/08/496/"/>
-      <url>/2024/08/08/496/</url>
+      <title>[1.8x+]LifeStealZ </title>
+      <link href="/2024/08/08/483593/"/>
+      <url>/2024/08/08/483593/</url>
       
-        <content type="html"><![CDATA[<h1 id="Bedwars1058-插件文档"><a href="#Bedwars1058-插件文档" class="headerlink" title="Bedwars1058 插件文档"></a>Bedwars1058 插件文档</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Bedwars1058 是一个高级的 BedWars 插件，为 Minecraft 服务器提供经典的 BedWars 游戏模式。这个插件不仅功能丰富，还具有高度的可定制性，适合各种规模的服务器。</p><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul><li>完全可自定义的游戏机制</li><li>支持多种地图和队伍配置</li><li>多种游戏事件和胜利条件</li><li>内置的商店和经济系统</li><li>支持多种语言</li><li>高性能，支持大型服务器<br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/03/222234e0fk14gkxvpmrfxv.png"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/03/222243kww5ae2z4o44zw98.jpg"></li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li>下载插件文件 <code>Bedwars1058.jar</code>。</li><li>将 <code>Bedwars1058.jar</code> 文件放入服务器的 <code>plugins</code> 文件夹中。</li><li>重启服务器。</li></ol><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>安装插件后，可以通过编辑 <code>config.yml</code> 文件来配置插件。以下是默认的配置示例：</p><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">game:</span></span><br><span class="line">  <span class="attr">max-players:</span> <span class="number">16</span></span><br><span class="line">  <span class="attr">min-players:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">teams:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">Red</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">Blue</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">Green</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">Yellow</span></span><br><span class="line">  <span class="attr">bed-protection:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">blocks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GLASS</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">END_STONE</span></span><br><span class="line">  <span class="attr">generator-speed:</span> <span class="number">1.0</span></span><br><span class="line"></span><br><span class="line"><span class="attr">shop:</span></span><br><span class="line">  <span class="attr">items:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">"Sword"</span></span><br><span class="line">      <span class="attr">type:</span> <span class="string">IRON_SWORD</span></span><br><span class="line">      <span class="attr">cost:</span> <span class="number">10</span></span><br><span class="line">      <span class="attr">currency:</span> <span class="string">IRON_INGOT</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">"Armor"</span></span><br><span class="line">      <span class="attr">type:</span> <span class="string">DIAMOND_CHESTPLATE</span></span><br><span class="line">      <span class="attr">cost:</span> <span class="number">20</span></span><br><span class="line">      <span class="attr">currency:</span> <span class="string">GOLD_INGOT</span></span><br><span class="line"></span><br><span class="line"><span class="attr">language:</span></span><br><span class="line">  <span class="attr">default:</span> <span class="string">en</span></span><br><span class="line">  <span class="attr">messages:</span></span><br><span class="line">    <span class="attr">game-start:</span> <span class="string">"游戏开始!"</span></span><br><span class="line">    <span class="attr">bed-destroyed:</span> <span class="string">"%team% 的床已被摧毁!"</span></span><br><span class="line">    <span class="attr">victory:</span> <span class="string">"%team% 获胜了!"</span><span class="string">·</span></span><br></pre></td></tr></tbody></table></figure><h3 id="配置选项"><a href="#配置选项" class="headerlink" title="配置选项"></a>配置选项</h3><ul><li><code>game.max-players</code>: 每场游戏的最大玩家数。</li><li><code>game.min-players</code>: 每场游戏的最小玩家数。</li><li><code>game.teams</code>: 可用的队伍列表。</li><li><code>game.bed-protection.enabled</code>: 是否启用床保护。</li><li><code>game.bed-protection.blocks</code>: 床保护使用的方块类型。</li><li><code>game.generator-speed</code>: 资源生成速度。</li><li><code>shop.items</code>: 商店物品列表。</li><li><code>language.default</code>: 默认语言。</li><li><code>language.messages</code>: 自定义消息。</li></ul><h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><ul><li><code>/bw join &lt;arena&gt;</code>: 加入一个竞技场。</li><li><code>/bw leave</code>: 离开当前竞技场。</li><li><code>/bw start</code>: 强制开始游戏。</li><li><code>/bw stop</code>: 强制停止游戏。</li><li><code>/bw setspawn &lt;team&gt;</code>: 设置团队的重生点。</li><li><code>/bw setbed &lt;team&gt;</code>: 设置团队的床位置。</li></ul><h2 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h2><ul><li><code>bw.admin</code>: 管理员权限，允许使用所有命令。</li><li><code>bw.join</code>: 允许玩家加入竞技场。</li><li><code>bw.leave</code>: 允许玩家离开竞技场。</li><li><code>bw.start</code>: 允许玩家强制开始游戏。</li><li><code>bw.stop</code>: 允许玩家强制停止游戏。</li></ul><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="加入竞技场"><a href="#加入竞技场" class="headerlink" title="加入竞技场"></a>加入竞技场</h3><pre class="code-block-wrapper"><div class="code-block-header"><span class="code-block-header__lang">plaintext</span><span class="code-block-header__copy">复制代码</span></div><code class="hljs code-block-body plaintext">/bw join arena1</code></pre><h3 id="强制开始游戏"><a href="#强制开始游戏" class="headerlink" title="强制开始游戏"></a>强制开始游戏</h3><pre class="code-block-wrapper"><div class="code-block-header"><span class="code-block-header__lang">plaintext</span><span class="code-block-header__copy">复制代码</span></div><code class="hljs code-block-body plaintext">/bw start</code></pre><h3 id="设置红队的重生点"><a href="#设置红队的重生点" class="headerlink" title="设置红队的重生点"></a>设置红队的重生点</h3><pre class="code-block-wrapper"><div class="code-block-header"><span class="code-block-header__lang">plaintext</span><span class="code-block-header__copy">复制代码</span></div><code class="hljs code-block-body plaintext">/bw setspawn Red</code></pre><h2 id="支持"><a href="#支持" class="headerlink" title="支持"></a>支持</h2><p>如果您在使用过程中遇到问题，请访问我们的<a href="https://www.spigotmc.org/resources/bedwars1058.1058/">支持页面</a>获取帮助。</p><h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><h3 id="1-0-0"><a href="#1-0-0" class="headerlink" title="1.0.0"></a>1.0.0</h3><ul><li>初始发布版本</li></ul><h3 id="1-1-0"><a href="#1-1-0" class="headerlink" title="1.1.0"></a>1.1.0</h3><ul><li>增加了新地图支持</li><li>优化了性能</li></ul><h3 id="1-2-0"><a href="#1-2-0" class="headerlink" title="1.2.0"></a>1.2.0</h3><ul><li>添加了新物品到商店</li><li>修复了已知的漏洞</li></ul><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></tbody></table></figure><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+        <content type="html"><![CDATA[<h2 id="LifeStealZ-插件简介"><a href="#LifeStealZ-插件简介" class="headerlink" title="LifeStealZ 插件简介"></a>LifeStealZ 插件简介</h2><p>LifeStealZ 是一个高性能的 Minecraft 插件，允许玩家通过击杀其他玩家来窃取生命。以下是该插件的主要功能和配置说明。</p><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul><li><strong>生命窃取</strong>: 玩家可以通过击杀其他玩家来窃取他们的生命。</li><li><strong>自定义配置</strong>: 插件允许自定义窃取的生命数量和各种触发条件。</li><li><strong>高性能</strong>: 设计优化，确保在大型服务器上也能高效运行。</li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li>下载 LifeStealZ 插件 <a href="https://www.spigotmc.org/resources/lifestealz.111469/">下载链接</a>.</li><li>将插件文件放入你的服务器的 <code>plugins</code> 文件夹中。</li><li>重启服务器以加载插件。</li></ol><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>安装完成后，可以在 <code>plugins/LifeStealZ/config.yml</code> 文件中进行配置。</p><h3 id="示例配置"><a href="#示例配置" class="headerlink" title="示例配置"></a>示例配置</h3><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">life_steal_amount:</span> <span class="number">2</span></span><br><span class="line"><span class="attr">max_health:</span> <span class="number">40</span></span><br><span class="line"><span class="attr">min_health:</span> <span class="number">10</span></span><br><span class="line"><span class="attr">messages:</span></span><br><span class="line">  <span class="attr">kill:</span> <span class="string">"&amp;c你窃取了 {amount} 点生命值！"</span></span><br><span class="line">  <span class="attr">death:</span> <span class="string">"&amp;c你被击杀，失去了 {amount} 点生命值！"</span></span><br></pre></td></tr></tbody></table></figure><h2 id="命令与权限"><a href="#命令与权限" class="headerlink" title="命令与权限"></a>命令与权限</h2><h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><ul><li><code>/lifestealz reload</code> - 重新加载插件配置。</li></ul><h3 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h3><ul><li><code>lifestealz.admin</code> - 允许使用所有命令。</li></ul><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="如何防止生命值被窃取？"><a href="#如何防止生命值被窃取？" class="headerlink" title="如何防止生命值被窃取？"></a>如何防止生命值被窃取？</h3><p>可以设置 <code>min_health</code> 参数，确保玩家的生命值不会低于该值。</p><h3 id="是否支持多语言？"><a href="#是否支持多语言？" class="headerlink" title="是否支持多语言？"></a>是否支持多语言？</h3><p>是的，您可以在配置文件中自定义所有消息。</p><p>更多详细信息和支持，请访问 <a href="https://www.spigotmc.org/resources/lifestealz.111469/">LifeStealZ 插件页面</a>。<br><img src="https://proxy.spigotmc.org/0f4065e3f6bd11a0bb61116da1f38381c3408620?url=https://bstats.org/signatures/bukkit/LifeStealZ.svg" alt="[​IMG]"></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
       
       
       <categories>
@@ -355,11 +355,11 @@
     
     
     <entry>
-      <title>[1.8x+]LifeStealZ </title>
-      <link href="/2024/08/08/483593/"/>
-      <url>/2024/08/08/483593/</url>
+      <title>[1.8x+]Bedwars1058 经典起床插件</title>
+      <link href="/2024/08/08/496/"/>
+      <url>/2024/08/08/496/</url>
       
-        <content type="html"><![CDATA[<h2 id="LifeStealZ-插件简介"><a href="#LifeStealZ-插件简介" class="headerlink" title="LifeStealZ 插件简介"></a>LifeStealZ 插件简介</h2><p>LifeStealZ 是一个高性能的 Minecraft 插件，允许玩家通过击杀其他玩家来窃取生命。以下是该插件的主要功能和配置说明。</p><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul><li><strong>生命窃取</strong>: 玩家可以通过击杀其他玩家来窃取他们的生命。</li><li><strong>自定义配置</strong>: 插件允许自定义窃取的生命数量和各种触发条件。</li><li><strong>高性能</strong>: 设计优化，确保在大型服务器上也能高效运行。</li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li>下载 LifeStealZ 插件 <a href="https://www.spigotmc.org/resources/lifestealz.111469/">下载链接</a>.</li><li>将插件文件放入你的服务器的 <code>plugins</code> 文件夹中。</li><li>重启服务器以加载插件。</li></ol><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>安装完成后，可以在 <code>plugins/LifeStealZ/config.yml</code> 文件中进行配置。</p><h3 id="示例配置"><a href="#示例配置" class="headerlink" title="示例配置"></a>示例配置</h3><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">life_steal_amount:</span> <span class="number">2</span></span><br><span class="line"><span class="attr">max_health:</span> <span class="number">40</span></span><br><span class="line"><span class="attr">min_health:</span> <span class="number">10</span></span><br><span class="line"><span class="attr">messages:</span></span><br><span class="line">  <span class="attr">kill:</span> <span class="string">"&amp;c你窃取了 {amount} 点生命值！"</span></span><br><span class="line">  <span class="attr">death:</span> <span class="string">"&amp;c你被击杀，失去了 {amount} 点生命值！"</span></span><br></pre></td></tr></tbody></table></figure><h2 id="命令与权限"><a href="#命令与权限" class="headerlink" title="命令与权限"></a>命令与权限</h2><h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><ul><li><code>/lifestealz reload</code> - 重新加载插件配置。</li></ul><h3 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h3><ul><li><code>lifestealz.admin</code> - 允许使用所有命令。</li></ul><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="如何防止生命值被窃取？"><a href="#如何防止生命值被窃取？" class="headerlink" title="如何防止生命值被窃取？"></a>如何防止生命值被窃取？</h3><p>可以设置 <code>min_health</code> 参数，确保玩家的生命值不会低于该值。</p><h3 id="是否支持多语言？"><a href="#是否支持多语言？" class="headerlink" title="是否支持多语言？"></a>是否支持多语言？</h3><p>是的，您可以在配置文件中自定义所有消息。</p><p>更多详细信息和支持，请访问 <a href="https://www.spigotmc.org/resources/lifestealz.111469/">LifeStealZ 插件页面</a>。<br><img src="https://proxy.spigotmc.org/0f4065e3f6bd11a0bb61116da1f38381c3408620?url=https://bstats.org/signatures/bukkit/LifeStealZ.svg" alt="[​IMG]"></p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+        <content type="html"><![CDATA[<h1 id="Bedwars1058-插件文档"><a href="#Bedwars1058-插件文档" class="headerlink" title="Bedwars1058 插件文档"></a>Bedwars1058 插件文档</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Bedwars1058 是一个高级的 BedWars 插件，为 Minecraft 服务器提供经典的 BedWars 游戏模式。这个插件不仅功能丰富，还具有高度的可定制性，适合各种规模的服务器。</p><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul><li>完全可自定义的游戏机制</li><li>支持多种地图和队伍配置</li><li>多种游戏事件和胜利条件</li><li>内置的商店和经济系统</li><li>支持多种语言</li><li>高性能，支持大型服务器<br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/03/222234e0fk14gkxvpmrfxv.png"><br><img src="https://www.pixelbbs.cn/data/attachment/forum/202405/03/222243kww5ae2z4o44zw98.jpg"></li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li>下载插件文件 <code>Bedwars1058.jar</code>。</li><li>将 <code>Bedwars1058.jar</code> 文件放入服务器的 <code>plugins</code> 文件夹中。</li><li>重启服务器。</li></ol><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>安装插件后，可以通过编辑 <code>config.yml</code> 文件来配置插件。以下是默认的配置示例：</p><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">game:</span></span><br><span class="line">  <span class="attr">max-players:</span> <span class="number">16</span></span><br><span class="line">  <span class="attr">min-players:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">teams:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">Red</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">Blue</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">Green</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">Yellow</span></span><br><span class="line">  <span class="attr">bed-protection:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">blocks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GLASS</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">END_STONE</span></span><br><span class="line">  <span class="attr">generator-speed:</span> <span class="number">1.0</span></span><br><span class="line"></span><br><span class="line"><span class="attr">shop:</span></span><br><span class="line">  <span class="attr">items:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">"Sword"</span></span><br><span class="line">      <span class="attr">type:</span> <span class="string">IRON_SWORD</span></span><br><span class="line">      <span class="attr">cost:</span> <span class="number">10</span></span><br><span class="line">      <span class="attr">currency:</span> <span class="string">IRON_INGOT</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">"Armor"</span></span><br><span class="line">      <span class="attr">type:</span> <span class="string">DIAMOND_CHESTPLATE</span></span><br><span class="line">      <span class="attr">cost:</span> <span class="number">20</span></span><br><span class="line">      <span class="attr">currency:</span> <span class="string">GOLD_INGOT</span></span><br><span class="line"></span><br><span class="line"><span class="attr">language:</span></span><br><span class="line">  <span class="attr">default:</span> <span class="string">en</span></span><br><span class="line">  <span class="attr">messages:</span></span><br><span class="line">    <span class="attr">game-start:</span> <span class="string">"游戏开始!"</span></span><br><span class="line">    <span class="attr">bed-destroyed:</span> <span class="string">"%team% 的床已被摧毁!"</span></span><br><span class="line">    <span class="attr">victory:</span> <span class="string">"%team% 获胜了!"</span><span class="string">·</span></span><br></pre></td></tr></tbody></table></figure><h3 id="配置选项"><a href="#配置选项" class="headerlink" title="配置选项"></a>配置选项</h3><ul><li><code>game.max-players</code>: 每场游戏的最大玩家数。</li><li><code>game.min-players</code>: 每场游戏的最小玩家数。</li><li><code>game.teams</code>: 可用的队伍列表。</li><li><code>game.bed-protection.enabled</code>: 是否启用床保护。</li><li><code>game.bed-protection.blocks</code>: 床保护使用的方块类型。</li><li><code>game.generator-speed</code>: 资源生成速度。</li><li><code>shop.items</code>: 商店物品列表。</li><li><code>language.default</code>: 默认语言。</li><li><code>language.messages</code>: 自定义消息。</li></ul><h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><ul><li><code>/bw join &lt;arena&gt;</code>: 加入一个竞技场。</li><li><code>/bw leave</code>: 离开当前竞技场。</li><li><code>/bw start</code>: 强制开始游戏。</li><li><code>/bw stop</code>: 强制停止游戏。</li><li><code>/bw setspawn &lt;team&gt;</code>: 设置团队的重生点。</li><li><code>/bw setbed &lt;team&gt;</code>: 设置团队的床位置。</li></ul><h2 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h2><ul><li><code>bw.admin</code>: 管理员权限，允许使用所有命令。</li><li><code>bw.join</code>: 允许玩家加入竞技场。</li><li><code>bw.leave</code>: 允许玩家离开竞技场。</li><li><code>bw.start</code>: 允许玩家强制开始游戏。</li><li><code>bw.stop</code>: 允许玩家强制停止游戏。</li></ul><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="加入竞技场"><a href="#加入竞技场" class="headerlink" title="加入竞技场"></a>加入竞技场</h3><pre class="code-block-wrapper"><div class="code-block-header"><span class="code-block-header__lang">plaintext</span><span class="code-block-header__copy">复制代码</span></div><code class="hljs code-block-body plaintext">/bw join arena1</code></pre><h3 id="强制开始游戏"><a href="#强制开始游戏" class="headerlink" title="强制开始游戏"></a>强制开始游戏</h3><pre class="code-block-wrapper"><div class="code-block-header"><span class="code-block-header__lang">plaintext</span><span class="code-block-header__copy">复制代码</span></div><code class="hljs code-block-body plaintext">/bw start</code></pre><h3 id="设置红队的重生点"><a href="#设置红队的重生点" class="headerlink" title="设置红队的重生点"></a>设置红队的重生点</h3><pre class="code-block-wrapper"><div class="code-block-header"><span class="code-block-header__lang">plaintext</span><span class="code-block-header__copy">复制代码</span></div><code class="hljs code-block-body plaintext">/bw setspawn Red</code></pre><h2 id="支持"><a href="#支持" class="headerlink" title="支持"></a>支持</h2><p>如果您在使用过程中遇到问题，请访问我们的<a href="https://www.spigotmc.org/resources/bedwars1058.1058/">支持页面</a>获取帮助。</p><h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><h3 id="1-0-0"><a href="#1-0-0" class="headerlink" title="1.0.0"></a>1.0.0</h3><ul><li>初始发布版本</li></ul><h3 id="1-1-0"><a href="#1-1-0" class="headerlink" title="1.1.0"></a>1.1.0</h3><ul><li>增加了新地图支持</li><li>优化了性能</li></ul><h3 id="1-2-0"><a href="#1-2-0" class="headerlink" title="1.2.0"></a>1.2.0</h3><ul><li>添加了新物品到商店</li><li>修复了已知的漏洞</li></ul><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></tbody></table></figure><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
       
       
       <categories>
@@ -529,11 +529,11 @@
     
     
     <entry>
-      <title>TAB插件如何将头上的id改成cmi的nick设置的假名字</title>
-      <link href="/2024/07/07/39658/"/>
-      <url>/2024/07/07/39658/</url>
+      <title>Cmi的聊天功能怎么关闭</title>
+      <link href="/2024/07/07/396/"/>
+      <url>/2024/07/07/396/</url>
       
-        <content type="html"><![CDATA[<p>要将玩家在 TAB 插件中的头上显示的 ID 改为 CMI 插件中的 <code>nick</code> 设置的假名字，你需要确保两个插件能够互相兼容，并且 TAB 插件能够读取到 CMI 设置的昵称。这通常涉及到对 TAB 插件的配置进行调整，使其使用 CMI 的变量。</p><p>以下是一个实现方法的示例：</p><h3 id="1-确保-PlaceholderAPI-已安装"><a href="#1-确保-PlaceholderAPI-已安装" class="headerlink" title="1. 确保 PlaceholderAPI 已安装"></a>1. 确保 PlaceholderAPI 已安装</h3><p>为了让 TAB 插件能够使用 CMI 的变量，需要确保安装了 PlaceholderAPI 插件，因为它能够在插件之间共享变量。</p><ol><li>下载并安装 <a href="https://www.spigotmc.org/resources/placeholderapi.6245/">PlaceholderAPI</a> 插件。</li><li>启动服务器，以生成 PlaceholderAPI 的配置文件和所需文件夹。</li><li>确保 CMI 和 PlaceholderAPI 插件都正常工作，并且 PlaceholderAPI 能够正确读取 CMI 提供的变量。</li></ol><h3 id="2-配置-PlaceholderAPI-变量"><a href="#2-配置-PlaceholderAPI-变量" class="headerlink" title="2. 配置 PlaceholderAPI 变量"></a>2. 配置 PlaceholderAPI 变量</h3><p>PlaceholderAPI 插件需要设置，以便它能够读取和使用 CMI 的变量。通常，CMI 插件默认支持 PlaceholderAPI，所以你需要确保 CMI 的 Placeholder 支持已启用。</p><p>如果需要，使用以下命令下载 CMI 的 PlaceholderAPI 扩展：</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/papi ecloud download CMI</span><br><span class="line">/papi reload</span><br></pre></td></tr></tbody></table></figure><h3 id="3-配置-TAB-插件"><a href="#3-配置-TAB-插件" class="headerlink" title="3. 配置 TAB 插件"></a>3. 配置 TAB 插件</h3><p>编辑 TAB 插件的配置文件，以使用 CMI 提供的 <code>nick</code> 变量。以下是一个可能的配置示例：</p><h4 id="编辑-TAB-插件的配置文件-config-yml-或-tablist-yml（具体文件名取决于你的-TAB-插件版本和配置结构）："><a href="#编辑-TAB-插件的配置文件-config-yml-或-tablist-yml（具体文件名取决于你的-TAB-插件版本和配置结构）：" class="headerlink" title="编辑 TAB 插件的配置文件 config.yml 或 tablist.yml（具体文件名取决于你的 TAB 插件版本和配置结构）："></a>编辑 <code>TAB</code> 插件的配置文件 <code>config.yml</code> 或 <code>tablist.yml</code>（具体文件名取决于你的 TAB 插件版本和配置结构）：</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 示例文件路径：plugins/TAB/config.yml 或 plugins/TAB/tablist.yml</span><br><span class="line"></span><br><span class="line"># 配置玩家头上显示的标签格式</span><br><span class="line">name-tag:</span><br><span class="line">  enabled: true</span><br><span class="line">  format: "%cmi_user_displayname%"</span><br></pre></td></tr></tbody></table></figure><p>在这个示例中，<code>%cmi_user_displayname%</code> 是 PlaceholderAPI 提供的变量，它将被替换为 CMI 插件中设置的玩家昵称（假名字）。</p><h3 id="4-重启服务器"><a href="#4-重启服务器" class="headerlink" title="4. 重启服务器"></a>4. 重启服务器</h3><p>为了使更改生效，重启你的 Minecraft 服务器。</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/stop</span><br><span class="line"># 然后启动你的服务器</span><br></pre></td></tr></tbody></table></figure><h3 id="5-验证配置"><a href="#5-验证配置" class="headerlink" title="5. 验证配置"></a>5. 验证配置</h3><p>登录到服务器，查看玩家头上显示的标签是否已经变为 CMI 中设置的假名字。如果没有正确显示，请检查以下内容：</p><ol><li>PlaceholderAPI 是否正确加载了 CMI 的扩展。</li><li>CMI 中是否正确设置了玩家的昵称。</li><li>TAB 插件的配置文件中是否正确使用了 PlaceholderAPI 的变量。</li></ol><h3 id="6-调试和调整"><a href="#6-调试和调整" class="headerlink" title="6. 调试和调整"></a>6. 调试和调整</h3><p>如果遇到问题，请检查服务器日志文件以获取错误信息，并确保所有插件版本都是兼容的。可以根据错误提示进行相应的调整和调试。</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过确保 PlaceholderAPI 插件和相关扩展的正确安装和配置，你可以让 TAB 插件使用 CMI 提供的 <code>nick</code> 变量来显示玩家的假名字。希望这个指南能够帮助你实现所需的功能。</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+        <content type="html"><![CDATA[<p> CMI 插件的聊天功能，你可以通过修改 CMI 的配置文件来实现。以下是步骤：</p><ul><li>1.找到配置文件：在你的服务器目录中找到 CMI 的配置文件，通常位于 plugins/CMI/config.yml。</li><li>2.编辑配置文件：使用文本编辑器（如 Notepad++ 或 Visual Studio Code）打开 config.yml 文件。</li><li>3.找到聊天管理配置：搜索或找到与聊天功能相关的配置部分。通常这些设置在 Chat 或 ChatControl 部分。</li><li>4.禁用聊天功能：将相关的聊天功能禁用。例如 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Chat:</span><br><span class="line"> # Defines if chat management part is enabled</span><br><span class="line"> Enabled: false</span><br></pre></td></tr></tbody></table></figure>具体的配置选项和路径可能会因 CMI 版本不同有所差异。以下是一个可能的配置示例：<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Chat:</span><br><span class="line">  # Determines if CMI should handle the chat formatting</span><br><span class="line">  # If you are using another plugin for chat formatting, set this to false</span><br><span class="line">  # If you want to use CMI for chat formatting, set this to true</span><br><span class="line">  Enabled: false</span><br><span class="line"></span><br><span class="line">  # List of filters to apply on chat messages</span><br><span class="line">  Filters:</span><br><span class="line">    - enabled: false</span><br><span class="line">      regex: '.*'</span><br><span class="line">      replaceWith: '[filtered]'</span><br></pre></td></tr></tbody></table></figure></li></ul><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
       
       
       <categories>
@@ -560,11 +560,11 @@
     
     
     <entry>
-      <title>Cmi的聊天功能怎么关闭</title>
-      <link href="/2024/07/07/396/"/>
-      <url>/2024/07/07/396/</url>
+      <title>TAB插件如何将头上的id改成cmi的nick设置的假名字</title>
+      <link href="/2024/07/07/39658/"/>
+      <url>/2024/07/07/39658/</url>
       
-        <content type="html"><![CDATA[<p> CMI 插件的聊天功能，你可以通过修改 CMI 的配置文件来实现。以下是步骤：</p><ul><li>1.找到配置文件：在你的服务器目录中找到 CMI 的配置文件，通常位于 plugins/CMI/config.yml。</li><li>2.编辑配置文件：使用文本编辑器（如 Notepad++ 或 Visual Studio Code）打开 config.yml 文件。</li><li>3.找到聊天管理配置：搜索或找到与聊天功能相关的配置部分。通常这些设置在 Chat 或 ChatControl 部分。</li><li>4.禁用聊天功能：将相关的聊天功能禁用。例如 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Chat:</span><br><span class="line"> # Defines if chat management part is enabled</span><br><span class="line"> Enabled: false</span><br></pre></td></tr></tbody></table></figure>具体的配置选项和路径可能会因 CMI 版本不同有所差异。以下是一个可能的配置示例：<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Chat:</span><br><span class="line">  # Determines if CMI should handle the chat formatting</span><br><span class="line">  # If you are using another plugin for chat formatting, set this to false</span><br><span class="line">  # If you want to use CMI for chat formatting, set this to true</span><br><span class="line">  Enabled: false</span><br><span class="line"></span><br><span class="line">  # List of filters to apply on chat messages</span><br><span class="line">  Filters:</span><br><span class="line">    - enabled: false</span><br><span class="line">      regex: '.*'</span><br><span class="line">      replaceWith: '[filtered]'</span><br></pre></td></tr></tbody></table></figure></li></ul><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+        <content type="html"><![CDATA[<p>要将玩家在 TAB 插件中的头上显示的 ID 改为 CMI 插件中的 <code>nick</code> 设置的假名字，你需要确保两个插件能够互相兼容，并且 TAB 插件能够读取到 CMI 设置的昵称。这通常涉及到对 TAB 插件的配置进行调整，使其使用 CMI 的变量。</p><p>以下是一个实现方法的示例：</p><h3 id="1-确保-PlaceholderAPI-已安装"><a href="#1-确保-PlaceholderAPI-已安装" class="headerlink" title="1. 确保 PlaceholderAPI 已安装"></a>1. 确保 PlaceholderAPI 已安装</h3><p>为了让 TAB 插件能够使用 CMI 的变量，需要确保安装了 PlaceholderAPI 插件，因为它能够在插件之间共享变量。</p><ol><li>下载并安装 <a href="https://www.spigotmc.org/resources/placeholderapi.6245/">PlaceholderAPI</a> 插件。</li><li>启动服务器，以生成 PlaceholderAPI 的配置文件和所需文件夹。</li><li>确保 CMI 和 PlaceholderAPI 插件都正常工作，并且 PlaceholderAPI 能够正确读取 CMI 提供的变量。</li></ol><h3 id="2-配置-PlaceholderAPI-变量"><a href="#2-配置-PlaceholderAPI-变量" class="headerlink" title="2. 配置 PlaceholderAPI 变量"></a>2. 配置 PlaceholderAPI 变量</h3><p>PlaceholderAPI 插件需要设置，以便它能够读取和使用 CMI 的变量。通常，CMI 插件默认支持 PlaceholderAPI，所以你需要确保 CMI 的 Placeholder 支持已启用。</p><p>如果需要，使用以下命令下载 CMI 的 PlaceholderAPI 扩展：</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/papi ecloud download CMI</span><br><span class="line">/papi reload</span><br></pre></td></tr></tbody></table></figure><h3 id="3-配置-TAB-插件"><a href="#3-配置-TAB-插件" class="headerlink" title="3. 配置 TAB 插件"></a>3. 配置 TAB 插件</h3><p>编辑 TAB 插件的配置文件，以使用 CMI 提供的 <code>nick</code> 变量。以下是一个可能的配置示例：</p><h4 id="编辑-TAB-插件的配置文件-config-yml-或-tablist-yml（具体文件名取决于你的-TAB-插件版本和配置结构）："><a href="#编辑-TAB-插件的配置文件-config-yml-或-tablist-yml（具体文件名取决于你的-TAB-插件版本和配置结构）：" class="headerlink" title="编辑 TAB 插件的配置文件 config.yml 或 tablist.yml（具体文件名取决于你的 TAB 插件版本和配置结构）："></a>编辑 <code>TAB</code> 插件的配置文件 <code>config.yml</code> 或 <code>tablist.yml</code>（具体文件名取决于你的 TAB 插件版本和配置结构）：</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 示例文件路径：plugins/TAB/config.yml 或 plugins/TAB/tablist.yml</span><br><span class="line"></span><br><span class="line"># 配置玩家头上显示的标签格式</span><br><span class="line">name-tag:</span><br><span class="line">  enabled: true</span><br><span class="line">  format: "%cmi_user_displayname%"</span><br></pre></td></tr></tbody></table></figure><p>在这个示例中，<code>%cmi_user_displayname%</code> 是 PlaceholderAPI 提供的变量，它将被替换为 CMI 插件中设置的玩家昵称（假名字）。</p><h3 id="4-重启服务器"><a href="#4-重启服务器" class="headerlink" title="4. 重启服务器"></a>4. 重启服务器</h3><p>为了使更改生效，重启你的 Minecraft 服务器。</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/stop</span><br><span class="line"># 然后启动你的服务器</span><br></pre></td></tr></tbody></table></figure><h3 id="5-验证配置"><a href="#5-验证配置" class="headerlink" title="5. 验证配置"></a>5. 验证配置</h3><p>登录到服务器，查看玩家头上显示的标签是否已经变为 CMI 中设置的假名字。如果没有正确显示，请检查以下内容：</p><ol><li>PlaceholderAPI 是否正确加载了 CMI 的扩展。</li><li>CMI 中是否正确设置了玩家的昵称。</li><li>TAB 插件的配置文件中是否正确使用了 PlaceholderAPI 的变量。</li></ol><h3 id="6-调试和调整"><a href="#6-调试和调整" class="headerlink" title="6. 调试和调整"></a>6. 调试和调整</h3><p>如果遇到问题，请检查服务器日志文件以获取错误信息，并确保所有插件版本都是兼容的。可以根据错误提示进行相应的调整和调试。</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过确保 PlaceholderAPI 插件和相关扩展的正确安装和配置，你可以让 TAB 插件使用 CMI 提供的 <code>nick</code> 变量来显示玩家的假名字。希望这个指南能够帮助你实现所需的功能。</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
       
       
       <categories>
@@ -742,6 +742,35 @@
     
     
     <entry>
+      <title>minecraft mod教程-添加物品与方块：GameRegistry的使用实例</title>
+      <link href="/2024/06/16/minecraft-mod%25E6%2595%2599%25E7%25A8%258B-%25E6%25B7%25BB%25E5%258A%25A0%25E7%2589%25A9%25E5%2593%2581%25E4%25B8%258E%25E6%2596%25B9%25E5%259D%2597%25EF%25BC%259Agameregistry%25E7%259A%2584%25E4%25BD%25BF%25E7%2594%25A8%25E5%25AE%259E%25E4%25BE%258B/"/>
+      <url>/2024/06/16/minecraft-mod%25E6%2595%2599%25E7%25A8%258B-%25E6%25B7%25BB%25E5%258A%25A0%25E7%2589%25A9%25E5%2593%2581%25E4%25B8%258E%25E6%2596%25B9%25E5%259D%2597%25EF%25BC%259Agameregistry%25E7%259A%2584%25E4%25BD%25BF%25E7%2594%25A8%25E5%25AE%259E%25E4%25BE%258B/</url>
+      
+        <content type="html"><![CDATA[<p>这两天实在是好忙啊，被boss紧逼什么的。各种事情都要到deadline了。但是教程什么的还是要继续更新啦。至于我的那个物品最大堆叠的mod已经发现了一些问题。这个mod的bug修复只进行了一部分。目前只是修复了不能附魔的问题。其他的工作量实在是太大了。毕竟coremod就是一个大坑啊。但愿我这种各种拖延症不会被四季大人提前带走吧……</p><p>Minecraft Forge 中使用最多的一个类基本上就是GameRegistry了吧。游戏里面的各种物品的注册都是能够通过GameRegistry实现的。当然了，操作已经注册了的物品也可以通过GameRegistry来操作。所以各种Mod开发者一定都很熟悉这个类，所以我就不介绍了……（雾，拖走</p><p>有一些低端的mod可能只包含一些基本的GameRegistry的使用。当然这种Mod基本都可以用mod制作器来代替。但是使用好GameRegistry还是很重要的。成功废话脱篇幅。</p><p>下面介绍一下GameRegistry提供的一些功能</p><ul><li>registerWorldGenerator：注册世界生成器用来在世界生成的时候插入一些自定义的方块</li><li>generateWorld：添加世界生成的钩子（如果你对于钩子不清楚的话可以移步<a href="http://en.wikipedia.org/wiki/Hooking">wiki</a> 或者<a href="http://baike.baidu.com/view/626139.htm">度娘</a>）</li><li>registerItem：注册物品，有两个重载（这也是本次教程要讲的一部分）</li><li>addSubstitutionAlias：给物品或者方块添加别名。说白了就是改名</li><li>registerBlock：注册方块。有四个重载，可见这果然是方块的世界啊。（也是本次教程的一部分）</li><li>addRecipe：添加合成。有两个重载。</li><li>addShapedRecipe：添加有序合成。</li><li>addShapelessRecipe：添加无序合成。（这三个合成将会在下一期介绍）</li><li>addSmelting：添加烧炼。（下一期介绍）</li><li>registerTileEntity：注册TileEntity（是在不知道TileEntity翻译成什么号）。总之这个就是一种记录在地图区块的数据。</li><li>registerTileEntityWithAlternatives：类似上一条。</li><li>registerFuelHandler：添加新的燃料用的。</li><li>getFuelValue：获得物品的燃烧时间</li><li>findBlock：通过名字获得方块(注意：现在的minecraft已经马上就不支持数字ID了。请使用这种方式获得方块)</li><li>findItem：通过名字获得物品</li><li>registerCustomItemStack：注册自定义的物品栈（关于物品栈的概念还是以后介绍吧）</li><li>findItemStack：通过mod名和名字获得刚刚注册的物品栈</li><li>findUniqueIdentifierFor：查找一个方块或者物品的UID（唯一身份标识）</li></ul><p>以上就是GameRegistry的功能。基本上这些功能能实现一个一般的Mod的绝大多数的功能了呢。</p><p>下面就来介绍一下如何添加一个自定义的物品，作为GameRegistry的使用实例：</p><p>要知道物品就是net.minecraft.item.Item。当然可以是它的子类。所以创建一个物品的话我们不妨就创建一个新的类继承自那个物品类：</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class MyCustomItem extends Item</span><br><span class="line">{</span><br><span class="line">    //这里不要吐槽我的括号在下一行。这样能多占一行呢www......找boss算工作量什么的</span><br><span class="line"></span><br><span class="line">    //下面物品的具体内容</span><br><span class="line">    //基本上就是提供一个构造函数。不要忘记在构造函数里面设定你的物品以及@Override处理你关心的那些方法就好</span><br><span class="line"></span><br><span class="line">    //不过在构造函数设定你的物品不是必须的。你可以在注册物品的时候对这个实例进行设定，只要是public的就可以在外部修改。这样的做法还是推荐那些直接使用Item进行注册的物品使用。如果要完全自定义一个物品，我个人还是推荐在构造函数初始化。这样代码看起来会比较整洁。</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p>这就是一个基本的物品。然后你需要实例化你的物品。并且你需要添加类似下面的代码</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GameRegistry.registerItem(new MyCustomItem() , "myCustumItem" , "myCustumMod")</span><br></pre></td></tr></tbody></table></figure><p>这样你就成功添加了一个你的自定义的Item。</p><p>下面介绍一下如何添加一个自定义的方块</p><p>添加自定义方块的做法和自定义物品的做法几乎一模一样。方块类都是继承net.minecraft.block.Block。同样的我们自己写一个block之后用GameRegistry注册就好了。至于Block的材质这个参数我们以后介绍。今天先写这么多了</p><div id="lv-container" data-id="city" data-uid="MTAyMC81OTg1MC8zNjMxMg==">  <script type="text/javascript">    (function(d, s) {      var j, e = d.getElementsByTagName(s)[0];      if (typeof LivereTower === 'function') { return; }      j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true;      e.parentNode.insertBefore(j, e);    })(document, 'script');  </script></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> MC </tag>
+            
+            <tag> 转载 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HEXO系列教程 | 为HEXO绑定自己的域名 | 小白向教程 –</title>
       <link href="/2024/06/14/hexo-tutorial-use-your-domain-beginner/"/>
       <url>/2024/06/14/hexo-tutorial-use-your-domain-beginner/</url>
@@ -841,11 +870,11 @@
       
         <tags>
             
+            <tag> MC </tag>
+            
             <tag> github </tag>
             
             <tag> 转载 </tag>
-            
-            <tag> MC </tag>
             
             <tag> 插件 </tag>
             
@@ -1068,9 +1097,9 @@
       
         <tags>
             
-            <tag> github </tag>
-            
             <tag> 教程 </tag>
+            
+            <tag> github </tag>
             
             <tag> java </tag>
             
@@ -1126,9 +1155,9 @@
       
         <tags>
             
-            <tag> github </tag>
-            
             <tag> 教程 </tag>
+            
+            <tag> github </tag>
             
         </tags>
       
@@ -1153,9 +1182,9 @@
       
         <tags>
             
-            <tag> github </tag>
-            
             <tag> 教程 </tag>
+            
+            <tag> github </tag>
             
             <tag> hexo </tag>
             
@@ -1182,9 +1211,9 @@
       
         <tags>
             
-            <tag> github </tag>
-            
             <tag> 教程 </tag>
+            
+            <tag> github </tag>
             
         </tags>
       
@@ -1236,9 +1265,9 @@
       
         <tags>
             
-            <tag> github </tag>
-            
             <tag> 教程 </tag>
+            
+            <tag> github </tag>
             
         </tags>
       
@@ -1263,11 +1292,11 @@
       
         <tags>
             
-            <tag> 转载 </tag>
-            
             <tag> 教程 </tag>
             
             <tag> MC </tag>
+            
+            <tag> 转载 </tag>
             
         </tags>
       
@@ -1292,11 +1321,11 @@
       
         <tags>
             
+            <tag> 教程 </tag>
+            
             <tag> github </tag>
             
             <tag> 转载 </tag>
-            
-            <tag> 教程 </tag>
             
             <tag> hexo </tag>
             
@@ -1323,11 +1352,11 @@
       
         <tags>
             
-            <tag> 转载 </tag>
-            
             <tag> 教程 </tag>
             
             <tag> MC </tag>
+            
+            <tag> 转载 </tag>
             
         </tags>
       
@@ -1381,9 +1410,9 @@
       
         <tags>
             
-            <tag> 转载 </tag>
-            
             <tag> MC </tag>
+            
+            <tag> 转载 </tag>
             
             <tag> 分享 </tag>
             
@@ -1410,9 +1439,9 @@
       
         <tags>
             
-            <tag> 转载 </tag>
-            
             <tag> 教程 </tag>
+            
+            <tag> 转载 </tag>
             
             <tag> Wiki </tag>
             
@@ -1466,11 +1495,11 @@
       
         <tags>
             
-            <tag> 转载 </tag>
-            
             <tag> 教程 </tag>
             
             <tag> MC </tag>
+            
+            <tag> 转载 </tag>
             
         </tags>
       
@@ -1495,11 +1524,11 @@
       
         <tags>
             
-            <tag> 转载 </tag>
-            
             <tag> 教程 </tag>
             
             <tag> MC </tag>
+            
+            <tag> 转载 </tag>
             
         </tags>
       
@@ -1636,9 +1665,9 @@
       
         <tags>
             
-            <tag> 转载 </tag>
-            
             <tag> MC </tag>
+            
+            <tag> 转载 </tag>
             
             <tag> 分享 </tag>
             
@@ -1742,9 +1771,9 @@
       
         <tags>
             
-            <tag> 转载 </tag>
-            
             <tag> MC </tag>
+            
+            <tag> 转载 </tag>
             
             <tag> 整合包 </tag>
             
@@ -1954,9 +1983,9 @@
       
         <tags>
             
-            <tag> 转载 </tag>
-            
             <tag> MC </tag>
+            
+            <tag> 转载 </tag>
             
             <tag> 新闻 </tag>
             
@@ -2091,9 +2120,9 @@
       
         <tags>
             
-            <tag> github </tag>
-            
             <tag> 教程 </tag>
+            
+            <tag> github </tag>
             
         </tags>
       
@@ -2118,9 +2147,9 @@
       
         <tags>
             
-            <tag> github </tag>
-            
             <tag> 教程 </tag>
+            
+            <tag> github </tag>
             
         </tags>
       
