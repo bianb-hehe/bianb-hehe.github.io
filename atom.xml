@@ -333,18 +333,18 @@
   </entry>
   
   <entry>
-    <title>[1.8x+]LifeStealZ </title>
-    <link href="https://bianb-hehe.github.io/2024/08/08/483593/"/>
-    <id>https://bianb-hehe.github.io/2024/08/08/483593/</id>
+    <title>[1.8x+]Bedwars1058 经典起床插件</title>
+    <link href="https://bianb-hehe.github.io/2024/08/08/496/"/>
+    <id>https://bianb-hehe.github.io/2024/08/08/496/</id>
     <published>2024-08-08T05:53:56.000Z</published>
-    <updated>2024-06-09T11:37:52.979Z</updated>
+    <updated>2024-06-09T10:37:14.799Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;LifeStealZ-插件简介&quot;&gt;&lt;a href=&quot;#LifeStealZ-插件简介&quot; class=&quot;headerlink&quot; title=&quot;LifeStealZ 插件简介&quot;&gt;&lt;/a&gt;LifeStealZ 插件简介&lt;/h2&gt;&lt;p&gt;LifeStealZ</summary>
+    <summary type="html">&lt;h1 id=&quot;Bedwars1058-插件文档&quot;&gt;&lt;a href=&quot;#Bedwars1058-插件文档&quot; class=&quot;headerlink&quot; title=&quot;Bedwars1058 插件文档&quot;&gt;&lt;/a&gt;Bedwars1058 插件文档&lt;/h1&gt;&lt;h2 id=&quot;介绍&quot;&gt;&lt;a</summary>
         
       
     
@@ -360,18 +360,18 @@
   </entry>
   
   <entry>
-    <title>[1.8x+]Bedwars1058 经典起床插件</title>
-    <link href="https://bianb-hehe.github.io/2024/08/08/496/"/>
-    <id>https://bianb-hehe.github.io/2024/08/08/496/</id>
+    <title>[1.8x+]LifeStealZ </title>
+    <link href="https://bianb-hehe.github.io/2024/08/08/483593/"/>
+    <id>https://bianb-hehe.github.io/2024/08/08/483593/</id>
     <published>2024-08-08T05:53:56.000Z</published>
-    <updated>2024-06-09T10:37:14.799Z</updated>
+    <updated>2024-06-09T11:37:52.979Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Bedwars1058-插件文档&quot;&gt;&lt;a href=&quot;#Bedwars1058-插件文档&quot; class=&quot;headerlink&quot; title=&quot;Bedwars1058 插件文档&quot;&gt;&lt;/a&gt;Bedwars1058 插件文档&lt;/h1&gt;&lt;h2 id=&quot;介绍&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;LifeStealZ-插件简介&quot;&gt;&lt;a href=&quot;#LifeStealZ-插件简介&quot; class=&quot;headerlink&quot; title=&quot;LifeStealZ 插件简介&quot;&gt;&lt;/a&gt;LifeStealZ 插件简介&lt;/h2&gt;&lt;p&gt;LifeStealZ</summary>
         
       
     
@@ -441,19 +441,20 @@
   </entry>
   
   <entry>
-    <title>[MC]SX转AP</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/2396/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/2396/</id>
+    <title>Cmi的nick变量是什么</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/239389346/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/239389346/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-10T02:34:14.125Z</updated>
+    <updated>2024-06-09T10:14:27.944Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;将 Minecraft 插件 SX (SX-Attribute) 转换为 AttributePlus (AP) 插件的配置，涉及到调整各插件的配置文件和插件所使用的具体属性。以下是一个示例步骤指南：&lt;/p&gt;
-&lt;h3 id=&quot;1-准备工作&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;p&gt;在使用 Minecraft 的 CMI（Content Management Interface）插件时，如果修改聊天配置后无法发送聊天信息并且游戏内提示检查日志，可以按以下步骤排查问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;检查日志文件&lt;/strong&gt; ：找到</summary>
         
       
     
@@ -473,20 +474,19 @@
   </entry>
   
   <entry>
-    <title>Cmi的nick变量是什么</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/239389346/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/239389346/</id>
+    <title>[MC]SX转AP</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/2396/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/2396/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T10:14:27.944Z</updated>
+    <updated>2024-06-10T02:34:14.125Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;在使用 Minecraft 的 CMI（Content Management Interface）插件时，如果修改聊天配置后无法发送聊天信息并且游戏内提示检查日志，可以按以下步骤排查问题：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;检查日志文件&lt;/strong&gt; ：找到</summary>
+    <summary type="html">&lt;p&gt;将 Minecraft 插件 SX (SX-Attribute) 转换为 AttributePlus (AP) 插件的配置，涉及到调整各插件的配置文件和插件所使用的具体属性。以下是一个示例步骤指南：&lt;/p&gt;
+&lt;h3 id=&quot;1-准备工作&quot;&gt;&lt;a</summary>
         
       
     
@@ -537,20 +537,20 @@
   </entry>
   
   <entry>
-    <title>[Wiki][CY/SCT] CMI – 插件文档帮助 –</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/3858/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/3858/</id>
+    <title>Cmi的聊天功能怎么关闭</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/396/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/396/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T10:19:15.533Z</updated>
+    <updated>2024-06-09T09:48:14.140Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;strong&gt;游戏时间奖励 | PlayTime Rewards&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;游戏时间奖励系统可以在玩家积累到了一定时长的游戏时间后执行一段命令.&lt;/p&gt;
-&lt;p&gt;你可以设置每过 X 秒或游戏时长共 X</summary>
+    <summary type="html">&lt;p&gt; CMI 插件的聊天功能，你可以通过修改 CMI 的配置文件来实现。以下是步骤：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.找到配置文件：在你的服务器目录中找到 CMI 的配置文件，通常位于</summary>
         
       
     
