@@ -441,19 +441,20 @@
   </entry>
   
   <entry>
-    <title>[MC]SX转AP</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/2396/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/2396/</id>
+    <title>Cmi的nick变量是什么</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/239389346/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/239389346/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-10T02:34:14.125Z</updated>
+    <updated>2024-06-09T10:14:27.944Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;将 Minecraft 插件 SX (SX-Attribute) 转换为 AttributePlus (AP) 插件的配置，涉及到调整各插件的配置文件和插件所使用的具体属性。以下是一个示例步骤指南：&lt;/p&gt;
-&lt;h3 id=&quot;1-准备工作&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;p&gt;在使用 Minecraft 的 CMI（Content Management Interface）插件时，如果修改聊天配置后无法发送聊天信息并且游戏内提示检查日志，可以按以下步骤排查问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;检查日志文件&lt;/strong&gt; ：找到</summary>
         
       
     
@@ -473,20 +474,19 @@
   </entry>
   
   <entry>
-    <title>Cmi的nick变量是什么</title>
-    <link href="https://bianb-hehe.github.io/2024/07/07/239389346/"/>
-    <id>https://bianb-hehe.github.io/2024/07/07/239389346/</id>
+    <title>[MC]SX转AP</title>
+    <link href="https://bianb-hehe.github.io/2024/07/07/2396/"/>
+    <id>https://bianb-hehe.github.io/2024/07/07/2396/</id>
     <published>2024-07-07T04:12:13.000Z</published>
-    <updated>2024-06-09T10:14:27.944Z</updated>
+    <updated>2024-06-10T02:34:14.125Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;在使用 Minecraft 的 CMI（Content Management Interface）插件时，如果修改聊天配置后无法发送聊天信息并且游戏内提示检查日志，可以按以下步骤排查问题：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;检查日志文件&lt;/strong&gt; ：找到</summary>
+    <summary type="html">&lt;p&gt;将 Minecraft 插件 SX (SX-Attribute) 转换为 AttributePlus (AP) 插件的配置，涉及到调整各插件的配置文件和插件所使用的具体属性。以下是一个示例步骤指南：&lt;/p&gt;
+&lt;h3 id=&quot;1-准备工作&quot;&gt;&lt;a</summary>
         
       
     
